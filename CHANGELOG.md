@@ -2,6 +2,9 @@
 
 ## 0.1.0-dev.1
 
+- Prepare the first pub.dev prerelease as `liquid_glass_effect_flutter`, with a
+  matching Dart entry point and shader asset namespace. Preserve development
+  import aliases, and add real showcase screenshots and installation guidance.
 - Added functional Materials, Controls and Comfort showcase screens, four
   presets, session favorites, resettable fine adjustments, responsive navigation
   and app-wide comfort previews. Isolated diagnostics updates from page builds.

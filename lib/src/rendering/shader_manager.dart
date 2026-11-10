@@ -3,9 +3,9 @@ import 'dart:ui' as ui;
 /// Loads and caches the immutable program while widgets own shader instances.
 abstract final class LiquidGlassShaderManager {
   static const filterAssetKey =
-      'packages/liquid_optics_flutter/shaders/liquid_glass.frag';
+      'packages/liquid_glass_effect_flutter/shaders/liquid_glass.frag';
   static const captureAssetKey =
-      'packages/liquid_optics_flutter/shaders/liquid_glass_capture.frag';
+      'packages/liquid_glass_effect_flutter/shaders/liquid_glass_capture.frag';
 
   static ui.FragmentProgram? _filterProgram;
   static ui.FragmentProgram? _captureProgram;

@@ -3,7 +3,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:liquid_optics_flutter/liquid_optics_flutter.dart';
+import 'package:liquid_glass_effect_flutter/liquid_glass_effect_flutter.dart';
 
 import 'support/renderer_fixture.dart';
 

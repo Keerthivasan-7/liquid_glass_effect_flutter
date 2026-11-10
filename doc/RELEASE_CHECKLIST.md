@@ -7,7 +7,7 @@ qualify newer shader or lifecycle changes.
 ## Source identity and packaging
 
 - [x] Confirm the canonical source repository: `Keerthivasan-7/liquid_glass_effect`.
-- [ ] Confirm the final pub.dev name; the Dart package remains `liquid_optics_flutter`.
+- [x] Select `liquid_glass_effect_flutter` for publication; pub.dev returned 404 on 10 November. Availability is not reserved until upload succeeds.
 - [x] Remove fake homepage/repository/issue URLs.
 - [x] Include BSD-3-Clause license and independent-reference research records.
 - [x] Exclude research downloads, CI, raw evidence, graphs and build outputs from the package.
@@ -30,7 +30,7 @@ qualify newer shader or lifecycle changes.
 - [ ] Repeat the final pub dry run when testing resumes; earlier SDK dry runs exited 65 for the then-missing source metadata.
 - [ ] Run hosted CI and configure required checks once a real repository exists.
 - [ ] Qualify the final rotation-axis/shader and showcase source; builds alone do not close this gate. Extended runs deferred by user direction.
-- [x] Refresh the library architecture graph after the axis-helper change: 418 nodes, 478 edges, 20 communities; synchronize root outputs and record source hashes.
+- [x] Refresh the library architecture graph after the publication rename: 419 nodes, 479 edges, 21 communities; synchronize root outputs and record source hashes.
 
 ## Runtime and accessibility gates
 

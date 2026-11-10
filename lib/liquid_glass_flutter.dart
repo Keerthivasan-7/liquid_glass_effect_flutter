@@ -1,5 +1,6 @@
 /// Backwards-compatible library alias.
-@Deprecated('Import package:liquid_optics_flutter/liquid_optics_flutter.dart')
+@Deprecated(
+    'Import package:liquid_glass_effect_flutter/liquid_glass_effect_flutter.dart')
 library;
 
-export 'liquid_optics_flutter.dart';
+export 'liquid_glass_effect_flutter.dart';

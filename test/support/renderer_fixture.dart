@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:liquid_optics_flutter/liquid_optics_flutter.dart';
+import 'package:liquid_glass_effect_flutter/liquid_glass_effect_flutter.dart';
 
 /// Versioned deterministic scenes shared by package and device visual checks.
 enum FixtureBackdrop {

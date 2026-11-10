@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:liquid_optics_flutter/liquid_optics_flutter.dart';
+import 'package:liquid_glass_effect_flutter/liquid_glass_effect_flutter.dart';
 
 import 'showcase_material.dart';
 
@@ -498,7 +498,7 @@ class _ShowcasePageState extends State<ShowcasePage> {
         child: child,
       );
 
-  Widget _tuningPanel() => Container(
+  Widget _tuningPanel() => KeyedSubtree(
         key: _tuningKey,
         child: _panel(
             child: Column(children: [

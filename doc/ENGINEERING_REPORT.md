@@ -113,8 +113,9 @@ interrupted and invalidated by a viewport/focus change; no glass baseline or
 full matrix is qualified. Later portrait safeguards and the latest optimization
 belong to different snapshots.
 
-The current structural library graph was regenerated on 10 November: 418 nodes,
-478 edges and 20 communities. It includes the new private axis helper and is
+The current structural library graph was regenerated after the publication
+rename on 10 November: 419 nodes, 479 edges and 21 communities. It includes the
+new public entry point and private axis helper and is
 excluded from the source package. Future CI now preserves SDK/build output for
 all platform build jobs and explicitly analyzes the example and benchmark;
 these latest workflow changes have not run.

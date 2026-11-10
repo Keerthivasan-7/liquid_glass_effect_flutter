@@ -1,13 +1,18 @@
 # Graph Report - lib  (2026-11-10)
 
 ## Corpus Check
-- 12 files · ~8,513 words
+- 13 files · ~8,529 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 418 nodes · 478 edges · 20 communities (15 shown, 5 thin omitted)
+- 419 nodes · 479 edges · 21 communities (16 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `24c3080c`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - liquid_glass.dart
@@ -20,16 +25,17 @@
 - shader_manager.dart
 - _LiquidGlassGroupState
 - @meta
-- liquid_optics_flutter.dart
+- liquid_glass_effect_flutter.dart
 - _RenderLiquidGlassScope
 - _LiquidGlassClipper
 - CustomPainter
 - _CaptureGlassLayer
-- liquid_glass_flutter.dart
+- liquid_glass_effect_flutter.dart
 - _LiquidGlassScopeRenderWidget
 - SingleChildRenderObjectWidget
 - _FilterGlassLayer
 - _CaptureBackgroundLayer
+- InheritedWidget
 
 ## God Nodes (most connected - your core abstractions)
 1. `_LiquidGlassState` - 4 edges
@@ -50,7 +56,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (20 total, 5 thin omitted)
+## Communities (21 total, 5 thin omitted)
 
 ### Community 0 - "liquid_glass.dart"
 Cohesion: 0.02
@@ -66,7 +72,7 @@ Nodes (52): abbeNumber, absorptionColor, absorptionStrength, animateLight, anima
 
 ### Community 3 - "liquid_glass_group.dart"
 Cohesion: 0.05
-Nodes (42): bool get, Duration, InheritedWidget, int?, LiquidGlassMotion get, Offset, package:flutter/scheduler.dart, package:meta/meta.dart (+34 more)
+Nodes (39): bool get, Duration, int?, LiquidGlassMotion get, Offset, package:flutter/scheduler.dart, package:meta/meta.dart, active (+31 more)
 
 ### Community 4 - "capture_footprint.dart"
 Cohesion: 0.05
@@ -92,7 +98,7 @@ Nodes (10): SingleTickerProviderStateMixin, LiquidGlassGroup, _LiquidGlassGroupS
 Cohesion: 0.22
 Nodes (10): @meta, ChangeNotifier, LiquidGlassMotionHandle, liquidGlassMotionOf, _RenderCaptureGlassSurface, _RenderFilterGlassBackdrop, RenderProxyBox, LiquidGlassCaptureClient (+2 more)
 
-### Community 10 - "liquid_optics_flutter.dart"
+### Community 10 - "liquid_glass_effect_flutter.dart"
 Cohesion: 0.22
 Nodes (8): src/configuration/liquid_glass_accessibility.dart, src/configuration/liquid_glass_config.dart, src/geometry/liquid_glass_shape.dart, src/rendering/liquid_glass_capabilities.dart, src/widgets/liquid_glass.dart, src/widgets/liquid_glass_group.dart, src/widgets/liquid_glass_scene.dart, src/widgets/liquid_glass_scope.dart
 
@@ -111,6 +117,10 @@ Nodes (3): CustomPainter, _GlassFocusPainter, _GlassOverlayPainter
 ### Community 17 - "SingleChildRenderObjectWidget"
 Cohesion: 0.67
 Nodes (3): SingleChildRenderObjectWidget, _CaptureGlassSurface, _FilterGlassBackdrop
+
+### Community 20 - "InheritedWidget"
+Cohesion: 0.67
+Nodes (3): InheritedWidget, _LiquidGlassMotionInherited, _LiquidGlassScopeInherited
 
 ## Knowledge Gaps
 - **286 isolated node(s):** `reduceTransparency`, `reduceMotion`, `highContrast`, `opaqueColor`, `operator` (+281 more)

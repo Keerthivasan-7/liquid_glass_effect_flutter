@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:liquid_glass_benchmark/benchmark_run.dart';
 import 'package:liquid_glass_benchmark/main.dart';
-import 'package:liquid_optics_flutter/liquid_optics_flutter.dart';
+import 'package:liquid_glass_effect_flutter/liquid_glass_effect_flutter.dart';
 
 void main() {
   test('delayed pre-start frames cannot shorten the warm-up', () {

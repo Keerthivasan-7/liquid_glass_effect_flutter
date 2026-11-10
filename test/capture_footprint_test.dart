@@ -2,8 +2,8 @@ import 'dart:math' as math;
 import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:liquid_optics_flutter/liquid_optics_flutter.dart';
-import 'package:liquid_optics_flutter/src/rendering/capture_footprint.dart';
+import 'package:liquid_glass_effect_flutter/liquid_glass_effect_flutter.dart';
+import 'package:liquid_glass_effect_flutter/src/rendering/capture_footprint.dart';
 
 void main() {
   test('quality and anisotropy envelopes contain the emitted sample stencils',

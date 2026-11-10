@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
-import 'package:liquid_optics_flutter/liquid_optics_flutter.dart';
+import 'package:liquid_glass_effect_flutter/liquid_glass_effect_flutter.dart';
 
 import 'benchmark_run.dart';
 import 'result_export.dart';

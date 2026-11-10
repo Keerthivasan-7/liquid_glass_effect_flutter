@@ -1,5 +1,13 @@
 # Verified Portable Renderer execution record
 
+Publication preparation (10 November): the user requested pub.dev publication
+and proposed `liquid_glass_effect_flutter` because `liquid_glass_effect` is taken.
+The proposed name returned 404 from the pub.dev package API. Current imports,
+public entry point, shader asset keys and example dependencies now use the new
+name. Actual showcase screenshots and a package-focused README are included.
+This is a `0.1.0-dev.1` prerelease candidate; the verification milestone and
+runtime/performance gates below remain open. Historical evidence is unchanged.
+
 Delivery steering: target **13 November 2026**. Extended testing has stopped at
 the user's request; see [the four-day delivery plan](FOUR_DAY_DELIVERY.md).
 The latest development change moves constant anisotropy rotation math to the

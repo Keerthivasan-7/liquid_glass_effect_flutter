@@ -3,7 +3,7 @@
 This guide targets the current `0.1.0-dev.1` source package. Use Flutter 3.32
 or later. The package has not been published. Its source repository is
 [liquid_glass_effect](https://github.com/Keerthivasan-7/liquid_glass_effect);
-the Dart package name remains `liquid_optics_flutter`.
+the publication name and primary import are `liquid_glass_effect_flutter`.
 Copy the package folder alongside your app, then add a path
 dependency using its actual folder name:
 
@@ -11,7 +11,7 @@ dependency using its actual folder name:
 dependencies:
   flutter:
     sdk: flutter
-  liquid_optics_flutter:
+  liquid_glass_effect_flutter:
     path: ../Liquid Glass
 ```
 
@@ -25,7 +25,7 @@ the glass controls. The following screen can be used as `MaterialApp.home`:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:liquid_optics_flutter/liquid_optics_flutter.dart';
+import 'package:liquid_glass_effect_flutter/liquid_glass_effect_flutter.dart';
 
 class GlassDemoPage extends StatelessWidget {
   const GlassDemoPage({super.key});

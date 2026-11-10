@@ -1,9 +1,22 @@
-name: liquid_optics_flutter
-description: A GPU-accelerated, geometry-aware liquid glass surface for Flutter with graceful fallbacks.
+name: liquid_glass_effect_flutter
+description: Liquid glass surfaces for Flutter with bounded background refraction, material presets, sharp foreground controls and accessible fallbacks.
 version: 0.1.0-dev.1
 homepage: https://github.com/Keerthivasan-7/liquid_glass_effect
 repository: https://github.com/Keerthivasan-7/liquid_glass_effect
 issue_tracker: https://github.com/Keerthivasan-7/liquid_glass_effect/issues
+
+platforms:
+  android:
+  windows:
+  web:
+
+screenshots:
+  - description: Regular liquid glass and four material presets in the light showcase.
+    path: assets/showcase/materials-light.png
+  - description: Interactive controls inside glass surfaces in the dark showcase.
+    path: assets/showcase/controls-dark.png
+  - description: Reduced-transparency comfort preview with opaque readable controls.
+    path: assets/showcase/comfort-opaque.png
 topics:
   - liquid-glass
   - shaders
