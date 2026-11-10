@@ -68,7 +68,8 @@ void main() {
     final results = <Map<String, Object?>>[];
     binding.reportData = <String, dynamic>{
       'protocol':
-          '3s warmup, timestamped window, 2s drain; no test pumping during sampling',
+          '3s warmup, timestamped window, 2s drain; display frozen and no test pumping during sampling',
+      'benchmarkProtocolVersion': 7,
       'smokeOnly': smoke,
       'repetitions': repetitions,
       'scenarioCount': scenarios.length,

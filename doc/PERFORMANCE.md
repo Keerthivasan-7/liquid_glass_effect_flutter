@@ -1,7 +1,9 @@
 # Performance protocol
 
-Updated 2026-11-10. No glass speedup or complete-matrix claim is qualified. One
-physical ordinary-control group has three accepted repetitions, scoped below.
+Updated 2026-11-10. No glass speedup or complete-matrix pass is qualified. The
+complete protocol-v6 phone matrix has 34 accepted and twelve unstable groups.
+Protocol v7 freezes the measurement display after profiling exposed observer
+work; its device repeatability qualification remains open.
 The first recorded
 Windows autorun attempt timed out; its raw files and explicit invalidation are
 preserved under `benchmark/results/windows-balanced-animated-1/`. Do not use
@@ -26,8 +28,9 @@ Capture quality cases share all optical parameters except their sample stencil.
 Sampling uses engine vsync timestamps: three seconds of warm-up, a 30-second
 window, then two seconds to accept delayed timing batches. A bounded raw buffer
 retains build/raster/total/vsync microseconds. Manual stop, timeout, hidden
-window, capacity exhaustion, and missing metadata disqualify a run. The HUD
-refreshes at four Hz in a separate repaint boundary. A vsync ticker keeps the
+window, capacity exhaustion, and missing metadata disqualify a run. In protocol
+v7 the display is frozen through warm-up, sampling and drain, with four-Hz idle
+refresh. Start/Stop and completion update controls. A vsync ticker keeps the
 measurement alive without forcing static content to repaint.
 
 ## Procedure
@@ -154,3 +157,27 @@ including the benchmark UI, rather than isolated shader/GPU costs. Use traces
 before attributing build variation or raster cost to a particular mechanism.
 Do not silently reduce optics or select only the best repetitions to close the
 gate. Preserve this baseline before targeted profiling or protocol changes.
+
+## Protocol v7: remove measurement-display build bursts
+
+The nine static ordinary-control repetitions in the saved phone matrix contain
+115–120 build durations over 8.33 ms per 30-second run. Their median spacing is
+about 247.74 ms, closely matching the display's four-Hz timer. That correlation
+does not by itself identify the cause of all twelve repeatability failures.
+
+Bounded desktop traces compare the original periodic display with the actual
+v7 implementation. The observer's refresh markers coincide with framework
+build bursts; freezing the display removes those periodic refresh builds.
+These short instrumented Windows/Skia diagnostics identify a source of observer
+work. They are not a three-run performance qualification, a renderer/GPU
+speedup measurement or evidence that the phone's repeatability failures are
+resolved. See [the profiling record](evidence/2026-11-10/measurement-display/README.md).
+
+The producer, runner and exported manifest now declare protocol 7. Metadata
+records zero active display refresh and four-Hz idle refresh. Raw validation
+requires that policy for v7, retains v6 compatibility and prevents combining
+different observer workloads in one repetition group. Existing v6 analysis
+reproduces exactly: 34 accepted, twelve rejected, with unchanged raw hashes.
+All fixed limits and the sixty-second initial / ten-second per-repetition
+settling, three-second warm-up, thirty-second window and two-second drain remain
+unchanged. Device v7 results must use a new results directory and binary.

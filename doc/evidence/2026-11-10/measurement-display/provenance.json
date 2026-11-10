@@ -1,0 +1,181 @@
+{
+  "baseRevision": "53b8109a406bb71ff32a3dfde3727c1948186c84",
+  "implementationFiles": [
+    {
+      "path": "benchmark/lib/main.dart",
+      "sha256": "d8b21ae2f83a76ef33c36a19cd0582554ed2d80c6fd694dc3fbf2ea49e44b8b3"
+    },
+    {
+      "path": "benchmark/integration_test/benchmark_matrix_test.dart",
+      "sha256": "6022048f44d219e5c2d28651e17d663093e1d1ed785faa7e6c228fcba9aef147"
+    },
+    {
+      "path": "benchmark/test/benchmark_view_test.dart",
+      "sha256": "44f9e1bd6b28023767ffd16c4bd88708f45feed969ac869589a3157faea7ea1c"
+    },
+    {
+      "path": "benchmark/tool/run_matrix.ps1",
+      "sha256": "d33f5aeda7e77df273a0ddeae2b6b4ead23b90fbf46c677d66cda3d2d9083770"
+    },
+    {
+      "path": "benchmark/tool/analyze_matrix.py",
+      "sha256": "4d471a78b32461acaa4f7e29c99b9562edc72e781050f8d73a67d50458fea611"
+    },
+    {
+      "path": "benchmark/tool/test_analyze_matrix.py",
+      "sha256": "3de7190f0b6b55b393d6b4c2880bde5ba9e87efe1de1f352918324ef19b54f90"
+    }
+  ],
+  "diagnosticSourceFiles": [
+    {
+      "path": "source/bounded-profile-driver.dart",
+      "sha256": "cb11ee5e4ed52fb3e5dd8b41c3502aa2667c20ee75c3c2d3a82c2070fd1363fc"
+    },
+    {
+      "path": "source/bounded-profile-test.dart",
+      "sha256": "34a49cfebc51f34a63cbd06a2305e8136fd2bbde7ef6453da67ef9b0691d699c"
+    },
+    {
+      "path": "source/instrumented-v6-main.dart",
+      "sha256": "06bcedfb82770375a49b7906804abadd4e299e85a379202f38362aa99215712b"
+    },
+    {
+      "path": "source/instrumented-v7-main.dart",
+      "sha256": "56ba964a78ecdffed325fbe861eb54a730bfcd2b40241793e943c5859b99bb87"
+    }
+  ],
+  "analysisScripts": [
+    {
+      "path": "analyze.py",
+      "sha256": "595a2a40fbff60eb12cc27502260c18a55a18818a34f72d7c9f37ad5455919c1"
+    },
+    {
+      "path": "analyze_phone_pulses.py",
+      "sha256": "bfc080308b8c9f4de664b46d43ab68f7303322b2ccda4a0fd3ed5fe67fd25913"
+    }
+  ],
+  "sdk": {
+    "frameworkVersion": "3.47.9",
+    "channel": "stable",
+    "repositoryUrl": "https://github.com/flutter/flutter.git",
+    "frameworkRevision": "c197ca5199e9ee5661e865596c9c07294dfab51c",
+    "frameworkCommitDate": "2026-10-29 10:10:20 -0400",
+    "engineRevision": "89c39edfdfae2949f6806e4a315c0c08522238b7",
+    "engineCommitDate": "2026-10-27 19:51:20.000Z",
+    "engineContentHash": "9e025265bef30b838c0c1b68cad19decf97048f2",
+    "engineBuildDate": "2026-10-28 01:52:45.983",
+    "dartSdkVersion": "3.13.7",
+    "devToolsVersion": "2.60.0",
+    "flutterVersion": "3.47.9"
+  },
+  "rendererSourceMatchesPublishedRevision": "954ea73f3e2523de83667dd3b7f06f11efb5edfb",
+  "rendererFilesMatched": 15,
+  "variants": [
+    {
+      "variant": "bounded-baseline",
+      "originalSha256": "13bfa571fba89cb956a7f63bd5e3e3c12560bf02b7c60016c7ccda2a690287b3",
+      "publicSha256": "c2f2b7e07652cecf13a0e91806d9d37d40192aac30174a8c27456f60505ca80a",
+      "traceEvents": 5656,
+      "retainedTraceSpanUs": 2013795,
+      "aotApplicationSha256": "3adb7940bb6e5dd95f84ad82b686f348a14685b2364c63131cf4cf75b58dbd86",
+      "metadata": {
+        "benchmarkProtocolVersion": 6,
+        "requiredInitialSettleUs": 60000000,
+        "appSessionAgeAtStartUs": 20077479,
+        "osVersion": "\"Windows 10 Home Single Language\" 10.0 (Build 26300)",
+        "dartVersion": "3.13.7 (stable) (Thu Oct 22 14:28:57 2026 -0700) on \"windows_x64\"",
+        "platform": "windows",
+        "buildMode": "profile",
+        "lifecycleAtStart": null,
+        "flutterRevision": "c197ca5199e9ee5661e865596c9c07294dfab51c",
+        "device": "desktop-diagnostic",
+        "gpu": "NVIDIA-RTX4050",
+        "renderer": "Windows-Skia",
+        "powerMode": "unrecorded",
+        "case": "ordinary",
+        "opticalConfig": null,
+        "surfaceCount": 1,
+        "arrangement": "compact",
+        "animatedBackground": true,
+        "qualityScale": 0.65,
+        "physicalWidth": 1582.0,
+        "physicalHeight": 853.0,
+        "devicePixelRatio": 1.25,
+        "refreshRateHz": 144.0,
+        "supportsShaderFilter": false,
+        "hudRefreshHz": 4,
+        "framePump": "Vsync ticker; static content is not rebuilt by the pump",
+        "runIndex": 1,
+        "activePathsDuringSampling": [],
+        "lifecycleAtEnd": null
+      }
+    },
+    {
+      "variant": "bounded-implemented",
+      "originalSha256": "f6c5faf7ff7766adad239872282c491ceae47f7a353882fcda7e2fc2e3620a3e",
+      "publicSha256": "6ba22895359410c250d26ef7b1c7075671c3d93637a9878eb42ac93177b19fe1",
+      "traceEvents": 7364,
+      "retainedTraceSpanUs": 1995566,
+      "aotApplicationSha256": "2baf79e168cf6e4df87d771af741572264344e89ce459316d7a43e3f5b87d4ea",
+      "metadata": {
+        "benchmarkProtocolVersion": 7,
+        "requiredInitialSettleUs": 60000000,
+        "appSessionAgeAtStartUs": 20111570,
+        "osVersion": "\"Windows 10 Home Single Language\" 10.0 (Build 26300)",
+        "dartVersion": "3.13.7 (stable) (Thu Oct 22 14:28:57 2026 -0700) on \"windows_x64\"",
+        "platform": "windows",
+        "buildMode": "profile",
+        "lifecycleAtStart": null,
+        "flutterRevision": "c197ca5199e9ee5661e865596c9c07294dfab51c",
+        "device": "desktop-diagnostic",
+        "gpu": "NVIDIA-RTX4050",
+        "renderer": "Windows-Skia",
+        "powerMode": "unrecorded",
+        "case": "ordinary",
+        "opticalConfig": null,
+        "surfaceCount": 1,
+        "arrangement": "compact",
+        "animatedBackground": true,
+        "qualityScale": 0.65,
+        "physicalWidth": 1582.0,
+        "physicalHeight": 853.0,
+        "devicePixelRatio": 1.25,
+        "refreshRateHz": 144.0,
+        "supportsShaderFilter": false,
+        "hudRefreshHz": 0,
+        "idleHudRefreshHz": 4,
+        "framePump": "Vsync ticker; static content is not rebuilt by the pump",
+        "runIndex": 1,
+        "activePathsDuringSampling": [],
+        "lifecycleAtEnd": null
+      }
+    }
+  ],
+  "comparisonIdentity": {
+    "physicalWidth": 1582.0,
+    "physicalHeight": 853.0,
+    "devicePixelRatio": 1.25,
+    "surfaceCount": 1,
+    "arrangement": "compact",
+    "animatedBackground": true,
+    "qualityScale": 0.65,
+    "case": "ordinary",
+    "refreshRateHz": 144.0,
+    "scopeSize": [
+      1265.6,
+      472.4
+    ]
+  },
+  "gpuLabelStatus": "Host-adapter label only; Windows app adapter selection not independently measured.",
+  "historicalV6AnalysisUnchanged": true,
+  "preservedRejectedDiagnostic": {
+    "path": "rejected-implemented-attempt",
+    "reason": "The first implemented diagnostic stopped early; its test asserted measurementComplete=false. Its old diagnostic harness exported only timeline data, so the stop reason is unknown. It is excluded from the comparison."
+  },
+  "limits": [
+    "One short instrumented diagnostic per variant; no statistical speedup conclusion.",
+    "No phone/GPU/energy/FPS qualification; no original-axis before/after claim.",
+    "All 138 historical phone exports and fixed p50/p99 limits remain unchanged.",
+    "Protocol-seven device qualification remains open."
+  ]
+}

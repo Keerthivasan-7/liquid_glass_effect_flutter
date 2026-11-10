@@ -112,7 +112,9 @@ class _BenchmarkPageState extends State<BenchmarkPage>
     _framePump = createTicker((_) {});
     SchedulerBinding.instance.addTimingsCallback(_record);
     _hudTimer = Timer.periodic(const Duration(milliseconds: 250), (_) {
-      if (mounted) _hud.value += 1;
+      // A bounded refresh rate still creates periodic build/layout work.
+      // Keep the display fixed through warm-up, sampling and timing drain.
+      if (mounted && !_active) _hud.value += 1;
     });
     if (_automaticRemaining > 0) {
       _automaticTimer = Timer(
@@ -179,7 +181,7 @@ class _BenchmarkPageState extends State<BenchmarkPage>
       duration: const Duration(
           seconds: int.fromEnvironment('BENCHMARK_SECONDS', defaultValue: 30)),
       metadata: <String, Object?>{
-        'benchmarkProtocolVersion': 6,
+        'benchmarkProtocolVersion': 7,
         'requiredInitialSettleUs': 60000000,
         'appSessionAgeAtStartUs': _sessionAge.elapsedMicroseconds,
         ...benchmarkPlatformMetadata(),
@@ -211,7 +213,8 @@ class _BenchmarkPageState extends State<BenchmarkPage>
         'refreshRateHz': refresh > 0 ? refresh : null,
         'supportsShaderFilter':
             LiquidGlassCapabilities.supportsShaderBackdropFilter,
-        'hudRefreshHz': 4,
+        'hudRefreshHz': 0,
+        'idleHudRefreshHz': 4,
         'framePump': 'Vsync ticker; static content is not rebuilt by the pump',
         'runIndex': _runIndex,
       },
@@ -459,8 +462,9 @@ class _BenchmarkPageState extends State<BenchmarkPage>
                                         text: const JsonEncoder.withIndent('  ')
                                             .convert(_report))),
                                 child: const Text('Copy JSON')),
-                            Text(
-                                '${_run?.phase.name ?? 'idle'} · ${_elapsed.elapsed.inSeconds} s · ${_run?.sampleCount ?? 0} samples'),
+                            Text(_active
+                                ? 'Measuring… results appear when complete.'
+                                : '${_run?.phase.name ?? 'idle'} · ${_elapsed.elapsed.inSeconds} s · ${_run?.sampleCount ?? 0} samples'),
                           ],
                         ),
                         _metrics(),

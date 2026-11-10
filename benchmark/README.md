@@ -6,9 +6,9 @@ and static or animated content. Start begins a three-second warm-up followed
 by 30 seconds of sampling. Stop ends the measurement early. A two-second drain
 accepts delayed FrameTiming batches whose timestamps fall inside the window.
 
-The timing callback only collects bounded raw samples. The HUD refreshes at
-four Hz in its own repaint boundary; it never rebuilds the content scene from
-the timing callback. A vsync ticker requests frames during measurement even
+The timing callback only collects bounded raw samples. Protocol v7 freezes the
+display through warm-up, sampling and timing drain; idle display refresh remains
+four Hz. Start/Stop and completion still update controls. A vsync ticker requests frames during measurement even
 for the static-content case. This measures the implemented retained-scene path;
 it does not force a full content repaint in the static variant.
 
@@ -117,9 +117,16 @@ also invalidates the run. The benchmark requests portrait orientation for its
 own activity. A driver failure stops the matrix, preserving the failed attempt
 instead of immediately relaunching the app.
 
-One physical protocol-v6 ordinary-control group has three accepted repetitions;
-see [the raw evidence](../doc/evidence/2026-11-09/performance-physical-ordinary-v6/README.md).
-The capture group was interrupted by a viewport/focus change and is not
-qualified. That ordinary control predates the portrait safeguards and latest
-renderer optimization. The full matrix and phone work are deferred at the
-user's request; no glass speedup is established.
+The complete physical protocol-v6 matrix collected 138 individually valid
+measurements: 34 of 46 groups meet fixed repeatability limits and twelve do not.
+See [all results](../doc/evidence/2026-11-10/performance-physical-current/README.md).
+Its four-Hz display produced periodic build work even in the ordinary control.
+Saved timestamps and bounded desktop traces motivated freezing the display in
+protocol v7. No renderer quality or sampling setting changed.
+
+Exports declare `hudRefreshHz: 0` during a v7 measurement and
+`idleHudRefreshHz: 4`. The validator still reproduces historical v6 results and
+rejects mixed protocols/display cadences in a repetition group. The runner
+rejects v6 prepared binaries/results for v7. Fixed p50/p99 limits, warm-up,
+settling and measurement windows are unchanged. New v7 device measurements are
+still required; the earlier matrix has not been relabeled or made to pass.
