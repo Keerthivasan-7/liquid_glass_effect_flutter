@@ -70,6 +70,9 @@ parameters remain unchanged.
 sources, AOT hashes and original/public trace hashes. Local authenticated service
 URLs are redacted from public strings; timing samples remain unchanged. Native
 binaries and exploratory traces remain private in `.research/`.
+Frozen diagnostic source is stored as `.dart.txt`; restore the `.dart` filenames
+in the isolated benchmark checkout to reproduce the diagnostic. These snapshots
+are evidence, separate from the application's analyzed source.
 
 Recompute the tables with `python analyze.py` and
 `python analyze_phone_pulses.py` from this directory. Both use only Python's
