@@ -32,7 +32,7 @@ recorded source snapshot, SDK, backend and scenarios. See
 | WP4 runtime qualification | Current published renderer passes eighteen v5 contracts on each of physical Xiaomi GLES, Android emulator GLES, Windows/Skia, CanvasKit and skwasm: 90 contracts, 215 observations. Current foreground ten-minute endurance passes on the phone (600,640 ms, 120 disposals), Windows (600,297 ms, 106 disposals) and emulator (600,536 ms, 120 disposals). Final emulator crash buffer empty and package/activity services present. | Interrupted phone and timed-out Windows attempts remain failed. Background/resume, Vulkan/iOS and other untested targets remain unverified. |
 | WP5 benchmark | V6 baseline: 46 groups / 138 raw exports, 34 accepted and twelve rejected, unchanged. Profiling identifies periodic display builds; v7 freezes the active display. Four selected v7 phone groups each pass three repetitions, with independent raw/hash validation. | Forty-two v7 groups remain unmeasured. Fixed spread limits and v6 failures are unchanged; no full-matrix or smooth-60-Hz pass. Phone released after the authorized focused run. |
 | WP6 optimization | CPU rotation-axis precomputation now reuses constant values across sampling and highlights; showcase build succeeds. Hover/press capture reuse has a prior count-based check. | Repeatable baseline/profiling must justify further optimization; no FPS/GPU improvement claimed. |
-| WP7 accessibility | Explicit transparency/motion/contrast, opaque treatment, inherited contrast, keyboard/accessibility focus and child actions. Focused checks and current phone/native/browser contracts pass. | Human physical-device and photographic/product-background review unverified. |
+| WP7 accessibility | Explicit policies and existing phone/native/browser contracts. New Windows photographic opaque-reading fixture passes twelve cases at 1×/2×/3× with native text, scrolling, contrast, keyboard actions and semantics; desktop-density failure reproduced and corrected. | Human physical-device, screen-reader and intended product-layout review unverified. New photo fixture has Windows evidence only. |
 | WP8 release docs | Contracts, SDK sampler audit, reference comparison and integration guide. Three-screen showcase, four presets and comfort previews. Current library graph: 419 nodes/479 edges/21 communities. Published prerelease, canonical repository, source tag, required merge checks and verified registry checksum recorded. | Finish current performance manifest and remaining review; reconcile final delivery notes. Publication is separate from milestone completion. |
 
 ## Four-day delivery
@@ -80,6 +80,9 @@ subsequent complete CI runs passed.
 - [Four focused v7 phone groups](evidence/2026-11-10/performance-physical-v7-focused/README.md):
   twelve valid measurements, all fixed group-spread checks passed. This is four
   selected cases only; forty-two v7 cases remain unmeasured.
+- [Photographic accessibility fixture](evidence/2026-11-10/photo-accessibility/README.md):
+  twelve Windows cases, twenty-four native images; original 40-pixel button
+  failure retained and corrected without altering the production renderer.
 - [Current hosted CI](evidence/2026-11-10/github-ci/42791541004/checks.json):
   both SDK lanes and all three platform builds pass at `b417012`.
 
