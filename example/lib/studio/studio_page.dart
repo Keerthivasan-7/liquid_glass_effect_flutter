@@ -46,6 +46,7 @@ class _StudioPageState extends State<StudioPage>
   bool _still = false;
   bool _joined = true;
   double _zoom = 1;
+  double _angle = 0;
   bool _largeType = false;
 
   bool get _quiet =>
@@ -87,6 +88,7 @@ class _StudioPageState extends State<StudioPage>
       _still = _followLight = _largeType = false;
       _joined = true;
       _zoom = 1;
+      _angle = 0;
     });
   }
 
@@ -213,6 +215,19 @@ class _StudioPageState extends State<StudioPage>
                         onPressed: () => _move(true, replay: true),
                         icon: const Icon(Icons.replay_rounded),
                         label: const Text('Replay join')),
+                    Row(children: [
+                      const Text('Lens angle'),
+                      Expanded(
+                          child: Slider(
+                        value: _angle,
+                        max: 90,
+                        divisions: 18,
+                        label: '${_angle.round()}°',
+                        semanticFormatterCallback: (v) =>
+                            '${v.round()} degrees',
+                        onChanged: (v) => setState(() => _angle = v),
+                      )),
+                    ]),
                     ExpansionTile(
                         tilePadding: EdgeInsets.zero,
                         title: const Text('Render details'),
@@ -273,7 +288,10 @@ class _StudioPageState extends State<StudioPage>
   Widget _lenses(double width, LiquidGlassConfig material,
       LiquidGlassAccessibilityPolicy policy) {
     final scale = width >= 430 ? 1.25 : 1.0;
-    final spread = math.min(104 * scale, (width - 54 * scale) / 2);
+    final radians = _angle * math.pi / 180;
+    final halfWidth = (24 + 14 * math.cos(radians)) * scale;
+    final spread = math.min(108 * scale, width / 2 - halfWidth - 2);
+    final joinedSpacing = halfWidth + 40 * scale;
     const icons = [Icons.remove, Icons.center_focus_strong, Icons.add];
     const labels = ['Zoom out', 'Reset zoom', 'Zoom in'];
     return SizedBox(
@@ -281,7 +299,7 @@ class _StudioPageState extends State<StudioPage>
         child: AnimatedBuilder(
             animation: _join,
             builder: (context, _) {
-              final spacing = spread + (64 * scale - spread) * _join.value;
+              final spacing = spread + (joinedSpacing - spread) * _join.value;
               return LiquidGlassCluster(
                 config: material,
                 accessibility: policy,
@@ -292,9 +310,10 @@ class _StudioPageState extends State<StudioPage>
                   for (var i = 0; i < icons.length; i++)
                     LiquidGlassMember(
                         id: i,
+                        rotation: (i - 1) * radians,
                         bounds: Rect.fromCenter(
                             center: Offset(width / 2 + (i - 1) * spacing, 60),
-                            width: (i == 1 ? 62 : 48) * scale,
+                            width: (i == 1 ? 62 : 76) * scale,
                             height: 48 * scale),
                         child: IconButton(
                             tooltip: labels[i],
