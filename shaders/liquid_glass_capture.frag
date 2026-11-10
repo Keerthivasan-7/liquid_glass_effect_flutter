@@ -61,6 +61,7 @@ uniform vec4 u_capsule_0;
 uniform vec4 u_capsule_1;
 uniform vec4 u_capsule_2;
 uniform vec4 u_capsule_3;
+uniform vec4 u_capsule_radii;
 
 const float PI = 3.141592653589793;
 
@@ -243,12 +244,11 @@ vec2 wave_gradient(vec2 frag, vec3 wave) {
 
 // The xy components carry the gradient of the distance in z. The
 // polynomial blend interpolates both, so the bridge has a single normal.
-vec3 capsule_field(vec2 p, vec4 box) {
-  vec2 half_size = box.zw * 0.5;
-  float radius = min(half_size.x, half_size.y);
-  vec2 d = p - (box.xy + half_size);
-  vec2 span = half_size - radius;
-  vec2 v = d - clamp(d, -span, span);
+vec3 capsule_field(vec2 p, vec4 capsule, float radius) {
+  vec2 d = p - capsule.xy;
+  vec2 spine = capsule.zw;
+  float projection = clamp(dot(d, spine) / max(dot(spine, spine), 0.000001), -1.0, 1.0);
+  vec2 v = d - spine * projection;
   float len = length(v);
   return vec3(v / max(len, 0.0001), len - radius);
 }
@@ -273,11 +273,11 @@ void main() {
   vec2 edge_normal;
 
   float coverage = 1.0;
-  if (u_capsule_0.z > 0.0) {
-    vec3 field = capsule_field(frag, u_capsule_0);
-    if (u_capsule_1.z > 0.0) field = join_field(field, capsule_field(frag, u_capsule_1));
-    if (u_capsule_2.z > 0.0) field = join_field(field, capsule_field(frag, u_capsule_2));
-    if (u_capsule_3.z > 0.0) field = join_field(field, capsule_field(frag, u_capsule_3));
+  if (u_capsule_radii.x > 0.0) {
+    vec3 field = capsule_field(frag, u_capsule_0, u_capsule_radii.x);
+    if (u_capsule_radii.y > 0.0) field = join_field(field, capsule_field(frag, u_capsule_1, u_capsule_radii.y));
+    if (u_capsule_radii.z > 0.0) field = join_field(field, capsule_field(frag, u_capsule_2, u_capsule_radii.z));
+    if (u_capsule_radii.w > 0.0) field = join_field(field, capsule_field(frag, u_capsule_3, u_capsule_radii.w));
     distance = field.z;
     edge_normal = field.xy;
     // Skia runtime effects do not expose screen-space derivatives.

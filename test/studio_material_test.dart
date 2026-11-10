@@ -1,3 +1,4 @@
+import 'dart:math' as math;
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
@@ -91,6 +92,103 @@ void main() {
     expect(hits, 0);
     await tester.tapAt(origin + const Offset(74, 60));
     expect(hits, 1);
+  });
+
+  testWidgets(
+      'rotated outlines, foreground and hits agree across cluster paths',
+      (tester) async {
+    const boundary = ValueKey('rotated-capsules');
+    const center = Offset(98, 88);
+    const backdrop = Color(0xff202020);
+    for (final mode in ['shared', 'opaque', 'over capacity']) {
+      for (final (angle, vertical) in [
+        (math.pi / 4, false),
+        (-math.pi / 2, true)
+      ]) {
+        var hits = 0;
+        LiquidGlassRenderPath? renderPath;
+        final size = vertical ? const Size(24, 108) : const Size(108, 24);
+        final direction =
+            Offset.fromDirection(angle + (vertical ? math.pi / 2 : 0));
+        final normal = Offset(-direction.dy, direction.dx);
+        final bounds = Rect.fromCenter(
+            center: center, width: size.width, height: size.height);
+        await tester.pumpWidget(MaterialApp(
+            home: Center(
+                child: SizedBox(
+          width: 220,
+          height: 180,
+          child: RepaintBoundary(
+              key: boundary,
+              child: LiquidGlassScene(
+                pixelRatio: 1,
+                qualityScale: 1,
+                content: const ColoredBox(color: backdrop),
+                glass: LiquidGlassCluster(
+                    blendRadius: 0,
+                    config: coordinateGlassConfig.copyWith(tint: Colors.white),
+                    accessibility: LiquidGlassAccessibilityPolicy(
+                        reduceMotion: true,
+                        reduceTransparency: mode == 'opaque',
+                        opaqueColor: Colors.white),
+                    onRenderPathChanged: (value) => renderPath = value,
+                    members: [
+                      LiquidGlassMember(
+                          id: 'lens',
+                          bounds: bounds,
+                          rotation: angle,
+                          child: GestureDetector(
+                              behavior: HitTestBehavior.opaque,
+                              onTap: () => hits++,
+                              child: Align(
+                                  alignment: vertical
+                                      ? Alignment.bottomCenter
+                                      : Alignment.centerRight,
+                                  child: const SizedBox.square(
+                                      dimension: 14,
+                                      child: ColoredBox(color: Colors.red))))),
+                      if (mode == 'over capacity')
+                        for (var i = 0; i < 4; i++)
+                          LiquidGlassMember(
+                              id: i,
+                              bounds: Rect.fromLTWH(10.0 + i * 25, 155, 16, 16),
+                              child: const SizedBox()),
+                    ]),
+              )),
+        ))));
+        await tester.pumpAndSettle();
+        expect(
+            renderPath,
+            mode == 'opaque'
+                ? LiquidGlassRenderPath.fallback
+                : LiquidGlassRenderPath.capture);
+        final pixels = await _pixels(tester, boundary);
+        int channel(Offset point, int c) =>
+            pixels[(point.dy.floor() * 220 + point.dx.floor()) * 4 + c];
+        // Sample well away from the antialiasing fringe, including regions
+        // inside the enclosing rectangle but outside the actual rotated lens.
+        for (var y = 32; y < 144; y += 3) {
+          for (var x = 40; x < 156; x += 3) {
+            final p = Offset(x + .5, y + .5);
+            final v = p - center;
+            final projection =
+                (v.dx * direction.dx + v.dy * direction.dy).clamp(-42, 42);
+            final distance =
+                (v - direction * projection.toDouble()).distance - 12;
+            if (distance.abs() < 2) continue;
+            expect(channel(p, 0) > 40, distance < 0,
+                reason: '$mode, $angle, $p');
+          }
+        }
+        final tip = center + direction * 47;
+        expect(channel(tip, 0), greaterThan(190));
+        expect(channel(tip, 1), lessThan(100));
+        final origin = tester.getTopLeft(find.byKey(boundary));
+        await tester.tapAt(origin + tip);
+        await tester.tapAt(origin + center + normal * 22);
+        expect(hits, 1);
+      }
+    }
   });
 
   testWidgets('wave travels under a held pointer with fixed light then stops',

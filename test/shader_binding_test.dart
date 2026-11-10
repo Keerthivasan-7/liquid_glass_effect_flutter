@@ -92,29 +92,32 @@ Map<String, List<String>> _manifest(bool capture) => <String, List<String>>{
           r'_waves.$2.age'
         ],
         'u_blend_radius': <String>['field?.blendRadius ?? 0'],
+        'u_capsule_radii': <String>[
+          for (var i = 0; i < 4; i++) 'field?.member($i)?.radius ?? 0'
+        ],
         'u_capsule_0': <String>[
-          'field?.member(0).left ?? 0',
-          'field?.member(0).top ?? 0',
-          'field?.member(0).width ?? 0',
-          'field?.member(0).height ?? 0'
+          'field?.member(0)?.center.dx ?? 0',
+          'field?.member(0)?.center.dy ?? 0',
+          'field?.member(0)?.spine.dx ?? 0',
+          'field?.member(0)?.spine.dy ?? 0'
         ],
         'u_capsule_1': <String>[
-          'field?.member(1).left ?? 0',
-          'field?.member(1).top ?? 0',
-          'field?.member(1).width ?? 0',
-          'field?.member(1).height ?? 0'
+          'field?.member(1)?.center.dx ?? 0',
+          'field?.member(1)?.center.dy ?? 0',
+          'field?.member(1)?.spine.dx ?? 0',
+          'field?.member(1)?.spine.dy ?? 0'
         ],
         'u_capsule_2': <String>[
-          'field?.member(2).left ?? 0',
-          'field?.member(2).top ?? 0',
-          'field?.member(2).width ?? 0',
-          'field?.member(2).height ?? 0'
+          'field?.member(2)?.center.dx ?? 0',
+          'field?.member(2)?.center.dy ?? 0',
+          'field?.member(2)?.spine.dx ?? 0',
+          'field?.member(2)?.spine.dy ?? 0'
         ],
         'u_capsule_3': <String>[
-          'field?.member(3).left ?? 0',
-          'field?.member(3).top ?? 0',
-          'field?.member(3).width ?? 0',
-          'field?.member(3).height ?? 0'
+          'field?.member(3)?.center.dx ?? 0',
+          'field?.member(3)?.center.dy ?? 0',
+          'field?.member(3)?.spine.dx ?? 0',
+          'field?.member(3)?.spine.dy ?? 0'
         ],
         'u_surface_size': <String>['size.width', 'size.height'],
         'u_scope_size': <String>['scopeSize.width', 'scopeSize.height'],
