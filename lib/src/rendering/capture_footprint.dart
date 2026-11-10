@@ -93,8 +93,11 @@ LiquidGlassCaptureFootprint liquidGlassCaptureFootprint({
   final reflectionStencil =
       reflectionRadius * stencilFraction * anisotropyStretch;
 
+  // The spectral red/blue taps scale the complete displacement vector by
+  // 1 + (safe_hash(...) - 0.5) * 0.18, whose conservative maximum is 1.09.
+  // The scatter stencil is added after that scaling in sample_capture.
   final transmissionReach =
-      refractedReach + chromaticReach + transmissionStencil;
+      (refractedReach + chromaticReach) * 1.09 + transmissionStencil;
 
   // reflection_offset combines 0.45..0.85 of the refracted vector with a
   // light-directed 0.24 * scatterRadius offset, then applies its own stencil.

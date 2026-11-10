@@ -52,6 +52,10 @@ uniform sampler2D u_backdrop;
 
 out vec4 frag_color;
 
+uniform float u_vibrancy;
+uniform vec3 u_wave_0;
+uniform vec3 u_wave_1;
+
 const float PI = 3.141592653589793;
 
 float p_length(vec2 v, float exponent) {
@@ -198,11 +202,23 @@ vec3 thin_film_color(float cos_theta) {
 vec2 refracted_offset(vec3 normal, float ior, float shortest) {
   vec3 ray = refract(vec3(0.0, 0.0, -1.0), normal, 1.0 / max(ior, 1.0001));
   vec2 lateral = ray.xy / max(abs(ray.z), 0.2);
+  float internal_path = u_thickness * shortest * (1.0 + 0.35 * (1.0 - abs(ray.z)));
   float distance = min(
-    length(lateral) * u_refraction_strength * u_thickness * shortest,
+    length(lateral) * u_refraction_strength * internal_path,
     u_max_displacement
   );
   return length(lateral) > 0.00001 ? normalize(lateral) * distance : vec2(0.0);
+}
+
+// Radial derivative of a compact sin^2 packet behind a moving wavefront.
+vec2 wave_gradient(vec2 frag, vec3 wave) {
+  if (wave.z < 0.0) return vec2(0.0);
+  vec2 delta = frag - wave.xy;
+  float r = length(delta);
+  float phase = (wave.z * 245.0 - r) / 44.0;
+  if (phase <= 0.0 || phase >= 1.0 || r < 0.001) return vec2(0.0);
+  float decay = exp(-3.3 * wave.z) * (1.0 - smoothstep(0.70, 0.92, wave.z));
+  return delta / r * (-0.33 * sin(2.0 * PI * phase) * decay);
 }
 
 void main() {
@@ -238,6 +254,8 @@ void main() {
     clamp(u_curvature * 0.5, 0.0, 1.0)
   );
   float height = pow(sin(inward * 0.5 * PI), profile_power);
+  float meniscus_lip = inward * exp(-inward * 3.6) * 0.32 * u_curvature;
+  height = clamp(height + meniscus_lip, 0.0, 1.0);
   float edge_weight = 1.0 - height;
   float slope = edge_weight * mix(
     2.25,
@@ -251,6 +269,9 @@ void main() {
   float interaction_falloff = exp(
     -dot(interaction_delta, interaction_delta) * 12.0
   ) * clamp(u_interaction_strength, 0.0, 1.0);
+
+  vec2 ripple_normal = wave_gradient(frag, u_wave_0) + wave_gradient(frag, u_wave_1);
+
   float motion_speed = min(length(u_motion_velocity), 1.5);
   vec2 motion_direction = motion_speed > 0.0001
       ? u_motion_velocity / motion_speed
@@ -262,7 +283,7 @@ void main() {
       mix(0.34, 0.82, edge_weight);
   normal = normalize(vec3(
     normal.xy - interaction_delta * interaction_falloff * 1.15 -
-        motion_normal,
+        ripple_normal - motion_normal,
     normal.z
   ));
 
@@ -304,24 +325,45 @@ void main() {
 #if defined(IMPELLER_TARGET_OPENGLES) && !defined(IMPELLER_OPENGLES_UNFLIPPED_DEPRECATED)
     legacy_offset.y = -legacy_offset.y;
 #endif
+    vec2 red_vec = red_uv + legacy_offset;
+    vec2 blue_vec = blue_uv - legacy_offset;
+    float jitter = (safe_hash(frag * 1.61803) - 0.5) * 0.18;
     vec4 red_sample = sample_backdrop(
-      uv + red_uv + legacy_offset,
+      uv + red_vec * (1.0 + jitter),
       pixel,
       scatter_radius
     );
     vec4 blue_sample = sample_backdrop(
-      uv + blue_uv - legacy_offset,
+      uv + blue_vec * (1.0 + jitter),
       pixel,
       scatter_radius
     );
-    color.r = red_sample.r;
-    color.b = blue_sample.b;
+    vec4 amber_sample = sample_backdrop(
+      uv + red_vec * 0.46,
+      pixel,
+      scatter_radius
+    );
+    vec4 cyan_sample = sample_backdrop(
+      uv + blue_vec * 0.50,
+      pixel,
+      scatter_radius
+    );
+    color.r = mix(red_sample.r, amber_sample.r, 0.26);
+    color.g = color.g * 0.46 + amber_sample.g * 0.27 + cyan_sample.g * 0.27;
+    color.b = mix(blue_sample.b, cyan_sample.b, 0.30);
   }
 
   float alpha = color.a;
   vec3 transmitted = alpha > 0.0001 ? color.rgb / alpha : vec3(0.0);
   float luminance = dot(transmitted, vec3(0.2126, 0.7152, 0.0722));
   transmitted = mix(vec3(luminance), transmitted, u_saturation);
+  if (u_vibrancy > 0.0) {
+    float high = max(max(transmitted.r, transmitted.g), transmitted.b);
+    float low = min(min(transmitted.r, transmitted.g), transmitted.b);
+    float headroom = max(0.0, min(1.0 - high, low));
+    float gain = u_vibrancy * headroom * (1.0 - clamp(high - low, 0.0, 1.0));
+    transmitted += (transmitted - vec3(luminance)) * gain;
+  }
 
   vec3 view = vec3(0.0, 0.0, 1.0);
   float n_dot_v = clamp(dot(normal, view), 0.001, 1.0);
@@ -340,7 +382,7 @@ void main() {
   vec3 straight = mix(u_tint.rgb, transmitted, u_transmission);
 
   vec2 reflection_offset = -displacement_uv * (0.45 + u_roughness * 0.4) +
-      normalize(-u_light_direction + vec2(0.000001)) * pixel *
+      (-u_light_direction / max(length(u_light_direction), 1.0)) * pixel *
           scatter_radius * 0.24;
   // A rough dielectric cannot return a pin-sharp environment reflection.
   // Reuse the anisotropic microfacet footprint at a smaller radius so the
@@ -417,11 +459,37 @@ void main() {
     thin_film_color(n_dot_v),
     u_thin_film_strength * u_coat_strength
   );
+  vec2 light_2d = (-u_light_direction / max(length(u_light_direction), 1.0));
   vec3 direct_specular = u_light_color.rgb * u_light_intensity * n_dot_l *
       (clamp(base_specular, 0.0, 4.0) * u_specular_strength +
        clamp(coat_specular, 0.0, 4.0) * u_coat_strength * interference) * 0.16;
 
-  vec2 light_2d = normalize(-u_light_direction + vec2(0.000001));
+  // Analytic Studio Softbox Specular Lobe (Photographic studio area light reflection)
+  vec3 softbox_specular = vec3(0.0);
+  if (u_specular_strength > 0.001 && u_coat_strength > 0.001) {
+    vec3 r_vec = reflect(-view, normal);
+    if (r_vec.z > 0.03) {
+      float z_box = 1.35;
+      float t_box = z_box / r_vec.z;
+      vec2 q_box = (p / shortest) + r_vec.xy * t_box;
+      vec2 box_center = -light_2d * 0.72;
+      vec2 box_half_size = vec2(0.55, 0.35);
+      vec2 d_box_vec = abs(q_box - box_center) - box_half_size;
+      float d_box = length(max(d_box_vec, 0.0)) + min(max(d_box_vec.x, d_box_vec.y), 0.0);
+      float penumbra = 0.08 + u_coat_roughness * 0.30 + u_roughness * 0.20;
+      float softbox_int = (1.0 - smoothstep(-penumbra, penumbra, d_box)) * (z_box / sqrt(t_box * t_box + 1.0));
+      float softbox_weight = softbox_int * coat_fresnel * u_coat_strength * u_specular_strength * 0.38;
+      softbox_specular = u_light_color.rgb * u_light_intensity * softbox_weight;
+    }
+  }
+
+  // Total Internal Reflection (TIR) Diamond-Grade Edge Luminescence
+  float sin2_theta = 1.0 - n_dot_v * n_dot_v;
+  float critical_sin2 = 1.0 / max(u_refractive_index * u_refractive_index, 1.001);
+  float tir_intensity = smoothstep(critical_sin2 - 0.10, critical_sin2 + 0.05, sin2_theta) *
+      pow(edge_weight, 1.5) * u_transmission * u_fresnel_strength;
+  vec3 tir_glow = mix(u_light_color.rgb, vec3(1.0), 0.72) * tir_intensity * 0.36;
+
   float light_facing = clamp(
     dot(-edge_normal, light_2d) * 0.5 + 0.5,
     0.0,
@@ -443,8 +511,18 @@ void main() {
     0.0,
     0.34
   );
-  straight = mix(straight, u_tint.rgb, adaptive_tint);
-  straight += direct_specular;
+  if (adaptive_tint > 0.0001) {
+    vec3 tint_target = u_tint.rgb;
+    vec3 soft_tint = mix(
+      straight - (vec3(1.0) - 2.0 * tint_target) * straight * (vec3(1.0) - straight),
+      straight + (2.0 * tint_target - vec3(1.0)) * (sqrt(max(straight, vec3(0.0))) - straight),
+      step(vec3(0.5), tint_target)
+    );
+    // Both tint responses fade with opacity, preserving the untinted limit.
+    vec3 tint_response = mix(tint_target, soft_tint, 0.45);
+    straight = mix(straight, tint_response, adaptive_tint);
+  }
+  straight += direct_specular + softbox_specular + tir_glow;
   straight += u_light_color.rgb * (
     environment_rim * 0.34 + caustic_band * 0.11 + interaction_glow * 0.05 +
         motion_glint * 0.09

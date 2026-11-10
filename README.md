@@ -5,7 +5,13 @@ lighting, and crisp foreground controls.
 
 **First prerelease: [0.1.0-dev.1](https://pub.dev/packages/liquid_glass_effect_flutter/versions/0.1.0-dev.1) · Flutter 3.32+ · BSD-3-Clause**
 
-![Regular liquid glass over the live showcase background](assets/showcase/materials-light.png)
+![Optics Studio showing capsule controls separating and joining over a satellite photograph, followed by material and text-size changes](assets/showcase/studio-motion.webp)
+
+**Development preview.** Run the example from this checkout to try Optics
+Studio, coalescing capsules, interactive lighting and glass controls. The
+recording comes from the release web example running in Chrome. These APIs
+are available in the development source. The install command below selects
+the published first prerelease.
 
 [Run the showcase](example/README.md) · [Integration guide](doc/INTEGRATION_GUIDE.md) ·
 [Renderer compatibility](doc/COMPATIBILITY.md) ·

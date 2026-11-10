@@ -41,8 +41,7 @@ void main() {
               final axis = Offset(math.cos(angle), math.sin(angle));
               final displaced = axis * (64 * 1.3);
               for (final tap in _stencil(scatter, quality)) {
-                final sample = displaced +
-                    axis * (0.01 * shortest) +
+                final sample = (displaced + axis * (0.01 * shortest)) * 1.09 +
                     _anisotropic(tap, anisotropy, rotation);
                 expect(sample.distance,
                     lessThanOrEqualTo(footprint.transmissionReach + 0.000001));

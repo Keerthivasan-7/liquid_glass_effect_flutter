@@ -52,6 +52,9 @@ jobs:
       - name: Package tests and shader compilation
         shell: bash
         run: flutter test --reporter expanded 2>&1 | tee check-logs/tests.log
+      - name: Studio interactions and large text
+        shell: bash
+        run: (cd example && flutter test --reporter expanded) 2>&1 | tee check-logs/studio.log
       - name: Benchmark tests
         shell: bash
         run: (cd benchmark && flutter test --reporter expanded) 2>&1 | tee check-logs/benchmark-tests.log

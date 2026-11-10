@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:liquid_glass_effect_flutter/liquid_glass_effect_flutter.dart';
 
 import 'showcase_material.dart';
+import 'studio/studio_page.dart';
 
 void main() => runApp(const ShowcaseApp());
 
@@ -15,7 +16,11 @@ class ShowcaseApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Liquid Glass',
         theme: ThemeData(useMaterial3: true),
-        home: const ShowcasePage(),
+        routes: {
+          '/gallery': (_) => const ShowcasePage(),
+          '/studio': (_) => const StudioPage()
+        },
+        home: const StudioPage(),
       );
 }
 
@@ -196,6 +201,11 @@ class _ShowcasePageState extends State<ShowcasePage> {
           shape: const LiquidGlassShape.capsule(),
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
           child: Row(children: [
+            if (Navigator.canPop(context))
+              IconButton(
+                  tooltip: 'Back to Studio',
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: () => Navigator.pop(context)),
             Expanded(
               child: PopupMenuButton<ShowcaseMaterial>(
                 tooltip: 'Choose a glass material',

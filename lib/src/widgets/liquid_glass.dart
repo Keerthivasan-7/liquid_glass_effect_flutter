@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 import 'dart:ui' as ui;
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
@@ -8,6 +9,7 @@ import 'package:flutter/scheduler.dart';
 import '../configuration/liquid_glass_config.dart';
 import '../configuration/liquid_glass_accessibility.dart';
 import '../geometry/liquid_glass_shape.dart';
+import '../geometry/capsule_field.dart';
 import '../rendering/capture_footprint.dart';
 import '../rendering/liquid_glass_capabilities.dart';
 import '../rendering/shader_manager.dart';
@@ -38,6 +40,7 @@ class LiquidGlass extends StatefulWidget {
     this.semanticLabel,
     this.interactive = false,
     this.interactionDuration = const Duration(milliseconds: 180),
+    this.lightingController,
     this.onRenderPathChanged,
     super.key,
   });
@@ -63,6 +66,9 @@ class LiquidGlass extends StatefulWidget {
   /// Duration used to settle hover and press feedback.
   final Duration interactionDuration;
 
+  /// Optional lighting controller to synchronize dynamic specular highlights with device tilt or cursor.
+  final ValueListenable<Offset>? lightingController;
+
   /// Debug/diagnostic callback fired when the concrete renderer changes.
   final ValueChanged<LiquidGlassRenderPath>? onRenderPathChanged;
 
@@ -74,6 +80,31 @@ class _LiquidGlassState extends State<LiquidGlass>
     with TickerProviderStateMixin {
   late final AnimationController _animation;
   late final AnimationController _motionSettle;
+  static const _waveDuration = Duration(milliseconds: 920);
+  final _waveClocks = <AnimationController>[];
+  final _waveOrigins = [Offset.zero, Offset.zero];
+  var _nextWave = 0;
+
+  _Wave _wave(int i) => (
+        origin: _waveOrigins[i],
+        age: _waveClocks.isNotEmpty && _waveClocks[i].isAnimating
+            ? _waveClocks[i].value * _waveDuration.inMilliseconds / 1000
+            : -1,
+      );
+
+  void _emitWave(Offset point) {
+    if (_reduceMotion || _renderPath == LiquidGlassRenderPath.fallback) return;
+    if (_waveClocks.isEmpty) {
+      for (var i = 0; i < _waveOrigins.length; i++) {
+        _waveClocks
+            .add(AnimationController(vsync: this, duration: _waveDuration));
+      }
+    }
+    _waveOrigins[_nextWave] = point;
+    _waveClocks[_nextWave].forward(from: 0);
+    _nextWave = 1 - _nextWave;
+  }
+
   final GlobalKey _surfaceKey = GlobalKey();
   ui.FragmentShader? _filterShader;
   ui.FragmentShader? _captureShader;
@@ -92,10 +123,19 @@ class _LiquidGlassState extends State<LiquidGlass>
   Offset _interactionPoint = Offset.zero;
   Offset _interactionVelocity = Offset.zero;
   Duration? _lastInteractionTime;
+  Offset? _dynamicLight;
+
+  LiquidGlassConfig get _effectiveConfig {
+    final light = _dynamicLight;
+    if (_reduceMotion || light == null || !light.isFinite) return widget.config;
+    return widget.config.copyWith(lightDirection: light);
+  }
 
   @override
   void initState() {
     super.initState();
+    widget.lightingController?.addListener(_handleLightingChanged);
+    _dynamicLight = widget.lightingController?.value;
     _animation = AnimationController(
       vsync: this,
       duration: widget.config.animationDuration,
@@ -104,6 +144,14 @@ class _LiquidGlassState extends State<LiquidGlass>
       vsync: this,
       duration: _settleDuration,
     );
+  }
+
+  void _handleLightingChanged() {
+    if (mounted) {
+      setState(() {
+        _dynamicLight = widget.lightingController?.value;
+      });
+    }
   }
 
   Duration get _settleDuration => Duration(
@@ -150,13 +198,25 @@ class _LiquidGlassState extends State<LiquidGlass>
   @override
   void didUpdateWidget(covariant LiquidGlass oldWidget) {
     super.didUpdateWidget(oldWidget);
+    if (oldWidget.lightingController != widget.lightingController) {
+      oldWidget.lightingController?.removeListener(_handleLightingChanged);
+      widget.lightingController?.addListener(_handleLightingChanged);
+      _dynamicLight = widget.lightingController?.value;
+    }
     if (oldWidget.config.animationDuration != widget.config.animationDuration) {
       _animation.duration = widget.config.animationDuration;
     }
     if (oldWidget.interactionDuration != widget.interactionDuration) {
       _motionSettle.duration = _settleDuration;
     }
-    if (oldWidget.config.renderer != widget.config.renderer ||
+    if (!widget.interactive && oldWidget.interactive) {
+      _pressed = false;
+      _hovered = false;
+      _interactionVelocity = Offset.zero;
+      _motionSettle.value = 1;
+    }
+    if ((oldWidget.shape is CapsuleField) != (widget.shape is CapsuleField) ||
+        oldWidget.config.renderer != widget.config.renderer ||
         oldWidget.accessibility != widget.accessibility) {
       _updateAccessibility();
       _syncCaptureRegistration();
@@ -184,6 +244,7 @@ class _LiquidGlassState extends State<LiquidGlass>
       widget.accessibility.reduceTransparency || _highContrast;
 
   bool get _mayUseFilter =>
+      widget.shape is! CapsuleField &&
       !_usesOpaqueTreatment &&
       (widget.config.renderer == LiquidGlassRenderer.auto ||
           widget.config.renderer == LiquidGlassRenderer.shader);
@@ -302,6 +363,13 @@ class _LiquidGlassState extends State<LiquidGlass>
         ..stop()
         ..value = 0;
     }
+    if (_reduceMotion ||
+        !widget.interactive ||
+        _renderPath == LiquidGlassRenderPath.fallback) {
+      for (final clock in _waveClocks) {
+        if (clock.isAnimating) clock.value = 1;
+      }
+    }
     if (_reduceMotion) {
       _motionSettle
         ..stop()
@@ -312,9 +380,13 @@ class _LiquidGlassState extends State<LiquidGlass>
 
   @override
   void dispose() {
+    widget.lightingController?.removeListener(_handleLightingChanged);
     if (_captureRetained) _captureHandle?.releaseCapture();
     _captureHandle?.removeListener(_handleChanged);
     _motionHandle?.removeListener(_handleMotionChanged);
+    for (final clock in _waveClocks) {
+      clock.dispose();
+    }
     _animation.dispose();
     _motionSettle.dispose();
     _filterShader?.dispose();
@@ -341,7 +413,9 @@ class _LiquidGlassState extends State<LiquidGlass>
       curve: _pressed ? Curves.easeOutCubic : Curves.easeOutBack,
       tween: Tween<double>(end: widget.interactive ? interactionTarget : 0),
       builder: (context, interactionStrength, _) => AnimatedScale(
-        scale: widget.interactive ? scaleTarget : 1,
+        scale: widget.interactive && widget.shape is! CapsuleField
+            ? scaleTarget
+            : 1,
         duration: reduceMotion ? Duration.zero : widget.interactionDuration,
         curve: _pressed ? Curves.easeOutCubic : Curves.easeOutBack,
         child: _buildSurface(interactionStrength),
@@ -349,13 +423,15 @@ class _LiquidGlassState extends State<LiquidGlass>
     );
 
     if (widget.interactive) {
-      if (_focused || _accessibilityFocused) {
-        surface = CustomPaint(
-          foregroundPainter: _GlassFocusPainter(
-              shape: widget.shape, width: _highContrast ? 3 : 2),
-          child: surface,
-        );
-      }
+      // Keep the subtree mounted when focus changes. Inserting a new parent
+      // here discards the button's internally owned keyboard focus node.
+      surface = CustomPaint(
+        foregroundPainter: _focused || _accessibilityFocused
+            ? _GlassFocusPainter(
+                shape: widget.shape, width: _highContrast ? 3 : 2)
+            : null,
+        child: surface,
+      );
       surface = Focus(
         canRequestFocus: false,
         skipTraversal: true,
@@ -368,6 +444,9 @@ class _LiquidGlassState extends State<LiquidGlass>
         child: surface,
       );
       surface = MouseRegion(
+        opaque: widget.shape is! CapsuleField,
+        hitTestBehavior:
+            widget.shape is CapsuleField ? HitTestBehavior.deferToChild : null,
         onEnter: (event) => _trackInteraction(
           point: event.localPosition,
           delta: event.delta,
@@ -381,7 +460,9 @@ class _LiquidGlassState extends State<LiquidGlass>
         ),
         onExit: (_) => _releaseInteraction(hovered: false, pressed: false),
         child: Listener(
-          behavior: HitTestBehavior.translucent,
+          behavior: widget.shape is CapsuleField
+              ? HitTestBehavior.deferToChild
+              : HitTestBehavior.translucent,
           onPointerDown: (event) => _trackInteraction(
             point: event.localPosition,
             delta: event.delta,
@@ -433,6 +514,7 @@ class _LiquidGlassState extends State<LiquidGlass>
     bool? pressed,
   }) {
     if (!mounted) return;
+    if (pressed == true) _emitWave(point);
     final previousTime = _lastInteractionTime;
     final elapsed = previousTime == null
         ? 0.016
@@ -480,7 +562,8 @@ class _LiquidGlassState extends State<LiquidGlass>
   }
 
   Widget _buildSurface(double interactionStrength) => AnimatedBuilder(
-        animation: Listenable.merge(<Listenable>[_animation, _motionSettle]),
+        animation: Listenable.merge(
+            <Listenable>[_animation, _motionSettle, ..._waveClocks]),
         builder: (context, _) {
           final path = _renderPath;
           _reportRenderPath(path);
@@ -515,8 +598,9 @@ class _LiquidGlassState extends State<LiquidGlass>
                   return _CaptureGlassSurface(
                     handle: _captureHandle!,
                     shader: _captureShader!,
-                    config: widget.config,
+                    config: _effectiveConfig,
                     shape: widget.shape,
+                    waves: (_wave(0), _wave(1)),
                     animationValue: _animation.value,
                     interactionPoint: motion.point,
                     interactionStrength: motion.interactionStrength,
@@ -542,7 +626,7 @@ class _LiquidGlassState extends State<LiquidGlass>
                         child: IgnorePointer(
                           child: CustomPaint(
                             painter: _GlassOverlayPainter(
-                              config: widget.config,
+                              config: _effectiveConfig,
                               shape: widget.shape,
                               applyTint:
                                   path == LiquidGlassRenderPath.fallback &&
@@ -586,8 +670,8 @@ class _LiquidGlassState extends State<LiquidGlass>
     }
     return BackdropFilter(
       filter: ui.ImageFilter.blur(
-        sigmaX: widget.config.blurSigma,
-        sigmaY: widget.config.blurSigma,
+        sigmaX: _effectiveConfig.blurSigma,
+        sigmaY: _effectiveConfig.blurSigma,
         tileMode: TileMode.clamp,
       ),
       child: const SizedBox.expand(),
@@ -601,7 +685,7 @@ class _LiquidGlassState extends State<LiquidGlass>
     Offset screenOrigin,
     double pixelsPerLogical,
   ) {
-    final config = widget.config;
+    final config = _effectiveConfig;
     final light = _animatedLight(config.lightDirection, _animation.value);
     final tint = config.tint;
     final absorption = config.absorptionColor;
@@ -669,7 +753,14 @@ class _LiquidGlassState extends State<LiquidGlass>
       ..setFloat(59, screenOrigin.dy * pixelsPerLogical)
       ..setFloat(60, size.width)
       ..setFloat(61, size.height)
-      ..setFloat(62, pixelsPerLogical);
+      ..setFloat(62, pixelsPerLogical)
+      ..setFloat(63, config.vibrancy)
+      ..setFloat(64, _wave(0).origin.dx)
+      ..setFloat(65, _wave(0).origin.dy)
+      ..setFloat(66, _wave(0).age)
+      ..setFloat(67, _wave(1).origin.dx)
+      ..setFloat(68, _wave(1).origin.dy)
+      ..setFloat(69, _wave(1).age);
   }
 
   _GlassMotionSample _resolveMotion(Size size, double interactionStrength) {
@@ -803,6 +894,9 @@ class _FilterGlassLayer extends BackdropFilterLayer {
   }
 }
 
+typedef _Wave = ({Offset origin, double age});
+typedef _Waves = (_Wave, _Wave);
+
 class _CaptureGlassSurface extends SingleChildRenderObjectWidget {
   const _CaptureGlassSurface({
     required this.handle,
@@ -810,6 +904,7 @@ class _CaptureGlassSurface extends SingleChildRenderObjectWidget {
     required this.config,
     required this.shape,
     required this.animationValue,
+    required this.waves,
     required this.interactionPoint,
     required this.interactionStrength,
     required this.interactionVelocity,
@@ -823,6 +918,7 @@ class _CaptureGlassSurface extends SingleChildRenderObjectWidget {
   final LiquidGlassConfig config;
   final LiquidGlassShape shape;
   final double animationValue;
+  final _Waves waves;
   final Offset interactionPoint;
   final double interactionStrength;
   final Offset interactionVelocity;
@@ -837,6 +933,7 @@ class _CaptureGlassSurface extends SingleChildRenderObjectWidget {
         config: config,
         shape: shape,
         animationValue: animationValue,
+        waves: waves,
         interactionPoint: interactionPoint,
         interactionStrength: interactionStrength,
         interactionVelocity: interactionVelocity,
@@ -854,6 +951,7 @@ class _CaptureGlassSurface extends SingleChildRenderObjectWidget {
       ..shader = shader
       ..config = config
       ..shape = shape
+      ..waves = waves
       ..animationValue = animationValue
       ..interactionPoint = interactionPoint
       ..interactionStrength = interactionStrength
@@ -874,6 +972,7 @@ class _RenderCaptureGlassSurface extends RenderProxyBox
     required LiquidGlassConfig config,
     required LiquidGlassShape shape,
     required double animationValue,
+    required _Waves waves,
     required Offset interactionPoint,
     required double interactionStrength,
     required Offset interactionVelocity,
@@ -883,6 +982,7 @@ class _RenderCaptureGlassSurface extends RenderProxyBox
         _shader = shader,
         _config = config,
         _shape = shape,
+        _waves = waves,
         _animationValue = animationValue,
         _interactionPoint = interactionPoint,
         _interactionStrength = interactionStrength,
@@ -894,6 +994,14 @@ class _RenderCaptureGlassSurface extends RenderProxyBox
   ui.FragmentShader _shader;
   LiquidGlassConfig _config;
   LiquidGlassShape _shape;
+  _Waves _waves;
+
+  set waves(_Waves value) {
+    if (_waves == value) return;
+    _waves = value;
+    markNeedsPaint();
+  }
+
   double _animationValue;
   Offset _interactionPoint;
   double _interactionStrength;
@@ -1081,7 +1189,11 @@ class _RenderCaptureGlassSurface extends RenderProxyBox
           canvas
             ..save()
             ..translate(offset.dx, offset.dy)
-            ..drawPath(path, Paint()..shader = _shader)
+            ..drawPath(
+                _shape is CapsuleField
+                    ? (Path()..addRect(Offset.zero & size))
+                    : path,
+                Paint()..shader = _shader)
             ..restore();
           shaderPainted = true;
         }
@@ -1112,6 +1224,7 @@ class _RenderCaptureGlassSurface extends RenderProxyBox
       List<double> surfaceTransform) {
     final tint = _config.tint;
     final light = _animatedLight(_config.lightDirection);
+    final field = _shape is CapsuleField ? _shape as CapsuleField : null;
     final absorption = _config.absorptionColor;
     final lightColor = _config.lightColor;
     final anisotropyAxis = _anisotropyAxis(_config.anisotropyRotation);
@@ -1184,6 +1297,30 @@ class _RenderCaptureGlassSurface extends RenderProxyBox
       ..setFloat(65, surfaceTransform[1])
       ..setFloat(66, surfaceTransform[4])
       ..setFloat(67, surfaceTransform[5])
+      ..setFloat(68, _config.vibrancy)
+      ..setFloat(69, _waves.$1.origin.dx)
+      ..setFloat(70, _waves.$1.origin.dy)
+      ..setFloat(71, _waves.$1.age)
+      ..setFloat(72, _waves.$2.origin.dx)
+      ..setFloat(73, _waves.$2.origin.dy)
+      ..setFloat(74, _waves.$2.age)
+      ..setFloat(75, field?.blendRadius ?? 0)
+      ..setFloat(76, field?.member(0).left ?? 0)
+      ..setFloat(77, field?.member(0).top ?? 0)
+      ..setFloat(78, field?.member(0).width ?? 0)
+      ..setFloat(79, field?.member(0).height ?? 0)
+      ..setFloat(80, field?.member(1).left ?? 0)
+      ..setFloat(81, field?.member(1).top ?? 0)
+      ..setFloat(82, field?.member(1).width ?? 0)
+      ..setFloat(83, field?.member(1).height ?? 0)
+      ..setFloat(84, field?.member(2).left ?? 0)
+      ..setFloat(85, field?.member(2).top ?? 0)
+      ..setFloat(86, field?.member(2).width ?? 0)
+      ..setFloat(87, field?.member(2).height ?? 0)
+      ..setFloat(88, field?.member(3).left ?? 0)
+      ..setFloat(89, field?.member(3).top ?? 0)
+      ..setFloat(90, field?.member(3).width ?? 0)
+      ..setFloat(91, field?.member(3).height ?? 0)
       ..setImageSampler(0, image);
   }
 

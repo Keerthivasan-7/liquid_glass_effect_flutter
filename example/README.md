@@ -3,7 +3,17 @@
 Run `flutter pub get` and `flutter run` from this directory. The showcase uses
 `LiquidGlassScene` to keep functional glass separate from its captured content.
 
-The three navigation destinations open different, scrollable screens:
+The app opens in **Optics Studio**. Select Clear, Satin or Prism, then move the
+spacing slider to separate the three camera controls and bring them back
+together. The controls zoom or reset the backdrop. Try **Pointer** illumination
+and drag across the scene, or select **Still motion**. **Replay join** repeats
+the same transition from a fixed starting pose. **Render details** shows the
+actual renderer and includes a large-text preview. **Published showcase**
+opens a still from version 0.1.0-dev.1.
+
+![Optics Studio interaction recording](../assets/showcase/studio-motion.webp)
+
+**Gallery** opens the three earlier destinations:
 
 - **Materials:** choose Regular, Clear, Frosted or Lightweight. Save a favorite
   for this session, then use the top adjustment button for the fine controls.
