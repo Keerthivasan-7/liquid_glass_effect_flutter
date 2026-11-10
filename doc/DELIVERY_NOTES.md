@@ -39,7 +39,9 @@ The source ZIP is a development source bundle, not a published pub archive or
 a source commit. Its example still resolves the library with `path: ../`.
 The separate Git bundle preserves the local development revision and evidence.
 It can be restored with `git clone PATH_TO_BUNDLE NEW_FOLDER`; use the quoted
-absolute bundle path if it contains spaces. No remote URL is configured.
+absolute bundle path if it contains spaces. This offline snapshot predates the
+remote connection. The workspace now uses
+`https://github.com/Keerthivasan-7/liquid_glass_effect` as `origin`.
 
 ## Evidence and remaining work
 
@@ -50,9 +52,10 @@ installation remain deferred. One ordinary-control timing group is accepted;
 the glass timing baseline and full 46-case matrix remain open.
 
 Local history begins at this development handoff and does not reconstruct an
-original pre-change commit. There is no canonical hosted repository yet, so
-source URLs, hosted CI, merge rules, a verified release tag and the publication
-metadata warning remain unresolved. Physical
+original pre-change commit. The user has now supplied the canonical GitHub
+repository and package metadata links have been updated. Hosted CI, merge
+rules, a verified release tag and the final publication dry run remain open.
+The initial upload skips automated checks to respect the testing deferral. Physical
 iOS, Vulkan and other unverified backends retain their explicit limitations.
 Human accessibility/product-background review also remains open.
 

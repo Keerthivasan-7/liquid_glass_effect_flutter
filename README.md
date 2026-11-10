@@ -11,8 +11,9 @@ Conventional glassmorphism blurs a rectangular backdrop and adds a translucent f
 ## Installation
 
 The public name is a release candidate and has not been reserved on pub.dev.
-Use a local path dependency during development; a hosted source repository has
-not been created yet. Adjust this path to the actual package folder:
+Source is hosted at [liquid_glass_effect](https://github.com/Keerthivasan-7/liquid_glass_effect).
+The Dart package name remains `liquid_optics_flutter`. Use a local path dependency
+during development, adjusting the path to the actual package folder:
 
 ```yaml
 dependencies:

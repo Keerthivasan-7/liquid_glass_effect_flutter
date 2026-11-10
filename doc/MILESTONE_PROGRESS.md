@@ -71,10 +71,12 @@ Official SDKs and isolated validation copies are in ignored `.research/`.
 The user confirmed on 2026-11-09 that no repository existed. Local Git history
 was initialized on 10 November for the development handoff, with the snapshot
 named `dev-handoff-2026-11-10`. This starts from the current development source;
-it does not recover an original pre-change revision. No remote or canonical URL
-has been configured. Fake links were removed. The dry run reports one
-homepage/repository warning. Hosted CI, branch protection and a verified
-release tag remain open.
+it does not recover an original pre-change revision. The user subsequently
+created `https://github.com/Keerthivasan-7/liquid_glass_effect`, now connected as
+`origin`. Package source/issue links use this real URL. The earlier dry run's
+missing-source warning is historical; the dry run has not been repeated.
+Hosted CI, branch protection and a verified release tag remain open. The initial
+upload uses a CI-skip instruction to respect the user's testing deferral.
 
 Initial Windows benchmarks were timed-out partial/empty runs; all are preserved
 and invalidated. A minimized Windows soak was invalidated. Filter-coordinate

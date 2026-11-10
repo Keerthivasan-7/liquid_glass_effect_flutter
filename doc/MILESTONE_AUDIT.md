@@ -12,7 +12,7 @@ alone do not complete the milestone. Unmet requirements stay visible.
 | WP0.6 inaccessible-device issues | Local issue register below | Hosted issues need canonical repository. |
 | WP1.1–3 CI and SDK lanes | Workflow and exact SDK/source/check manifests | Implemented; hosted execution and publication warning remain open. |
 | WP1.4–6 example, build smoke, schedule | Explicit example/benchmark analysis, separate Windows/web/Android build jobs, weekly stable checks. All build jobs record SDK identity and preserve command logs even on failure. | Workflow prepared; latest logging changes not executed. No hosted results without a repository. |
-| WP1.7 required merge checks | No canonical repository supplied | External dependency. |
+| WP1.7 required merge checks | Canonical GitHub repository supplied and connected on 10 November | Hosted checks and branch protection remain to be configured/verified. |
 | WP2.1–7 bounds, rounding, unions, extremes | `capture_footprint.dart`, property tests, shader equations, affine/fractional pixel checks | Implemented/tested. Perspective is outside the declared contract. |
 | WP2.8 overlay reuse, expansion, failure | Hover/press envelope, shared-crop movement, failure downgrade | Passing regression checks; background scroll captured during layer composition. |
 | WP2 optional diagnostic suggestions | Union ratio, current/retained/peak bytes, retired count, generations/failures | Core fields implemented. Per-reason recapture and maximum-footprint fields were suggestions; not claimed implemented. |
@@ -29,7 +29,7 @@ alone do not complete the milestone. Unmet requirements stay visible.
 | WP6 measured optimization | No speculative optical sample/quality reduction | CPU rotation-axis precomputation implemented after the user directed work forward. Sample counts and quality remain unchanged; showcase build succeeds. No measured speedup claimed; extended checks deferred. |
 | WP7.1–5,7 accessibility | Exported policy, opaque path, focused tests and native/browser contracts | Implemented/checked; app supplies unavailable transparency preference. |
 | WP7.6 text scaling / contrast backgrounds | Large-text/high-contrast PNGs, light/dark/mixed fields; app child-style responsibility documented | Deterministic states checked. Photographic/product and physical review unverified. |
-| WP8.1 metadata | Fake URLs removed; none invented | Canonical source identity required. |
+| WP8.1 metadata | User supplied `Keerthivasan-7/liquid_glass_effect`; origin connected and real package source/issue links added | Metadata updated; publication dry run remains deferred. |
 | WP8.2–4 docs / vocabulary | Three-screen showcase, four presets, comfort controls, complete integration guide, README, compatibility, progress | Development desktop/Android builds produced; final handoff reconciliation in progress. |
 | WP8.5 performance manifests | Protocol v6 and ordinary-control raw/source/SDK/analysis subset archived | One qualified control, no glass/full-matrix manifest. Latest development source is different. |
 | WP8.6–7 research / old spec | Exact SDK sampler audit; superseded-spec banner | Implemented. Closed issue does not imply shipped API; checked SDKs retain nearest implicit sampler/one-argument shader API. |
@@ -40,7 +40,7 @@ alone do not complete the milestone. Unmet requirements stay visible.
 
 | ID | Dependency / gap | Closure condition |
 |---|---|---|
-| R1 | No hosted source repository or canonical URL. Local history initialized 10 November for the development handoff; no original pre-change history recovered. | Establish the real remote and confirm its URL/name; verified release commit/tag; hosted checks and merge rules; truthful metadata dry run. |
+| R1 | Canonical repository supplied on 10 November: `https://github.com/Keerthivasan-7/liquid_glass_effect`. Local history starts at the development handoff; no original pre-change history recovered. | Complete hosted checks/merge rules, verified release commit/tag and publication dry run. Initial upload skips CI to respect the user's testing deferral. |
 | R2 | Physical Android GLES / Vulkan | Xiaomi Android 10 GLES passes all 18 v5 visuals. Standalone ten-minute endurance also passes; timing remains separate. Qualify Vulkan independently. |
 | R3 | Physical iOS Metal / filter overlap | Physical capture/scroll/overlap plus separate overlapping-filter evidence. Simulator/closed issue insufficient. |
 | R4 | macOS / Linux | Named runtime runs if entering the verified set. |

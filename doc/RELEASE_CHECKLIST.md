@@ -6,14 +6,16 @@ qualify newer shader or lifecycle changes.
 
 ## Source identity and packaging
 
-- [ ] Confirm the final pub.dev name and canonical source repository.
+- [x] Confirm the canonical source repository: `Keerthivasan-7/liquid_glass_effect`.
+- [ ] Confirm the final pub.dev name; the Dart package remains `liquid_optics_flutter`.
 - [x] Remove fake homepage/repository/issue URLs.
 - [x] Include BSD-3-Clause license and independent-reference research records.
 - [x] Exclude research downloads, CI, raw evidence, graphs and build outputs from the package.
 - [ ] Inspect the final package archive and resolve dry-run warnings truthfully.
 - [ ] Establish a reproducible source commit/tag.
   The local `dev-handoff-2026-11-10` snapshot preserves development source;
-  a verified release commit/tag and canonical hosted repository remain open.
+  a verified release commit/tag remains open; the canonical hosted repository
+  has now been supplied.
 
 ## Automated engineering gates
 
@@ -24,7 +26,8 @@ qualify newer shader or lifecycle changes.
 - [x] Prove conservative sampling bounds and semantic uniform/value bindings.
 - [x] Detect deliberate refraction-sign, crop-origin, uniform-value and foreground-blur defects.
 - [x] Inspect the real 366-KB archive and confirm intended exclusions.
-- [ ] Resolve the one missing real repository/homepage warning; both SDK dry runs exit 65 for that warning.
+- [x] Add real homepage/repository/issue links supplied by the user.
+- [ ] Repeat the final pub dry run when testing resumes; earlier SDK dry runs exited 65 for the then-missing source metadata.
 - [ ] Run hosted CI and configure required checks once a real repository exists.
 - [ ] Qualify the final rotation-axis/shader and showcase source; builds alone do not close this gate. Extended runs deferred by user direction.
 - [x] Refresh the library architecture graph after the axis-helper change: 418 nodes, 478 edges, 20 communities; synchronize root outputs and record source hashes.
