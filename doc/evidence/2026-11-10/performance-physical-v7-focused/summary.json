@@ -1,0 +1,539 @@
+{
+  "recordedAtUtc": "2026-11-10T09:48:05.364102+00:00",
+  "scope": "Four targeted protocol-seven scenarios only; not the full 46-case matrix. Latest attempt authoritative.",
+  "measurementPhaseComplete": true,
+  "selectedScenarios": 4,
+  "completedMeasurementGroups": 4,
+  "coversFull46CaseMatrix": false,
+  "unmeasuredMatrixScenarios": 42,
+  "qualifiedGroups": 4,
+  "exportedRawRuns": 12,
+  "allGroupsQualified": true,
+  "startedAtUtc": "2026-11-10T09:32:04.4477457Z",
+  "finishedAtUtc": "2026-11-10T09:46:35.7848208Z",
+  "unstableOrMissingScenarios": [],
+  "binarySha256": "CE43C53B42D03CE4C99E1AEDBFB86A77E37EFB231BEC5027B9CB6F9CEA9C000E",
+  "configuration": {
+    "protocolVersion": 7,
+    "runnerSha256": "D33F5AEDA7E77DF273A0DDEAE2B6B4EAD23B90FBF46C677D66CDA3D2D9083770",
+    "sourceHash": "1ac351f723866ee8542c72e938e95c0466bdb7bbf9a9c97fbd9fa0e951e12f40",
+    "frameworkRevision": "c197ca5199e9ee5661e865596c9c07294dfab51c",
+    "engineRevision": "89c39edfdfae2949f6806e4a315c0c08522238b7",
+    "dartSdkVersion": "3.13.7",
+    "validatorSha256": "4D471A78B32461ACAA4F7E29C99B9562EDC72E781050F8D73A67D50458FEA611",
+    "launcherSha256": "8EF79592C35A54555F1A5AB01AEE3C2E1CCF5C7014F5A887A9E8E39FB7F94189",
+    "device": "[device-serial-redacted]",
+    "deviceLabel": "Xiaomi M2006C3MII Android10 API29 ARMv7",
+    "gpu": "PowerVR GE8320 MT6765 GLES3.2",
+    "renderer": "Impeller-OpenGLES",
+    "powerMode": "USB-powered normal mode",
+    "targetPlatform": "android-arm",
+    "includeFilter": true,
+    "minimumHostFreeMemoryMiB": 0,
+    "impellerOverride": "default",
+    "startupSettleSeconds": 10,
+    "initialSettleSeconds": 60
+  },
+  "rawValidatorSha256": "4d471a78b32461acaa4f7e29c99b9562edc72e781050f8d73a67d50458fea611",
+  "sourceSnapshotSha256": "ae5c37f3030bba741174da43311e90ea55cbfaddda389a992511604433cf4996",
+  "dependencyLocks": [
+    {
+      "sourcePath": "pubspec.lock",
+      "exportPath": "dependencies/package-pubspec-lock.yaml",
+      "sha256": "ba9454b617b27f6f572bddfb532e92829427acaffbb674f579a5380a5437a075"
+    },
+    {
+      "sourcePath": "benchmark/pubspec.lock",
+      "exportPath": "dependencies/benchmark-pubspec-lock.yaml",
+      "sha256": "f7fab0202280c0cd442bf856ae61cc3cfd385da4466eeca4774ade0e8c7a2a80"
+    }
+  ],
+  "limits": [
+    "FrameTiming is not measured presentation FPS, GPU time or energy.",
+    "Current-source baseline only; no equivalent pre-change speedup comparison.",
+    "Physical-phone host-memory gate is explicitly zero MiB; telemetry retained.",
+    "Fixed p50 max/min 1.25 and p99 max/min 1.5 limits were not changed."
+  ],
+  "groups": [
+    {
+      "scenario": "ordinary-1-compact-static",
+      "attempt": 1,
+      "measurementsComplete": true,
+      "rawRuns": 3,
+      "rawValid": true,
+      "qualified": true,
+      "errors": [],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.1521068859198356,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0676027041081644,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0067267419723316,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0184703789848133,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0265756868378524,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0216834921086306,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-ordinary-1-compact-static-run-1.json": "bcf83b8e4c7fc6b4c95675c74d7c85e52fb6c497c71c879ee34df221f9d6700b",
+        "2-ordinary-1-compact-static-run-2.json": "110fc72e85074006b7ec60dcdad3cd100428dd6e6180b6a4c00d7fc1c2d8e9e2",
+        "3-ordinary-1-compact-static-run-3.json": "a492db0ac0897186f1417259410477fbc75a32308efa2c75a11f85dbd0cc0670"
+      },
+      "timings": [
+        {
+          "sampleCount": 1813,
+          "build": {
+            "p50Ms": 1.121,
+            "p90Ms": 1.673,
+            "p99Ms": 2.053,
+            "worstMs": 2.879
+          },
+          "raster": {
+            "p50Ms": 15.864,
+            "p90Ms": 19.433,
+            "p99Ms": 22.332,
+            "worstMs": 32.893
+          },
+          "totalSpan": {
+            "p50Ms": 22.868,
+            "p90Ms": 24.682,
+            "p99Ms": 28.742,
+            "worstMs": 40.705
+          },
+          "displayBudgetExceedanceRate": 0.32597904026475455
+        },
+        {
+          "sampleCount": 1815,
+          "build": {
+            "p50Ms": 0.973,
+            "p90Ms": 1.539,
+            "p99Ms": 1.923,
+            "worstMs": 2.192
+          },
+          "raster": {
+            "p50Ms": 15.821,
+            "p90Ms": 19.122,
+            "p99Ms": 21.927,
+            "worstMs": 32.433
+          },
+          "totalSpan": {
+            "p50Ms": 22.276,
+            "p90Ms": 24.344,
+            "p99Ms": 28.132,
+            "worstMs": 35.934
+          },
+          "displayBudgetExceedanceRate": 0.2892561983471074
+        },
+        {
+          "sampleCount": 1815,
+          "build": {
+            "p50Ms": 1.027,
+            "p90Ms": 1.438,
+            "p99Ms": 1.955,
+            "worstMs": 2.247
+          },
+          "raster": {
+            "p50Ms": 15.758,
+            "p90Ms": 18.967,
+            "p99Ms": 21.939,
+            "worstMs": 31.494
+          },
+          "totalSpan": {
+            "p50Ms": 22.561,
+            "p90Ms": 24.551,
+            "p99Ms": 28.399,
+            "worstMs": 38.988
+          },
+          "displayBudgetExceedanceRate": 0.2909090909090909
+        }
+      ]
+    },
+    {
+      "scenario": "capturePerformance-4-compact-static",
+      "attempt": 1,
+      "measurementsComplete": true,
+      "rawRuns": 3,
+      "rawValid": true,
+      "qualified": true,
+      "errors": [],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0661209068010076,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0666666666666667,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0008308139669058,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.01305071579181,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.003597931189566,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0053698543596223,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-capturePerformance-4-compact-static-run-1.json": "7be97b9c59fd23332c92f781eae53e601ff46188150a4637d144aec825b8579d",
+        "2-capturePerformance-4-compact-static-run-2.json": "90ea23b91a20f5a8d48acb4e3bc39daa70fa591382fad0dd975b8efb925da8f0",
+        "3-capturePerformance-4-compact-static-run-3.json": "2b10a93329f4fa8927844a32dd83ab4cfc2250a8f68eaf28affc05adac14e742"
+      },
+      "timings": [
+        {
+          "sampleCount": 686,
+          "build": {
+            "p50Ms": 1.588,
+            "p90Ms": 2.21,
+            "p99Ms": 2.43,
+            "worstMs": 2.675
+          },
+          "raster": {
+            "p50Ms": 43.331,
+            "p90Ms": 43.955,
+            "p99Ms": 45.643,
+            "worstMs": 58.71
+          },
+          "totalSpan": {
+            "p50Ms": 80.334,
+            "p90Ms": 86.835,
+            "p99Ms": 88.643,
+            "worstMs": 103.332
+          },
+          "displayBudgetExceedanceRate": 1.0
+        },
+        {
+          "sampleCount": 686,
+          "build": {
+            "p50Ms": 1.693,
+            "p90Ms": 2.226,
+            "p99Ms": 2.592,
+            "worstMs": 2.855
+          },
+          "raster": {
+            "p50Ms": 43.332,
+            "p90Ms": 43.948,
+            "p99Ms": 45.406,
+            "worstMs": 78.698
+          },
+          "totalSpan": {
+            "p50Ms": 80.046,
+            "p90Ms": 86.663,
+            "p99Ms": 89.119,
+            "worstMs": 110.178
+          },
+          "displayBudgetExceedanceRate": 0.9985422740524781
+        },
+        {
+          "sampleCount": 686,
+          "build": {
+            "p50Ms": 1.624,
+            "p90Ms": 2.211,
+            "p99Ms": 2.526,
+            "worstMs": 3.288
+          },
+          "raster": {
+            "p50Ms": 43.367,
+            "p90Ms": 44.188,
+            "p99Ms": 45.055,
+            "worstMs": 48.741
+          },
+          "totalSpan": {
+            "p50Ms": 80.093,
+            "p90Ms": 86.718,
+            "p99Ms": 88.82,
+            "worstMs": 89.649
+          },
+          "displayBudgetExceedanceRate": 1.0
+        }
+      ]
+    },
+    {
+      "scenario": "ordinary-4-compact-animated",
+      "attempt": 1,
+      "measurementsComplete": true,
+      "rawRuns": 3,
+      "rawValid": true,
+      "qualified": true,
+      "errors": [],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0522847100175747,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.032033426183844,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0097346821912578,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.032287994061978,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0114987930656134,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.051384120955372,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-ordinary-4-compact-animated-run-1.json": "0f26af40d4a6553113d0f0a892ade368c02f0ec3bab829ef597fda3984060226",
+        "2-ordinary-4-compact-animated-run-2.json": "147a9241ec252f199e722044b3d6fcc17e953d929bd35cc0d64a3392f8b032bb",
+        "3-ordinary-4-compact-animated-run-3.json": "49ec8fe454590d77b64d68576bce3f4edc4f6f11094dd069ce0b26d6bf1eb7bb"
+      },
+      "timings": [
+        {
+          "sampleCount": 1815,
+          "build": {
+            "p50Ms": 2.276,
+            "p90Ms": 3.066,
+            "p99Ms": 3.59,
+            "worstMs": 4.232
+          },
+          "raster": {
+            "p50Ms": 15.87,
+            "p90Ms": 19.472,
+            "p99Ms": 22.252,
+            "worstMs": 32.005
+          },
+          "totalSpan": {
+            "p50Ms": 22.993,
+            "p90Ms": 24.871,
+            "p99Ms": 28.789,
+            "worstMs": 34.943
+          },
+          "displayBudgetExceedanceRate": 0.3234159779614325
+        },
+        {
+          "sampleCount": 1816,
+          "build": {
+            "p50Ms": 2.359,
+            "p90Ms": 3.126,
+            "p99Ms": 3.62,
+            "worstMs": 4.152
+          },
+          "raster": {
+            "p50Ms": 15.837,
+            "p90Ms": 19.448,
+            "p99Ms": 21.783,
+            "worstMs": 27.652
+          },
+          "totalSpan": {
+            "p50Ms": 23.047,
+            "p90Ms": 24.989,
+            "p99Ms": 28.31,
+            "worstMs": 35.105
+          },
+          "displayBudgetExceedanceRate": 0.31222466960352424
+        },
+        {
+          "sampleCount": 1815,
+          "build": {
+            "p50Ms": 2.395,
+            "p90Ms": 3.146,
+            "p99Ms": 3.705,
+            "worstMs": 4.419
+          },
+          "raster": {
+            "p50Ms": 15.717,
+            "p90Ms": 19.19,
+            "p99Ms": 21.556,
+            "worstMs": 33.741
+          },
+          "totalSpan": {
+            "p50Ms": 22.785,
+            "p90Ms": 24.641,
+            "p99Ms": 27.382,
+            "worstMs": 38.729
+          },
+          "displayBudgetExceedanceRate": 0.29256198347107437
+        }
+      ]
+    },
+    {
+      "scenario": "blur-10-compact-animated",
+      "attempt": 1,
+      "measurementsComplete": true,
+      "rawRuns": 3,
+      "rawValid": true,
+      "qualified": true,
+      "errors": [],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0325149303251495,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.01713469776297,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0025991831138783,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.1419857396035114,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0029679152738291,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.1588250177717268,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-blur-10-compact-animated-run-1.json": "6c9007d189c3e216763010995da8d2c3665815267765391fdde7d0862ac0e9c2",
+        "2-blur-10-compact-animated-run-2.json": "9b08ac01b8bfd754778e1902ca507865cf4dcabfc7de8d9fed4f42b8638d917a",
+        "3-blur-10-compact-animated-run-3.json": "7d95bc5009c7b46d82031e8865b75a0ac16bd2e00cfb96a498975496d98f76f4"
+      },
+      "timings": [
+        {
+          "sampleCount": 834,
+          "build": {
+            "p50Ms": 1.556,
+            "p90Ms": 3.723,
+            "p99Ms": 4.274,
+            "worstMs": 4.597
+          },
+          "raster": {
+            "p50Ms": 35.102,
+            "p90Ms": 38.142,
+            "p99Ms": 55.416,
+            "worstMs": 62.861
+          },
+          "totalSpan": {
+            "p50Ms": 64.018,
+            "p90Ms": 72.252,
+            "p99Ms": 96.179,
+            "worstMs": 120.124
+          },
+          "displayBudgetExceedanceRate": 1.0
+        },
+        {
+          "sampleCount": 840,
+          "build": {
+            "p50Ms": 1.511,
+            "p90Ms": 3.483,
+            "p99Ms": 4.222,
+            "worstMs": 4.815
+          },
+          "raster": {
+            "p50Ms": 35.011,
+            "p90Ms": 38.493,
+            "p99Ms": 49.425,
+            "worstMs": 53.287
+          },
+          "totalSpan": {
+            "p50Ms": 64.208,
+            "p90Ms": 72.542,
+            "p99Ms": 82.997,
+            "worstMs": 91.158
+          },
+          "displayBudgetExceedanceRate": 1.0
+        },
+        {
+          "sampleCount": 835,
+          "build": {
+            "p50Ms": 1.507,
+            "p90Ms": 3.388,
+            "p99Ms": 4.202,
+            "worstMs": 4.783
+          },
+          "raster": {
+            "p50Ms": 35.076,
+            "p90Ms": 38.644,
+            "p99Ms": 48.526,
+            "worstMs": 56.603
+          },
+          "totalSpan": {
+            "p50Ms": 64.152,
+            "p90Ms": 73.689,
+            "p99Ms": 89.001,
+            "worstMs": 97.13
+          },
+          "displayBudgetExceedanceRate": 1.0
+        }
+      ]
+    }
+  ]
+}

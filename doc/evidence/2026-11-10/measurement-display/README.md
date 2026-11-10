@@ -78,6 +78,8 @@ Recompute the tables with `python analyze.py` and
 `python analyze_phone_pulses.py` from this directory. Both use only Python's
 standard library and reproduce the checked-in analysis from public raw files.
 
-Device qualification for v7 remains open. Keep historical v6 and new v7 results
+The [focused v7 phone follow-up](../performance-physical-v7-focused/README.md)
+passes all twelve measurements in four selected cases; forty-two cases remain
+unmeasured. Full device qualification for v7 remains open. Keep historical v6 and new v7 results
 separate; do not relax the fixed p50/p99 limits or reinterpret earlier failures
 as passes.

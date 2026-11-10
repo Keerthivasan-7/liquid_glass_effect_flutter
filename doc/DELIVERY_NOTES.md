@@ -29,10 +29,10 @@ files: 419 nodes, 479 edges and 21 communities.
 
 ## Current checks
 
-- Hosted [run 42761367535](https://github.com/Keerthivasan-7/liquid_glass_effect_flutter/actions/runs/42761367535)
-  at `970d38f`: all five jobs pass. Minimum Flutter 3.32.0 and stable 3.47.9 each
-  pass formatting, package/example/benchmark analysis, 63 package checks, nine
-  benchmark checks, twelve independent raw-validator checks and a zero-warning
+- Hosted [run 42791541004](https://github.com/Keerthivasan-7/liquid_glass_effect_flutter/actions/runs/42791541004)
+  at `b417012`: all five jobs pass. Minimum Flutter 3.32.0 and stable 3.47.9 each
+  pass formatting, package/example/benchmark analysis, 63 package checks, ten
+  benchmark checks, seventeen independent raw-validator checks and a zero-warning
   publication dry run. Android, Windows and web build jobs pass separately.
 - The published renderer passes eighteen visual contracts on each of the
   physical Xiaomi Android 10 / Impeller GLES phone, Windows/Skia, CanvasKit and
@@ -51,7 +51,7 @@ files: 419 nodes, 479 edges and 21 communities.
   read back and verified; force pushes and branch deletion are blocked.
 
 See [current runtime evidence](evidence/2026-11-10/runtime-current/README.md),
-[hosted check records](evidence/2026-11-10/github-ci/42761367535/checks.json)
+[hosted check records](evidence/2026-11-10/github-ci/42791541004/checks.json)
 and [the requirement audit](MILESTONE_AUDIT.md).
 
 ## Remaining work
@@ -60,6 +60,8 @@ and [the requirement audit](MILESTONE_AUDIT.md).
    collected 138 individually valid measurements; 34 of 46 groups meet fixed
    spread limits and twelve fail. [All data and failures](evidence/2026-11-10/performance-physical-current/README.md)
    are retained. This is not a full-matrix or 60/120-Hz performance pass.
+   Profiling removed periodic display work in v7; its four-case phone follow-up
+   passes all twelve measurements, with forty-two cases still unmeasured.
 2. Obtain human showcase, accessibility and photographic/product-background
    review. Automated contracts cover selected deterministic states.
 3. Investigate background/resume separately. The phone's interrupted soak lost

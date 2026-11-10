@@ -3,7 +3,8 @@
 Updated 2026-11-10. No glass speedup or complete-matrix pass is qualified. The
 complete protocol-v6 phone matrix has 34 accepted and twelve unstable groups.
 Protocol v7 freezes the measurement display after profiling exposed observer
-work; its device repeatability qualification remains open.
+work. Four focused v7 phone groups pass; the remaining forty-two groups and full
+repeatability qualification remain open.
 The first recorded
 Windows autorun attempt timed out; its raw files and explicit invalidation are
 preserved under `benchmark/results/windows-balanced-animated-1/`. Do not use
@@ -181,3 +182,20 @@ reproduces exactly: 34 accepted, twelve rejected, with unchanged raw hashes.
 All fixed limits and the sixty-second initial / ten-second per-repetition
 settling, three-second warm-up, thirty-second window and two-second drain remain
 unchanged. Device v7 results must use a new results directory and binary.
+
+## Focused v7 phone follow-up
+
+The user-authorized four-case follow-up completed all twelve measurements:
+ordinary-one-static, capture-performance-four-static, ordinary-four-animated
+and blur-ten-animated. Each three-run group passes the unchanged p50/p99 spread
+limits, including the three configurations that were unstable in v6. Raw/hash
+recomputation and protocol/display-policy validation pass.
+See [the focused report](evidence/2026-11-10/performance-physical-v7-focused/README.md).
+
+This covers four cases, not the full 46-case matrix. Forty-two v7 cases remain
+unmeasured. Endpoint battery temperature rose from 34.9 to 37.2°C with USB power;
+there is no continuous temperature/clock trace. Cross-protocol timing differences
+do not establish a renderer speedup, GPU cost or presentation FPS. The old v6
+data and twelve rejected groups remain unchanged. Accepted v7 groups can be
+retained when resuming the same source/binary/protocol; do not rerun them without
+a new reason or mix them with v6 groups.

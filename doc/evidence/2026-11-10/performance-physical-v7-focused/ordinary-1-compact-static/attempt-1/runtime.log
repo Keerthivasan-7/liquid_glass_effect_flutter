@@ -1,0 +1,26 @@
+D/ViewRootImpl(23343): setSurfaceViewCreated, created:true
+D/Surface (23343): Surface::disconnect(this=0xcdb57800,api=1)
+D/Surface (23343): Surface::connect(this=0xcdb57800,api=1)
+W/Looper  (23343): Slow Looper main: Long Msg: seq=7 plan=15:02:34.162  late=1189ms wall=4278ms running=0ms h=android.view.Choreographer$FrameHandler c=android.view.Choreographer$FrameDisplayEventReceiver
+W/Looper  (23343): Slow Looper main: doFrame is 1189ms late because of 5 msg, msg 1 took 1195ms (seq=2 late=7ms h=android.app.ActivityThread$H w=110), msg 2 took 1081ms (seq=3 late=1217ms h=android.app.ActivityThread$H w=159)
+I/Choreographer(23343): Skipped 245 frames!  The application may be doing too much work on its main thread.
+W/Looper  (23343): Slow Looper main: doFrame is 4091ms late because of 4 msg, msg 1 took 4278ms (seq=7 late=1189ms h=android.view.Choreographer$FrameHandler c=android.view.Choreographer$FrameDisplayEventReceiver), msg 4 took 52ms (seq=10 late=4051ms h=android.app.ActivityThread$H c=kotlinx.coroutines.internal.DispatchedContinuation)
+VMServiceFlutterDriver: Connecting to Flutter application at [local-test-service-uri-redacted]
+VMServiceFlutterDriver: Isolate found with number: 1336515806386971
+VMServiceFlutterDriver: Isolate 1336515806386971 is runnable.
+VMServiceFlutterDriver: Isolate is paused at start.
+VMServiceFlutterDriver: Attempting to resume isolate
+I/flutter (23343): 00:00 +0: repeatable native renderer matrix
+VMServiceFlutterDriver: Connected to Flutter application.
+I/glass_benchmar(23343): ProcessProfilingInfo new_methods=1370 is saved saved_to_disk=1 resolve_classes_delay=8000
+I/flutter (23343): MATRIX_INITIAL_SETTLE seconds=60
+D/ProfileInstaller(23343): Installing profile for dev.liquidglass.liquid_glass_benchmark
+I/flutter (23343): MATRIX_RESULT ordinary-1-compact-static repetition=1 samples=1813 complete=true
+I/flutter (23343): MATRIX_RESULT ordinary-1-compact-static repetition=2 samples=1815 complete=true
+I/flutter (23343): MATRIX_RESULT ordinary-1-compact-static repetition=3 samples=1815 complete=true
+I/flutter (23343): 03:22 +1: (tearDownAll)
+W/glass_benchmar(23343): Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+W/glass_benchmar(23343): Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+I/flutter (23343): 03:22 +2: All tests passed!
+All tests passed.
+Leaving the application running.
