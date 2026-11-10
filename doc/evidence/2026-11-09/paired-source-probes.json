@@ -1,0 +1,110 @@
+{
+  "scope": "Matched Flutter 3.44.1 offscreen pixel probes at DPR1; not native-device evidence or timing comparison",
+  "originalDirection": {
+    "referenceLeft": [
+      74,
+      128,
+      64,
+      255
+    ],
+    "renderedLeft": [
+      74,
+      128,
+      64,
+      255
+    ],
+    "referenceRight": [
+      181,
+      128,
+      64,
+      255
+    ],
+    "renderedRight": [
+      181,
+      128,
+      64,
+      255
+    ],
+    "renderPath": "capture",
+    "inwardSamplingContractPassed": false,
+    "sourceUnderTest": "reconstructed original",
+    "scope": "Flutter 3.44.1 offscreen Skia at DPR1"
+  },
+  "currentDirection": {
+    "referenceLeft": [
+      74,
+      128,
+      64,
+      255
+    ],
+    "renderedLeft": [
+      83,
+      128,
+      64,
+      255
+    ],
+    "referenceRight": [
+      181,
+      128,
+      64,
+      255
+    ],
+    "renderedRight": [
+      172,
+      128,
+      64,
+      255
+    ],
+    "renderPath": "capture",
+    "inwardSamplingContractPassed": true,
+    "sourceUnderTest": "current",
+    "scope": "Flutter 3.44.1 offscreen Skia at DPR1"
+  },
+  "originalFreshness": {
+    "sourceUnderTest": "reconstructed original",
+    "beforeCenter": [
+      255,
+      0,
+      0,
+      255
+    ],
+    "afterCenter": [
+      255,
+      0,
+      0,
+      255
+    ],
+    "afterOutside": [
+      0,
+      0,
+      255,
+      255
+    ],
+    "captureCountBefore": 3,
+    "captureCountAfter": 4
+  },
+  "currentFreshness": {
+    "sourceUnderTest": "current",
+    "beforeCenter": [
+      255,
+      0,
+      0,
+      255
+    ],
+    "afterCenter": [
+      0,
+      0,
+      255,
+      255
+    ],
+    "afterOutside": [
+      0,
+      0,
+      255,
+      255
+    ],
+    "captureCountBefore": 3,
+    "captureCountAfter": 4
+  },
+  "conclusion": "The original selected-capture output fails the inward edge probes and keeps a stale visible center despite an advancing capture counter. Current source passes both probes. Optical equivalence for a speed comparison is not established."
+}

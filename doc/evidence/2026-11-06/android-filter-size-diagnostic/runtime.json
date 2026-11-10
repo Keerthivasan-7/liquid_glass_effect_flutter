@@ -1,0 +1,92 @@
+{
+  "fixtureVersion": 2,
+  "contractFilter": "explicit",
+  "errors": [
+    {
+      "test": "explicit filter bends the backdrop and keeps foreground sharp",
+      "exception": "Expected: a value greater than <75>\n  Actual: <25>\n   Which: is not a value greater than <75>",
+      "stack": "#0      fail (package:matcher/src/expect/expect.dart:187)\n#1      _expect (package:matcher/src/expect/expect.dart:182)\n#2      expect (package:matcher/src/expect/expect.dart:65)\n#3      expect (package:flutter_test/src/widget_tester.dart:473)\n#4      registerRendererContractTests.<anonymous closure> (file:///C:/Projects/Flutter/Liquid%20Glass/test/support/renderer_contract_suite.dart:473)\n<asynchronous suspension>\n#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192)\n<asynchronous suspension>\n#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952)\n<asynchronous suspension>\n#7      TestWidgetsFlutterBinding._createTestCompletionHandler.<anonymous closure> (package:flutter_test/src/binding.dart:1706)\n<asynchronous suspension>\n"
+    }
+  ],
+  "platform": "android",
+  "backendLabel": "Impeller-OpenGLES",
+  "buildMode": "profile",
+  "supportsShaderFilter": true,
+  "physicalWidth": 1344.0,
+  "physicalHeight": 2992.0,
+  "devicePixelRatio": 3.0,
+  "refreshRateHz": 60.000003814697266,
+  "observations": {
+    "filter-reference": {
+      "requestedRenderer": "fallback",
+      "activePath": "fallback",
+      "surfaceScale": 1.0,
+      "surfaceRotationRadians": 0.0,
+      "textScale": 1.0,
+      "highContrast": false,
+      "generation": 0,
+      "captureCount": 0,
+      "captureFailures": 0,
+      "activeSurfaceCount": 0,
+      "captureSupported": true,
+      "scopeSize": [
+        400.0,
+        300.0
+      ],
+      "captureRect": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pixelSize": [
+        0.0,
+        0.0
+      ],
+      "capturePixelRatio": 1.0,
+      "captureAreaRatio": 0.0,
+      "currentBytes": 0,
+      "retainedBytes": 0,
+      "peakRetainedBytes": 0,
+      "retiredImageCount": 0
+    },
+    "filter-explicit": {
+      "requestedRenderer": "shader",
+      "activePath": "filter",
+      "surfaceScale": 1.0,
+      "surfaceRotationRadians": 0.0,
+      "textScale": 1.0,
+      "highContrast": false,
+      "generation": 0,
+      "captureCount": 0,
+      "captureFailures": 0,
+      "activeSurfaceCount": 0,
+      "captureSupported": true,
+      "scopeSize": [
+        400.0,
+        300.0
+      ],
+      "captureRect": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pixelSize": [
+        0.0,
+        0.0
+      ],
+      "capturePixelRatio": 1.0,
+      "captureAreaRatio": 0.0,
+      "currentBytes": 0,
+      "retainedBytes": 0,
+      "peakRetainedBytes": 0,
+      "retiredImageCount": 0
+    }
+  },
+  "screenshots": [
+    "filter-reference.png",
+    "filter-explicit.png"
+  ],
+  "recordedAtUtc": "2026-11-06T02:39:21.012233Z"
+}

@@ -1,0 +1,55 @@
+Resolving dependencies...
+Downloading packages...
+  clock 1.1.2 (1.1.3 available)
+  matcher 0.12.19 (0.12.20 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.0 (1.19.0 available)
+  stack_trace 1.12.1 (1.12.2 available)
+  test_api 0.7.11 (0.7.15 available)
+  vector_math 2.2.0 (2.4.4 available)
+  web 1.1.1 (1.1.2 available)
+Got dependencies!
+8 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Installing build\app\outputs\flutter-apk\app-profile.apk...         8.9s
+W/UiContextUtils(22591): Requested context is a non-UI Context. Creating a UI-Context with display: 0. Context: Context=android.app.Application@5912294, of which baseContext=android.app.ContextImpl@3bb66fa
+D/VRI[MainActivity](22591): WindowInsets changed: 1344x2992 statusBars:[0,159,0,0] navigationBars:[0,0,0,72] mandatorySystemGestures:[0,195,0,96] 
+I/Surface (22591): Creating surface for consumer unnamed-22591-0 with slotExpansion=1 for 64 slots
+I/Surface (22591): Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+I/Surface (22591): Creating surface for consumer unnamed-22591-1 with slotExpansion=1 for 64 slots
+I/Surface (22591): Creating surface for consumer 3d3bb4 SurfaceView[dev.liquidglass.liquid_glass_benchmark/dev.liquidglass.liquid_glass_benchmark.MainActivity]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+D/ProfileInstaller(22591): Installing profile for dev.liquidglass.liquid_glass_benchmark
+I/Choreographer(22591): Skipped 229 frames!  The application may be doing too much work on its main thread.
+D/WindowLayoutComponentImpl(22591): Register WindowLayoutInfoListener on Context=dev.liquidglass.liquid_glass_benchmark.MainActivity@10b8e23, of which baseContext=android.app.ContextImpl@70e6211
+I/glass_benchmark(22591): Compiler allocated 5230KB to compile void android.view.ViewRootImpl.performTraversals(long)
+W/glass_benchmark(22591): Suspending all threads took: 5.228ms
+I/glass_benchmark(22591): Background concurrent mark compact GC freed 2583KB AllocSpace bytes, 1(16KB) LOS objects, 49% free, 2539KB/5078KB, paused 15.494ms,61.857ms total 361.592ms
+VMServiceFlutterDriver: Connecting to Flutter application at http://127.0.0.1:51091/s4k9vwpoVn4=/
+VMServiceFlutterDriver: Isolate found with number: 4362919517231391
+VMServiceFlutterDriver: Isolate 4362919517231391 is runnable.
+VMServiceFlutterDriver: Isolate is paused at start.
+VMServiceFlutterDriver: Attempting to resume isolate
+I/flutter (22591): 00:00 +0: repeatable native renderer matrix
+VMServiceFlutterDriver: Connected to Flutter application.
+D/InsetsController(22591): hide(ime())
+I/ImeTracker(22591): dev.liquidglass.liquid_glass_benchmark:19d79ea9: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+Unhandled exception:
+DriverError: Failed to fulfill RequestData due to remote error
+Original error: ext.flutter.driver: (112) Service has disappeared
+Original stack trace:
+#0      new _OutstandingRequest (package:vm_service/src/vm_service.dart:280:34)
+#1      VmService._call.<anonymous closure> (package:vm_service/src/vm_service.dart:1962:25)
+#2      VmService._call (package:vm_service/src/vm_service.dart:1974:8)
+#3      VmService.callServiceExtension (package:vm_service/src/vm_service.dart:1913:14)
+#4      VMServiceFlutterDriver.sendCommand (package:flutter_driver/src/driver/vmservice_driver.dart:327:12)
+#5      FlutterDriver.requestData (package:flutter_driver/src/driver/driver.dart:585:13)
+#6      integrationDriver (package:integration_test/integration_test_driver.dart:71:42)
+<asynchronous suspension>
+
+
+#0      VMServiceFlutterDriver.sendCommand (package:flutter_driver/src/driver/vmservice_driver.dart:340:7)
+<asynchronous suspension>
+#1      FlutterDriver.requestData (package:flutter_driver/src/driver/driver.dart:585:7)
+<asynchronous suspension>
+#2      integrationDriver (package:integration_test/integration_test_driver.dart:71:29)
+<asynchronous suspension>

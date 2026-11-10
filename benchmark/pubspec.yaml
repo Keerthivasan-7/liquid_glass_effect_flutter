@@ -1,0 +1,20 @@
+name: liquid_glass_benchmark
+description: On-device benchmark harness for liquid_optics_flutter.
+publish_to: none
+version: 1.0.0+1
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  liquid_optics_flutter:
+    path: ..
+  web: ^1.1.1
+dev_dependencies:
+  integration_test:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+flutter:
+  uses-material-design: true

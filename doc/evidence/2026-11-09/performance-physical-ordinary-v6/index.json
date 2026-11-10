@@ -1,0 +1,54 @@
+{
+  "configuration": {
+    "protocolVersion": 6,
+    "runnerSha256": "78152FC2E348091E795A9220AF417AA3E6748BC3D2ED10C6FACB5121423EA014",
+    "sourceHash": "e092c993fea8ee195b9e0ccfec1c6610a3c079f1060a2408c674caefcd803041",
+    "frameworkRevision": "c197ca5199e9ee5661e865596c9c07294dfab51c",
+    "engineRevision": "89c39edfdfae2949f6806e4a315c0c08522238b7",
+    "dartSdkVersion": "3.13.7",
+    "validatorSha256": "DB7755343956CBD8CD433B334D48DFE3903BAB0DEBC21D2A5EA8C355A4E4EB36",
+    "launcherSha256": "8EF79592C35A54555F1A5AB01AEE3C2E1CCF5C7014F5A887A9E8E39FB7F94189",
+    "deviceLabel": "Xiaomi M2006C3MII Android10 API29 ARMv7 720x1600 DPR2 60Hz",
+    "gpu": "MT6765 PowerVR Rogue GE8320 OpenGLES3.2 driver1.11@5425693",
+    "renderer": "Impeller OpenGLES observed in engine startup log",
+    "powerMode": "USB charging; lowPower0; battery61percent 35.2C before protocol6 preparation",
+    "targetPlatform": "android-arm",
+    "includeFilter": true,
+    "minimumHostFreeMemoryMiB": 0,
+    "impellerOverride": "default",
+    "startupSettleSeconds": 10,
+    "initialSettleSeconds": 60
+  },
+  "scenarios": [
+    "ordinary-1-compact-animated"
+  ],
+  "attempts": [
+    {
+      "qualified": true,
+      "attempt": 1,
+      "scenario": "ordinary-1-compact-animated",
+      "directory": ".",
+      "exitCode": 0,
+      "hostBefore": {
+        "freeMemoryMiB": 1188.98,
+        "totalMemoryMiB": 15599.4,
+        "recordedAtUtc": "2026-11-09T16:40:06.7647133Z",
+        "measurement": "Win32_OperatingSystem.FreePhysicalMemory; before/after group, not continuous telemetry"
+      },
+      "finishedAtUtc": "2026-11-09T16:43:53.7323634Z",
+      "hostMemoryQualified": true,
+      "deviceHealthAfter": "Service package: found",
+      "hostAfter": {
+        "freeMemoryMiB": 898.18,
+        "totalMemoryMiB": 15599.4,
+        "recordedAtUtc": "2026-11-09T16:43:53.4849197Z",
+        "measurement": "Win32_OperatingSystem.FreePhysicalMemory; before/after group, not continuous telemetry"
+      }
+    }
+  ],
+  "completed": true,
+  "redactions": [
+    "USB serial omitted; device model remains in raw metadata"
+  ],
+  "scope": "Only this ordinary-control group on its frozen pre-portrait APK; no glass benchmark or full-matrix claim."
+}

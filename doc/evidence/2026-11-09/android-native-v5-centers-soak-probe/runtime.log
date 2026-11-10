@@ -1,0 +1,45 @@
+D/ProfileInstaller( 4805): Installing profile for dev.liquidglass.liquid_glass_showcase
+VMServiceFlutterDriver: Connecting to Flutter application at http://127.0.0.1:50327/Je3XHIC9Xp0=/
+VMServiceFlutterDriver: Isolate found with number: 7338265605852867
+VMServiceFlutterDriver: Isolate 7338265605852867 is runnable.
+VMServiceFlutterDriver: Isolate is paused at start.
+VMServiceFlutterDriver: Attempting to resume isolate
+I/flutter ( 4805): 00:00 +0: animated capture survives repeated scope mount and disposal
+VMServiceFlutterDriver: Connected to Flutter application.
+D/InsetsController( 4805): hide(ime())
+I/ImeTracker( 4805): dev.liquidglass.liquid_glass_showcase:dc79c3f9: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+I/flutter ( 4805): Expected: null
+I/flutter ( 4805):   Actual: TestFailure:<Expected: a value less than <134.61269841269842>
+I/flutter ( 4805):             Actual: <137>
+I/flutter ( 4805):              Which: is not a value less than <134.61269841269842>
+I/flutter ( 4805):           The bevel must actually refract the moving backdrop
+I/flutter ( 4805):           >
+I/flutter ( 4805): 
+I/flutter ( 4805): #0      fail (package:matcher/src/expect/expect.dart:187)
+I/flutter ( 4805): #1      _expect (package:matcher/src/expect/expect.dart:182)
+I/flutter ( 4805): #2      expect (package:matcher/src/expect/expect.dart:65)
+I/flutter ( 4805): #3      expect (package:flutter_test/src/widget_tester.dart:473)
+I/flutter ( 4805): #4      main.<anonymous closure> (file:///C:/Projects/Flutter/Liquid%20Glass/.research/validation-stable/example/integration_test/renderer_soak_test.dart:211)
+I/flutter ( 4805): <asynchronous suspension>
+I/flutter ( 4805): #5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192)
+I/flutter ( 4805): <asynchronous suspension>
+I/flutter ( 4805): #6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1953)
+I/flutter ( 4805): <asynchronous suspension>
+I/flutter ( 4805): #7      TestWidgetsFlutterBinding._createTestCompletionHandler.<anonymous closure> (package:flutter_test/src/binding.dart:1707)
+I/flutter ( 4805): <asynchronous suspension>
+I/flutter ( 4805): 00:01 +0: animated capture survives repeated scope mount and disposal [E]
+I/flutter ( 4805):   Test failed. See exception logs above.
+I/flutter ( 4805):   The test description was: animated capture survives repeated scope mount and disposal
+I/flutter ( 4805):   
+I/flutter ( 4805): 00:01 +0 -1: (tearDownAll)
+I/_glass_showcase( 4805): Background concurrent mark compact GC freed 2119KB AllocSpace bytes, 1(16KB) LOS objects, 27% free, 61MB/85MB, paused 6.600ms,8.732ms total 111.803ms
+I/flutter ( 4805): 00:01 +1 -1: Some tests failed.
+Failure Details:
+Failure in method: animated capture survives repeated scope mount and disposal
+Instance of 'FlutterErrorDetails'
+end of failure 1
+
+
+
+I/_glass_showcase( 4805): Background young concurrent mark compact GC freed 96KB AllocSpace bytes, 0(0B) LOS objects, 27% free, 61MB/85MB, paused 959us,10.999ms total 33.381ms
+Leaving the application running.

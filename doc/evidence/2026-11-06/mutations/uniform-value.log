@@ -1,0 +1,67 @@
+00:00 +0: loading C:/Projects/Flutter/Liquid Glass/test/shader_binding_test.dart
+00:00 +0: capture uniform names, types, order, and Dart values match
+00:00 +0 -1: capture uniform names, types, order, and Dart values match [E]
+  Expected: {
+              0: 'size.width',
+              1: 'size.height',
+              2: 'scopeSize.width',
+              3: 'scopeSize.height',
+              4: 'origin.dx',
+              5: 'origin.dy',
+              6: 'config.refractiveIndex',
+              7: 'config.refractionStrength',
+              8: 'config.fresnelStrength',
+              9: 'config.specularStrength',
+              10: 'config.chromaticAberration',
+              11: 'config.thickness',
+              12: 'config.curvature',
+              13: 'config.cornerSmoothing',
+              14: 'config.edgeWidth',
+              15: 'config.maxDisplacement',
+              16: 'config.blurSigma',
+              17: 'config.saturation',
+              18: 'tint.r',
+              19: 'tint.g',
+              20: 'tint.b',
+              21: 'tint.a',
+              22: 'light.dx',
+              23: 'light.dy',
+              ...
+            }
+    Actual: {
+              0: 'size.width',
+              1: 'size.height',
+              2: 'scopeSize.width',
+              3: 'scopeSize.height',
+              4: 'origin.dx',
+              5: 'origin.dy',
+              6: 'config.refractiveIndex',
+              7: 'config.fresnelStrength',
+              8: 'config.fresnelStrength',
+              9: 'config.specularStrength',
+              10: 'config.chromaticAberration',
+              11: 'config.thickness',
+              12: 'config.curvature',
+              13: 'config.cornerSmoothing',
+              14: 'config.edgeWidth',
+              15: 'config.maxDisplacement',
+              16: 'config.blurSigma',
+              17: 'config.saturation',
+              18: 'tint.r',
+              19: 'tint.g',
+              20: 'tint.b',
+              21: 'tint.a',
+              22: 'light.dx',
+              23: 'light.dy',
+              ...
+            }
+     Which: at location ['7'] is 'config.fresnelStrength' instead of 'config.refractionStrength'
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test\shader_binding_test.dart 149:7                 main.<fn>
+  
+00:00 +0 -1: Some tests failed.
+
+Failing tests:
+  C:/Projects/Flutter/Liquid Glass/test/shader_binding_test.dart: capture uniform names, types, order, and Dart values match

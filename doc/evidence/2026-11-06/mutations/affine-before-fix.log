@@ -1,0 +1,31 @@
+00:00 +0: loading C:/Projects/Flutter/Liquid Glass/test/visual_contract_test.dart
+00:00 +0: scaled and rotated surfaces preserve scope coordinate mapping
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: a numeric value within <2> of <127.5>
+  Actual: <105>
+   Which:  differs by <22.5>
+
+When the exception was thrown, this was the stack:
+#4      registerRendererContractTests.<anonymous closure> (file:///C:/Projects/Flutter/Liquid%20Glass/test/support/renderer_contract_suite.dart:236:9)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Projects/Flutter/Liquid%20Glass/test/support/renderer_contract_suite.dart line 236
+The test description was:
+  scaled and rotated surfaces preserve scope coordinate mapping
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:01 +0 -1: scaled and rotated surfaces preserve scope coordinate mapping [E]
+  Test failed. See exception logs above.
+  The test description was: scaled and rotated surfaces preserve scope coordinate mapping
+  
+00:01 +0 -1: Some tests failed.
+
+Failing tests:
+  C:/Projects/Flutter/Liquid Glass/test/visual_contract_test.dart: scaled and rotated surfaces preserve scope coordinate mapping

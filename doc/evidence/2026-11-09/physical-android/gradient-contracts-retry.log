@@ -1,0 +1,77 @@
+Resolving dependencies...
+Downloading packages...
+  material_color_utilities 0.13.0 (0.13.1 available)
+  test_api 0.7.12 (0.7.15 available)
+Got dependencies!
+2 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Installing build\app\outputs\flutter-apk\app-profile.apk...        30.0s
+D/libMEOW (28702): applied 0 plugin for [dev.liquidglass.liquid_glass_showcase].
+D/SurfaceView(28702): UPDATE null, mIsCastMode = false
+D/Surface (28702): Surface::connect(this=0xbcce3800,api=1)
+D/Surface (28702): Surface::setBufferCount(this=0xbcce3800,bufferCount=3)
+D/Surface (28702): Surface::connect(this=0xbce76800,api=1)
+W/Gralloc3(28702): mapper 3.x is not supported
+E/ion     (28702): ioctl c0044901 failed with code -1: Invalid argument
+VMServiceFlutterDriver: Connecting to Flutter application at http://127.0.0.1:63195/LMM1QfjFc3E=/
+VMServiceFlutterDriver: Isolate found with number: 935025086774583
+D/ViewRootImpl(28702): setSurfaceViewCreated, created:true
+D/Surface (28702): Surface::disconnect(this=0xbce76800,api=1)
+D/Surface (28702): Surface::connect(this=0xbce76800,api=1)
+W/Looper  (28702): Slow Looper main: Long Msg: seq=8 plan=18:27:43.600  late=2175ms wall=4983ms running=0ms h=android.view.Choreographer$FrameHandler c=android.view.Choreographer$FrameDisplayEventReceiver
+W/Looper  (28702): Slow Looper main: doFrame is 2175ms late because of 6 msg, msg 1 took 1167ms (seq=2 late=548ms h=android.app.ActivityThread$H w=110), msg 2 took 1985ms (seq=3 late=1278ms h=android.app.ActivityThread$H w=159)
+VMServiceFlutterDriver: Isolate 935025086774583 is runnable.
+VMServiceFlutterDriver: Isolate is paused at start.
+VMServiceFlutterDriver: Attempting to resume isolate
+I/Choreographer(28702): Skipped 282 frames!  The application may be doing too much work on its main thread.
+W/Looper  (28702): Slow Looper main: doFrame is 4710ms late because of 4 msg, msg 1 took 4983ms (seq=8 late=2175ms h=android.view.Choreographer$FrameHandler c=android.view.Choreographer$FrameDisplayEventReceiver)
+I/flutter (28702): 00:00 +0: convex capture samples toward its center and preserves the flat interior
+I/flutter (28702): FIXTURE_STEP coordinates-reference pump
+VMServiceFlutterDriver: Connected to Flutter application.
+I/_glass_showcas(28702): ProcessProfilingInfo new_methods=1373 is saved saved_to_disk=1 resolve_classes_delay=8000
+I/flutter (28702): FIXTURE_STEP coordinates-reference settled
+I/flutter (28702): FIXTURE_STEP coordinates-reference readback
+D/ProfileInstaller(28702): Installing profile for dev.liquidglass.liquid_glass_showcase
+D/Surface (28702): Surface::disconnect(this=0xbcce3800,api=1)
+D/Surface (28702): Surface::connect(this=0xbcce3800,api=1)
+D/Surface (28702): Surface::setBufferCount(this=0xbcce3800,bufferCount=3)
+D/Surface (28702): Surface::disconnect(this=0xbce76800,api=1)
+D/Surface (28702): Surface::connect(this=0xbce76800,api=1)
+D/Surface (28702): Surface::disconnect(this=0xbcce3800,api=1)
+D/Surface (28702): Surface::connect(this=0xbcce3800,api=1)
+D/Surface (28702): Surface::disconnect(this=0xbce76800,api=1)
+D/Surface (28702): Surface::setBufferCount(this=0xbcce3800,bufferCount=3)
+D/Surface (28702): Surface::connect(this=0xbce76800,api=1)
+D/Surface (28702): Surface::disconnect(this=0xbcce3800,api=1)
+D/Surface (28702): Surface::connect(this=0xbcce3800,api=1)
+D/Surface (28702): Surface::setBufferCount(this=0xbcce3800,bufferCount=3)
+D/Surface (28702): Surface::disconnect(this=0xbce76800,api=1)
+D/Surface (28702): Surface::connect(this=0xbce76800,api=1)
+D/Surface (28702): Surface::disconnect(this=0xbcce3800,api=1)
+D/Surface (28702): Surface::connect(this=0xbcce3800,api=1)
+D/Surface (28702): Surface::setBufferCount(this=0xbcce3800,bufferCount=3)
+Unhandled exception:
+DriverError: Failed to fulfill RequestData due to remote error
+Original error: ext.flutter.driver: (112) Service has disappeared
+Original stack trace:
+#0      new _OutstandingRequest (package:vm_service/src/vm_service.dart:280:34)
+#1      VmService._call.<anonymous closure> (package:vm_service/src/vm_service.dart:1962:25)
+#2      VmService._call (package:vm_service/src/vm_service.dart:1974:8)
+#3      VmService.callServiceExtension (package:vm_service/src/vm_service.dart:1913:14)
+#4      VMServiceFlutterDriver.sendCommand (package:flutter_driver/src/driver/vmservice_driver.dart:327:12)
+#5      FlutterDriver.requestData (package:flutter_driver/src/driver/driver.dart:585:13)
+#6      integrationDriver (package:integration_test/integration_test_driver.dart:71:42)
+<asynchronous suspension>
+
+
+#0      VMServiceFlutterDriver.sendCommand (package:flutter_driver/src/driver/vmservice_driver.dart:340:7)
+<asynchronous suspension>
+#1      FlutterDriver.requestData (package:flutter_driver/src/driver/driver.dart:585:7)
+<asynchronous suspension>
+#2      integrationDriver (package:integration_test/integration_test_driver.dart:71:29)
+<asynchronous suspension>
+Failed to stop app
+adb uninstall failed: ProcessException: Process exited abnormally with exit code 1:
+adb.exe: device 'BESGHI9HS4CEGEIV' not found
+  Command: C:\Users\keert\AppData\Local\Android\sdk\platform-tools\adb.exe -s BESGHI9HS4CEGEIV uninstall dev.liquidglass.liquid_glass_showcase
+Failed to uninstall app

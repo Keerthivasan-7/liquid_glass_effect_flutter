@@ -1,0 +1,52 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+# Libraries should not include pubspec.lock, per https://dart.dev/guides/libraries/private-files#pubspeclock.
+/pubspec.lock
+**/doc/api/
+.dart_tool/
+.flutter-plugins-dependencies
+/build/
+/coverage/
+/.research/
+/check-logs/
+/benchmark/results/
+**/__pycache__/
+
+# Keep qualification logs alongside their evidence, not transient build logs.
+!/doc/evidence/**/*.log
+
+# Version the current architecture outputs; keep local caches/history private.
+/graphify-out/*
+!/graphify-out/graph.json
+!/graphify-out/graph.html
+!/graphify-out/GRAPH_REPORT.md
+!/graphify-out/manifest.json
+!/graphify-out/source-snapshot.json
+/lib/graphify-out/*
+!/lib/graphify-out/graph.json
+!/lib/graphify-out/graph.html
+!/lib/graphify-out/GRAPH_REPORT.md
+!/lib/graphify-out/manifest.json
+!/lib/graphify-out/source-snapshot.json

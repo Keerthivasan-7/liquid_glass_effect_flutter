@@ -1,0 +1,27 @@
+name: liquid_optics_flutter
+description: A GPU-accelerated, geometry-aware liquid glass surface for Flutter with graceful fallbacks.
+version: 0.1.0-dev.1
+topics:
+  - liquid-glass
+  - shaders
+  - glassmorphism
+  - ui
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+  flutter: ">=3.32.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  meta: ^1.16.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  shaders:
+    - shaders/liquid_glass.frag
+    - shaders/liquid_glass_capture.frag

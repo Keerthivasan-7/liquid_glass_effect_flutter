@@ -1,0 +1,78 @@
+Resolving dependencies...
+Downloading packages...
+  async 2.13.0 (2.13.1 available)
+  clock 1.1.2 (1.1.3 available)
+  matcher 0.12.19 (0.12.20 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.0 (1.19.0 available)
+  platform 3.1.6 (3.2.0 available)
+  process 5.0.3 (5.0.6 available)
+  source_span 1.10.1 (1.10.2 available)
+  stack_trace 1.12.1 (1.12.2 available)
+  test_api 0.7.11 (0.7.15 available)
+  vector_math 2.2.0 (2.4.4 available)
+  vm_service 15.0.0 (15.4.0 available)
+  webdriver 3.1.0 (3.2.0 available)
+Got dependencies!
+13 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Running Gradle task 'assembleProfile'...                           92.7s
+√ Built build\app\outputs\flutter-apk\app-profile.apk (29.1MB)
+Installing build\app\outputs\flutter-apk\app-profile.apk...         3.3s
+I/Choreographer(18736): Skipped 99 frames!  The application may be doing too much work on its main thread.
+D/WindowLayoutComponentImpl(18736): Register WindowLayoutInfoListener on Context=dev.liquidglass.liquid_glass_showcase.MainActivity@2cbdb52, of which baseContext=android.app.ContextImpl@27ee97f
+I/_glass_showcase(18736): Compiler allocated 5230KB to compile void android.view.ViewRootImpl.performTraversals(long)
+D/ProfileInstaller(18736): Installing profile for dev.liquidglass.liquid_glass_showcase
+VMServiceFlutterDriver: Connecting to Flutter application at http://127.0.0.1:64163/1IrkzrD3H9Y=/
+VMServiceFlutterDriver: Isolate found with number: 5009712839042275
+VMServiceFlutterDriver: Isolate 5009712839042275 is runnable.
+VMServiceFlutterDriver: Isolate is paused at start.
+VMServiceFlutterDriver: Attempting to resume isolate
+I/flutter (18736): 00:00 +0: convex capture samples toward its center and preserves the flat interior
+VMServiceFlutterDriver: Connected to Flutter application.
+D/InsetsController(18736): hide(ime())
+I/ImeTracker(18736): dev.liquidglass.liquid_glass_showcase:f1c11ddb: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+I/_glass_showcase(18736): Background concurrent mark compact GC freed 2663KB AllocSpace bytes, 1(16KB) LOS objects, 49% free, 2523KB/5046KB, paused 2.243ms,52.900ms total 683.809ms
+I/flutter (18736): 00:53 +1: all surface silhouettes clip the optical pass
+I/_glass_showcase(18736): Background concurrent mark compact GC freed 128KB AllocSpace bytes, 0(0B) LOS objects, 49% free, 2523KB/5046KB, paused 1.411ms,82.850ms total 798.669ms
+I/flutter (18736): 01:17 +2: scope resize and DPR changes refresh sampling without scaling content
+I/flutter (18736): 01:32 +3: movement inside a shared crop does not recapture content
+I/flutter (18736): 01:43 +4: composited foreground text and icon remain pixel sharp
+I/flutter (18736): 01:43 +5: scaled and rotated surfaces preserve scope coordinate mapping
+I/flutter (18736): 01:56 +6: crop origin and fractional capture scale preserve coordinates
+I/flutter (18736): 02:04 +7: anisotropic scattering is independent of the capture aspect ratio
+I/flutter (18736): 02:06 +8: retained glass samples the updated content generation
+I/flutter (18736): 02:07 +9: capture failure releases the image and reports fallback once
+I/flutter (18736): 02:15 +10: transparency and contrast policies render opaque without advanced sampling
+I/flutter (18736): 02:25 +11: reduced motion leaves the captured material idle
+I/flutter (18736): 02:34 +12: explicit filter bends the backdrop and keeps foreground sharp
+I/flutter (18736): Expected: a value greater than <75>
+I/flutter (18736):   Actual: <73>
+I/flutter (18736):    Which: is not a value greater than <75>
+I/flutter (18736): 
+I/flutter (18736): #0      fail (package:matcher/src/expect/expect.dart:187)
+I/flutter (18736): #1      _expect (package:matcher/src/expect/expect.dart:182)
+I/flutter (18736): #2      expect (package:matcher/src/expect/expect.dart:65)
+I/flutter (18736): #3      expect (package:flutter_test/src/widget_tester.dart:473)
+I/flutter (18736): #4      registerRendererContractTests.<anonymous closure> (file:///C:/Projects/Flutter/Liquid%20Glass/test/support/renderer_contract_suite.dart:466)
+I/flutter (18736): <asynchronous suspension>
+I/flutter (18736): #5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192)
+I/flutter (18736): <asynchronous suspension>
+I/flutter (18736): #6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952)
+I/flutter (18736): <asynchronous suspension>
+I/flutter (18736): #7      TestWidgetsFlutterBinding._createTestCompletionHandler.<anonymous closure> (package:flutter_test/src/binding.dart:1706)
+I/flutter (18736): <asynchronous suspension>
+I/flutter (18736): 02:45 +12: explicit filter bends the backdrop and keeps foreground sharp [E]
+I/flutter (18736):   Test failed. See exception logs above.
+I/flutter (18736):   The test description was: explicit filter bends the backdrop and keeps foreground sharp
+I/flutter (18736):   
+I/flutter (18736): 02:45 +12 -1: keyboard and accessibility focus remain visible without consuming child actions
+I/flutter (18736): 03:24 +13 -1: (tearDownAll)
+I/flutter (18736): 03:24 +14 -1: Some tests failed.
+Failure Details:
+Failure in method: explicit filter bends the backdrop and keeps foreground sharp
+Instance of 'FlutterErrorDetails'
+end of failure 1
+
+
+

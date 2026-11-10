@@ -1,0 +1,54 @@
+Resolving dependencies...
+Downloading packages...
+  material_color_utilities 0.13.0 (0.13.1 available)
+  test_api 0.7.12 (0.7.15 available)
+Got dependencies!
+2 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Installing build\app\outputs\flutter-apk\app-profile.apk...      2,223ms
+I/Choreographer( 4768): Skipped 192 frames!  The application may be doing too much work on its main thread.
+D/WindowLayoutComponentImpl( 4768): Register WindowLayoutInfoListener on Context=dev.liquidglass.liquid_glass_showcase.MainActivity@17a955d, of which baseContext=android.app.ContextImpl@a501315
+D/ProfileInstaller( 4768): Installing profile for dev.liquidglass.liquid_glass_showcase
+VMServiceFlutterDriver: Connecting to Flutter application at http://127.0.0.1:50121/PN83aT6PSKo=/
+VMServiceFlutterDriver: Isolate found with number: 2171123448145423
+VMServiceFlutterDriver: Isolate 2171123448145423 is runnable.
+VMServiceFlutterDriver: Isolate is paused at start.
+VMServiceFlutterDriver: Attempting to resume isolate
+I/flutter ( 4768): 00:00 +0: convex capture samples toward its center and preserves the flat interior
+VMServiceFlutterDriver: Connected to Flutter application.
+I/Choreographer( 4768): Skipped 47 frames!  The application may be doing too much work on its main thread.
+W/_glass_showcase( 4768): Suspending all threads took: 34.568ms
+I/_glass_showcase( 4768): Background concurrent mark compact GC freed 1959KB AllocSpace bytes, 1(16KB) LOS objects, 49% free, 2523KB/5046KB, paused 57.647ms,91.588ms total 640.447ms
+I/_glass_showcase( 4768): Compiler allocated 5228KB to compile void android.view.ViewRootImpl.performTraversals(long)
+I/flutter ( 4768): 01:44 +1: all surface silhouettes clip the optical pass
+I/flutter ( 4768): 03:00 +2: scope resize and DPR changes refresh sampling without scaling content
+I/flutter ( 4768): 04:15 +3: movement inside a shared crop does not recapture content
+I/flutter ( 4768): 05:39 +4: composited foreground text and icon remain pixel sharp
+I/flutter ( 4768): 05:43 +5: scaled and rotated surfaces preserve scope coordinate mapping
+I/flutter ( 4768): 07:37 +6: crop origin and fractional capture scale preserve coordinates
+I/flutter ( 4768): 08:35 +7: anisotropic scattering is independent of the capture aspect ratio
+Unhandled exception:
+DriverError: Failed to fulfill RequestData due to remote error
+Original error: ext.flutter.driver: (112) Service has disappeared
+Original stack trace:
+#0      new _OutstandingRequest (package:vm_service/src/vm_service.dart:280:34)
+#1      VmService._call.<anonymous closure> (package:vm_service/src/vm_service.dart:1962:25)
+#2      VmService._call (package:vm_service/src/vm_service.dart:1974:8)
+#3      VmService.callServiceExtension (package:vm_service/src/vm_service.dart:1913:14)
+#4      VMServiceFlutterDriver.sendCommand (package:flutter_driver/src/driver/vmservice_driver.dart:327:12)
+#5      FlutterDriver.requestData (package:flutter_driver/src/driver/driver.dart:585:13)
+#6      integrationDriver (package:integration_test/integration_test_driver.dart:71:42)
+<asynchronous suspension>
+
+
+#0      VMServiceFlutterDriver.sendCommand (package:flutter_driver/src/driver/vmservice_driver.dart:340:7)
+<asynchronous suspension>
+#1      FlutterDriver.requestData (package:flutter_driver/src/driver/driver.dart:585:7)
+<asynchronous suspension>
+#2      integrationDriver (package:integration_test/integration_test_driver.dart:71:29)
+<asynchronous suspension>
+Failed to stop app
+adb uninstall failed: ProcessException: Process exited abnormally with exit code 1:
+adb.exe: device 'emulator-5554' not found
+  Command: C:\Users\keert\AppData\Local\Android\sdk\platform-tools\adb.exe -s emulator-5554 uninstall dev.liquidglass.liquid_glass_showcase
+Failed to uninstall app

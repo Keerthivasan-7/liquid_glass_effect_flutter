@@ -1,0 +1,29 @@
+{
+  "reason": "Antialiased adjacent logical-pixel rectangles left translucent seams during downsampling. Disable antialiasing only for coordinate calibration; retain strict renderer assertions.",
+  "runs": [
+    {
+      "run": "windows-grid-probe",
+      "sourceImage": "doc\\evidence\\2026-11-09\\windows-grid-probe\\crop-0.65-source-capture.png",
+      "alphaRange": [
+        199,
+        222
+      ],
+      "size": [
+        132,
+        159
+      ]
+    },
+    {
+      "run": "windows-v4-calibrated",
+      "sourceImage": "doc\\evidence\\2026-11-09\\windows-v4-calibrated\\crop-0.65-source-capture.png",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "size": [
+        132,
+        159
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+--------- beginning of crash
+11-09 16:38:17.206   685   685 E AndroidRuntime: *** FATAL EXCEPTION IN SYSTEM PROCESS: main
+11-09 16:38:17.206   685   685 E AndroidRuntime: java.lang.IllegalStateException: Invalid @IntRange(from = -1): -38386
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.internal.util.AnnotationValidations.invalid(AnnotationValidations.java:234)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.internal.util.AnnotationValidations.invalid(AnnotationValidations.java:230)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.internal.util.AnnotationValidations.validate(AnnotationValidations.java:104)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at android.app.AppOpsManager$NoteOpEvent.<init>(AppOpsManager.java:4414)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.appop.AttributedOp.finishOrPause(AttributedOp.java:342)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.appop.AttributedOp.finished(AttributedOp.java:292)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.appop.AttributedOp.finished(AttributedOp.java:288)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.finishOperationUnchecked(AppOpsService.java:4486)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.finishOperationUnchecked(AppOpsService.java:4442)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.finishOperationImpl(AppOpsService.java:4372)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.-$$Nest$mfinishOperationImpl(AppOpsService.java:0)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.appop.AppOpsService$CheckOpsDelegateDispatcher.$r8$lambda$isKDS9RXD9cfyW6vB1LFop2lwy4(AppOpsService.java:0)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.appop.AppOpsService$CheckOpsDelegateDispatcher$$ExternalSyntheticLambda11.accept(R8$$SyntheticClass:0)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.policy.AppOpsPolicy.finishOperation(AppOpsPolicy.java:304)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.appop.AppOpsService$CheckOpsDelegateDispatcher.finishOperation(AppOpsService.java:8247)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.appop.AppOpsService.finishOperation(AppOpsService.java:4343)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at android.app.AppOpsManager.finishOp(AppOpsManager.java:10997)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at android.app.AppOpsManager.finishOp(AppOpsManager.java:10990)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at android.app.AppOpsManager.finishOp(AppOpsManager.java:10969)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.power.Notifier.notifyWakelockRelease(Notifier.java:1393)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.power.Notifier.lambda$notifyWakeLockListener$9(Notifier.java:1339)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.power.Notifier.$r8$lambda$Rb9qlD2tgScsj7p88_DorCc8zYI(Notifier.java:0)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.power.Notifier$$ExternalSyntheticLambda2.run(R8$$SyntheticClass:0)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1095)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:125)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:296)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:397)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.SystemServer.run(SystemServer.java:1097)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.server.SystemServer.main(SystemServer.java:727)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+11-09 16:38:17.206   685   685 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:917)
+11-09 16:38:22.881  1151  1151 E AndroidRuntime: FATAL EXCEPTION: main
+11-09 16:38:22.881  1151  1151 E AndroidRuntime: Process: com.android.phone, PID: 1151
+11-09 16:38:22.881  1151  1151 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+11-09 16:38:56.193  4940  5002 E AndroidRuntime: FATAL EXCEPTION: CronetInit
+11-09 16:38:56.193  4940  5002 E AndroidRuntime: Process: com.android.vending:background, PID: 4940
+11-09 16:38:56.193  4940  5002 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+11-09 16:38:56.210  1093  1239 E AndroidRuntime: FATAL EXCEPTION: IpClient.wlan0
+11-09 16:38:56.210  1093  1239 E AndroidRuntime: Process: com.android.networkstack.process, PID: 1093
+11-09 16:38:56.210  1093  1239 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+11-09 16:38:56.220   973  1131 E AndroidRuntime: FATAL EXCEPTION: WifiPickerTracker-WifiRepository
+11-09 16:38:56.220   973  1131 E AndroidRuntime: Process: com.android.systemui, PID: 973
+11-09 16:38:56.220   973  1131 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+11-09 16:38:56.220  4873  5034 E AndroidRuntime: FATAL EXCEPTION: CronetInit
+11-09 16:38:56.220  4873  5034 E AndroidRuntime: Process: com.android.vending, PID: 4873
+11-09 16:38:56.220  4873  5034 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+11-09 16:38:56.374  1341  4777 E AndroidRuntime: FATAL EXCEPTION: highpool[34]
+11-09 16:38:56.374  1341  4777 E AndroidRuntime: Process: com.google.android.gms, PID: 1341
+11-09 16:38:56.374  1341  4777 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+11-09 16:38:56.424   973  1073 E AndroidRuntime: FATAL EXCEPTION: SysUiBg
+11-09 16:38:56.424   973  1073 E AndroidRuntime: Process: com.android.systemui, PID: 973
+11-09 16:38:56.424   973  1073 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+11-09 16:38:56.497  1341  4763 E AndroidRuntime: FATAL EXCEPTION: highpool[33]
+11-09 16:38:56.497  1341  4763 E AndroidRuntime: Process: com.google.android.gms, PID: 1341
+11-09 16:38:56.497  1341  4763 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause

@@ -1,0 +1,37 @@
+[
+  {
+    "backend": "skwasm",
+    "arguments": [
+      "drive",
+      "--driver=test_driver/integration_test.dart",
+      "--target=integration_test/renderer_contract_test.dart",
+      "-d",
+      "web-server",
+      "--release",
+      "--browser-name=chrome",
+      "--headless",
+      "--driver-port=4444",
+      "--browser-dimension=1000x800",
+      "--dart-define=RENDERER_LABEL=skwasm",
+      "--wasm"
+    ],
+    "exitCode": 0
+  },
+  {
+    "backend": "CanvasKit",
+    "arguments": [
+      "drive",
+      "--driver=test_driver/integration_test.dart",
+      "--target=integration_test/renderer_contract_test.dart",
+      "-d",
+      "web-server",
+      "--release",
+      "--browser-name=chrome",
+      "--headless",
+      "--driver-port=4444",
+      "--browser-dimension=1000x800",
+      "--dart-define=RENDERER_LABEL=CanvasKit"
+    ],
+    "exitCode": 0
+  }
+]

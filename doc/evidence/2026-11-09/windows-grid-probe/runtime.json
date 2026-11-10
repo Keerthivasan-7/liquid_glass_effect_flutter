@@ -1,0 +1,59 @@
+{
+  "fixtureVersion": 4,
+  "contractFilter": "crop origin",
+  "errors": [
+    {
+      "test": "crop origin and fractional capture scale preserve coordinates",
+      "exception": "Expected: a numeric value within <2> of <165.75>\n  Actual: <168>\n   Which:  differs by <2.25>",
+      "stack": "#0      fail (package:matcher/src/expect/expect.dart:187)\n#1      _expect (package:matcher/src/expect/expect.dart:182)\n#2      expect (package:matcher/src/expect/expect.dart:65)\n#3      expect (package:flutter_test/src/widget_tester.dart:473)\n#4      registerRendererContractTests.<anonymous closure> (file:///C:/Projects/Flutter/Liquid%20Glass/test/support/renderer_contract_suite.dart:457)\n<asynchronous suspension>\n#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192)\n<asynchronous suspension>\n#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952)\n<asynchronous suspension>\n#7      TestWidgetsFlutterBinding._createTestCompletionHandler.<anonymous closure> (package:flutter_test/src/binding.dart:1706)\n<asynchronous suspension>\n"
+    }
+  ],
+  "platform": "windows",
+  "backendLabel": "Windows-Skia",
+  "buildMode": "profile",
+  "supportsShaderFilter": false,
+  "physicalWidth": 1582.0,
+  "physicalHeight": 853.0,
+  "devicePixelRatio": 1.25,
+  "refreshRateHz": 144.0,
+  "observations": {
+    "crop-0.65": {
+      "requestedRenderer": "capture",
+      "activePath": "capture",
+      "surfaceScale": 1.0,
+      "surfaceRotationRadians": 0.0,
+      "textScale": 1.0,
+      "highContrast": false,
+      "generation": 3,
+      "captureCount": 3,
+      "captureFailures": 0,
+      "activeSurfaceCount": 1,
+      "captureSupported": true,
+      "scopeSize": [
+        400.0,
+        300.0
+      ],
+      "captureRect": [
+        184.6153846153846,
+        8.615384615384615,
+        161.23076923076925,
+        195.6923076923077
+      ],
+      "pixelSize": [
+        132.0,
+        159.0
+      ],
+      "capturePixelRatio": 0.8125,
+      "captureAreaRatio": 0.262930177514793,
+      "currentBytes": 83952,
+      "retainedBytes": 83952,
+      "peakRetainedBytes": 485104,
+      "retiredImageCount": 0
+    }
+  },
+  "screenshots": [
+    "crop-0.65.png",
+    "crop-0.65-source-capture.png"
+  ],
+  "recordedAtUtc": "2026-11-09T11:41:55.013025Z"
+}

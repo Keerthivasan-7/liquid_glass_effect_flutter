@@ -1,0 +1,173 @@
+name: Renderer checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    name: Package / ${{ matrix.sdk.label }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        sdk:
+          - label: minimum-3.32.0
+            version: '3.32.0'
+          - label: latest-stable
+            version: ''
+    steps:
+      - uses: actions/checkout@v7
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ matrix.sdk.version }}
+          cache: true
+      - name: Record SDK and resolve dependencies
+        shell: bash
+        run: |
+          mkdir -p check-logs
+          flutter --version --machine | tee check-logs/sdk.json
+          flutter pub get 2>&1 | tee check-logs/package-pub.log
+          (cd example && flutter pub get) 2>&1 | tee check-logs/example-pub.log
+          (cd benchmark && flutter pub get) 2>&1 | tee check-logs/benchmark-pub.log
+      - name: Formatting
+        shell: bash
+        run: dart format --output=none --set-exit-if-changed lib test example/lib example/integration_test example/test_driver benchmark/lib benchmark/test benchmark/integration_test benchmark/test_driver 2>&1 | tee check-logs/format.log
+      - name: Analysis
+        shell: bash
+        run: flutter analyze 2>&1 | tee check-logs/analyze.log
+      - name: Example analysis
+        shell: bash
+        run: (cd example && flutter analyze) 2>&1 | tee check-logs/example-analyze.log
+      - name: Benchmark analysis
+        shell: bash
+        run: (cd benchmark && flutter analyze) 2>&1 | tee check-logs/benchmark-analyze.log
+      - name: Package tests and shader compilation
+        shell: bash
+        run: flutter test --reporter expanded 2>&1 | tee check-logs/tests.log
+      - name: Benchmark tests
+        shell: bash
+        run: (cd benchmark && flutter test --reporter expanded) 2>&1 | tee check-logs/benchmark-tests.log
+      - name: Independent raw benchmark validator tests
+        shell: bash
+        run: python3 -m unittest discover -s benchmark/tool -v 2>&1 | tee check-logs/raw-validator-tests.log
+      - name: Package archive dry run
+        shell: bash
+        run: flutter pub publish --dry-run 2>&1 | tee check-logs/publish.log
+      - name: Preserve check output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: checks-${{ matrix.sdk.label }}
+          path: check-logs/
+
+  web-build:
+    name: Web build smoke / stable
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Record SDK
+        shell: bash
+        run: |
+          mkdir -p check-logs
+          flutter --version --machine | tee check-logs/sdk.json
+      - name: Resolve example dependencies
+        shell: bash
+        run: flutter pub get 2>&1 | tee ../check-logs/example-pub.log
+        working-directory: example
+      - name: Compile web showcase
+        shell: bash
+        run: flutter build web --release 2>&1 | tee ../check-logs/web-build.log
+        working-directory: example
+      - name: Preserve build output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-build-stable
+          path: check-logs/
+
+  android-build:
+    name: Android qualification build / stable
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Record SDK
+        shell: bash
+        run: |
+          mkdir -p check-logs
+          flutter --version --machine | tee check-logs/sdk.json
+      - name: Resolve example dependencies
+        shell: bash
+        run: flutter pub get 2>&1 | tee ../check-logs/example-pub.log
+        working-directory: example
+      - name: Compile native surface readback and qualification tests
+        shell: bash
+        run: flutter build apk --profile --target=integration_test/renderer_qualification_test.dart --target-platform=android-arm,android-x64 2>&1 | tee ../check-logs/android-qualification-build.log
+        working-directory: example
+      - name: Resolve benchmark dependencies
+        shell: bash
+        run: flutter pub get 2>&1 | tee ../check-logs/benchmark-pub.log
+        working-directory: benchmark
+      - name: Compile native benchmark harness
+        shell: bash
+        run: flutter build apk --profile --target=integration_test/benchmark_matrix_test.dart --target-platform=android-arm,android-x64 2>&1 | tee ../check-logs/android-benchmark-build.log
+        working-directory: benchmark
+      - name: Preserve build output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-build-stable
+          path: check-logs/
+
+  windows-build:
+    name: Windows build smoke / stable
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Record SDK
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force check-logs | Out-Null
+          flutter --version --machine | Tee-Object -FilePath check-logs/sdk.json
+          exit $LASTEXITCODE
+      - name: Resolve example dependencies
+        shell: pwsh
+        run: |
+          flutter pub get 2>&1 | Tee-Object -FilePath ../check-logs/example-pub.log
+          exit $LASTEXITCODE
+        working-directory: example
+      - name: Compile Windows showcase
+        shell: pwsh
+        run: |
+          flutter build windows --profile 2>&1 | Tee-Object -FilePath ../check-logs/windows-build.log
+          exit $LASTEXITCODE
+        working-directory: example
+      - name: Preserve build output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-build-stable
+          path: check-logs/

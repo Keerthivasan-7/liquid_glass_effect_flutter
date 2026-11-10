@@ -1,0 +1,136 @@
+import 'dart:convert';
+import 'dart:io';
+import 'dart:ui' as ui;
+
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:liquid_optics_flutter/liquid_optics_flutter.dart';
+import 'package:liquid_optics_flutter/src/rendering/shader_manager.dart';
+
+const imageKey = ValueKey('historical-probe');
+const expectCurrent = bool.fromEnvironment('EXPECT_CURRENT_RENDERER');
+const config = LiquidGlassConfig(
+  renderer: LiquidGlassRenderer.capture,
+  blurSigma: 0, refractionStrength: 0.12, thickness: 2, edgeWidth: 0.5,
+  roughness: 0, transmission: 1, absorptionStrength: 0,
+  scatteringStrength: 0, dispersionStrength: 0, chromaticAberration: 0,
+  environmentStrength: 0, coatStrength: 0, causticStrength: 0,
+  fresnelStrength: 0, specularStrength: 0, innerShadow: 0,
+  saturation: 1, tint: Colors.transparent, noise: 0,
+  animateLight: false, quality: LiquidGlassQuality.performance,
+);
+final evidence = Directory(const String.fromEnvironment('PROBE_EVIDENCE_DIR',
+    defaultValue: 'C:/Projects/Flutter/Liquid Glass/doc/evidence/2026-11-09/original-consumer-source'));
+
+Widget fixture(Widget background, LiquidGlassConfig settings,
+    {ValueChanged<LiquidGlassDiagnostics>? onDiagnostics,
+     ValueChanged<LiquidGlassRenderPath>? onPath}) => MaterialApp(
+  home: Center(child: SizedBox(width: 400, height: 300,
+    child: RepaintBoundary(key: imageKey, child: LiquidGlassScene(
+      qualityScale: 1, pixelRatio: 1,
+      onDiagnosticsChanged: onDiagnostics,
+      content: background,
+      glass: Stack(children: [Positioned(left: 110, top: 80, width: 180,
+        height: 140, child: LiquidGlass(config: settings, onRenderPathChanged: onPath,
+          child: const SizedBox()))]),
+    )),
+  )),
+);
+
+Future<List<int>> pixels(WidgetTester tester, String name) async {
+  final boundary = tester.renderObject<RenderRepaintBoundary>(find.byKey(imageKey));
+  return (await tester.runAsync(() async {
+    final image = await boundary.toImage(pixelRatio: 1);
+    try {
+      final rgba = await image.toByteData(format: ui.ImageByteFormat.rawRgba);
+      final png = await image.toByteData(format: ui.ImageByteFormat.png);
+      await evidence.create(recursive: true);
+      await File('${evidence.path}/$name.png').writeAsBytes(png!.buffer.asUint8List());
+      return rgba!.buffer.asUint8List().toList();
+    } finally { image.dispose(); }
+  }))!;
+}
+List<int> at(List<int> bytes, int x, int y) => bytes.sublist((y*400+x)*4,(y*400+x)*4+4);
+
+void main() {
+  setUpAll(() => LiquidGlassShaderManager.loadCapture());
+  testWidgets('record original refraction direction', (tester) async {
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetDevicePixelRatio);
+    await tester.pumpWidget(fixture(CustomPaint(painter: _Coordinates()),
+        config.copyWith(renderer: LiquidGlassRenderer.fallback)));
+    await tester.pumpAndSettle();
+    final reference = await pixels(tester, 'direction-reference');
+    LiquidGlassRenderPath? path;
+    await tester.pumpWidget(fixture(CustomPaint(painter: _Coordinates()), config,
+        onPath: (value) => path = value));
+    await tester.pumpAndSettle();
+    final original = await pixels(tester, expectCurrent ? 'direction-current' : 'direction-original');
+    final inward = at(original,115,150)[0] > at(reference,115,150)[0]+2 &&
+        at(original,284,150)[0] < at(reference,284,150)[0]-2;
+    final data = {'referenceLeft': at(reference,115,150),
+      'renderedLeft': at(original,115,150),
+      'referenceRight': at(reference,284,150),
+      'renderedRight': at(original,284,150),
+      'renderPath': path?.name, 'inwardSamplingContractPassed': inward,
+      'sourceUnderTest': expectCurrent ? 'current' : 'reconstructed original',
+      'scope': 'Flutter 3.44.1 offscreen Skia at DPR1'};
+    await tester.runAsync(() => File('${evidence.path}/direction-probe.json')
+        .writeAsString(const JsonEncoder.withIndent('  ').convert(data)));
+    expect(path, LiquidGlassRenderPath.capture);
+    expect(inward, expectCurrent);
+    await tester.pumpWidget(const SizedBox());
+    await tester.pumpAndSettle();
+  });
+  testWidgets('record original independently repainted background', (tester) async {
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetDevicePixelRatio);
+    final blue = ValueNotifier(false);
+    LiquidGlassDiagnostics? diagnostics;
+    try {
+      await tester.pumpWidget(fixture(CustomPaint(painter: _Solid(blue)),
+          config.copyWith(refractionStrength: 0),
+          onDiagnostics: (value) => diagnostics = value));
+      await tester.pumpAndSettle();
+      final before = await pixels(tester, 'freshness-before');
+      final firstCount = diagnostics!.captureCount;
+      blue.value = true;
+      await tester.pumpAndSettle();
+      final after = await pixels(tester, 'freshness-after');
+      final data = {'sourceUnderTest': expectCurrent ? 'current' : 'reconstructed original',
+        'beforeCenter': at(before,200,150),
+        'afterCenter': at(after,200,150),'afterOutside': at(after,40,40),
+        'captureCountBefore': firstCount,'captureCountAfter': diagnostics!.captureCount};
+      await tester.runAsync(() => File('${evidence.path}/freshness-probe.json')
+          .writeAsString(const JsonEncoder.withIndent('  ').convert(data)));
+      expect(at(after,40,40), [0,0,255,255]);
+      expect(at(after,200,150), expectCurrent ? [0,0,255,255] : at(before,200,150));
+      expect(diagnostics!.captureCount, greaterThan(firstCount));
+    } finally {
+      await tester.pumpWidget(const SizedBox());
+      await tester.pumpAndSettle();
+      blue.dispose();
+    }
+  });
+}
+
+class _Coordinates extends CustomPainter {
+  @override void paint(Canvas canvas, Size size) {
+    final rect = Offset.zero & size;
+    canvas.drawRect(rect, Paint()..shader = const LinearGradient(
+      colors: [Color(0xFF000040),Color(0xFFFF0040)]).createShader(rect));
+    canvas.drawRect(rect, Paint()..blendMode = BlendMode.plus
+      ..shader = const LinearGradient(begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,colors: [Color(0xFF000000),Color(0xFF00FF00)])
+        .createShader(rect));
+  }
+  @override bool shouldRepaint(_Coordinates oldDelegate) => false;
+}
+class _Solid extends CustomPainter {
+  _Solid(this.blue): super(repaint: blue);
+  final ValueNotifier<bool> blue;
+  @override void paint(Canvas canvas, Size size) =>
+      canvas.drawColor(blue.value ? const Color(0xFF0000FF) : const Color(0xFFFF0000), BlendMode.src);
+  @override bool shouldRepaint(_Solid oldDelegate) => false;
+}

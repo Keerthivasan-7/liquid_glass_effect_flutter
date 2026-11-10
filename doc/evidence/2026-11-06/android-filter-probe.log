@@ -1,0 +1,94 @@
+Resolving dependencies...
+Downloading packages...
+  async 2.13.0 (2.13.1 available)
+  clock 1.1.2 (1.1.3 available)
+  matcher 0.12.19 (0.12.20 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.0 (1.19.0 available)
+  platform 3.1.6 (3.2.0 available)
+  process 5.0.3 (5.0.6 available)
+  source_span 1.10.1 (1.10.2 available)
+  stack_trace 1.12.1 (1.12.2 available)
+  test_api 0.7.11 (0.7.15 available)
+  vector_math 2.2.0 (2.4.4 available)
+  vm_service 15.0.0 (15.4.0 available)
+  webdriver 3.1.0 (3.2.0 available)
+Got dependencies!
+13 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Running Gradle task 'assembleProfile'...                           54.4s
+√ Built build\app\outputs\flutter-apk\app-profile.apk (29.1MB)
+Installing build\app\outputs\flutter-apk\app-profile.apk...         4.2s
+I/_glass_showcase(19574): hiddenapi: Accessing hidden method Landroid/view/accessibility/AccessibilityNodeInfo;->getSourceNodeId()J (runtime_flags=0, domain=platform, api=unsupported,test-api) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+I/_glass_showcase(19574): hiddenapi: Accessing hidden method Landroid/view/accessibility/AccessibilityRecord;->getSourceNodeId()J (runtime_flags=0, domain=platform, api=unsupported) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+I/_glass_showcase(19574): hiddenapi: Accessing hidden field Landroid/view/accessibility/AccessibilityNodeInfo;->mChildNodeIds:Landroid/util/LongArray; (runtime_flags=0, domain=platform, api=unsupported) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+I/_glass_showcase(19574): hiddenapi: Accessing hidden method Landroid/util/LongArray;->get(I)J (runtime_flags=0, domain=platform, api=unsupported) from Lio/flutter/view/AccessibilityViewEmbedder$ReflectionAccessors; (domain=app, TargetSdkVersion=36) using reflection: allowed
+D/CompatChangeReporter(19574): Compat change id reported: 377864165; UID 10235; state: ENABLED
+W/HWUI    (19574): Unknown dataspace 0
+W/libc    (19574): Access denied finding property "vendor.mesa.virtgpu.kumquat"
+D/WindowOnBackDispatcher(19574): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@d9692a7
+I/WindowExtensionsImpl(19574): Initializing Window Extensions, vendor API level=10, activity embedding enabled=true
+W/UiContextUtils(19574): Requested context is a non-UI Context. Creating a UI-Context with display: 0. Context: Context=android.app.Application@5912294, of which baseContext=android.app.ContextImpl@f8734ab
+D/VRI[MainActivity](19574): WindowInsets changed: 1344x2992 statusBars:[0,159,0,0] navigationBars:[0,0,0,72] mandatorySystemGestures:[0,195,0,96] 
+I/Surface (19574): Creating surface for consumer unnamed-19574-0 with slotExpansion=1 for 64 slots
+I/Surface (19574): Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+I/Surface (19574): Creating surface for consumer unnamed-19574-1 with slotExpansion=1 for 64 slots
+I/Surface (19574): Creating surface for consumer 37b73dd SurfaceView[dev.liquidglass.liquid_glass_showcase/dev.liquidglass.liquid_glass_showcase.MainActivity]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+I/Choreographer(19574): Skipped 119 frames!  The application may be doing too much work on its main thread.
+D/WindowLayoutComponentImpl(19574): Register WindowLayoutInfoListener on Context=dev.liquidglass.liquid_glass_showcase.MainActivity@94c5f20, of which baseContext=android.app.ContextImpl@1a29e9b
+D/ProfileInstaller(19574): Installing profile for dev.liquidglass.liquid_glass_showcase
+I/_glass_showcase(19574): Compiler allocated 5230KB to compile void android.view.ViewRootImpl.performTraversals(long)
+VMServiceFlutterDriver: Connecting to Flutter application at http://127.0.0.1:57850/xjmsAuuffIk=/
+VMServiceFlutterDriver: Isolate found with number: 6099745180517615
+VMServiceFlutterDriver: Isolate 6099745180517615 is runnable.
+VMServiceFlutterDriver: Isolate is paused at start.
+VMServiceFlutterDriver: Attempting to resume isolate
+I/flutter (19574): 00:00 +0: convex capture samples toward its center and preserves the flat interior
+VMServiceFlutterDriver: Connected to Flutter application.
+I/Choreographer(19574): Skipped 40 frames!  The application may be doing too much work on its main thread.
+I/HWUI    (19574): Davey! duration=860ms; Flags=1, FrameTimelineVsyncId=3028470, IntendedVsync=14284961326948, Vsync=14285627993588, InputEventId=0, HandleInputStart=14285638316080, AnimationStart=14285638495480, PerformTraversalsStart=14285638551580, DrawStart=14285647743680, FrameDeadline=14284977993614, FrameStartTime=14285635272280, FrameInterval=16666666, WorkloadTarget=16666666, AnimationTime=14285627993588, SyncQueued=14285650451480, SyncStart=14285654752680, IssueDrawCommandsStart=14285656060780, SwapBuffers=14285755875780, FrameCompleted=14285826469080, DequeueBufferDuration=64301600, QueueBufferDuration=661700, GpuCompleted=14285780211680, SwapBuffersCompleted=14285826469080, DisplayPresentTime=0, CommandSubmissionCompleted=14285755875780, 
+D/InsetsController(19574): hide(ime())
+I/ImeTracker(19574): dev.liquidglass.liquid_glass_showcase:b352d89c: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+I/_glass_showcase(19574): Background concurrent mark compact GC freed 2727KB AllocSpace bytes, 1(16KB) LOS objects, 49% free, 2523KB/5046KB, paused 2.077ms,20.882ms total 130.683ms
+I/flutter (19574): 00:24 +1: all surface silhouettes clip the optical pass
+I/flutter (19574): 00:42 +2: scope resize and DPR changes refresh sampling without scaling content
+I/flutter (19574): 00:53 +3: movement inside a shared crop does not recapture content
+I/flutter (19574): 01:05 +4: composited foreground text and icon remain pixel sharp
+I/flutter (19574): 01:05 +5: scaled and rotated surfaces preserve scope coordinate mapping
+I/flutter (19574): 01:17 +6: crop origin and fractional capture scale preserve coordinates
+I/flutter (19574): 01:25 +7: anisotropic scattering is independent of the capture aspect ratio
+I/flutter (19574): 01:27 +8: retained glass samples the updated content generation
+I/flutter (19574): 01:28 +9: capture failure releases the image and reports fallback once
+I/flutter (19574): 01:40 +10: transparency and contrast policies render opaque without advanced sampling
+I/flutter (19574): 01:58 +11: reduced motion leaves the captured material idle
+I/flutter (19574): 02:08 +12: explicit filter bends the backdrop and keeps foreground sharp
+I/flutter (19574): Expected: a value greater than <75>
+I/flutter (19574):   Actual: <73>
+I/flutter (19574):    Which: is not a value greater than <75>
+I/flutter (19574): 
+I/flutter (19574): #0      fail (package:matcher/src/expect/expect.dart:187)
+I/flutter (19574): #1      _expect (package:matcher/src/expect/expect.dart:182)
+I/flutter (19574): #2      expect (package:matcher/src/expect/expect.dart:65)
+I/flutter (19574): #3      expect (package:flutter_test/src/widget_tester.dart:473)
+I/flutter (19574): #4      registerRendererContractTests.<anonymous closure> (file:///C:/Projects/Flutter/Liquid%20Glass/test/support/renderer_contract_suite.dart:466)
+I/flutter (19574): <asynchronous suspension>
+I/flutter (19574): #5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192)
+I/flutter (19574): <asynchronous suspension>
+I/flutter (19574): #6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952)
+I/flutter (19574): <asynchronous suspension>
+I/flutter (19574): #7      TestWidgetsFlutterBinding._createTestCompletionHandler.<anonymous closure> (package:flutter_test/src/binding.dart:1706)
+I/flutter (19574): <asynchronous suspension>
+I/flutter (19574): 02:15 +12: explicit filter bends the backdrop and keeps foreground sharp [E]
+I/flutter (19574):   Test failed. See exception logs above.
+I/flutter (19574):   The test description was: explicit filter bends the backdrop and keeps foreground sharp
+I/flutter (19574):   
+I/flutter (19574): 02:15 +12 -1: keyboard and accessibility focus remain visible without consuming child actions
+I/flutter (19574): 02:41 +13 -1: (tearDownAll)
+I/flutter (19574): 02:42 +14 -1: Some tests failed.
+Failure Details:
+Failure in method: explicit filter bends the backdrop and keeps foreground sharp
+Instance of 'FlutterErrorDetails'
+end of failure 1
+
+
+
