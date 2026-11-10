@@ -13,6 +13,7 @@ const _boundaryKey = ValueKey<String>('photo-accessibility-image');
 
 void registerPhotoAccessibilityTests({
   required Future<Uint8List> Function() loadPhoto,
+  TestVariant<Object?> variant = const DefaultTestVariant(),
   Future<void> Function(String name, Uint8List png)? saveImage,
   void Function(String name, Map<String, Object?> observation)? onObservation,
 }) {
@@ -99,6 +100,8 @@ void registerPhotoAccessibilityTests({
                                                               context)
                                                           .style
                                                           .color,
+                                                  visualDensity:
+                                                      VisualDensity.standard,
                                                   minimumSize:
                                                       const Size(48, 48)),
                                               onPressed: () => activations += 1,
@@ -222,7 +225,7 @@ void registerPhotoAccessibilityTests({
             scroll.dispose();
             semantics.dispose();
           }
-        });
+        }, variant: variant);
       }
     }
   }
