@@ -20,40 +20,47 @@ verification gates below still apply to completion of the renderer milestone.
 ## Automated engineering gates
 
 - [x] Implement minimum 3.32.0 and current stable CI lanes and build smoke jobs.
-- [x] Prepare explicit example/benchmark analysis and SDK/build-log artifacts for every platform build job; hosted execution remains open.
-- [x] Run final formatting, analysis and 55 package checks on Flutter 3.32.0 and 3.47.9; source hashes match.
-- [x] Record nine benchmark checks on both SDKs and twelve independent raw-validator tests before the latest renderer change.
+- [x] Run explicit example/benchmark analysis and preserve SDK/build-log artifacts for every hosted platform build job.
+- [x] Run formatting, analysis and 63 package checks on Flutter 3.32.0 and 3.47.9 at `970d38f`; both hosted lanes pass.
+- [x] Record nine benchmark checks and twelve independent raw-validator checks on both hosted SDK lanes, including the current renderer.
 - [x] Prove conservative sampling bounds and semantic uniform/value bindings.
 - [x] Detect deliberate refraction-sign, crop-origin, uniform-value and foreground-blur defects.
-- [x] Inspect the real 366-KB archive and confirm intended exclusions.
+- [x] Inspect the actual published archive and confirm intended exclusions (628,400 bytes / 181 files).
 - [x] Add real homepage/repository/issue links supplied by the user.
-- [x] Run the publication-candidate dry run on Flutter 3.44.1: zero warnings. Earlier SDK dry runs exited 65 for the then-missing source metadata; final minimum/latest SDK qualification remains separate.
-- [ ] Run hosted CI and configure required checks. Upload commits skipped automated suites at the user's request.
-- [ ] Qualify the final rotation-axis/shader and showcase source; builds alone do not close this gate. Extended runs deferred by user direction.
+- [x] Run zero-warning dry runs locally and on both hosted SDK lanes. Earlier missing-metadata failures remain historical.
+- [x] Pass hosted CI: both SDK lanes and Android, web and Windows builds, run `42761367535`.
+- [x] Configure and read back all five required GitHub Actions checks on `main`, strict and enforced for administrators; block force pushes and branch deletion.
+- [x] Qualify the published rotation-axis renderer on the physical phone, Windows, CanvasKit and skwasm. Human showcase review remains separate.
 - [x] Refresh the library architecture graph after the publication rename: 419 nodes, 479 edges, 21 communities; synchronize root outputs and record source hashes.
 
 ## Runtime and accessibility gates
 
 - [x] Extended Windows Skia profile capture, fallback, transform and focus contracts.
 - [x] Extended Android emulator GLES capture contracts.
-- [x] Physical Xiaomi Android 10 GLES: all eighteen v5 visuals and standalone ten-minute endurance on the same verified APK.
+- [x] Current physical Xiaomi Android 10 GLES: all eighteen v5 visuals and standalone ten-minute foreground endurance on the same verified APK.
 - [x] Verify separate Impeller GLES filter displacement on fixture v4.
 - [x] Complete all eighteen fixture-v4 release contracts independently on CanvasKit and skwasm.
-- [x] Complete physical Xiaomi GLES v5 ten-minute renderer/disposal checks: 5,460 test iterations, 120 disposals, driver exit zero and bounded retention. Preserve all earlier failed attempts.
+- [x] Complete current physical Xiaomi GLES v5 ten-minute checks: 600,640 ms, 120 disposals, driver exit zero and bounded retention. Preserve the interrupted attempt and its native GL-context failure.
+- [x] Complete current Windows ten-minute foreground checks: 600,297 ms, 106 disposals, corrected driver exit zero and bounded retention. Reject and preserve the earlier timed-out report.
+- [x] Complete current CanvasKit and skwasm release visual suites separately; actual renderer resources recorded.
 - [x] Confirm a clean v4 Android emulator repeat: 10,056 frames, 120 disposals, healthy core services and no new crash-buffer entries. New native-readback harness results remain separate.
 - [x] Save a short actual scrolling contract recording.
 - [x] Implement explicit transparency/motion/contrast policies and opaque fallback.
 - [x] Check inherited text/icon contrast, keyboard action preservation and focus feedback.
-- [ ] Review physical-device accessibility and supported product layouts.
-- [ ] Qualify physical Android, Vulkan and physical iOS/Metal before claiming them supported.
+- [x] Repeat current renderer qualification on the owned Android emulator: eighteen v5 visual contracts and 600,536-ms endurance, 120 disposals, driver exit zero, bounded tracked images/RSS, final healthy services and empty crash buffer.
+- [ ] Review physical-device accessibility and supported product layouts with a human reviewer.
+- [x] Qualify physical Android GLES for the named phone and foreground scenarios.
+- [ ] Qualify Vulkan and physical iOS/Metal before claiming them supported; other Android devices remain unverified.
+- [ ] Investigate interrupted-surface/background-resume behavior before making lifecycle reliability claims.
 - [ ] Test overlapping filters on physical iOS independently from capture.
 
 ## Performance gates
 
 - [x] Implement raw exports, warm-up/window/drain, fair cases, metadata and invalid-run flags.
 - [x] Preserve one accepted physical protocol-v6 ordinary-control group with three raw repetitions and independent analysis; this is not a glass or full-matrix baseline.
-- [ ] Record at least three complete profile/release repetitions for each product case.
-- [ ] Recompute statistics from raw samples and report run spread and limitations.
+- [x] Record three complete profile repetitions for each of the 46 current phone cases: 138 individually valid measurements.
+- [x] Independently recompute all raw statistics, hashes, spread and budget exceedances; preserve all results and limitations.
+- [ ] Pass fixed repeatability gates for every group: 34 of 46 qualify; twelve remain unstable. The full matrix gate has not passed.
 - [ ] Capture representative platform memory/GPU/energy evidence where claimed.
 - [ ] Approve an optimization only after equivalent visual and timing baselines.
 

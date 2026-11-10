@@ -1,0 +1,49 @@
+{
+  "runId": 42755622840,
+  "headSha": "45b0c240738677853e989f7adbf2315463ef73e7",
+  "url": "https://github.com/Keerthivasan-7/liquid_glass_effect_flutter/actions/runs/42755622840",
+  "conclusion": "failure",
+  "jobs": [
+    {
+      "name": "Android qualification build / stable",
+      "id": 129629398823,
+      "html_url": "https://github.com/Keerthivasan-7/liquid_glass_effect_flutter/actions/runs/42755622840/job/129629398823",
+      "conclusion": "success"
+    },
+    {
+      "name": "Web build smoke / stable",
+      "id": 129629399002,
+      "html_url": "https://github.com/Keerthivasan-7/liquid_glass_effect_flutter/actions/runs/42755622840/job/129629399002",
+      "conclusion": "success"
+    },
+    {
+      "name": "Windows build smoke / stable",
+      "id": 129629399134,
+      "html_url": "https://github.com/Keerthivasan-7/liquid_glass_effect_flutter/actions/runs/42755622840/job/129629399134",
+      "conclusion": "success"
+    },
+    {
+      "name": "Package / minimum-3.32.0",
+      "id": 129629399160,
+      "html_url": "https://github.com/Keerthivasan-7/liquid_glass_effect_flutter/actions/runs/42755622840/job/129629399160",
+      "conclusion": "success"
+    },
+    {
+      "name": "Package / latest-stable",
+      "id": 129629399211,
+      "html_url": "https://github.com/Keerthivasan-7/liquid_glass_effect_flutter/actions/runs/42755622840/job/129629399211",
+      "conclusion": "failure"
+    }
+  ],
+  "reason": "Latest-stable SDK migration changed two tracked analysis_options.yaml files; publication dry run correctly failed with one dirty-source warning.",
+  "correctedByRevision": "bc87b63aae158a89c52bcea6413862e1e043384e",
+  "rawSdkOutput": {
+    "path": "windows-build-stable/sdk.json",
+    "sha256": "59c700c292a3471a8e544c853fdcd6c31df08e123096270e1af7ed9d65bb0ac1",
+    "note": "Unmodified command stdout contains Flutter bootstrap messages before its JSON object; sdk.parsed.json is a separately extracted object."
+  },
+  "subsequentPassingRuns": [
+    42756370898,
+    42761367535
+  ]
+}

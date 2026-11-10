@@ -1,8 +1,8 @@
 # Delivery plan — 13 November 2026
 
-The delivery deadline is four days from 9 November. The user has asked to stop
-extended testing and move implementation forward. Phone testing is also deferred
-until the user makes the device available again.
+The delivery deadline is four days from 9 November. After initially deferring
+testing, the user requested all tests and made the phone available for the full
+matrix on 10 November. The deadline remains 13 November.
 
 | Finish by | Implementation outcome |
 |---|---|
@@ -13,10 +13,12 @@ until the user makes the device available again.
 
 The original milestone requirements remain tracked in MILESTONE_AUDIT.md.
 Deferring a check does not make it passed. The full 46-case performance matrix,
-physical iOS/Vulkan qualification and hosted checks remain open. The user has
+physical iOS/Vulkan qualification and human product review remain open. The user has
 created the canonical repository on 10 November:
 `https://github.com/Keerthivasan-7/liquid_glass_effect_flutter`. Source links are now
-configured; hosted qualification remains deferred.
+configured. Both hosted SDK lanes and all three platform build jobs pass.
+All five checks are required on `main`, with up-to-date branches and administrator
+enforcement; saved settings were read back and verified.
 
 ## Current implementation step
 
@@ -27,15 +29,18 @@ scrolls behind foreground controls; diagnostics update only their own label.
 Desktop and Android profile builds succeeded. The final Android package now
 includes the last settings/navigation cleanup. A 192-file development source
 bundle and artifact/source hash manifest accompany it in `.research/artifacts/`.
-See [the handoff notes](DELIVERY_NOTES.md). Phone installation and extended
-validation remain deferred.
+See [the handoff notes](DELIVERY_NOTES.md). Current-source visual qualification
+passes on the physical Android phone, Windows, CanvasKit and skwasm. Separate
+ten-minute foreground endurance runs pass on the phone and Windows. The phone
+performance measurement phase is complete: 138 individually valid runs,
+34 of 46 groups repeatable, twelve unstable. The full repeatability gate remains
+open; all attempts and fixed limits are preserved.
 
 Both shaders now accept a precomputed rotation axis. Repeated sampling and
 highlight calculations reuse that axis rather than evaluating constant sine and
 cosine per fragment. Refraction settings, blur taps and material quality are
 unchanged. Dart bindings and their manifests have been updated together.
 
-This change follows the last completed runtime qualification. Its performance
-gain has not been measured, and no additional test runs are being launched at
-the user's request. Earlier passing evidence must not be attributed to this
-new shader snapshot.
+Current runtime qualification includes this change, and all renderer source
+hashes match the published prerelease. Its performance gain has not been
+measured against an equivalent pre-change baseline. No speedup is claimed.

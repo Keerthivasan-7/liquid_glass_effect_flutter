@@ -1,0 +1,128 @@
+{
+  "valid": false,
+  "errors": [
+    "unstable raster.p99Ms",
+    "unstable totalSpan.p99Ms"
+  ],
+  "runs": [
+    {
+      "valid": true,
+      "errors": [],
+      "statistics": {
+        "build": {
+          "p50Ms": 1.737,
+          "p90Ms": 10.96,
+          "p99Ms": 30.971,
+          "worstMs": 36.435
+        },
+        "raster": {
+          "p50Ms": 34.864,
+          "p90Ms": 40.766,
+          "p99Ms": 49.553,
+          "worstMs": 64.115
+        },
+        "totalSpan": {
+          "p50Ms": 64.127,
+          "p90Ms": 73.988,
+          "p99Ms": 89.608,
+          "worstMs": 113.287
+        }
+      },
+      "sampleCount": 831
+    },
+    {
+      "valid": true,
+      "errors": [],
+      "statistics": {
+        "build": {
+          "p50Ms": 1.64,
+          "p90Ms": 12.451,
+          "p99Ms": 32.172,
+          "worstMs": 40.576
+        },
+        "raster": {
+          "p50Ms": 36.27,
+          "p90Ms": 64.833,
+          "p99Ms": 124.442,
+          "worstMs": 146.143
+        },
+        "totalSpan": {
+          "p50Ms": 67.776,
+          "p90Ms": 129.206,
+          "p99Ms": 224.159,
+          "worstMs": 267.814
+        }
+      },
+      "sampleCount": 668
+    },
+    {
+      "valid": true,
+      "errors": [],
+      "statistics": {
+        "build": {
+          "p50Ms": 1.697,
+          "p90Ms": 11.121,
+          "p99Ms": 31.84,
+          "worstMs": 34.539
+        },
+        "raster": {
+          "p50Ms": 35.162,
+          "p90Ms": 41.22,
+          "p99Ms": 55.766,
+          "worstMs": 64.725
+        },
+        "totalSpan": {
+          "p50Ms": 65.105,
+          "p90Ms": 75.175,
+          "p99Ms": 96.396,
+          "worstMs": 113.446
+        }
+      },
+      "sampleCount": 818
+    }
+  ],
+  "spread": {
+    "build": {
+      "p50Ms": {
+        "maxMinRatio": 1.0591463414634148,
+        "limit": 1.25,
+        "stable": true
+      },
+      "p99Ms": {
+        "maxMinRatio": 1.0387782118756255,
+        "limit": 1.5,
+        "stable": true
+      }
+    },
+    "raster": {
+      "p50Ms": {
+        "maxMinRatio": 1.0403281321707207,
+        "limit": 1.25,
+        "stable": true
+      },
+      "p99Ms": {
+        "maxMinRatio": 2.511290941012653,
+        "limit": 1.5,
+        "stable": false
+      }
+    },
+    "totalSpan": {
+      "p50Ms": {
+        "maxMinRatio": 1.0569027086874483,
+        "limit": 1.25,
+        "stable": true
+      },
+      "p99Ms": {
+        "maxMinRatio": 2.5015512007856437,
+        "limit": 1.5,
+        "stable": false
+      }
+    }
+  },
+  "complete": false,
+  "rawSha256": {
+    "1-blur-10-compact-animated-run-1.json": "6184a32554f2d5bc391eb5784be9a63233d715fc254e57616f46b1b3bb7e1ac9",
+    "2-blur-10-compact-animated-run-2.json": "ce8f2d1579340e0bc31e3e190aee53b1693b8c2b591cae20bc8a29c426bb445a",
+    "3-blur-10-compact-animated-run-3.json": "eaddcea57284bef2fdcbe61dc327b631ae4aac30b92c8826cefffadf9043d009"
+  }
+}

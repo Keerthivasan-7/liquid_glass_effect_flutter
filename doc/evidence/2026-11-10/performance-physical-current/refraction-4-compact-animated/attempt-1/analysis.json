@@ -1,0 +1,127 @@
+{
+  "valid": false,
+  "errors": [
+    "unstable build.p50Ms"
+  ],
+  "runs": [
+    {
+      "valid": true,
+      "errors": [],
+      "statistics": {
+        "build": {
+          "p50Ms": 3.702,
+          "p90Ms": 18.342,
+          "p99Ms": 35.081,
+          "worstMs": 39.706
+        },
+        "raster": {
+          "p50Ms": 48.887,
+          "p90Ms": 50.023,
+          "p99Ms": 51.963,
+          "worstMs": 75.89
+        },
+        "totalSpan": {
+          "p50Ms": 101.027,
+          "p90Ms": 108.102,
+          "p99Ms": 110.271,
+          "worstMs": 131.741
+        }
+      },
+      "sampleCount": 552
+    },
+    {
+      "valid": true,
+      "errors": [],
+      "statistics": {
+        "build": {
+          "p50Ms": 4.241,
+          "p90Ms": 19.529,
+          "p99Ms": 34.793,
+          "worstMs": 42.387
+        },
+        "raster": {
+          "p50Ms": 48.796,
+          "p90Ms": 49.961,
+          "p99Ms": 53.053,
+          "worstMs": 65.557
+        },
+        "totalSpan": {
+          "p50Ms": 101.544,
+          "p90Ms": 108.345,
+          "p99Ms": 111.919,
+          "worstMs": 121.116
+        }
+      },
+      "sampleCount": 550
+    },
+    {
+      "valid": true,
+      "errors": [],
+      "statistics": {
+        "build": {
+          "p50Ms": 3.332,
+          "p90Ms": 17.634,
+          "p99Ms": 35.356,
+          "worstMs": 41.957
+        },
+        "raster": {
+          "p50Ms": 48.773,
+          "p90Ms": 49.995,
+          "p99Ms": 52.299,
+          "worstMs": 56.2
+        },
+        "totalSpan": {
+          "p50Ms": 100.585,
+          "p90Ms": 107.992,
+          "p99Ms": 111.257,
+          "worstMs": 115.595
+        }
+      },
+      "sampleCount": 554
+    }
+  ],
+  "spread": {
+    "build": {
+      "p50Ms": {
+        "maxMinRatio": 1.2728091236494596,
+        "limit": 1.25,
+        "stable": false
+      },
+      "p99Ms": {
+        "maxMinRatio": 1.0161814158020293,
+        "limit": 1.5,
+        "stable": true
+      }
+    },
+    "raster": {
+      "p50Ms": {
+        "maxMinRatio": 1.0023373587845734,
+        "limit": 1.25,
+        "stable": true
+      },
+      "p99Ms": {
+        "maxMinRatio": 1.0209764640224774,
+        "limit": 1.5,
+        "stable": true
+      }
+    },
+    "totalSpan": {
+      "p50Ms": {
+        "maxMinRatio": 1.0095342247850077,
+        "limit": 1.25,
+        "stable": true
+      },
+      "p99Ms": {
+        "maxMinRatio": 1.014944999138486,
+        "limit": 1.5,
+        "stable": true
+      }
+    }
+  },
+  "complete": false,
+  "rawSha256": {
+    "1-refraction-4-compact-animated-run-1.json": "dd17128732d48d8cb473d6748bf558d281adc69bb7ea4b1f82cf487dddf72948",
+    "2-refraction-4-compact-animated-run-2.json": "f8a308e825d6aa9e643f108801f6c52051128b50c70a1061b98faceb6b6aa248",
+    "3-refraction-4-compact-animated-run-3.json": "46515982cbe76430dfc758cc0b6e7d31d8727dd12ba3daebef884f390ad68a55"
+  }
+}

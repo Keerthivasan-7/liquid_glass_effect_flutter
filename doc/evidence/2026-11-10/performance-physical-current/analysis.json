@@ -1,0 +1,5855 @@
+{
+  "schemaVersion": 1,
+  "complete": false,
+  "scope": "scenarios selected in index.json; not an automatic full-matrix claim",
+  "sourceHash": "476fbd3868c12f2e57572b403d0e1da25fe33c83eeee0e1f59fad93d7bddee0c",
+  "missingOrUnstableScenarios": [
+    "capturePerformance-4-compact-static",
+    "filter-10-compact-static",
+    "capturePerformance-1-compact-animated",
+    "captureUltra-1-compact-animated",
+    "ordinary-4-compact-animated",
+    "refraction-4-compact-animated",
+    "captureBalanced-4-compact-animated",
+    "blur-10-compact-animated",
+    "capturePerformance-10-compact-animated",
+    "captureUltra-10-compact-animated",
+    "filter-10-compact-animated",
+    "captureBalanced-10-spread-animated"
+  ],
+  "attempts": [
+    {
+      "scenario": "ordinary-1-compact-static",
+      "directory": "ordinary-1-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 0.973,
+              "p90Ms": 1.79,
+              "p99Ms": 29.069,
+              "worstMs": 33.507
+            },
+            "raster": {
+              "p50Ms": 13.209,
+              "p90Ms": 16.242,
+              "p99Ms": 19.227,
+              "worstMs": 23.064
+            },
+            "totalSpan": {
+              "p50Ms": 16.341,
+              "p90Ms": 22.427,
+              "p99Ms": 42.749,
+              "worstMs": 50.158
+            }
+          },
+          "sampleCount": 1658
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 0.853,
+              "p90Ms": 1.739,
+              "p99Ms": 24.582,
+              "worstMs": 34.835
+            },
+            "raster": {
+              "p50Ms": 12.136,
+              "p90Ms": 15.505,
+              "p99Ms": 19.224,
+              "worstMs": 22.886
+            },
+            "totalSpan": {
+              "p50Ms": 14.739,
+              "p90Ms": 20.799,
+              "p99Ms": 38.801,
+              "worstMs": 47.956
+            }
+          },
+          "sampleCount": 1689
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.04,
+              "p90Ms": 1.825,
+              "p99Ms": 29.743,
+              "worstMs": 32.691
+            },
+            "raster": {
+              "p50Ms": 13.415,
+              "p90Ms": 16.276,
+              "p99Ms": 19.641,
+              "worstMs": 24.691
+            },
+            "totalSpan": {
+              "p50Ms": 16.642,
+              "p90Ms": 21.908,
+              "p99Ms": 42.314,
+              "worstMs": 49.072
+            }
+          },
+          "sampleCount": 1657
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.2192262602579134,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.2099503701895695,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.1053889255108766,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0216916354556802,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.1291132369902979,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.1017499548980696,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-ordinary-1-compact-static-run-1.json": "8377089e8887f426a21a62c57dd70d04007bd8b5a0e875da583cd5a8c44f722e",
+        "2-ordinary-1-compact-static-run-2.json": "1947388514d75e8d092751fc2134dd72af8962b028a7b01d75b76a298310642c",
+        "3-ordinary-1-compact-static-run-3.json": "d4464a048857dc6c857086f7baa3c6705e60a8d677c2767b1af86100af45ffe5"
+      }
+    },
+    {
+      "scenario": "blur-1-compact-static",
+      "directory": "blur-1-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 0.956,
+              "p90Ms": 1.701,
+              "p99Ms": 29.49,
+              "worstMs": 33.717
+            },
+            "raster": {
+              "p50Ms": 15.597,
+              "p90Ms": 17.898,
+              "p99Ms": 20.409,
+              "worstMs": 26.67
+            },
+            "totalSpan": {
+              "p50Ms": 18.969,
+              "p90Ms": 22.944,
+              "p99Ms": 43.993,
+              "worstMs": 50.216
+            }
+          },
+          "sampleCount": 1667
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 0.993,
+              "p90Ms": 1.789,
+              "p99Ms": 30.289,
+              "worstMs": 34.336
+            },
+            "raster": {
+              "p50Ms": 15.545,
+              "p90Ms": 17.772,
+              "p99Ms": 20.473,
+              "worstMs": 23.318
+            },
+            "totalSpan": {
+              "p50Ms": 19.118,
+              "p90Ms": 23.376,
+              "p99Ms": 44.407,
+              "worstMs": 48.835
+            }
+          },
+          "sampleCount": 1644
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 0.977,
+              "p90Ms": 1.735,
+              "p99Ms": 29.843,
+              "worstMs": 31.588
+            },
+            "raster": {
+              "p50Ms": 15.248,
+              "p90Ms": 17.448,
+              "p99Ms": 19.901,
+              "worstMs": 24.334
+            },
+            "totalSpan": {
+              "p50Ms": 18.703,
+              "p90Ms": 22.741,
+              "p99Ms": 43.483,
+              "worstMs": 46.064
+            }
+          },
+          "sampleCount": 1672
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.038702928870293,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0270939301458122,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0228882476390346,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.028742274257575,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0221889536438005,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0212496837844676,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-blur-1-compact-static-run-1.json": "3f786f2cf99726633654925c40e0573963b240f682f1f958b41c02a61a7e8247",
+        "2-blur-1-compact-static-run-2.json": "bf8ca458be7b7e82d5cc97301ab4a08fd4bbf245b3017280bfc54baed2143474",
+        "3-blur-1-compact-static-run-3.json": "b408361e22984966f47f91a782dc534de7b4ae00e2d41fa173caf78224db54b4"
+      }
+    },
+    {
+      "scenario": "refraction-1-compact-static",
+      "directory": "refraction-1-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.869,
+              "p90Ms": 20.821,
+              "p99Ms": 28.731,
+              "worstMs": 31.22
+            },
+            "raster": {
+              "p50Ms": 40.597,
+              "p90Ms": 40.939,
+              "p99Ms": 41.775,
+              "worstMs": 44.66
+            },
+            "totalSpan": {
+              "p50Ms": 73.725,
+              "p90Ms": 80.845,
+              "p99Ms": 82.964,
+              "worstMs": 84.877
+            }
+          },
+          "sampleCount": 734
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.894,
+              "p90Ms": 26.209,
+              "p99Ms": 30.225,
+              "worstMs": 30.851
+            },
+            "raster": {
+              "p50Ms": 40.579,
+              "p90Ms": 40.955,
+              "p99Ms": 43.257,
+              "worstMs": 55.996
+            },
+            "totalSpan": {
+              "p50Ms": 73.965,
+              "p90Ms": 81.144,
+              "p99Ms": 83.527,
+              "worstMs": 91.988
+            }
+          },
+          "sampleCount": 733
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.904,
+              "p90Ms": 17.598,
+              "p99Ms": 28.662,
+              "worstMs": 30.099
+            },
+            "raster": {
+              "p50Ms": 40.596,
+              "p90Ms": 41.037,
+              "p99Ms": 42.351,
+              "worstMs": 56.322
+            },
+            "totalSpan": {
+              "p50Ms": 73.649,
+              "p90Ms": 81.141,
+              "p99Ms": 83.278,
+              "worstMs": 92.304
+            }
+          },
+          "sampleCount": 732
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0187265917602997,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0545321331379527,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0004435791912072,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.035475763016158,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0042906217328138,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0067860758883371,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-refraction-1-compact-static-run-1.json": "e4a9ef5525ced9d30d48e885f03be8f021312405739cacbf6acd6ef38c59195f",
+        "2-refraction-1-compact-static-run-2.json": "2a273518f17a630578149ef8844c3426ed44973af16a90e225a07bfe60baa984",
+        "3-refraction-1-compact-static-run-3.json": "02f0a83ff99c67479fa1a1e735c9270ced7c8d6bbd87a684f596f4c00b2f7a79"
+      }
+    },
+    {
+      "scenario": "capturePerformance-1-compact-static",
+      "directory": "capturePerformance-1-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.881,
+              "p90Ms": 19.391,
+              "p99Ms": 29.015,
+              "worstMs": 33.128
+            },
+            "raster": {
+              "p50Ms": 40.529,
+              "p90Ms": 40.985,
+              "p99Ms": 41.942,
+              "worstMs": 53.281
+            },
+            "totalSpan": {
+              "p50Ms": 73.889,
+              "p90Ms": 81.115,
+              "p99Ms": 83.253,
+              "worstMs": 92.678
+            }
+          },
+          "sampleCount": 734
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.871,
+              "p90Ms": 16.493,
+              "p99Ms": 28.894,
+              "worstMs": 34.457
+            },
+            "raster": {
+              "p50Ms": 40.54,
+              "p90Ms": 40.988,
+              "p99Ms": 42.443,
+              "worstMs": 51.379
+            },
+            "totalSpan": {
+              "p50Ms": 73.846,
+              "p90Ms": 81.021,
+              "p99Ms": 83.032,
+              "worstMs": 86.234
+            }
+          },
+          "sampleCount": 733
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.874,
+              "p90Ms": 21.004,
+              "p99Ms": 28.99,
+              "worstMs": 31.291
+            },
+            "raster": {
+              "p50Ms": 40.539,
+              "p90Ms": 40.997,
+              "p99Ms": 42.255,
+              "worstMs": 42.875
+            },
+            "totalSpan": {
+              "p50Ms": 73.803,
+              "p90Ms": 80.958,
+              "p99Ms": 83.04,
+              "worstMs": 84.391
+            }
+          },
+          "sampleCount": 734
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.005344735435596,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0041877206340417,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0002714105948827,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0119450669972818,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0011652642846496,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0026616244339532,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-capturePerformance-1-compact-static-run-1.json": "456645e4c1dc482e27f06952e28ab5e78617ea93c838377d1ff4fd1fbb9bfbb1",
+        "2-capturePerformance-1-compact-static-run-2.json": "b309fb608ad120e449201a9d7524334d8b65e31dde09f935d0ee35c8e5550380",
+        "3-capturePerformance-1-compact-static-run-3.json": "c0722ad9d7828c3ab46e2c7cb3497a851ec23cdffd98b9bb8a6a04977c481932"
+      }
+    },
+    {
+      "scenario": "captureBalanced-1-compact-static",
+      "directory": "captureBalanced-1-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.962,
+              "p90Ms": 27.089,
+              "p99Ms": 30.04,
+              "worstMs": 32.579
+            },
+            "raster": {
+              "p50Ms": 63.784,
+              "p90Ms": 65.89,
+              "p99Ms": 68.938,
+              "worstMs": 72.967
+            },
+            "totalSpan": {
+              "p50Ms": 121.321,
+              "p90Ms": 127.86,
+              "p99Ms": 130.659,
+              "worstMs": 133.992
+            }
+          },
+          "sampleCount": 465
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.942,
+              "p90Ms": 27.09,
+              "p99Ms": 29.673,
+              "worstMs": 32.043
+            },
+            "raster": {
+              "p50Ms": 63.791,
+              "p90Ms": 66.05,
+              "p99Ms": 68.77,
+              "worstMs": 76.398
+            },
+            "totalSpan": {
+              "p50Ms": 121.737,
+              "p90Ms": 128.677,
+              "p99Ms": 131.304,
+              "worstMs": 140.075
+            }
+          },
+          "sampleCount": 465
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.956,
+              "p90Ms": 27.177,
+              "p99Ms": 30.101,
+              "worstMs": 30.796
+            },
+            "raster": {
+              "p50Ms": 63.606,
+              "p90Ms": 65.922,
+              "p99Ms": 67.922,
+              "worstMs": 69.188
+            },
+            "totalSpan": {
+              "p50Ms": 121.766,
+              "p90Ms": 128.376,
+              "p99Ms": 131.694,
+              "worstMs": 133.839
+            }
+          },
+          "sampleCount": 466
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0102986611740474,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0144238870353521,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0029085306417633,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0149583345602309,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0036679552591885,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0079213831423783,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureBalanced-1-compact-static-run-1.json": "4115c1ac4c269b1c2180e0cf721ad3b177a6238062d9815d8f83b855ed05d806",
+        "2-captureBalanced-1-compact-static-run-2.json": "3371931f6b0f81330a6a1483d80f396ff5fd810f5690ccb7f1bfcc933e672a53",
+        "3-captureBalanced-1-compact-static-run-3.json": "40562b8877bae94db614a21f32f922ad79260a809a3a4a273480924554851afd"
+      }
+    },
+    {
+      "scenario": "captureUltra-1-compact-static",
+      "directory": "captureUltra-1-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.044,
+              "p90Ms": 26.829,
+              "p99Ms": 31.122,
+              "worstMs": 32.423
+            },
+            "raster": {
+              "p50Ms": 113.79,
+              "p90Ms": 124.037,
+              "p99Ms": 130.729,
+              "worstMs": 131.827
+            },
+            "totalSpan": {
+              "p50Ms": 217.906,
+              "p90Ms": 237.349,
+              "p99Ms": 244.83,
+              "worstMs": 249.7
+            }
+          },
+          "sampleCount": 267
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.067,
+              "p90Ms": 27.753,
+              "p99Ms": 30.126,
+              "worstMs": 32.648
+            },
+            "raster": {
+              "p50Ms": 113.916,
+              "p90Ms": 123.848,
+              "p99Ms": 128.022,
+              "worstMs": 130.273
+            },
+            "totalSpan": {
+              "p50Ms": 218.319,
+              "p90Ms": 238.422,
+              "p99Ms": 246.458,
+              "worstMs": 247.876
+            }
+          },
+          "sampleCount": 266
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.068,
+              "p90Ms": 27.32,
+              "p99Ms": 29.848,
+              "worstMs": 31.413
+            },
+            "raster": {
+              "p50Ms": 108.962,
+              "p90Ms": 124.096,
+              "p99Ms": 126.908,
+              "worstMs": 128.178
+            },
+            "totalSpan": {
+              "p50Ms": 218.454,
+              "p90Ms": 239.564,
+              "p99Ms": 248.906,
+              "worstMs": 252.767
+            }
+          },
+          "sampleCount": 266
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0117416829745598,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0426829268292683,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0454653916044125,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0301084250007881,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0025148458509632,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0166482865661888,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureUltra-1-compact-static-run-1.json": "61166ba1a0a43d33491355f1d4237c411dced282335ff362fec528ee2350e75a",
+        "2-captureUltra-1-compact-static-run-2.json": "5eb7381fc0d775a9466531c4c807a0018a9700894d19d7c85f153f6707693f25",
+        "3-captureUltra-1-compact-static-run-3.json": "93110466e1351712efca17158849cdb00d827dacf87e3f8d008da6beca6bc82f"
+      }
+    },
+    {
+      "scenario": "filter-1-compact-static",
+      "directory": "filter-1-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.923,
+              "p90Ms": 13.576,
+              "p99Ms": 29.673,
+              "worstMs": 32.551
+            },
+            "raster": {
+              "p50Ms": 27.131,
+              "p90Ms": 27.48,
+              "p99Ms": 29.606,
+              "worstMs": 33.121
+            },
+            "totalSpan": {
+              "p50Ms": 45.901,
+              "p90Ms": 54.258,
+              "p99Ms": 56.246,
+              "worstMs": 58.831
+            }
+          },
+          "sampleCount": 1090
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.03,
+              "p90Ms": 13.225,
+              "p99Ms": 29.292,
+              "worstMs": 32.866
+            },
+            "raster": {
+              "p50Ms": 27.059,
+              "p90Ms": 27.384,
+              "p99Ms": 28.779,
+              "worstMs": 31.749
+            },
+            "totalSpan": {
+              "p50Ms": 45.929,
+              "p90Ms": 53.927,
+              "p99Ms": 55.707,
+              "worstMs": 56.943
+            }
+          },
+          "sampleCount": 1093
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.039,
+              "p90Ms": 13.372,
+              "p99Ms": 29.49,
+              "worstMs": 32.701
+            },
+            "raster": {
+              "p50Ms": 27.085,
+              "p90Ms": 27.438,
+              "p99Ms": 29.019,
+              "worstMs": 30.917
+            },
+            "totalSpan": {
+              "p50Ms": 45.798,
+              "p90Ms": 53.849,
+              "p99Ms": 55.969,
+              "worstMs": 58.075
+            }
+          },
+          "sampleCount": 1091
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0603224128965159,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0130069643588693,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0026608522118334,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0287362312797526,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0028603869164592,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0096756242482992,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-filter-1-compact-static-run-1.json": "bb2ba02feefb1db5aabbcadec18c9b65f1feca1871d7a5df82112ab866586874",
+        "2-filter-1-compact-static-run-2.json": "aea708c0a416d367083be35083cb7b600ba97ad3022a7be14cb835972ac0d5f4",
+        "3-filter-1-compact-static-run-3.json": "0f8194c5426cbec6e07f5dfa20e39491305e59ac49ab30ec16dd8d112d521e9d"
+      }
+    },
+    {
+      "scenario": "ordinary-4-compact-static",
+      "directory": "ordinary-4-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.084,
+              "p90Ms": 1.841,
+              "p99Ms": 30.032,
+              "worstMs": 33.129
+            },
+            "raster": {
+              "p50Ms": 13.87,
+              "p90Ms": 16.764,
+              "p99Ms": 20.112,
+              "worstMs": 22.573
+            },
+            "totalSpan": {
+              "p50Ms": 17.456,
+              "p90Ms": 23.575,
+              "p99Ms": 43.471,
+              "worstMs": 48.557
+            }
+          },
+          "sampleCount": 1649
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 0.911,
+              "p90Ms": 1.698,
+              "p99Ms": 29.191,
+              "worstMs": 33.414
+            },
+            "raster": {
+              "p50Ms": 13.274,
+              "p90Ms": 15.944,
+              "p99Ms": 17.708,
+              "worstMs": 21.822
+            },
+            "totalSpan": {
+              "p50Ms": 16.051,
+              "p90Ms": 20.301,
+              "p99Ms": 43.112,
+              "worstMs": 47.396
+            }
+          },
+          "sampleCount": 1659
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.029,
+              "p90Ms": 1.852,
+              "p99Ms": 29.47,
+              "worstMs": 34.517
+            },
+            "raster": {
+              "p50Ms": 13.534,
+              "p90Ms": 16.772,
+              "p99Ms": 19.687,
+              "worstMs": 22.8
+            },
+            "totalSpan": {
+              "p50Ms": 17.057,
+              "p90Ms": 23.406,
+              "p99Ms": 42.116,
+              "worstMs": 48.814
+            }
+          },
+          "sampleCount": 1654
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.189901207464325,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0288102497345073,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0448998041283712,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.135757849559521,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0875334870101552,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0321730458733023,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-ordinary-4-compact-static-run-1.json": "bca69d3d19ce4140cfbb6f117a4ac98e5483c333604fcaa4d3471fb022908201",
+        "2-ordinary-4-compact-static-run-2.json": "47238a4e3f0d8f633d363f34d2bc3a5f775527cacc63c8098f8290886e7734b0",
+        "3-ordinary-4-compact-static-run-3.json": "db72684864fcdeae87c9fb543a5fb2689d9908c1a03cafb687f2db37c2ec58ae"
+      }
+    },
+    {
+      "scenario": "blur-4-compact-static",
+      "directory": "blur-4-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 0.787,
+              "p90Ms": 1.927,
+              "p99Ms": 30.03,
+              "worstMs": 31.653
+            },
+            "raster": {
+              "p50Ms": 20.432,
+              "p90Ms": 21.523,
+              "p99Ms": 24.638,
+              "worstMs": 29.18
+            },
+            "totalSpan": {
+              "p50Ms": 33.246,
+              "p90Ms": 41.036,
+              "p99Ms": 47.058,
+              "worstMs": 49.361
+            }
+          },
+          "sampleCount": 1409
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 0.797,
+              "p90Ms": 1.89,
+              "p99Ms": 26.928,
+              "worstMs": 32.353
+            },
+            "raster": {
+              "p50Ms": 20.345,
+              "p90Ms": 21.936,
+              "p99Ms": 25.952,
+              "worstMs": 30.61
+            },
+            "totalSpan": {
+              "p50Ms": 33.241,
+              "p90Ms": 41.08,
+              "p99Ms": 46.753,
+              "worstMs": 50.748
+            }
+          },
+          "sampleCount": 1417
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 0.822,
+              "p90Ms": 1.932,
+              "p99Ms": 29.042,
+              "worstMs": 30.733
+            },
+            "raster": {
+              "p50Ms": 20.474,
+              "p90Ms": 21.771,
+              "p99Ms": 26.489,
+              "worstMs": 32.035
+            },
+            "totalSpan": {
+              "p50Ms": 33.548,
+              "p90Ms": 41.095,
+              "p99Ms": 46.768,
+              "worstMs": 53.924
+            }
+          },
+          "sampleCount": 1414
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0444726810673441,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.1151960784313726,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.006340624231998,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0751278512866305,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0092355825637016,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0065236455414626,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-blur-4-compact-static-run-1.json": "5bb2e4574a30de47e9edccc3a79681d12c3961b317bdefce226300848d0699db",
+        "2-blur-4-compact-static-run-2.json": "8437614b4585965546e1f6da0d5dd77ee59cd0cd20c69919d89403048cc2dad6",
+        "3-blur-4-compact-static-run-3.json": "60e5dbae70dd74af2c72c1f6e440003f744a0e9fccf06dda1d76387aaa57e8e8"
+      }
+    },
+    {
+      "scenario": "refraction-4-compact-static",
+      "directory": "refraction-4-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.041,
+              "p90Ms": 26.966,
+              "p99Ms": 30.425,
+              "worstMs": 35.706
+            },
+            "raster": {
+              "p50Ms": 42.849,
+              "p90Ms": 43.231,
+              "p99Ms": 43.785,
+              "worstMs": 53.547
+            },
+            "totalSpan": {
+              "p50Ms": 78.27,
+              "p90Ms": 85.641,
+              "p99Ms": 87.365,
+              "worstMs": 94.642
+            }
+          },
+          "sampleCount": 695
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.054,
+              "p90Ms": 27.0,
+              "p99Ms": 30.523,
+              "worstMs": 32.895
+            },
+            "raster": {
+              "p50Ms": 42.848,
+              "p90Ms": 43.164,
+              "p99Ms": 43.681,
+              "worstMs": 48.74
+            },
+            "totalSpan": {
+              "p50Ms": 78.363,
+              "p90Ms": 85.23,
+              "p99Ms": 87.545,
+              "worstMs": 89.466
+            }
+          },
+          "sampleCount": 696
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.062,
+              "p90Ms": 21.793,
+              "p99Ms": 30.417,
+              "worstMs": 33.988
+            },
+            "raster": {
+              "p50Ms": 42.851,
+              "p90Ms": 43.197,
+              "p99Ms": 45.348,
+              "worstMs": 61.007
+            },
+            "totalSpan": {
+              "p50Ms": 78.615,
+              "p90Ms": 85.523,
+              "p99Ms": 87.538,
+              "worstMs": 102.574
+            }
+          },
+          "sampleCount": 694
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0102890739833414,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0034848933162375,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0000700149365198,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.038163045717818,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.004407819087773,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0020603216391004,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-refraction-4-compact-static-run-1.json": "071348622183cb5f349691f49fc03521a3184bda0b818db5ca65e49818b2c38b",
+        "2-refraction-4-compact-static-run-2.json": "d4eaec18c1d395f54d51ba2adaf6b4fd2fc3005d1bf75d2a3a56c173824c98ce",
+        "3-refraction-4-compact-static-run-3.json": "bbdb789c10defd03ebc6d304c79389f72196560f76b7e5751f317b4e4b3210bc"
+      }
+    },
+    {
+      "scenario": "capturePerformance-4-compact-static",
+      "directory": "capturePerformance-4-compact-static\\attempt-1",
+      "valid": false,
+      "errors": [
+        "unstable build.p50Ms",
+        "runner or environment did not qualify attempt"
+      ],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.367,
+              "p90Ms": 15.625,
+              "p99Ms": 29.881,
+              "worstMs": 32.046
+            },
+            "raster": {
+              "p50Ms": 47.971,
+              "p90Ms": 60.477,
+              "p99Ms": 62.137,
+              "worstMs": 63.441
+            },
+            "totalSpan": {
+              "p50Ms": 92.635,
+              "p90Ms": 103.434,
+              "p99Ms": 109.173,
+              "worstMs": 111.331
+            }
+          },
+          "sampleCount": 597
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.086,
+              "p90Ms": 27.474,
+              "p99Ms": 31.317,
+              "worstMs": 34.931
+            },
+            "raster": {
+              "p50Ms": 47.823,
+              "p90Ms": 60.506,
+              "p99Ms": 61.504,
+              "worstMs": 69.767
+            },
+            "totalSpan": {
+              "p50Ms": 92.916,
+              "p90Ms": 103.551,
+              "p99Ms": 110.015,
+              "worstMs": 129.877
+            }
+          },
+          "sampleCount": 598
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.082,
+              "p90Ms": 27.306,
+              "p99Ms": 30.822,
+              "worstMs": 32.967
+            },
+            "raster": {
+              "p50Ms": 47.826,
+              "p90Ms": 60.514,
+              "p99Ms": 61.753,
+              "worstMs": 63.615
+            },
+            "totalSpan": {
+              "p50Ms": 92.948,
+              "p90Ms": 103.98,
+              "p99Ms": 109.228,
+              "worstMs": 112.726
+            }
+          },
+          "sampleCount": 598
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.5259692757863934,
+            "limit": 1.25,
+            "stable": false
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0480572939325994,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0030947452062815,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0102920135275755,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0033788524855616,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0077125296547682,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-capturePerformance-4-compact-static-run-1.json": "d0ee24c435dd69bd3ae141412b8089ebca75d57c10133bf5908abc289b8a5665",
+        "2-capturePerformance-4-compact-static-run-2.json": "ee2ba652424234a07a12e66a9e2c0c5989dde4574cd58bb787bee833844c975b",
+        "3-capturePerformance-4-compact-static-run-3.json": "e39956f1bb547ac5b6ac19fe8da1036bfe9e0b7576893407ade36b92a171888a"
+      }
+    },
+    {
+      "scenario": "captureBalanced-4-compact-static",
+      "directory": "captureBalanced-4-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.131,
+              "p90Ms": 27.397,
+              "p99Ms": 30.236,
+              "worstMs": 31.927
+            },
+            "raster": {
+              "p50Ms": 67.259,
+              "p90Ms": 67.939,
+              "p99Ms": 68.905,
+              "worstMs": 71.395
+            },
+            "totalSpan": {
+              "p50Ms": 128.038,
+              "p90Ms": 134.365,
+              "p99Ms": 136.245,
+              "worstMs": 137.79
+            }
+          },
+          "sampleCount": 443
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.154,
+              "p90Ms": 27.61,
+              "p99Ms": 31.133,
+              "worstMs": 31.571
+            },
+            "raster": {
+              "p50Ms": 67.204,
+              "p90Ms": 67.879,
+              "p99Ms": 68.674,
+              "worstMs": 75.956
+            },
+            "totalSpan": {
+              "p50Ms": 128.132,
+              "p90Ms": 134.468,
+              "p99Ms": 136.638,
+              "worstMs": 138.491
+            }
+          },
+          "sampleCount": 444
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.136,
+              "p90Ms": 27.612,
+              "p99Ms": 31.474,
+              "worstMs": 34.402
+            },
+            "raster": {
+              "p50Ms": 67.248,
+              "p90Ms": 67.869,
+              "p99Ms": 68.803,
+              "worstMs": 69.23
+            },
+            "totalSpan": {
+              "p50Ms": 128.051,
+              "p90Ms": 134.598,
+              "p99Ms": 136.275,
+              "worstMs": 136.821
+            }
+          },
+          "sampleCount": 444
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0107930549038011,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.040944569387485,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0008184036664485,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0033637184378366,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0007341570471266,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0028845095232852,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureBalanced-4-compact-static-run-1.json": "c3ef9126df3a4bb975aa362e8fce164cec91d00e746312719c52fe98266c3060",
+        "2-captureBalanced-4-compact-static-run-2.json": "1b0418e05d75e6c9f3a5a144ea5de8070556e73c58ad482a63d78f2160ac1bdc",
+        "3-captureBalanced-4-compact-static-run-3.json": "bc695f16183f0fc0ddc1367b0e5c6542a6d564b098988d48a9f54c278efef676"
+      }
+    },
+    {
+      "scenario": "captureUltra-4-compact-static",
+      "directory": "captureUltra-4-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.086,
+              "p90Ms": 27.924,
+              "p99Ms": 31.897,
+              "worstMs": 34.59
+            },
+            "raster": {
+              "p50Ms": 90.229,
+              "p90Ms": 91.742,
+              "p99Ms": 94.49,
+              "worstMs": 94.92
+            },
+            "totalSpan": {
+              "p50Ms": 174.213,
+              "p90Ms": 180.697,
+              "p99Ms": 184.43,
+              "worstMs": 185.826
+            }
+          },
+          "sampleCount": 331
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.122,
+              "p90Ms": 28.119,
+              "p99Ms": 31.613,
+              "worstMs": 32.317
+            },
+            "raster": {
+              "p50Ms": 90.15,
+              "p90Ms": 91.861,
+              "p99Ms": 94.582,
+              "worstMs": 95.303
+            },
+            "totalSpan": {
+              "p50Ms": 174.364,
+              "p90Ms": 180.896,
+              "p99Ms": 183.968,
+              "worstMs": 184.885
+            }
+          },
+          "sampleCount": 331
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.11,
+              "p90Ms": 28.308,
+              "p99Ms": 31.618,
+              "worstMs": 32.697
+            },
+            "raster": {
+              "p50Ms": 90.225,
+              "p90Ms": 91.77,
+              "p99Ms": 94.049,
+              "worstMs": 134.613
+            },
+            "totalSpan": {
+              "p50Ms": 174.04,
+              "p90Ms": 180.634,
+              "p99Ms": 183.98,
+              "worstMs": 226.462
+            }
+          },
+          "sampleCount": 330
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0172579098753596,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0089836459684307,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0008763172490294,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0056672585567097,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0018616410020686,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0025113063141418,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureUltra-4-compact-static-run-1.json": "e749a4f0d762612975719fd99c496c02ea994c6f1f52f12c13d7c1b4a0ec236c",
+        "2-captureUltra-4-compact-static-run-2.json": "6d1ea4aaee3f4983de4a99fe57264dd48dfc352c964d27d1475b31f8d865e21d",
+        "3-captureUltra-4-compact-static-run-3.json": "273ad87f9f881bf017728eeaa0734266af3589f6759ee93443af4eb4b8f26fde"
+      }
+    },
+    {
+      "scenario": "filter-4-compact-static",
+      "directory": "filter-4-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.663,
+              "p90Ms": 19.636,
+              "p99Ms": 31.099,
+              "worstMs": 33.155
+            },
+            "raster": {
+              "p50Ms": 35.037,
+              "p90Ms": 35.663,
+              "p99Ms": 36.954,
+              "worstMs": 39.105
+            },
+            "totalSpan": {
+              "p50Ms": 62.728,
+              "p90Ms": 69.802,
+              "p99Ms": 72.044,
+              "worstMs": 73.636
+            }
+          },
+          "sampleCount": 848
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.588,
+              "p90Ms": 19.841,
+              "p99Ms": 31.505,
+              "worstMs": 33.613
+            },
+            "raster": {
+              "p50Ms": 35.09,
+              "p90Ms": 35.883,
+              "p99Ms": 38.425,
+              "worstMs": 40.004
+            },
+            "totalSpan": {
+              "p50Ms": 63.069,
+              "p90Ms": 70.051,
+              "p99Ms": 72.691,
+              "worstMs": 74.824
+            }
+          },
+          "sampleCount": 846
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.558,
+              "p90Ms": 20.309,
+              "p99Ms": 31.8,
+              "worstMs": 33.524
+            },
+            "raster": {
+              "p50Ms": 35.069,
+              "p90Ms": 35.716,
+              "p99Ms": 37.595,
+              "worstMs": 45.174
+            },
+            "totalSpan": {
+              "p50Ms": 62.565,
+              "p90Ms": 69.845,
+              "p99Ms": 72.517,
+              "worstMs": 75.148
+            }
+          },
+          "sampleCount": 847
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.041047693510555,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.022540917714396,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0015126865884638,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0398062456026411,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.008055622152961,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0089806229526401,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-filter-4-compact-static-run-1.json": "5a6ad65f0f09f426c7640369248ce8e51c1da4eb78785410a106fe4de9ccef1b",
+        "2-filter-4-compact-static-run-2.json": "382a1f141ad98acc00b2c727291a60c8048fa815901d978ac89bf9784b49ee24",
+        "3-filter-4-compact-static-run-3.json": "b0e0a9dc4e11b3c006e68e08df5d974723e0f8f5f994c828fdcd9d71530bb6ac"
+      }
+    },
+    {
+      "scenario": "ordinary-10-compact-static",
+      "directory": "ordinary-10-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.016,
+              "p90Ms": 1.867,
+              "p99Ms": 29.858,
+              "worstMs": 35.334
+            },
+            "raster": {
+              "p50Ms": 14.014,
+              "p90Ms": 16.637,
+              "p99Ms": 18.503,
+              "worstMs": 24.65
+            },
+            "totalSpan": {
+              "p50Ms": 17.081,
+              "p90Ms": 21.956,
+              "p99Ms": 42.684,
+              "worstMs": 51.569
+            }
+          },
+          "sampleCount": 1657
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.032,
+              "p90Ms": 1.804,
+              "p99Ms": 29.414,
+              "worstMs": 34.727
+            },
+            "raster": {
+              "p50Ms": 14.078,
+              "p90Ms": 16.713,
+              "p99Ms": 19.432,
+              "worstMs": 26.183
+            },
+            "totalSpan": {
+              "p50Ms": 17.782,
+              "p90Ms": 22.852,
+              "p99Ms": 42.707,
+              "worstMs": 47.718
+            }
+          },
+          "sampleCount": 1659
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 0.996,
+              "p90Ms": 1.771,
+              "p99Ms": 29.452,
+              "worstMs": 33.45
+            },
+            "raster": {
+              "p50Ms": 13.664,
+              "p90Ms": 16.599,
+              "p99Ms": 18.68,
+              "worstMs": 24.046
+            },
+            "totalSpan": {
+              "p50Ms": 17.018,
+              "p90Ms": 21.615,
+              "p99Ms": 42.976,
+              "worstMs": 48.016
+            }
+          },
+          "sampleCount": 1657
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.036144578313253,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0150948527911878,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0302985948477752,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.050208074366319,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.04489364202609,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0068409708555899,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-ordinary-10-compact-static-run-1.json": "3ed56c73a07cafe7c376716305a95f371ea9225dad8f1f72b6b9358a398c94ac",
+        "2-ordinary-10-compact-static-run-2.json": "41613a4d895772772a2204a8a46d752051997d9bda918aaec47b98ed9b49b7a4",
+        "3-ordinary-10-compact-static-run-3.json": "95c46726c9ce056618b529b71b895e2f2abbdc95a05e3e70149a735222d8c059"
+      }
+    },
+    {
+      "scenario": "blur-10-compact-static",
+      "directory": "blur-10-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 0.855,
+              "p90Ms": 10.497,
+              "p99Ms": 31.592,
+              "worstMs": 34.747
+            },
+            "raster": {
+              "p50Ms": 35.117,
+              "p90Ms": 39.325,
+              "p99Ms": 49.65,
+              "worstMs": 63.919
+            },
+            "totalSpan": {
+              "p50Ms": 63.949,
+              "p90Ms": 72.08,
+              "p99Ms": 85.585,
+              "worstMs": 103.179
+            }
+          },
+          "sampleCount": 834
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 0.976,
+              "p90Ms": 10.249,
+              "p99Ms": 30.937,
+              "worstMs": 35.936
+            },
+            "raster": {
+              "p50Ms": 34.985,
+              "p90Ms": 39.073,
+              "p99Ms": 48.735,
+              "worstMs": 53.45
+            },
+            "totalSpan": {
+              "p50Ms": 64.154,
+              "p90Ms": 71.85,
+              "p99Ms": 80.973,
+              "worstMs": 97.767
+            }
+          },
+          "sampleCount": 837
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 0.85,
+              "p90Ms": 10.251,
+              "p99Ms": 30.985,
+              "worstMs": 38.447
+            },
+            "raster": {
+              "p50Ms": 34.968,
+              "p90Ms": 39.669,
+              "p99Ms": 49.317,
+              "worstMs": 60.07
+            },
+            "totalSpan": {
+              "p50Ms": 64.178,
+              "p90Ms": 72.662,
+              "p99Ms": 85.864,
+              "worstMs": 93.018
+            }
+          },
+          "sampleCount": 835
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.148235294117647,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0211720593464135,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.004261038663921,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0187750076946753,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0035809785923158,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.060402850332827,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-blur-10-compact-static-run-1.json": "d32d19c7e5e323f71a8eaf668902d53df5b6953a1e05aef5f4d08b7668fb143d",
+        "2-blur-10-compact-static-run-2.json": "729720f47308a436dce4845ee1267aafe4925bc59965afe38cd96ab30d9e0ded",
+        "3-blur-10-compact-static-run-3.json": "2c4404f8c4485c3a526374f9cb5adc01e6ea11b5c00bec3aa28ec27356a17ed0"
+      }
+    },
+    {
+      "scenario": "refraction-10-compact-static",
+      "directory": "refraction-10-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.347,
+              "p90Ms": 27.348,
+              "p99Ms": 29.228,
+              "worstMs": 32.384
+            },
+            "raster": {
+              "p50Ms": 39.729,
+              "p90Ms": 41.19,
+              "p99Ms": 43.765,
+              "worstMs": 60.412
+            },
+            "totalSpan": {
+              "p50Ms": 72.538,
+              "p90Ms": 80.254,
+              "p99Ms": 83.532,
+              "worstMs": 100.752
+            }
+          },
+          "sampleCount": 742
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.385,
+              "p90Ms": 27.738,
+              "p99Ms": 31.008,
+              "worstMs": 33.546
+            },
+            "raster": {
+              "p50Ms": 39.7,
+              "p90Ms": 41.223,
+              "p99Ms": 44.052,
+              "worstMs": 58.15
+            },
+            "totalSpan": {
+              "p50Ms": 72.259,
+              "p90Ms": 80.28,
+              "p99Ms": 84.309,
+              "worstMs": 100.201
+            }
+          },
+          "sampleCount": 742
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.353,
+              "p90Ms": 27.268,
+              "p99Ms": 30.89,
+              "worstMs": 33.588
+            },
+            "raster": {
+              "p50Ms": 39.691,
+              "p90Ms": 41.321,
+              "p99Ms": 42.3,
+              "worstMs": 53.691
+            },
+            "totalSpan": {
+              "p50Ms": 72.083,
+              "p90Ms": 79.931,
+              "p99Ms": 82.556,
+              "worstMs": 88.458
+            }
+          },
+          "sampleCount": 745
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0161908819769918,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0609005063637607,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0009573958831977,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0414184397163122,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0063121679175395,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.021234071418189,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-refraction-10-compact-static-run-1.json": "561e74f6650553adde7dfabe1e5e9eddf797e4ad1e8b71dc8903fefe1874244f",
+        "2-refraction-10-compact-static-run-2.json": "441d241377d14567c4e28ae051dcb1791fcd8abe7e0d6c8c4f6091af503edbf9",
+        "3-refraction-10-compact-static-run-3.json": "215056aead08797f37d6bdbdb840e0406c0b81199febc0e282bbf801bd43adaf"
+      }
+    },
+    {
+      "scenario": "capturePerformance-10-compact-static",
+      "directory": "capturePerformance-10-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.307,
+              "p90Ms": 26.355,
+              "p99Ms": 30.172,
+              "worstMs": 33.815
+            },
+            "raster": {
+              "p50Ms": 39.477,
+              "p90Ms": 40.603,
+              "p99Ms": 44.731,
+              "worstMs": 58.366
+            },
+            "totalSpan": {
+              "p50Ms": 71.748,
+              "p90Ms": 79.278,
+              "p99Ms": 82.434,
+              "worstMs": 99.506
+            }
+          },
+          "sampleCount": 749
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.329,
+              "p90Ms": 27.311,
+              "p99Ms": 30.116,
+              "worstMs": 33.014
+            },
+            "raster": {
+              "p50Ms": 39.436,
+              "p90Ms": 40.536,
+              "p99Ms": 41.829,
+              "worstMs": 45.794
+            },
+            "totalSpan": {
+              "p50Ms": 71.424,
+              "p90Ms": 79.254,
+              "p99Ms": 81.185,
+              "worstMs": 82.337
+            }
+          },
+          "sampleCount": 751
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.311,
+              "p90Ms": 23.676,
+              "p99Ms": 30.55,
+              "worstMs": 37.372
+            },
+            "raster": {
+              "p50Ms": 39.473,
+              "p90Ms": 40.554,
+              "p99Ms": 43.588,
+              "worstMs": 58.41
+            },
+            "totalSpan": {
+              "p50Ms": 71.841,
+              "p90Ms": 79.332,
+              "p99Ms": 81.295,
+              "worstMs": 99.904
+            }
+          },
+          "sampleCount": 750
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.009536194191591,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0144109443485192,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0010396591946444,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0693777044634105,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0058383736559138,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0153846153846153,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-capturePerformance-10-compact-static-run-1.json": "96df1fafa6def07969c4e038f49584fee61464b008b6d466771d370bfff59e49",
+        "2-capturePerformance-10-compact-static-run-2.json": "4587d75dc1951f57f0be5c1ebe684705ce8867ff7e4fa86a6a4fdffadfa9b03b",
+        "3-capturePerformance-10-compact-static-run-3.json": "87285812e98f4a90bc03e87354743c6039e4edf19c413f1efac30bf321c4ce31"
+      }
+    },
+    {
+      "scenario": "captureBalanced-10-compact-static",
+      "directory": "captureBalanced-10-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.369,
+              "p90Ms": 27.83,
+              "p99Ms": 30.943,
+              "worstMs": 33.306
+            },
+            "raster": {
+              "p50Ms": 61.634,
+              "p90Ms": 62.402,
+              "p99Ms": 65.658,
+              "worstMs": 80.414
+            },
+            "totalSpan": {
+              "p50Ms": 116.907,
+              "p90Ms": 123.317,
+              "p99Ms": 127.265,
+              "worstMs": 138.264
+            }
+          },
+          "sampleCount": 484
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.378,
+              "p90Ms": 27.831,
+              "p99Ms": 31.021,
+              "worstMs": 38.143
+            },
+            "raster": {
+              "p50Ms": 61.604,
+              "p90Ms": 62.372,
+              "p99Ms": 67.05,
+              "worstMs": 76.429
+            },
+            "totalSpan": {
+              "p50Ms": 116.561,
+              "p90Ms": 122.945,
+              "p99Ms": 125.836,
+              "worstMs": 138.162
+            }
+          },
+          "sampleCount": 484
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.293,
+              "p90Ms": 26.247,
+              "p99Ms": 31.394,
+              "worstMs": 35.632
+            },
+            "raster": {
+              "p50Ms": 61.641,
+              "p90Ms": 62.408,
+              "p99Ms": 63.497,
+              "worstMs": 64.744
+            },
+            "totalSpan": {
+              "p50Ms": 116.793,
+              "p90Ms": 122.819,
+              "p99Ms": 125.264,
+              "worstMs": 126.075
+            }
+          },
+          "sampleCount": 484
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0370693414740515,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0145751866334873,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0006006103499772,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0559553994676913,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0029684028105454,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0159742623579002,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureBalanced-10-compact-static-run-1.json": "d960969addac89e87c8d64791b51d6a730ded0fafdad12a304030b56a4e866b5",
+        "2-captureBalanced-10-compact-static-run-2.json": "71d99d8b41b8818c50fb187ab3a83d75a0e1b2d0b974a1c95893586d0be12d48",
+        "3-captureBalanced-10-compact-static-run-3.json": "6350dc252285f2d653f7d658fac6e31445895e4504add784f6bb0d227fd958aa"
+      }
+    },
+    {
+      "scenario": "captureUltra-10-compact-static",
+      "directory": "captureUltra-10-compact-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.405,
+              "p90Ms": 28.111,
+              "p99Ms": 32.858,
+              "worstMs": 34.058
+            },
+            "raster": {
+              "p50Ms": 87.904,
+              "p90Ms": 89.372,
+              "p99Ms": 90.85,
+              "worstMs": 134.028
+            },
+            "totalSpan": {
+              "p50Ms": 166.957,
+              "p90Ms": 174.378,
+              "p99Ms": 178.575,
+              "worstMs": 216.031
+            }
+          },
+          "sampleCount": 344
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.438,
+              "p90Ms": 27.853,
+              "p99Ms": 34.252,
+              "worstMs": 37.054
+            },
+            "raster": {
+              "p50Ms": 87.687,
+              "p90Ms": 89.449,
+              "p99Ms": 92.12,
+              "worstMs": 94.991
+            },
+            "totalSpan": {
+              "p50Ms": 167.163,
+              "p90Ms": 173.803,
+              "p99Ms": 177.472,
+              "worstMs": 179.952
+            }
+          },
+          "sampleCount": 344
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.435,
+              "p90Ms": 28.257,
+              "p99Ms": 31.845,
+              "worstMs": 37.776
+            },
+            "raster": {
+              "p50Ms": 87.85,
+              "p90Ms": 89.24,
+              "p99Ms": 92.725,
+              "worstMs": 124.76
+            },
+            "totalSpan": {
+              "p50Ms": 167.103,
+              "p90Ms": 175.275,
+              "p99Ms": 181.272,
+              "worstMs": 203.35
+            }
+          },
+          "sampleCount": 344
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0137214137214139,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0755848641859005,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0024747111886596,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0206384149697303,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0012338506321987,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0214118283447529,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureUltra-10-compact-static-run-1.json": "f35085c06cfb7715f6fe1bf29e7aaafc360cd96070834a0816409525cd362043",
+        "2-captureUltra-10-compact-static-run-2.json": "8125770216424ef929c28f433263c98f574beb300c832a07dac66c1aa6d1c38e",
+        "3-captureUltra-10-compact-static-run-3.json": "65edb7f810b3b04a6d9540cfd21a5b5877c832cd85a6eea4282cbab14c543cfe"
+      }
+    },
+    {
+      "scenario": "filter-10-compact-static",
+      "directory": "filter-10-compact-static\\attempt-1",
+      "valid": false,
+      "errors": [
+        "unstable build.p50Ms",
+        "runner or environment did not qualify attempt"
+      ],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.588,
+              "p90Ms": 19.913,
+              "p99Ms": 33.689,
+              "worstMs": 36.959
+            },
+            "raster": {
+              "p50Ms": 44.646,
+              "p90Ms": 45.747,
+              "p99Ms": 48.452,
+              "worstMs": 54.306
+            },
+            "totalSpan": {
+              "p50Ms": 82.168,
+              "p90Ms": 89.22,
+              "p99Ms": 91.98,
+              "worstMs": 97.775
+            }
+          },
+          "sampleCount": 666
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.191,
+              "p90Ms": 15.578,
+              "p99Ms": 32.187,
+              "worstMs": 36.205
+            },
+            "raster": {
+              "p50Ms": 45.398,
+              "p90Ms": 47.291,
+              "p99Ms": 51.817,
+              "worstMs": 64.385
+            },
+            "totalSpan": {
+              "p50Ms": 83.993,
+              "p90Ms": 91.153,
+              "p99Ms": 95.891,
+              "worstMs": 107.019
+            }
+          },
+          "sampleCount": 654
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.648,
+              "p90Ms": 17.64,
+              "p99Ms": 33.63,
+              "worstMs": 39.317
+            },
+            "raster": {
+              "p50Ms": 44.726,
+              "p90Ms": 45.654,
+              "p99Ms": 47.156,
+              "worstMs": 49.434
+            },
+            "totalSpan": {
+              "p50Ms": 82.304,
+              "p90Ms": 89.15,
+              "p99Ms": 91.495,
+              "worstMs": 92.64
+            }
+          },
+          "sampleCount": 666
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.6649931538110454,
+            "limit": 1.25,
+            "stable": false
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0466648025600398,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0168436142095596,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0988421409788787,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0222105929315548,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0480463413301273,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-filter-10-compact-static-run-1.json": "02e4597d116692a51deeacea71bc7f3b17dcdcd3539e4e6435d89e5655fbf2b3",
+        "2-filter-10-compact-static-run-2.json": "d63a4907a1104ed791c2dd856f53fddcb3426dbf65d53ee6e6631facdc27c539",
+        "3-filter-10-compact-static-run-3.json": "b51d1f52ee7f3da77c6ee9571dccf5000adfd8b3c04fd45802c967caa30e8e27"
+      }
+    },
+    {
+      "scenario": "captureBalanced-4-overlapping-static",
+      "directory": "captureBalanced-4-overlapping-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.823,
+              "p90Ms": 16.538,
+              "p99Ms": 29.968,
+              "worstMs": 35.283
+            },
+            "raster": {
+              "p50Ms": 42.615,
+              "p90Ms": 43.285,
+              "p99Ms": 46.319,
+              "worstMs": 54.837
+            },
+            "totalSpan": {
+              "p50Ms": 78.15,
+              "p90Ms": 85.301,
+              "p99Ms": 86.99,
+              "worstMs": 97.686
+            }
+          },
+          "sampleCount": 698
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.989,
+              "p90Ms": 22.476,
+              "p99Ms": 30.067,
+              "worstMs": 34.846
+            },
+            "raster": {
+              "p50Ms": 42.64,
+              "p90Ms": 43.284,
+              "p99Ms": 45.789,
+              "worstMs": 70.952
+            },
+            "totalSpan": {
+              "p50Ms": 78.122,
+              "p90Ms": 85.092,
+              "p99Ms": 87.723,
+              "worstMs": 111.51
+            }
+          },
+          "sampleCount": 698
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.031,
+              "p90Ms": 24.632,
+              "p99Ms": 31.231,
+              "worstMs": 34.062
+            },
+            "raster": {
+              "p50Ms": 42.616,
+              "p90Ms": 43.234,
+              "p99Ms": 45.772,
+              "worstMs": 48.506
+            },
+            "totalSpan": {
+              "p50Ms": 78.432,
+              "p90Ms": 85.375,
+              "p99Ms": 87.343,
+              "worstMs": 89.943
+            }
+          },
+          "sampleCount": 699
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.1140976412506858,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0421449546182595,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.000586647893934,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.011950537446474,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0039681523770514,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0084262558914818,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureBalanced-4-overlapping-static-run-1.json": "7254f7c102b456e9c67552419e6b7ed16c2e585095d2bdaf1bc69d0fe256374e",
+        "2-captureBalanced-4-overlapping-static-run-2.json": "6a92ad6d9f0b939c601c902ed8ad361f2c6a7075c29e5817818fe37dbdf2746f",
+        "3-captureBalanced-4-overlapping-static-run-3.json": "8458c5b299ec73b0cae08fc9f839b85872d893412aa64bb4f2f76b16d5bc306e"
+      }
+    },
+    {
+      "scenario": "captureBalanced-10-spread-static",
+      "directory": "captureBalanced-10-spread-static\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.423,
+              "p90Ms": 27.786,
+              "p99Ms": 31.861,
+              "worstMs": 35.179
+            },
+            "raster": {
+              "p50Ms": 63.415,
+              "p90Ms": 69.523,
+              "p99Ms": 71.354,
+              "worstMs": 73.851
+            },
+            "totalSpan": {
+              "p50Ms": 122.981,
+              "p90Ms": 130.489,
+              "p99Ms": 133.18,
+              "worstMs": 134.535
+            }
+          },
+          "sampleCount": 462
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.42,
+              "p90Ms": 27.962,
+              "p99Ms": 31.097,
+              "worstMs": 37.452
+            },
+            "raster": {
+              "p50Ms": 63.508,
+              "p90Ms": 69.558,
+              "p99Ms": 72.006,
+              "worstMs": 78.681
+            },
+            "totalSpan": {
+              "p50Ms": 122.787,
+              "p90Ms": 130.586,
+              "p99Ms": 133.381,
+              "worstMs": 136.688
+            }
+          },
+          "sampleCount": 461
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.425,
+              "p90Ms": 27.989,
+              "p99Ms": 31.306,
+              "worstMs": 37.328
+            },
+            "raster": {
+              "p50Ms": 63.333,
+              "p90Ms": 69.596,
+              "p99Ms": 70.987,
+              "worstMs": 73.684
+            },
+            "totalSpan": {
+              "p50Ms": 122.281,
+              "p90Ms": 130.053,
+              "p99Ms": 133.212,
+              "worstMs": 134.662
+            }
+          },
+          "sampleCount": 462
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0020661157024793,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.024568286329871,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0027631724377497,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.014354741008917,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.005724519753682,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.001509235620964,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureBalanced-10-spread-static-run-1.json": "866486a22c64dab3788e8ab5e0289e7f3ec59f692f2d2e1a64345ca6ba712dd7",
+        "2-captureBalanced-10-spread-static-run-2.json": "2187576817c0836febbc2be2ba01705ef8b2d135b8dd9e5429132ae686244be1",
+        "3-captureBalanced-10-spread-static-run-3.json": "d2618dd8fa1b0c923a70613fd7a3b5cf6a2f4ad28ec7f0276dcd2930b36878fb"
+      }
+    },
+    {
+      "scenario": "ordinary-1-compact-animated",
+      "directory": "ordinary-1-compact-animated\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.068,
+              "p90Ms": 3.334,
+              "p99Ms": 25.136,
+              "worstMs": 30.844
+            },
+            "raster": {
+              "p50Ms": 13.048,
+              "p90Ms": 15.199,
+              "p99Ms": 18.165,
+              "worstMs": 29.677
+            },
+            "totalSpan": {
+              "p50Ms": 16.985,
+              "p90Ms": 20.976,
+              "p99Ms": 38.825,
+              "worstMs": 42.502
+            }
+          },
+          "sampleCount": 1670
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.182,
+              "p90Ms": 3.416,
+              "p99Ms": 26.065,
+              "worstMs": 34.716
+            },
+            "raster": {
+              "p50Ms": 13.256,
+              "p90Ms": 15.752,
+              "p99Ms": 18.946,
+              "worstMs": 44.855
+            },
+            "totalSpan": {
+              "p50Ms": 17.603,
+              "p90Ms": 23.064,
+              "p99Ms": 39.789,
+              "worstMs": 48.288
+            }
+          },
+          "sampleCount": 1663
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.338,
+              "p90Ms": 3.488,
+              "p99Ms": 27.047,
+              "worstMs": 32.098
+            },
+            "raster": {
+              "p50Ms": 13.675,
+              "p90Ms": 15.865,
+              "p99Ms": 19.477,
+              "worstMs": 26.376
+            },
+            "totalSpan": {
+              "p50Ms": 18.147,
+              "p90Ms": 23.192,
+              "p99Ms": 40.408,
+              "worstMs": 45.614
+            }
+          },
+          "sampleCount": 1659
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.130560928433269,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0760264162953532,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0480533415082771,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0722268097990642,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.06841330585811,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0407726980038634,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-ordinary-1-compact-animated-run-1.json": "ee4e799bb1b3315a341da56e22f560fff51c1408c48bfa4f89bb776dc883c172",
+        "2-ordinary-1-compact-animated-run-2.json": "cf5c55e74e69906c1a00aace4939d0a58a645f97554a4ec115df3c2d6282e479",
+        "3-ordinary-1-compact-animated-run-3.json": "de5a3aae64f0a91cb0cf73a1e43be2e88f2fc6eaf6877d286864d6813f1bb846"
+      }
+    },
+    {
+      "scenario": "blur-1-compact-animated",
+      "directory": "blur-1-compact-animated\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.046,
+              "p90Ms": 3.206,
+              "p99Ms": 26.608,
+              "worstMs": 36.264
+            },
+            "raster": {
+              "p50Ms": 15.005,
+              "p90Ms": 17.311,
+              "p99Ms": 19.933,
+              "worstMs": 22.248
+            },
+            "totalSpan": {
+              "p50Ms": 19.067,
+              "p90Ms": 23.846,
+              "p99Ms": 42.401,
+              "worstMs": 49.692
+            }
+          },
+          "sampleCount": 1665
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.994,
+              "p90Ms": 3.173,
+              "p99Ms": 27.549,
+              "worstMs": 31.831
+            },
+            "raster": {
+              "p50Ms": 14.487,
+              "p90Ms": 16.931,
+              "p99Ms": 19.593,
+              "worstMs": 24.296
+            },
+            "totalSpan": {
+              "p50Ms": 18.585,
+              "p90Ms": 23.359,
+              "p99Ms": 41.885,
+              "worstMs": 49.498
+            }
+          },
+          "sampleCount": 1662
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.94,
+              "p90Ms": 3.164,
+              "p99Ms": 25.636,
+              "worstMs": 30.602
+            },
+            "raster": {
+              "p50Ms": 14.496,
+              "p90Ms": 16.862,
+              "p99Ms": 19.876,
+              "worstMs": 27.631
+            },
+            "totalSpan": {
+              "p50Ms": 18.48,
+              "p90Ms": 22.821,
+              "p99Ms": 41.001,
+              "worstMs": 45.26
+            }
+          },
+          "sampleCount": 1683
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.054639175257732,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0746216258386645,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0357561952094982,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0173531363241974,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0317640692640693,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0341455086461306,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-blur-1-compact-animated-run-1.json": "183251da030c47630504ad3cb13354ad8c00583e069d7139be56659645a310a2",
+        "2-blur-1-compact-animated-run-2.json": "53eea9c3b974e675fefa3797aaffffe5d9c4c0f376a9de8f86250d4c47a4704d",
+        "3-blur-1-compact-animated-run-3.json": "87bdc05680b85bb2faf60a517a6beb6b4dc3ee32dd7cd08ca9847656b17d85a4"
+      }
+    },
+    {
+      "scenario": "refraction-1-compact-animated",
+      "directory": "refraction-1-compact-animated\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.6,
+              "p90Ms": 16.984,
+              "p99Ms": 33.393,
+              "worstMs": 38.382
+            },
+            "raster": {
+              "p50Ms": 45.414,
+              "p90Ms": 46.621,
+              "p99Ms": 49.149,
+              "worstMs": 61.843
+            },
+            "totalSpan": {
+              "p50Ms": 93.997,
+              "p90Ms": 100.998,
+              "p99Ms": 102.804,
+              "worstMs": 105.45
+            }
+          },
+          "sampleCount": 592
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.603,
+              "p90Ms": 16.756,
+              "p99Ms": 33.244,
+              "worstMs": 37.002
+            },
+            "raster": {
+              "p50Ms": 45.352,
+              "p90Ms": 46.662,
+              "p99Ms": 48.566,
+              "worstMs": 51.602
+            },
+            "totalSpan": {
+              "p50Ms": 94.006,
+              "p90Ms": 100.84,
+              "p99Ms": 103.533,
+              "worstMs": 107.932
+            }
+          },
+          "sampleCount": 592
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.781,
+              "p90Ms": 17.164,
+              "p99Ms": 33.63,
+              "worstMs": 37.592
+            },
+            "raster": {
+              "p50Ms": 45.49,
+              "p90Ms": 46.63,
+              "p99Ms": 48.341,
+              "worstMs": 55.404
+            },
+            "totalSpan": {
+              "p50Ms": 94.48,
+              "p90Ms": 101.116,
+              "p99Ms": 103.291,
+              "worstMs": 112.752
+            }
+          },
+          "sampleCount": 589
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0696153846153846,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0116111177956926,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0030428647027696,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0167145900995014,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0051384618658044,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0070911637679467,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-refraction-1-compact-animated-run-1.json": "0492fa8ec6910279eb8bd62919c10a9f6dfe6cb1d9579738ae18a011de2c4fab",
+        "2-refraction-1-compact-animated-run-2.json": "50f254f119145ae615a992213a966c0384b23e25591e12b4a6e1b4e1f5c08e09",
+        "3-refraction-1-compact-animated-run-3.json": "4e6dd6af5022352a0ac1afd74409be939c1ec4e0aa5fcc64004cc20fc1789deb"
+      }
+    },
+    {
+      "scenario": "capturePerformance-1-compact-animated",
+      "directory": "capturePerformance-1-compact-animated\\attempt-1",
+      "valid": false,
+      "errors": [
+        "unstable build.p50Ms",
+        "runner or environment did not qualify attempt"
+      ],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.518,
+              "p90Ms": 17.008,
+              "p99Ms": 33.946,
+              "worstMs": 38.168
+            },
+            "raster": {
+              "p50Ms": 45.838,
+              "p90Ms": 47.696,
+              "p99Ms": 50.164,
+              "worstMs": 103.489
+            },
+            "totalSpan": {
+              "p50Ms": 95.112,
+              "p90Ms": 101.893,
+              "p99Ms": 104.769,
+              "worstMs": 154.956
+            }
+          },
+          "sampleCount": 584
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.577,
+              "p90Ms": 16.628,
+              "p99Ms": 33.503,
+              "worstMs": 37.704
+            },
+            "raster": {
+              "p50Ms": 45.596,
+              "p90Ms": 47.334,
+              "p99Ms": 50.262,
+              "worstMs": 58.617
+            },
+            "totalSpan": {
+              "p50Ms": 94.923,
+              "p90Ms": 101.686,
+              "p99Ms": 106.18,
+              "worstMs": 114.602
+            }
+          },
+          "sampleCount": 589
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.374,
+              "p90Ms": 20.831,
+              "p99Ms": 34.624,
+              "worstMs": 55.489
+            },
+            "raster": {
+              "p50Ms": 45.645,
+              "p90Ms": 48.196,
+              "p99Ms": 52.04,
+              "worstMs": 64.298
+            },
+            "totalSpan": {
+              "p50Ms": 96.014,
+              "p90Ms": 102.734,
+              "p99Ms": 106.861,
+              "worstMs": 114.242
+            }
+          },
+          "sampleCount": 582
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.339952343129468,
+            "limit": 1.25,
+            "stable": false
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0334596901769992,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.005307483112554,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0373973367355074,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.011493526331869,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0199677385486166,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-capturePerformance-1-compact-animated-run-1.json": "4199f8dc731c0fdd95b7b57db5d280fa1f763a1e45db04118bc7759a3cae28b5",
+        "2-capturePerformance-1-compact-animated-run-2.json": "75e9d52227d3bd9c8a702c38e3a6fe1c95818d348b59596d831ac69f0f5abdca",
+        "3-capturePerformance-1-compact-animated-run-3.json": "8dca422f6fd9ed6e869ef1b3a56be777bd46cc4fc14ce4da90386ad26cd17ae0"
+      }
+    },
+    {
+      "scenario": "captureBalanced-1-compact-animated",
+      "directory": "captureBalanced-1-compact-animated\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.69,
+              "p90Ms": 28.869,
+              "p99Ms": 34.908,
+              "worstMs": 36.241
+            },
+            "raster": {
+              "p50Ms": 68.259,
+              "p90Ms": 70.024,
+              "p99Ms": 72.325,
+              "worstMs": 74.555
+            },
+            "totalSpan": {
+              "p50Ms": 140.105,
+              "p90Ms": 146.912,
+              "p99Ms": 149.916,
+              "worstMs": 151.471
+            }
+          },
+          "sampleCount": 407
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 4.191,
+              "p90Ms": 29.856,
+              "p99Ms": 36.21,
+              "worstMs": 39.517
+            },
+            "raster": {
+              "p50Ms": 68.029,
+              "p90Ms": 69.817,
+              "p99Ms": 73.243,
+              "worstMs": 113.757
+            },
+            "totalSpan": {
+              "p50Ms": 139.14,
+              "p90Ms": 146.031,
+              "p99Ms": 151.198,
+              "worstMs": 192.482
+            }
+          },
+          "sampleCount": 407
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.83,
+              "p90Ms": 26.422,
+              "p99Ms": 34.664,
+              "worstMs": 44.079
+            },
+            "raster": {
+              "p50Ms": 68.17,
+              "p90Ms": 69.806,
+              "p99Ms": 72.637,
+              "worstMs": 78.134
+            },
+            "totalSpan": {
+              "p50Ms": 139.237,
+              "p90Ms": 145.897,
+              "p99Ms": 149.195,
+              "worstMs": 156.672
+            }
+          },
+          "sampleCount": 408
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.1357723577235772,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0445995845834295,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0033809110820386,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0126927065330107,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0069354606870777,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0134253828881665,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureBalanced-1-compact-animated-run-1.json": "b6745b642a0231070f98bab3325bde93ea17f9b8aee40050486d4bf4d6df5ca2",
+        "2-captureBalanced-1-compact-animated-run-2.json": "01db161167f137ce933f97a14487acc28e2cf8bfae150aa5b9734c84d59e10c0",
+        "3-captureBalanced-1-compact-animated-run-3.json": "ad5f3a44e4e7503b36037446dc8b57489303dd32bdd3d28253ea419144ac4156"
+      }
+    },
+    {
+      "scenario": "captureUltra-1-compact-animated",
+      "directory": "captureUltra-1-compact-animated\\attempt-1",
+      "valid": false,
+      "errors": [
+        "unstable build.p50Ms",
+        "runner or environment did not qualify attempt"
+      ],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 4.423,
+              "p90Ms": 31.301,
+              "p99Ms": 36.035,
+              "worstMs": 38.203
+            },
+            "raster": {
+              "p50Ms": 88.94,
+              "p90Ms": 90.171,
+              "p99Ms": 92.247,
+              "worstMs": 95.389
+            },
+            "totalSpan": {
+              "p50Ms": 181.872,
+              "p90Ms": 188.758,
+              "p99Ms": 191.947,
+              "worstMs": 196.367
+            }
+          },
+          "sampleCount": 317
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 4.58,
+              "p90Ms": 32.02,
+              "p99Ms": 35.125,
+              "worstMs": 38.454
+            },
+            "raster": {
+              "p50Ms": 88.79,
+              "p90Ms": 90.233,
+              "p99Ms": 94.75,
+              "worstMs": 110.413
+            },
+            "totalSpan": {
+              "p50Ms": 181.109,
+              "p90Ms": 188.36,
+              "p99Ms": 200.505,
+              "worstMs": 252.677
+            }
+          },
+          "sampleCount": 319
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.499,
+              "p90Ms": 25.209,
+              "p99Ms": 34.063,
+              "worstMs": 41.25
+            },
+            "raster": {
+              "p50Ms": 88.605,
+              "p90Ms": 90.402,
+              "p99Ms": 94.076,
+              "worstMs": 100.174
+            },
+            "totalSpan": {
+              "p50Ms": 179.963,
+              "p90Ms": 187.4,
+              "p99Ms": 195.415,
+              "worstMs": 206.225
+            }
+          },
+          "sampleCount": 320
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.3089454129751357,
+            "limit": 1.25,
+            "stable": false
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0578927281801367,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0037808250098752,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0271336737238068,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0106077360346295,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.044585224046221,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureUltra-1-compact-animated-run-1.json": "8e244017d2c327ebaacfa2214bf5cd6d28a740c28e0bfd68cf494e95bc6f9dda",
+        "2-captureUltra-1-compact-animated-run-2.json": "d15fe03afdbb4f8d6739675b44f985d5f1f70d3885ba713ac634d938cc62bd34",
+        "3-captureUltra-1-compact-animated-run-3.json": "62a259a49daa58f8aa4961451210acab6ece8c8597168ea5d5ecf20205234e90"
+      }
+    },
+    {
+      "scenario": "filter-1-compact-animated",
+      "directory": "filter-1-compact-animated\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.125,
+              "p90Ms": 14.248,
+              "p99Ms": 30.441,
+              "worstMs": 37.101
+            },
+            "raster": {
+              "p50Ms": 27.568,
+              "p90Ms": 28.015,
+              "p99Ms": 30.063,
+              "worstMs": 34.697
+            },
+            "totalSpan": {
+              "p50Ms": 46.773,
+              "p90Ms": 54.473,
+              "p99Ms": 57.277,
+              "worstMs": 64.147
+            }
+          },
+          "sampleCount": 1071
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.13,
+              "p90Ms": 15.38,
+              "p99Ms": 30.25,
+              "worstMs": 32.509
+            },
+            "raster": {
+              "p50Ms": 27.547,
+              "p90Ms": 28.016,
+              "p99Ms": 30.133,
+              "worstMs": 34.912
+            },
+            "totalSpan": {
+              "p50Ms": 47.16,
+              "p90Ms": 54.982,
+              "p99Ms": 56.703,
+              "worstMs": 57.915
+            }
+          },
+          "sampleCount": 1074
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.079,
+              "p90Ms": 13.967,
+              "p99Ms": 30.224,
+              "worstMs": 33.273
+            },
+            "raster": {
+              "p50Ms": 27.604,
+              "p90Ms": 28.122,
+              "p99Ms": 31.361,
+              "worstMs": 35.763
+            },
+            "totalSpan": {
+              "p50Ms": 46.982,
+              "p90Ms": 54.806,
+              "p99Ms": 56.834,
+              "worstMs": 61.323
+            }
+          },
+          "sampleCount": 1072
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0165638194218902,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.007179724722075,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0020691908374777,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0431759970728138,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0082740042332112,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0101229211858278,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-filter-1-compact-animated-run-1.json": "4cfa4d451d07a8f489799b050141e779332aab2abc90b6474a0412da621f01f0",
+        "2-filter-1-compact-animated-run-2.json": "1b866a8a3a09bf877cdb4b6097fe1c966defadf5448bb809568994db04c8f9b2",
+        "3-filter-1-compact-animated-run-3.json": "d67aa944e8611af8fbc44f766140b5a41f48b702723a10bf527f4817d440758b"
+      }
+    },
+    {
+      "scenario": "ordinary-4-compact-animated",
+      "directory": "ordinary-4-compact-animated\\attempt-1",
+      "valid": false,
+      "errors": [
+        "unstable build.p50Ms",
+        "runner or environment did not qualify attempt"
+      ],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.866,
+              "p90Ms": 3.3,
+              "p99Ms": 23.25,
+              "worstMs": 31.816
+            },
+            "raster": {
+              "p50Ms": 12.735,
+              "p90Ms": 15.807,
+              "p99Ms": 19.817,
+              "worstMs": 27.569
+            },
+            "totalSpan": {
+              "p50Ms": 16.522,
+              "p90Ms": 23.086,
+              "p99Ms": 39.321,
+              "worstMs": 48.891
+            }
+          },
+          "sampleCount": 1697
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.384,
+              "p90Ms": 3.517,
+              "p99Ms": 26.587,
+              "worstMs": 35.405
+            },
+            "raster": {
+              "p50Ms": 13.976,
+              "p90Ms": 16.218,
+              "p99Ms": 20.361,
+              "worstMs": 25.782
+            },
+            "totalSpan": {
+              "p50Ms": 18.551,
+              "p90Ms": 24.098,
+              "p99Ms": 43.78,
+              "worstMs": 52.097
+            }
+          },
+          "sampleCount": 1666
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.409,
+              "p90Ms": 3.549,
+              "p99Ms": 26.216,
+              "worstMs": 36.907
+            },
+            "raster": {
+              "p50Ms": 13.994,
+              "p90Ms": 16.279,
+              "p99Ms": 20.073,
+              "worstMs": 29.8
+            },
+            "totalSpan": {
+              "p50Ms": 18.634,
+              "p90Ms": 24.068,
+              "p99Ms": 39.952,
+              "worstMs": 47.148
+            }
+          },
+          "sampleCount": 1668
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.2909967845659163,
+            "limit": 1.25,
+            "stable": false
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.14352688172043,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0988614055751866,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0274511782812736,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.1278295605858857,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.1133999643956156,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-ordinary-4-compact-animated-run-1.json": "47c3472c75d5417256ac4ea8c180606998b1d53d3016c7bd9c9b16b40e61e899",
+        "2-ordinary-4-compact-animated-run-2.json": "cd901f6158a9a967cb8b846c6becfed0adda9ccaf1103e10ad4e8e49aca98d4e",
+        "3-ordinary-4-compact-animated-run-3.json": "e018cd1683dbb9b13f69411cdb7ef945ba9eef9b3afa29cff74aba84a8b5561c"
+      }
+    },
+    {
+      "scenario": "blur-4-compact-animated",
+      "directory": "blur-4-compact-animated\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.727,
+              "p90Ms": 3.514,
+              "p99Ms": 24.55,
+              "worstMs": 30.314
+            },
+            "raster": {
+              "p50Ms": 20.288,
+              "p90Ms": 22.826,
+              "p99Ms": 30.221,
+              "worstMs": 39.877
+            },
+            "totalSpan": {
+              "p50Ms": 33.635,
+              "p90Ms": 41.882,
+              "p99Ms": 51.638,
+              "worstMs": 65.024
+            }
+          },
+          "sampleCount": 1404
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.704,
+              "p90Ms": 3.566,
+              "p99Ms": 24.243,
+              "worstMs": 31.683
+            },
+            "raster": {
+              "p50Ms": 20.415,
+              "p90Ms": 22.328,
+              "p99Ms": 27.155,
+              "worstMs": 34.219
+            },
+            "totalSpan": {
+              "p50Ms": 33.65,
+              "p90Ms": 41.444,
+              "p99Ms": 48.596,
+              "worstMs": 59.351
+            }
+          },
+          "sampleCount": 1414
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.621,
+              "p90Ms": 3.495,
+              "p99Ms": 24.89,
+              "worstMs": 30.823
+            },
+            "raster": {
+              "p50Ms": 20.578,
+              "p90Ms": 23.187,
+              "p99Ms": 32.551,
+              "worstMs": 38.562
+            },
+            "totalSpan": {
+              "p50Ms": 34.185,
+              "p90Ms": 42.576,
+              "p99Ms": 55.596,
+              "worstMs": 64.555
+            }
+          },
+          "sampleCount": 1388
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0653917334978409,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0266881161572414,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0142941640378549,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.1987111029276376,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0163520142708489,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.1440447773479299,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-blur-4-compact-animated-run-1.json": "535ae6322af5f470998d481b32d045ca5799ffaf751685eb4eccc219f56bc76e",
+        "2-blur-4-compact-animated-run-2.json": "9530722d3f31cd5d7db9c9e218f0530b0fa53ef2cc4b2627391a491be0712050",
+        "3-blur-4-compact-animated-run-3.json": "03bc3717bf5065e2cb8a07d84e4bccb3944e9a17c5526a9df510637179e543ef"
+      }
+    },
+    {
+      "scenario": "refraction-4-compact-animated",
+      "directory": "refraction-4-compact-animated\\attempt-1",
+      "valid": false,
+      "errors": [
+        "unstable build.p50Ms",
+        "runner or environment did not qualify attempt"
+      ],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.702,
+              "p90Ms": 18.342,
+              "p99Ms": 35.081,
+              "worstMs": 39.706
+            },
+            "raster": {
+              "p50Ms": 48.887,
+              "p90Ms": 50.023,
+              "p99Ms": 51.963,
+              "worstMs": 75.89
+            },
+            "totalSpan": {
+              "p50Ms": 101.027,
+              "p90Ms": 108.102,
+              "p99Ms": 110.271,
+              "worstMs": 131.741
+            }
+          },
+          "sampleCount": 552
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 4.241,
+              "p90Ms": 19.529,
+              "p99Ms": 34.793,
+              "worstMs": 42.387
+            },
+            "raster": {
+              "p50Ms": 48.796,
+              "p90Ms": 49.961,
+              "p99Ms": 53.053,
+              "worstMs": 65.557
+            },
+            "totalSpan": {
+              "p50Ms": 101.544,
+              "p90Ms": 108.345,
+              "p99Ms": 111.919,
+              "worstMs": 121.116
+            }
+          },
+          "sampleCount": 550
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.332,
+              "p90Ms": 17.634,
+              "p99Ms": 35.356,
+              "worstMs": 41.957
+            },
+            "raster": {
+              "p50Ms": 48.773,
+              "p90Ms": 49.995,
+              "p99Ms": 52.299,
+              "worstMs": 56.2
+            },
+            "totalSpan": {
+              "p50Ms": 100.585,
+              "p90Ms": 107.992,
+              "p99Ms": 111.257,
+              "worstMs": 115.595
+            }
+          },
+          "sampleCount": 554
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.2728091236494596,
+            "limit": 1.25,
+            "stable": false
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0161814158020293,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0023373587845734,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0209764640224774,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0095342247850077,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.014944999138486,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-refraction-4-compact-animated-run-1.json": "dd17128732d48d8cb473d6748bf558d281adc69bb7ea4b1f82cf487dddf72948",
+        "2-refraction-4-compact-animated-run-2.json": "f8a308e825d6aa9e643f108801f6c52051128b50c70a1061b98faceb6b6aa248",
+        "3-refraction-4-compact-animated-run-3.json": "46515982cbe76430dfc758cc0b6e7d31d8727dd12ba3daebef884f390ad68a55"
+      }
+    },
+    {
+      "scenario": "capturePerformance-4-compact-animated",
+      "directory": "capturePerformance-4-compact-animated\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 4.135,
+              "p90Ms": 18.7,
+              "p99Ms": 36.542,
+              "worstMs": 43.271
+            },
+            "raster": {
+              "p50Ms": 49.844,
+              "p90Ms": 53.599,
+              "p99Ms": 55.291,
+              "worstMs": 58.353
+            },
+            "totalSpan": {
+              "p50Ms": 104.245,
+              "p90Ms": 112.003,
+              "p99Ms": 115.839,
+              "worstMs": 117.433
+            }
+          },
+          "sampleCount": 536
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 4.011,
+              "p90Ms": 18.696,
+              "p99Ms": 35.456,
+              "worstMs": 40.913
+            },
+            "raster": {
+              "p50Ms": 49.467,
+              "p90Ms": 53.919,
+              "p99Ms": 55.691,
+              "worstMs": 61.41
+            },
+            "totalSpan": {
+              "p50Ms": 103.587,
+              "p90Ms": 111.529,
+              "p99Ms": 115.654,
+              "worstMs": 119.516
+            }
+          },
+          "sampleCount": 538
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.519,
+              "p90Ms": 17.717,
+              "p99Ms": 37.152,
+              "worstMs": 46.816
+            },
+            "raster": {
+              "p50Ms": 49.558,
+              "p90Ms": 53.659,
+              "p99Ms": 55.647,
+              "worstMs": 61.405
+            },
+            "totalSpan": {
+              "p50Ms": 103.405,
+              "p90Ms": 110.921,
+              "p99Ms": 116.078,
+              "worstMs": 117.243
+            }
+          },
+          "sampleCount": 542
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.1750497300369422,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0478339350180506,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.007621242444458,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0072344504530575,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.008123398288284,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0036661075276256,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-capturePerformance-4-compact-animated-run-1.json": "5e2dba593e35adb82884d40d1803b5dd2bde8d39db0623e3ebb050f5291d9b75",
+        "2-capturePerformance-4-compact-animated-run-2.json": "3bdd37c79a717869a88fc343a2a1b588f9e3bf77914fd42b53260faac2a1fe82",
+        "3-capturePerformance-4-compact-animated-run-3.json": "0178b08c149b136b3bbd83144d879806cabf4a2234627c30f5ec0f8274458e7f"
+      }
+    },
+    {
+      "scenario": "captureBalanced-4-compact-animated",
+      "directory": "captureBalanced-4-compact-animated\\attempt-1",
+      "valid": false,
+      "errors": [
+        "unstable build.p50Ms",
+        "runner or environment did not qualify attempt"
+      ],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 4.825,
+              "p90Ms": 31.545,
+              "p99Ms": 39.004,
+              "worstMs": 41.79
+            },
+            "raster": {
+              "p50Ms": 72.873,
+              "p90Ms": 74.11,
+              "p99Ms": 77.365,
+              "worstMs": 89.156
+            },
+            "totalSpan": {
+              "p50Ms": 149.693,
+              "p90Ms": 156.201,
+              "p99Ms": 158.503,
+              "worstMs": 175.698
+            }
+          },
+          "sampleCount": 382
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.34,
+              "p90Ms": 18.42,
+              "p99Ms": 37.142,
+              "worstMs": 51.448
+            },
+            "raster": {
+              "p50Ms": 72.608,
+              "p90Ms": 74.165,
+              "p99Ms": 76.758,
+              "worstMs": 83.255
+            },
+            "totalSpan": {
+              "p50Ms": 148.332,
+              "p90Ms": 155.771,
+              "p99Ms": 159.258,
+              "worstMs": 167.604
+            }
+          },
+          "sampleCount": 385
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 4.693,
+              "p90Ms": 29.663,
+              "p99Ms": 37.581,
+              "worstMs": 41.569
+            },
+            "raster": {
+              "p50Ms": 72.802,
+              "p90Ms": 73.891,
+              "p99Ms": 77.265,
+              "worstMs": 82.427
+            },
+            "totalSpan": {
+              "p50Ms": 149.736,
+              "p90Ms": 156.36,
+              "p99Ms": 158.272,
+              "worstMs": 161.678
+            }
+          },
+          "sampleCount": 382
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.444610778443114,
+            "limit": 1.25,
+            "stable": false
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.050131926121372,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0036497355663287,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0079079705047032,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0094652536202573,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0062297816417307,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureBalanced-4-compact-animated-run-1.json": "82e549ceed4ad8fde654dcfc75045f0214c8be75837efc0fd265f6a06f28ad35",
+        "2-captureBalanced-4-compact-animated-run-2.json": "e253805358bfcbd9eb674066be71f6b02761f7bff1a0792655ce560f15c8e518",
+        "3-captureBalanced-4-compact-animated-run-3.json": "4284efe37b32c732606ba1d45a683b6fdee4d365fe84f28a1c9ad6b0177b6eb9"
+      }
+    },
+    {
+      "scenario": "captureUltra-4-compact-animated",
+      "directory": "captureUltra-4-compact-animated\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 9.024,
+              "p90Ms": 16.527,
+              "p99Ms": 34.035,
+              "worstMs": 34.82
+            },
+            "raster": {
+              "p50Ms": 137.552,
+              "p90Ms": 151.599,
+              "p99Ms": 160.075,
+              "worstMs": 166.302
+            },
+            "totalSpan": {
+              "p50Ms": 278.085,
+              "p90Ms": 287.236,
+              "p99Ms": 298.193,
+              "worstMs": 300.394
+            }
+          },
+          "sampleCount": 210
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 8.87,
+              "p90Ms": 25.57,
+              "p99Ms": 37.595,
+              "worstMs": 38.396
+            },
+            "raster": {
+              "p50Ms": 141.408,
+              "p90Ms": 151.568,
+              "p99Ms": 155.08,
+              "worstMs": 170.996
+            },
+            "totalSpan": {
+              "p50Ms": 278.502,
+              "p90Ms": 286.743,
+              "p99Ms": 295.188,
+              "worstMs": 299.847
+            }
+          },
+          "sampleCount": 210
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 9.158,
+              "p90Ms": 31.861,
+              "p99Ms": 36.379,
+              "worstMs": 43.211
+            },
+            "raster": {
+              "p50Ms": 142.06,
+              "p90Ms": 151.534,
+              "p99Ms": 154.845,
+              "worstMs": 164.069
+            },
+            "totalSpan": {
+              "p50Ms": 279.207,
+              "p90Ms": 286.564,
+              "p99Ms": 292.665,
+              "worstMs": 299.483
+            }
+          },
+          "sampleCount": 209
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0324689966178129,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.1045982077273395,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0327730603698966,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.033775711195066,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0040347375802363,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0188884902533613,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureUltra-4-compact-animated-run-1.json": "0862c4e6910e6edd4c33557ae20f9c1a65e00f839b7cbb229c2182d6bb27c912",
+        "2-captureUltra-4-compact-animated-run-2.json": "b3df67555ed12dde6514bb3ab29adbf36dea00dc3496b17ea9426e4ea3caf1fa",
+        "3-captureUltra-4-compact-animated-run-3.json": "76524f183ace9584e264f6ad69dfb79afeec98461888bebda940328a35ba3031"
+      }
+    },
+    {
+      "scenario": "filter-4-compact-animated",
+      "directory": "filter-4-compact-animated\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.498,
+              "p90Ms": 20.424,
+              "p99Ms": 32.536,
+              "worstMs": 48.684
+            },
+            "raster": {
+              "p50Ms": 34.932,
+              "p90Ms": 35.688,
+              "p99Ms": 37.886,
+              "worstMs": 79.213
+            },
+            "totalSpan": {
+              "p50Ms": 62.751,
+              "p90Ms": 69.832,
+              "p99Ms": 72.376,
+              "worstMs": 110.693
+            }
+          },
+          "sampleCount": 848
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.462,
+              "p90Ms": 17.968,
+              "p99Ms": 32.481,
+              "worstMs": 34.469
+            },
+            "raster": {
+              "p50Ms": 34.917,
+              "p90Ms": 35.746,
+              "p99Ms": 38.761,
+              "worstMs": 46.959
+            },
+            "totalSpan": {
+              "p50Ms": 62.582,
+              "p90Ms": 69.792,
+              "p99Ms": 72.956,
+              "worstMs": 82.175
+            }
+          },
+          "sampleCount": 850
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.448,
+              "p90Ms": 20.145,
+              "p99Ms": 33.185,
+              "worstMs": 35.023
+            },
+            "raster": {
+              "p50Ms": 34.969,
+              "p90Ms": 35.624,
+              "p99Ms": 38.011,
+              "worstMs": 46.797
+            },
+            "totalSpan": {
+              "p50Ms": 62.746,
+              "p90Ms": 69.756,
+              "p99Ms": 71.713,
+              "worstMs": 73.898
+            }
+          },
+          "sampleCount": 849
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0145011600928076,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0216742095378837,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0014892459260532,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0230956025972655,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0027004570004154,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0173329800733482,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-filter-4-compact-animated-run-1.json": "7f658d3845bdd1f160fb352b4011ace41ace4984321ab2539e1957cc7d980b6e",
+        "2-filter-4-compact-animated-run-2.json": "a0a15b8eba7e21bd056a8f43ddf2a446d1d4e956fa5df72ba2472c9e3efeec69",
+        "3-filter-4-compact-animated-run-3.json": "250b9825ad4bee3bbf9bbb3e0009ae576cc387502f8a7502cf305153e8d7e623"
+      }
+    },
+    {
+      "scenario": "ordinary-10-compact-animated",
+      "directory": "ordinary-10-compact-animated\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.199,
+              "p90Ms": 3.382,
+              "p99Ms": 25.528,
+              "worstMs": 31.715
+            },
+            "raster": {
+              "p50Ms": 13.691,
+              "p90Ms": 16.008,
+              "p99Ms": 19.511,
+              "worstMs": 26.365
+            },
+            "totalSpan": {
+              "p50Ms": 18.059,
+              "p90Ms": 23.922,
+              "p99Ms": 39.794,
+              "worstMs": 46.86
+            }
+          },
+          "sampleCount": 1668
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.988,
+              "p90Ms": 3.321,
+              "p99Ms": 25.904,
+              "worstMs": 30.703
+            },
+            "raster": {
+              "p50Ms": 13.154,
+              "p90Ms": 16.004,
+              "p99Ms": 20.302,
+              "worstMs": 27.669
+            },
+            "totalSpan": {
+              "p50Ms": 17.368,
+              "p90Ms": 23.648,
+              "p99Ms": 39.637,
+              "worstMs": 45.331
+            }
+          },
+          "sampleCount": 1674
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.279,
+              "p90Ms": 3.43,
+              "p99Ms": 26.125,
+              "worstMs": 32.235
+            },
+            "raster": {
+              "p50Ms": 13.96,
+              "p90Ms": 16.353,
+              "p99Ms": 20.449,
+              "worstMs": 23.39
+            },
+            "totalSpan": {
+              "p50Ms": 18.513,
+              "p90Ms": 24.268,
+              "p99Ms": 40.706,
+              "worstMs": 45.719
+            }
+          },
+          "sampleCount": 1666
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.1463782696177063,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0233860858664996,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0612741371445948,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0480754446209832,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0659258406264396,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0269697504856574,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-ordinary-10-compact-animated-run-1.json": "dcc47529d53973e0d2dab34aac40da5687b44697c4739e7f793e42ae70b73b84",
+        "2-ordinary-10-compact-animated-run-2.json": "1c87b23f67f0985475a49cd70c47e6d2ae366e9b20a47815796e61387db146d4",
+        "3-ordinary-10-compact-animated-run-3.json": "4596a246d230c4aaa02c39bdc99c0cba5a10815c794054d18d1a422c8b54486c"
+      }
+    },
+    {
+      "scenario": "blur-10-compact-animated",
+      "directory": "blur-10-compact-animated\\attempt-1",
+      "valid": false,
+      "errors": [
+        "unstable raster.p99Ms",
+        "unstable totalSpan.p99Ms",
+        "runner or environment did not qualify attempt"
+      ],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.737,
+              "p90Ms": 10.96,
+              "p99Ms": 30.971,
+              "worstMs": 36.435
+            },
+            "raster": {
+              "p50Ms": 34.864,
+              "p90Ms": 40.766,
+              "p99Ms": 49.553,
+              "worstMs": 64.115
+            },
+            "totalSpan": {
+              "p50Ms": 64.127,
+              "p90Ms": 73.988,
+              "p99Ms": 89.608,
+              "worstMs": 113.287
+            }
+          },
+          "sampleCount": 831
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.64,
+              "p90Ms": 12.451,
+              "p99Ms": 32.172,
+              "worstMs": 40.576
+            },
+            "raster": {
+              "p50Ms": 36.27,
+              "p90Ms": 64.833,
+              "p99Ms": 124.442,
+              "worstMs": 146.143
+            },
+            "totalSpan": {
+              "p50Ms": 67.776,
+              "p90Ms": 129.206,
+              "p99Ms": 224.159,
+              "worstMs": 267.814
+            }
+          },
+          "sampleCount": 668
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 1.697,
+              "p90Ms": 11.121,
+              "p99Ms": 31.84,
+              "worstMs": 34.539
+            },
+            "raster": {
+              "p50Ms": 35.162,
+              "p90Ms": 41.22,
+              "p99Ms": 55.766,
+              "worstMs": 64.725
+            },
+            "totalSpan": {
+              "p50Ms": 65.105,
+              "p90Ms": 75.175,
+              "p99Ms": 96.396,
+              "worstMs": 113.446
+            }
+          },
+          "sampleCount": 818
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0591463414634148,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0387782118756255,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0403281321707207,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 2.511290941012653,
+            "limit": 1.5,
+            "stable": false
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0569027086874483,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 2.5015512007856437,
+            "limit": 1.5,
+            "stable": false
+          }
+        }
+      },
+      "rawSha256": {
+        "1-blur-10-compact-animated-run-1.json": "6184a32554f2d5bc391eb5784be9a63233d715fc254e57616f46b1b3bb7e1ac9",
+        "2-blur-10-compact-animated-run-2.json": "ce8f2d1579340e0bc31e3e190aee53b1693b8c2b591cae20bc8a29c426bb445a",
+        "3-blur-10-compact-animated-run-3.json": "eaddcea57284bef2fdcbe61dc327b631ae4aac30b92c8826cefffadf9043d009"
+      }
+    },
+    {
+      "scenario": "refraction-10-compact-animated",
+      "directory": "refraction-10-compact-animated\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 5.176,
+              "p90Ms": 19.461,
+              "p99Ms": 36.688,
+              "worstMs": 40.032
+            },
+            "raster": {
+              "p50Ms": 46.928,
+              "p90Ms": 48.064,
+              "p99Ms": 52.645,
+              "worstMs": 56.614
+            },
+            "totalSpan": {
+              "p50Ms": 97.033,
+              "p90Ms": 104.386,
+              "p99Ms": 107.656,
+              "worstMs": 113.554
+            }
+          },
+          "sampleCount": 573
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 5.066,
+              "p90Ms": 19.411,
+              "p99Ms": 37.685,
+              "worstMs": 59.743
+            },
+            "raster": {
+              "p50Ms": 46.981,
+              "p90Ms": 48.081,
+              "p99Ms": 53.2,
+              "worstMs": 68.455
+            },
+            "totalSpan": {
+              "p50Ms": 97.716,
+              "p90Ms": 104.462,
+              "p99Ms": 107.957,
+              "worstMs": 125.926
+            }
+          },
+          "sampleCount": 569
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 5.128,
+              "p90Ms": 19.667,
+              "p99Ms": 37.607,
+              "worstMs": 41.479
+            },
+            "raster": {
+              "p50Ms": 46.85,
+              "p90Ms": 48.49,
+              "p99Ms": 53.433,
+              "worstMs": 61.709
+            },
+            "totalSpan": {
+              "p50Ms": 97.478,
+              "p90Ms": 104.089,
+              "p99Ms": 106.82,
+              "worstMs": 113.139
+            }
+          },
+          "sampleCount": 572
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.0217133833399132,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0271750981247274,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0027961579509073,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.014968183113306,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0070388424556593,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0106440741434188,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-refraction-10-compact-animated-run-1.json": "3da10d8ba15b178f2f7cfeada312a03484f8c2b14e0db40bb586b43a1e291831",
+        "2-refraction-10-compact-animated-run-2.json": "aaef7145b7e881925bcae12d2335244b75a4027bfd80fa7f68e4ff953e50312c",
+        "3-refraction-10-compact-animated-run-3.json": "e96b6894e9425f7c07338a25a437de3000eaa3f11631bb07da05e337dd0e66c2"
+      }
+    },
+    {
+      "scenario": "capturePerformance-10-compact-animated",
+      "directory": "capturePerformance-10-compact-animated\\attempt-1",
+      "valid": false,
+      "errors": [
+        "unstable build.p50Ms",
+        "runner or environment did not qualify attempt"
+      ],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 5.626,
+              "p90Ms": 19.176,
+              "p99Ms": 37.891,
+              "worstMs": 42.042
+            },
+            "raster": {
+              "p50Ms": 46.657,
+              "p90Ms": 47.694,
+              "p99Ms": 49.6,
+              "worstMs": 60.13
+            },
+            "totalSpan": {
+              "p50Ms": 96.486,
+              "p90Ms": 103.626,
+              "p99Ms": 106.903,
+              "worstMs": 116.224
+            }
+          },
+          "sampleCount": 576
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 5.025,
+              "p90Ms": 19.608,
+              "p99Ms": 37.592,
+              "worstMs": 42.589
+            },
+            "raster": {
+              "p50Ms": 46.866,
+              "p90Ms": 47.967,
+              "p99Ms": 51.016,
+              "worstMs": 54.888
+            },
+            "totalSpan": {
+              "p50Ms": 97.005,
+              "p90Ms": 104.008,
+              "p99Ms": 106.111,
+              "worstMs": 110.397
+            }
+          },
+          "sampleCount": 575
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.995,
+              "p90Ms": 17.171,
+              "p99Ms": 32.215,
+              "worstMs": 40.101
+            },
+            "raster": {
+              "p50Ms": 45.014,
+              "p90Ms": 47.303,
+              "p99Ms": 51.684,
+              "worstMs": 59.456
+            },
+            "totalSpan": {
+              "p50Ms": 93.399,
+              "p90Ms": 101.796,
+              "p99Ms": 105.229,
+              "worstMs": 108.134
+            }
+          },
+          "sampleCount": 594
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.4082603254067585,
+            "limit": 1.25,
+            "stable": false
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.1761912152723886,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0411427555871506,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.042016129032258,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0386085504127454,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0159081621986334,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-capturePerformance-10-compact-animated-run-1.json": "45cda6205097763ee93eea29b724831427e791de59a9f49f7dfdd59e148977f7",
+        "2-capturePerformance-10-compact-animated-run-2.json": "66c81b14d83ecbb2de4cf9766c1ab7ec893623cbaa2b4188a87589db7d37f353",
+        "3-capturePerformance-10-compact-animated-run-3.json": "0b2f20b8422dcb42924fcf68d22e1a5fe064c625510a75fba04c29fbd31aa27f"
+      }
+    },
+    {
+      "scenario": "captureBalanced-10-compact-animated",
+      "directory": "captureBalanced-10-compact-animated\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 4.835,
+              "p90Ms": 19.335,
+              "p99Ms": 37.413,
+              "worstMs": 41.388
+            },
+            "raster": {
+              "p50Ms": 70.048,
+              "p90Ms": 73.07,
+              "p99Ms": 77.787,
+              "worstMs": 84.135
+            },
+            "totalSpan": {
+              "p50Ms": 143.848,
+              "p90Ms": 151.878,
+              "p99Ms": 157.728,
+              "worstMs": 164.814
+            }
+          },
+          "sampleCount": 397
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 5.913,
+              "p90Ms": 24.013,
+              "p99Ms": 39.342,
+              "worstMs": 41.644
+            },
+            "raster": {
+              "p50Ms": 70.701,
+              "p90Ms": 73.454,
+              "p99Ms": 78.987,
+              "worstMs": 80.617
+            },
+            "totalSpan": {
+              "p50Ms": 145.072,
+              "p90Ms": 152.403,
+              "p99Ms": 157.615,
+              "worstMs": 161.96
+            }
+          },
+          "sampleCount": 394
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 5.789,
+              "p90Ms": 27.634,
+              "p99Ms": 40.781,
+              "worstMs": 46.627
+            },
+            "raster": {
+              "p50Ms": 70.368,
+              "p90Ms": 73.077,
+              "p99Ms": 75.692,
+              "worstMs": 89.074
+            },
+            "totalSpan": {
+              "p50Ms": 143.957,
+              "p90Ms": 151.459,
+              "p99Ms": 157.564,
+              "worstMs": 168.859
+            }
+          },
+          "sampleCount": 396
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.222957600827301,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0900221848020741,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.009322179077204,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0435316810230937,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0085089817029085,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0010408468939607,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureBalanced-10-compact-animated-run-1.json": "564184b8c9ed7fd5842359f56bddda5915e94ed300553b094ad4a1a9e1e59338",
+        "2-captureBalanced-10-compact-animated-run-2.json": "f0ba8b1fec3badbff6ad0449433db3967840aaab1802ce4d2bbee1f1f03e477f",
+        "3-captureBalanced-10-compact-animated-run-3.json": "da54077c003438d8d27a66c5c5b6ed634e059253f7fa81e99c7f5315bfb36551"
+      }
+    },
+    {
+      "scenario": "captureUltra-10-compact-animated",
+      "directory": "captureUltra-10-compact-animated\\attempt-1",
+      "valid": false,
+      "errors": [
+        "unstable build.p50Ms",
+        "runner or environment did not qualify attempt"
+      ],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 8.458,
+              "p90Ms": 30.306,
+              "p99Ms": 41.796,
+              "worstMs": 46.041
+            },
+            "raster": {
+              "p50Ms": 89.487,
+              "p90Ms": 91.026,
+              "p99Ms": 94.548,
+              "worstMs": 99.227
+            },
+            "totalSpan": {
+              "p50Ms": 182.494,
+              "p90Ms": 189.371,
+              "p99Ms": 193.134,
+              "worstMs": 195.61
+            }
+          },
+          "sampleCount": 315
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 8.561,
+              "p90Ms": 20.951,
+              "p99Ms": 39.15,
+              "worstMs": 42.121
+            },
+            "raster": {
+              "p50Ms": 88.878,
+              "p90Ms": 90.912,
+              "p99Ms": 92.315,
+              "worstMs": 94.381
+            },
+            "totalSpan": {
+              "p50Ms": 180.404,
+              "p90Ms": 187.535,
+              "p99Ms": 190.546,
+              "worstMs": 192.98
+            }
+          },
+          "sampleCount": 319
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 4.383,
+              "p90Ms": 19.868,
+              "p99Ms": 39.175,
+              "worstMs": 39.936
+            },
+            "raster": {
+              "p50Ms": 87.856,
+              "p90Ms": 90.753,
+              "p99Ms": 92.941,
+              "worstMs": 108.556
+            },
+            "totalSpan": {
+              "p50Ms": 179.485,
+              "p90Ms": 187.075,
+              "p99Ms": 192.059,
+              "worstMs": 195.482
+            }
+          },
+          "sampleCount": 321
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.9532283823864933,
+            "limit": 1.25,
+            "stable": false
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0675862068965518,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0185644691313058,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0241889183772952,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0167646321419617,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0135820221888678,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureUltra-10-compact-animated-run-1.json": "20a1aeeceac72c5a74dd34d641fd314377e906bd04d3f1809b94e997c1b506c4",
+        "2-captureUltra-10-compact-animated-run-2.json": "b1e74da79e27ed371a941ff298ee368191e01afecf3e773d43c174f8eefba2c1",
+        "3-captureUltra-10-compact-animated-run-3.json": "b4004e2efb617bca380878c24032334bf1c91e2de82ed4121650aea1f62e705d"
+      }
+    },
+    {
+      "scenario": "filter-10-compact-animated",
+      "directory": "filter-10-compact-animated\\attempt-1",
+      "valid": false,
+      "errors": [
+        "unstable build.p50Ms",
+        "runner or environment did not qualify attempt"
+      ],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 2.988,
+              "p90Ms": 17.881,
+              "p99Ms": 33.771,
+              "worstMs": 40.793
+            },
+            "raster": {
+              "p50Ms": 45.683,
+              "p90Ms": 48.956,
+              "p99Ms": 55.94,
+              "worstMs": 64.835
+            },
+            "totalSpan": {
+              "p50Ms": 84.862,
+              "p90Ms": 93.744,
+              "p99Ms": 101.976,
+              "worstMs": 115.035
+            }
+          },
+          "sampleCount": 646
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 4.064,
+              "p90Ms": 18.004,
+              "p99Ms": 34.5,
+              "worstMs": 39.903
+            },
+            "raster": {
+              "p50Ms": 45.024,
+              "p90Ms": 46.185,
+              "p99Ms": 48.775,
+              "worstMs": 51.319
+            },
+            "totalSpan": {
+              "p50Ms": 83.024,
+              "p90Ms": 90.062,
+              "p99Ms": 92.571,
+              "worstMs": 95.182
+            }
+          },
+          "sampleCount": 660
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 4.748,
+              "p90Ms": 18.074,
+              "p99Ms": 34.437,
+              "worstMs": 38.465
+            },
+            "raster": {
+              "p50Ms": 45.064,
+              "p90Ms": 46.086,
+              "p99Ms": 48.641,
+              "worstMs": 55.065
+            },
+            "totalSpan": {
+              "p50Ms": 83.142,
+              "p90Ms": 89.981,
+              "p99Ms": 92.278,
+              "worstMs": 100.884
+            }
+          },
+          "sampleCount": 660
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.5890227576974565,
+            "limit": 1.25,
+            "stable": false
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0215865683574665,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0146366382373846,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.1500585925453835,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0221381769126998,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.105095472376948,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-filter-10-compact-animated-run-1.json": "e37f1797ce0c55ecac865e86475deb6b320162b362d5365e1106cfd3950ccd58",
+        "2-filter-10-compact-animated-run-2.json": "02805d36cc84e4adf08b6204253fe32801d3988276380be8c48ca736cf202c08",
+        "3-filter-10-compact-animated-run-3.json": "8fc3184daf2d6bc4843b10c99c9954af161dc94719f3a4c624ffc25df23ba14a"
+      }
+    },
+    {
+      "scenario": "captureBalanced-4-overlapping-animated",
+      "directory": "captureBalanced-4-overlapping-animated\\attempt-1",
+      "valid": true,
+      "errors": [],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.786,
+              "p90Ms": 20.634,
+              "p99Ms": 35.503,
+              "worstMs": 39.434
+            },
+            "raster": {
+              "p50Ms": 47.753,
+              "p90Ms": 49.014,
+              "p99Ms": 51.523,
+              "worstMs": 63.233
+            },
+            "totalSpan": {
+              "p50Ms": 98.203,
+              "p90Ms": 104.573,
+              "p99Ms": 107.759,
+              "worstMs": 113.325
+            }
+          },
+          "sampleCount": 569
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.827,
+              "p90Ms": 18.147,
+              "p99Ms": 35.736,
+              "worstMs": 41.391
+            },
+            "raster": {
+              "p50Ms": 47.758,
+              "p90Ms": 48.998,
+              "p99Ms": 51.948,
+              "worstMs": 67.338
+            },
+            "totalSpan": {
+              "p50Ms": 97.825,
+              "p90Ms": 104.568,
+              "p99Ms": 109.894,
+              "worstMs": 124.277
+            }
+          },
+          "sampleCount": 570
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 3.42,
+              "p90Ms": 18.575,
+              "p99Ms": 36.234,
+              "worstMs": 40.664
+            },
+            "raster": {
+              "p50Ms": 47.708,
+              "p90Ms": 48.953,
+              "p99Ms": 50.835,
+              "worstMs": 62.756
+            },
+            "totalSpan": {
+              "p50Ms": 98.012,
+              "p90Ms": 104.588,
+              "p99Ms": 108.389,
+              "worstMs": 110.055
+            }
+          },
+          "sampleCount": 571
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.1190058479532163,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0205898093118893,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0010480422570638,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.021894364119209,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0038640429338104,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0198127302591895,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureBalanced-4-overlapping-animated-run-1.json": "578ec08e287a0b4b233211f446199ab41fe4a19a14b6610e9c370ee855435b87",
+        "2-captureBalanced-4-overlapping-animated-run-2.json": "da6584c174ac308eb75d7861d4beeaca5d4f0d6ab3db480d517fb080d869b185",
+        "3-captureBalanced-4-overlapping-animated-run-3.json": "24da5aeda27b9ef08bf1e40d01273e72eda3c5f00139aa25fd226dbf2fb4196a"
+      }
+    },
+    {
+      "scenario": "captureBalanced-10-spread-animated",
+      "directory": "captureBalanced-10-spread-animated\\attempt-1",
+      "valid": false,
+      "errors": [
+        "unstable build.p50Ms",
+        "runner or environment did not qualify attempt"
+      ],
+      "runs": [
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 6.413,
+              "p90Ms": 26.163,
+              "p99Ms": 38.175,
+              "worstMs": 43.105
+            },
+            "raster": {
+              "p50Ms": 69.438,
+              "p90Ms": 70.87,
+              "p99Ms": 79.847,
+              "worstMs": 88.533
+            },
+            "totalSpan": {
+              "p50Ms": 143.296,
+              "p90Ms": 150.357,
+              "p99Ms": 155.75,
+              "worstMs": 166.783
+            }
+          },
+          "sampleCount": 399
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 8.326,
+              "p90Ms": 35.632,
+              "p99Ms": 40.405,
+              "worstMs": 52.791
+            },
+            "raster": {
+              "p50Ms": 69.615,
+              "p90Ms": 70.696,
+              "p99Ms": 74.194,
+              "worstMs": 85.456
+            },
+            "totalSpan": {
+              "p50Ms": 143.956,
+              "p90Ms": 150.515,
+              "p99Ms": 153.648,
+              "worstMs": 170.05
+            }
+          },
+          "sampleCount": 397
+        },
+        {
+          "valid": true,
+          "errors": [],
+          "statistics": {
+            "build": {
+              "p50Ms": 6.275,
+              "p90Ms": 23.213,
+              "p99Ms": 38.464,
+              "worstMs": 52.42
+            },
+            "raster": {
+              "p50Ms": 69.681,
+              "p90Ms": 70.92,
+              "p99Ms": 74.721,
+              "worstMs": 82.083
+            },
+            "totalSpan": {
+              "p50Ms": 143.192,
+              "p90Ms": 150.36,
+              "p99Ms": 153.373,
+              "worstMs": 161.228
+            }
+          },
+          "sampleCount": 398
+        }
+      ],
+      "spread": {
+        "build": {
+          "p50Ms": {
+            "maxMinRatio": 1.3268525896414343,
+            "limit": 1.25,
+            "stable": false
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.05841519318926,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "raster": {
+          "p50Ms": {
+            "maxMinRatio": 1.0034995247558973,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0761921449173786,
+            "limit": 1.5,
+            "stable": true
+          }
+        },
+        "totalSpan": {
+          "p50Ms": {
+            "maxMinRatio": 1.0053354936029943,
+            "limit": 1.25,
+            "stable": true
+          },
+          "p99Ms": {
+            "maxMinRatio": 1.0154981646052434,
+            "limit": 1.5,
+            "stable": true
+          }
+        }
+      },
+      "rawSha256": {
+        "1-captureBalanced-10-spread-animated-run-1.json": "a2436dc8ae71894374c44ad3361d99601e377a55e7ae34888716456f2def3c5d",
+        "2-captureBalanced-10-spread-animated-run-2.json": "d092c0f080dd57221955c93999ac393c5fb302f6cedba154f0e0a27cbc92f660",
+        "3-captureBalanced-10-spread-animated-run-3.json": "85ef372f4e16dce71d2244682f921f2c41af18869dfe870d126081e7e806a6f8"
+      }
+    }
+  ]
+}

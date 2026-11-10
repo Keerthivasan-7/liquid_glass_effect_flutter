@@ -1,0 +1,6469 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-11-10T07:26:58.638695Z",
+  "metadata": {
+    "benchmarkProtocolVersion": 6,
+    "requiredInitialSettleUs": 60000000,
+    "appSessionAgeAtStartUs": 70259270,
+    "osVersion": "QP1A.190711.020",
+    "dartVersion": "3.13.7 (stable) (Thu Oct 22 14:28:57 2026 -0700) on \"android_arm\"",
+    "platform": "android",
+    "buildMode": "profile",
+    "lifecycleAtStart": "resumed",
+    "flutterRevision": "c197ca5199e9ee5661e865596c9c07294dfab51c",
+    "device": "Xiaomi M2006C3MII Android10 API29 ARMv7",
+    "gpu": "PowerVR GE8320 MT6765 GLES3.2",
+    "renderer": "Impeller-OpenGLES",
+    "powerMode": "USB-powered normal mode",
+    "case": "captureUltra",
+    "opticalConfig": {
+      "blurSigma": 5.5,
+      "refractionStrength": 0.052,
+      "fresnelStrength": 0.72,
+      "specularStrength": 0.62,
+      "chromaticAberration": 0.00015,
+      "roughness": 0.22,
+      "transmission": 0.94,
+      "thickness": 0.78,
+      "absorptionColorArgb": 4294114047,
+      "absorptionStrength": 0.25,
+      "scatteringStrength": 0.08,
+      "dispersionStrength": 0.12,
+      "abbeNumber": 55.0,
+      "environmentStrength": 0.55,
+      "coatStrength": 0.22,
+      "coatRoughness": 0.12,
+      "coatRefractiveIndex": 1.46,
+      "thinFilmThickness": 0.0,
+      "thinFilmRefractiveIndex": 1.33,
+      "thinFilmStrength": 0.0,
+      "anisotropy": 0.1,
+      "anisotropyRotation": 0.125,
+      "causticStrength": 0.4,
+      "curvature": 0.9,
+      "refractiveIndex": 1.46,
+      "cornerSmoothing": 0.72,
+      "innerShadow": 0.18,
+      "edgeWidth": 0.065,
+      "maxDisplacement": 20.0,
+      "saturation": 1.04,
+      "tintArgb": 285212671,
+      "lightDirection": [
+        -0.65,
+        -0.75
+      ],
+      "lightColorArgb": 4294967295,
+      "lightIntensity": 1.0,
+      "motionStrength": 0.85,
+      "noise": 0.002,
+      "borderWidth": 0.0,
+      "quality": "ultra",
+      "renderer": "capture",
+      "animateLight": false,
+      "animationDurationUs": 8000000
+    },
+    "surfaceCount": 4,
+    "arrangement": "compact",
+    "animatedBackground": true,
+    "qualityScale": 0.65,
+    "physicalWidth": 720.0,
+    "physicalHeight": 1504.0,
+    "devicePixelRatio": 2.0,
+    "refreshRateHz": 60.0,
+    "supportsShaderFilter": true,
+    "hudRefreshHz": 4,
+    "framePump": "Vsync ticker; static content is not rebuilt by the pump",
+    "runIndex": 1,
+    "activePathsDuringSampling": [
+      "capture"
+    ],
+    "lifecycleAtEnd": "resumed"
+  },
+  "warmupUs": 3000000,
+  "ignoreVsyncAtOrBeforeUs": 209346225930,
+  "requestedDurationUs": 30000000,
+  "samplingStartVsyncUs": 209349341379,
+  "samplingEndVsyncUs": 209379341379,
+  "sampleCount": 210,
+  "capacity": 120000,
+  "capacityReached": false,
+  "stopReason": "duration",
+  "complete": true,
+  "measurementComplete": true,
+  "refreshRateHz": 60.0,
+  "frameBudgetMs": 16.666666666666668,
+  "percentileMethod": "nearest index to (n - 1) * p in sorted raw microseconds",
+  "build": {
+    "p50Ms": 9.024,
+    "p90Ms": 16.527,
+    "p99Ms": 34.035,
+    "worstMs": 34.82
+  },
+  "raster": {
+    "p50Ms": 137.552,
+    "p90Ms": 151.599,
+    "p99Ms": 160.075,
+    "worstMs": 166.302
+  },
+  "totalSpan": {
+    "p50Ms": 278.085,
+    "p90Ms": 287.236,
+    "p99Ms": 298.193,
+    "worstMs": 300.394
+  },
+  "budgetExceedances": {
+    "reference120Hz": {
+      "budgetMs": 8.33,
+      "build": 114,
+      "raster": 210,
+      "either": 210,
+      "eitherRate": 1.0
+    },
+    "reference60Hz": {
+      "budgetMs": 16.67,
+      "build": 19,
+      "raster": 210,
+      "either": 210,
+      "eitherRate": 1.0
+    },
+    "display": {
+      "budgetMs": 16.666666666666668,
+      "build": 19,
+      "raster": 210,
+      "either": 210,
+      "eitherRate": 1.0
+    }
+  },
+  "frames": [
+    {
+      "vsyncUs": 209349446444,
+      "buildUs": 2504,
+      "rasterUs": 125122,
+      "totalUs": 279492
+    },
+    {
+      "vsyncUs": 209349595070,
+      "buildUs": 13880,
+      "rasterUs": 147027,
+      "totalUs": 281652
+    },
+    {
+      "vsyncUs": 209349727203,
+      "buildUs": 2040,
+      "rasterUs": 130836,
+      "totalUs": 283604
+    },
+    {
+      "vsyncUs": 209349892360,
+      "buildUs": 8601,
+      "rasterUs": 148495,
+      "totalUs": 270560
+    },
+    {
+      "vsyncUs": 209350024484,
+      "buildUs": 8943,
+      "rasterUs": 132970,
+      "totalUs": 274653
+    },
+    {
+      "vsyncUs": 209350173115,
+      "buildUs": 6309,
+      "rasterUs": 147892,
+      "totalUs": 277900
+    },
+    {
+      "vsyncUs": 209350305238,
+      "buildUs": 16047,
+      "rasterUs": 133598,
+      "totalUs": 283224
+    },
+    {
+      "vsyncUs": 209350453873,
+      "buildUs": 2095,
+      "rasterUs": 156313,
+      "totalUs": 294261
+    },
+    {
+      "vsyncUs": 209350602515,
+      "buildUs": 14824,
+      "rasterUs": 127192,
+      "totalUs": 276518
+    },
+    {
+      "vsyncUs": 209350751151,
+      "buildUs": 2169,
+      "rasterUs": 149183,
+      "totalUs": 280621
+    },
+    {
+      "vsyncUs": 209350883273,
+      "buildUs": 10330,
+      "rasterUs": 131689,
+      "totalUs": 283924
+    },
+    {
+      "vsyncUs": 209351031904,
+      "buildUs": 9857,
+      "rasterUs": 145496,
+      "totalUs": 284549
+    },
+    {
+      "vsyncUs": 209351180540,
+      "buildUs": 1814,
+      "rasterUs": 127018,
+      "totalUs": 266675
+    },
+    {
+      "vsyncUs": 209351329176,
+      "buildUs": 16201,
+      "rasterUs": 146881,
+      "totalUs": 268745
+    },
+    {
+      "vsyncUs": 209351461300,
+      "buildUs": 6001,
+      "rasterUs": 134873,
+      "totalUs": 275354
+    },
+    {
+      "vsyncUs": 209351609936,
+      "buildUs": 16647,
+      "rasterUs": 151560,
+      "totalUs": 282139
+    },
+    {
+      "vsyncUs": 209351742060,
+      "buildUs": 1975,
+      "rasterUs": 130843,
+      "totalUs": 284745
+    },
+    {
+      "vsyncUs": 209351907215,
+      "buildUs": 32699,
+      "rasterUs": 146112,
+      "totalUs": 269689
+    },
+    {
+      "vsyncUs": 209352039338,
+      "buildUs": 11269,
+      "rasterUs": 124141,
+      "totalUs": 264566
+    },
+    {
+      "vsyncUs": 209352187967,
+      "buildUs": 1483,
+      "rasterUs": 147552,
+      "totalUs": 266955
+    },
+    {
+      "vsyncUs": 209352303573,
+      "buildUs": 9024,
+      "rasterUs": 128544,
+      "totalUs": 283231
+    },
+    {
+      "vsyncUs": 209352468730,
+      "buildUs": 2863,
+      "rasterUs": 148528,
+      "totalUs": 270514
+    },
+    {
+      "vsyncUs": 209352600844,
+      "buildUs": 34820,
+      "rasterUs": 125734,
+      "totalUs": 270090
+    },
+    {
+      "vsyncUs": 209352749476,
+      "buildUs": 2661,
+      "rasterUs": 148217,
+      "totalUs": 273722
+    },
+    {
+      "vsyncUs": 209352881591,
+      "buildUs": 14825,
+      "rasterUs": 129134,
+      "totalUs": 273970
+    },
+    {
+      "vsyncUs": 209353030233,
+      "buildUs": 14984,
+      "rasterUs": 155656,
+      "totalUs": 284891
+    },
+    {
+      "vsyncUs": 209353162356,
+      "buildUs": 3020,
+      "rasterUs": 131370,
+      "totalUs": 287344
+    },
+    {
+      "vsyncUs": 209353327507,
+      "buildUs": 16328,
+      "rasterUs": 149276,
+      "totalUs": 275876
+    },
+    {
+      "vsyncUs": 209353459623,
+      "buildUs": 2721,
+      "rasterUs": 127774,
+      "totalUs": 275721
+    },
+    {
+      "vsyncUs": 209353608265,
+      "buildUs": 10499,
+      "rasterUs": 150089,
+      "totalUs": 281165
+    },
+    {
+      "vsyncUs": 209353740677,
+      "buildUs": 1975,
+      "rasterUs": 131067,
+      "totalUs": 283770
+    },
+    {
+      "vsyncUs": 209353889326,
+      "buildUs": 11939,
+      "rasterUs": 150663,
+      "totalUs": 289647
+    },
+    {
+      "vsyncUs": 209354037974,
+      "buildUs": 15065,
+      "rasterUs": 127359,
+      "totalUs": 272131
+    },
+    {
+      "vsyncUs": 209354186618,
+      "buildUs": 3016,
+      "rasterUs": 148365,
+      "totalUs": 275940
+    },
+    {
+      "vsyncUs": 209354318753,
+      "buildUs": 15869,
+      "rasterUs": 137552,
+      "totalUs": 284827
+    },
+    {
+      "vsyncUs": 209354467403,
+      "buildUs": 2027,
+      "rasterUs": 156080,
+      "totalUs": 296210
+    },
+    {
+      "vsyncUs": 209354616043,
+      "buildUs": 16109,
+      "rasterUs": 130840,
+      "totalUs": 282397
+    },
+    {
+      "vsyncUs": 209354764694,
+      "buildUs": 12982,
+      "rasterUs": 149667,
+      "totalUs": 286820
+    },
+    {
+      "vsyncUs": 209354913338,
+      "buildUs": 7623,
+      "rasterUs": 134871,
+      "totalUs": 276858
+    },
+    {
+      "vsyncUs": 209355061983,
+      "buildUs": 15717,
+      "rasterUs": 149427,
+      "totalUs": 280986
+    },
+    {
+      "vsyncUs": 209355194116,
+      "buildUs": 2004,
+      "rasterUs": 131895,
+      "totalUs": 284594
+    },
+    {
+      "vsyncUs": 209355342766,
+      "buildUs": 10605,
+      "rasterUs": 148234,
+      "totalUs": 289142
+    },
+    {
+      "vsyncUs": 209355491411,
+      "buildUs": 1978,
+      "rasterUs": 128840,
+      "totalUs": 273168
+    },
+    {
+      "vsyncUs": 209355640058,
+      "buildUs": 9770,
+      "rasterUs": 150446,
+      "totalUs": 279454
+    },
+    {
+      "vsyncUs": 209355772190,
+      "buildUs": 14289,
+      "rasterUs": 126093,
+      "totalUs": 277443
+    },
+    {
+      "vsyncUs": 209355920842,
+      "buildUs": 3282,
+      "rasterUs": 144674,
+      "totalUs": 276975
+    },
+    {
+      "vsyncUs": 209356052966,
+      "buildUs": 11486,
+      "rasterUs": 127615,
+      "totalUs": 275950
+    },
+    {
+      "vsyncUs": 209356201616,
+      "buildUs": 1651,
+      "rasterUs": 149142,
+      "totalUs": 280951
+    },
+    {
+      "vsyncUs": 209356333742,
+      "buildUs": 14291,
+      "rasterUs": 123942,
+      "totalUs": 276727
+    },
+    {
+      "vsyncUs": 209356482393,
+      "buildUs": 2238,
+      "rasterUs": 166302,
+      "totalUs": 298193
+    },
+    {
+      "vsyncUs": 209356614528,
+      "buildUs": 16079,
+      "rasterUs": 130091,
+      "totalUs": 300024
+    },
+    {
+      "vsyncUs": 209356796213,
+      "buildUs": 10784,
+      "rasterUs": 144630,
+      "totalUs": 266514
+    },
+    {
+      "vsyncUs": 209356928349,
+      "buildUs": 2065,
+      "rasterUs": 124590,
+      "totalUs": 262313
+    },
+    {
+      "vsyncUs": 209357076999,
+      "buildUs": 10336,
+      "rasterUs": 149377,
+      "totalUs": 266221
+    },
+    {
+      "vsyncUs": 209357192611,
+      "buildUs": 1531,
+      "rasterUs": 125853,
+      "totalUs": 280044
+    },
+    {
+      "vsyncUs": 209357357778,
+      "buildUs": 10983,
+      "rasterUs": 143957,
+      "totalUs": 262794
+    },
+    {
+      "vsyncUs": 209357473395,
+      "buildUs": 2009,
+      "rasterUs": 123586,
+      "totalUs": 275396
+    },
+    {
+      "vsyncUs": 209357622042,
+      "buildUs": 15315,
+      "rasterUs": 145232,
+      "totalUs": 275922
+    },
+    {
+      "vsyncUs": 209357754175,
+      "buildUs": 3140,
+      "rasterUs": 125248,
+      "totalUs": 272709
+    },
+    {
+      "vsyncUs": 209357902823,
+      "buildUs": 10096,
+      "rasterUs": 147293,
+      "totalUs": 275852
+    },
+    {
+      "vsyncUs": 209358034956,
+      "buildUs": 13614,
+      "rasterUs": 127103,
+      "totalUs": 274980
+    },
+    {
+      "vsyncUs": 209358183604,
+      "buildUs": 1654,
+      "rasterUs": 145716,
+      "totalUs": 277261
+    },
+    {
+      "vsyncUs": 209358315732,
+      "buildUs": 12852,
+      "rasterUs": 135641,
+      "totalUs": 284414
+    },
+    {
+      "vsyncUs": 209358464380,
+      "buildUs": 1906,
+      "rasterUs": 160075,
+      "totalUs": 300394
+    },
+    {
+      "vsyncUs": 209358613024,
+      "buildUs": 9497,
+      "rasterUs": 127121,
+      "totalUs": 287236
+    },
+    {
+      "vsyncUs": 209358778188,
+      "buildUs": 16970,
+      "rasterUs": 145807,
+      "totalUs": 272396
+    },
+    {
+      "vsyncUs": 209358910319,
+      "buildUs": 1651,
+      "rasterUs": 131070,
+      "totalUs": 274692
+    },
+    {
+      "vsyncUs": 209359058966,
+      "buildUs": 11714,
+      "rasterUs": 148099,
+      "totalUs": 279257
+    },
+    {
+      "vsyncUs": 209359191093,
+      "buildUs": 2148,
+      "rasterUs": 124809,
+      "totalUs": 276627
+    },
+    {
+      "vsyncUs": 209359339734,
+      "buildUs": 13433,
+      "rasterUs": 147475,
+      "totalUs": 279411
+    },
+    {
+      "vsyncUs": 209359471863,
+      "buildUs": 1789,
+      "rasterUs": 131665,
+      "totalUs": 283267
+    },
+    {
+      "vsyncUs": 209359620500,
+      "buildUs": 12108,
+      "rasterUs": 150034,
+      "totalUs": 290310
+    },
+    {
+      "vsyncUs": 209359769149,
+      "buildUs": 15735,
+      "rasterUs": 131514,
+      "totalUs": 276447
+    },
+    {
+      "vsyncUs": 209359917799,
+      "buildUs": 2122,
+      "rasterUs": 150264,
+      "totalUs": 283881
+    },
+    {
+      "vsyncUs": 209360049926,
+      "buildUs": 14063,
+      "rasterUs": 129862,
+      "totalUs": 287312
+    },
+    {
+      "vsyncUs": 209360215091,
+      "buildUs": 2158,
+      "rasterUs": 144083,
+      "totalUs": 270407
+    },
+    {
+      "vsyncUs": 209360347223,
+      "buildUs": 12301,
+      "rasterUs": 129801,
+      "totalUs": 272676
+    },
+    {
+      "vsyncUs": 209360495864,
+      "buildUs": 2313,
+      "rasterUs": 153078,
+      "totalUs": 281579
+    },
+    {
+      "vsyncUs": 209360627996,
+      "buildUs": 16527,
+      "rasterUs": 132338,
+      "totalUs": 285766
+    },
+    {
+      "vsyncUs": 209360793153,
+      "buildUs": 16584,
+      "rasterUs": 156243,
+      "totalUs": 281011
+    },
+    {
+      "vsyncUs": 209360925276,
+      "buildUs": 3435,
+      "rasterUs": 123356,
+      "totalUs": 276872
+    },
+    {
+      "vsyncUs": 209361073926,
+      "buildUs": 14106,
+      "rasterUs": 145988,
+      "totalUs": 278414
+    },
+    {
+      "vsyncUs": 209361206055,
+      "buildUs": 1939,
+      "rasterUs": 129945,
+      "totalUs": 280444
+    },
+    {
+      "vsyncUs": 209361354700,
+      "buildUs": 10795,
+      "rasterUs": 151300,
+      "totalUs": 286892
+    },
+    {
+      "vsyncUs": 209361486834,
+      "buildUs": 2057,
+      "rasterUs": 128003,
+      "totalUs": 286988
+    },
+    {
+      "vsyncUs": 209361651974,
+      "buildUs": 14067,
+      "rasterUs": 146660,
+      "totalUs": 273793
+    },
+    {
+      "vsyncUs": 209361784106,
+      "buildUs": 14354,
+      "rasterUs": 128734,
+      "totalUs": 273321
+    },
+    {
+      "vsyncUs": 209361932758,
+      "buildUs": 3987,
+      "rasterUs": 149677,
+      "totalUs": 278383
+    },
+    {
+      "vsyncUs": 209362064889,
+      "buildUs": 15820,
+      "rasterUs": 129457,
+      "totalUs": 278963
+    },
+    {
+      "vsyncUs": 209362213525,
+      "buildUs": 2083,
+      "rasterUs": 152549,
+      "totalUs": 288150
+    },
+    {
+      "vsyncUs": 209362345644,
+      "buildUs": 16466,
+      "rasterUs": 128569,
+      "totalUs": 288648
+    },
+    {
+      "vsyncUs": 209362510807,
+      "buildUs": 9033,
+      "rasterUs": 150015,
+      "totalUs": 277182
+    },
+    {
+      "vsyncUs": 209362642939,
+      "buildUs": 1650,
+      "rasterUs": 127712,
+      "totalUs": 276064
+    },
+    {
+      "vsyncUs": 209362791587,
+      "buildUs": 32656,
+      "rasterUs": 151927,
+      "totalUs": 283570
+    },
+    {
+      "vsyncUs": 209362923720,
+      "buildUs": 1989,
+      "rasterUs": 132364,
+      "totalUs": 286960
+    },
+    {
+      "vsyncUs": 209363088879,
+      "buildUs": 8517,
+      "rasterUs": 150802,
+      "totalUs": 276193
+    },
+    {
+      "vsyncUs": 209363221002,
+      "buildUs": 1655,
+      "rasterUs": 131709,
+      "totalUs": 279809
+    },
+    {
+      "vsyncUs": 209363369652,
+      "buildUs": 16386,
+      "rasterUs": 151346,
+      "totalUs": 287304
+    },
+    {
+      "vsyncUs": 209363501789,
+      "buildUs": 2000,
+      "rasterUs": 128014,
+      "totalUs": 286511
+    },
+    {
+      "vsyncUs": 209363666958,
+      "buildUs": 8958,
+      "rasterUs": 152494,
+      "totalUs": 277025
+    },
+    {
+      "vsyncUs": 209363799086,
+      "buildUs": 15328,
+      "rasterUs": 127544,
+      "totalUs": 275878
+    },
+    {
+      "vsyncUs": 209363947720,
+      "buildUs": 1974,
+      "rasterUs": 146531,
+      "totalUs": 278324
+    },
+    {
+      "vsyncUs": 209364079859,
+      "buildUs": 17893,
+      "rasterUs": 134388,
+      "totalUs": 284533
+    },
+    {
+      "vsyncUs": 209364228507,
+      "buildUs": 6080,
+      "rasterUs": 127768,
+      "totalUs": 267076
+    },
+    {
+      "vsyncUs": 209364377153,
+      "buildUs": 8544,
+      "rasterUs": 128863,
+      "totalUs": 251188
+    },
+    {
+      "vsyncUs": 209364509273,
+      "buildUs": 9805,
+      "rasterUs": 150335,
+      "totalUs": 272941
+    },
+    {
+      "vsyncUs": 209364641401,
+      "buildUs": 5873,
+      "rasterUs": 130207,
+      "totalUs": 274350
+    },
+    {
+      "vsyncUs": 209364790053,
+      "buildUs": 14761,
+      "rasterUs": 150577,
+      "totalUs": 280327
+    },
+    {
+      "vsyncUs": 209364922177,
+      "buildUs": 6323,
+      "rasterUs": 128196,
+      "totalUs": 279405
+    },
+    {
+      "vsyncUs": 209365070826,
+      "buildUs": 30976,
+      "rasterUs": 148736,
+      "totalUs": 283147
+    },
+    {
+      "vsyncUs": 209365202960,
+      "buildUs": 2067,
+      "rasterUs": 129628,
+      "totalUs": 283900
+    },
+    {
+      "vsyncUs": 209365368117,
+      "buildUs": 34035,
+      "rasterUs": 149902,
+      "totalUs": 272433
+    },
+    {
+      "vsyncUs": 209365500242,
+      "buildUs": 2863,
+      "rasterUs": 126937,
+      "totalUs": 270780
+    },
+    {
+      "vsyncUs": 209365648878,
+      "buildUs": 27304,
+      "rasterUs": 148643,
+      "totalUs": 275618
+    },
+    {
+      "vsyncUs": 209365781012,
+      "buildUs": 16294,
+      "rasterUs": 135155,
+      "totalUs": 282781
+    },
+    {
+      "vsyncUs": 209365929661,
+      "buildUs": 2226,
+      "rasterUs": 148781,
+      "totalUs": 287203
+    },
+    {
+      "vsyncUs": 209366078312,
+      "buildUs": 14941,
+      "rasterUs": 129304,
+      "totalUs": 271401
+    },
+    {
+      "vsyncUs": 209366226960,
+      "buildUs": 3043,
+      "rasterUs": 148238,
+      "totalUs": 274537
+    },
+    {
+      "vsyncUs": 209366359085,
+      "buildUs": 15850,
+      "rasterUs": 130863,
+      "totalUs": 276637
+    },
+    {
+      "vsyncUs": 209366507722,
+      "buildUs": 10696,
+      "rasterUs": 146373,
+      "totalUs": 278918
+    },
+    {
+      "vsyncUs": 209366639860,
+      "buildUs": 1738,
+      "rasterUs": 125199,
+      "totalUs": 275260
+    },
+    {
+      "vsyncUs": 209366788508,
+      "buildUs": 9301,
+      "rasterUs": 149560,
+      "totalUs": 279702
+    },
+    {
+      "vsyncUs": 209366920639,
+      "buildUs": 1627,
+      "rasterUs": 130652,
+      "totalUs": 282345
+    },
+    {
+      "vsyncUs": 209367069280,
+      "buildUs": 10668,
+      "rasterUs": 151814,
+      "totalUs": 289087
+    },
+    {
+      "vsyncUs": 209367217927,
+      "buildUs": 1637,
+      "rasterUs": 124800,
+      "totalUs": 268596
+    },
+    {
+      "vsyncUs": 209367366579,
+      "buildUs": 8517,
+      "rasterUs": 142159,
+      "totalUs": 265812
+    },
+    {
+      "vsyncUs": 209367498711,
+      "buildUs": 2687,
+      "rasterUs": 130712,
+      "totalUs": 268245
+    },
+    {
+      "vsyncUs": 209367647358,
+      "buildUs": 32826,
+      "rasterUs": 148316,
+      "totalUs": 272575
+    },
+    {
+      "vsyncUs": 209367779490,
+      "buildUs": 14639,
+      "rasterUs": 126749,
+      "totalUs": 271174
+    },
+    {
+      "vsyncUs": 209367928129,
+      "buildUs": 2613,
+      "rasterUs": 148163,
+      "totalUs": 274366
+    },
+    {
+      "vsyncUs": 209368060250,
+      "buildUs": 13313,
+      "rasterUs": 129455,
+      "totalUs": 274935
+    },
+    {
+      "vsyncUs": 209368208900,
+      "buildUs": 2907,
+      "rasterUs": 151176,
+      "totalUs": 280965
+    },
+    {
+      "vsyncUs": 209368341027,
+      "buildUs": 15342,
+      "rasterUs": 128552,
+      "totalUs": 280824
+    },
+    {
+      "vsyncUs": 209368489675,
+      "buildUs": 6238,
+      "rasterUs": 151764,
+      "totalUs": 288582
+    },
+    {
+      "vsyncUs": 209368621807,
+      "buildUs": 12973,
+      "rasterUs": 128255,
+      "totalUs": 288050
+    },
+    {
+      "vsyncUs": 209368786969,
+      "buildUs": 15879,
+      "rasterUs": 149141,
+      "totalUs": 275615
+    },
+    {
+      "vsyncUs": 209368919103,
+      "buildUs": 2815,
+      "rasterUs": 128698,
+      "totalUs": 277082
+    },
+    {
+      "vsyncUs": 209369067747,
+      "buildUs": 14724,
+      "rasterUs": 153450,
+      "totalUs": 285231
+    },
+    {
+      "vsyncUs": 209369199885,
+      "buildUs": 2186,
+      "rasterUs": 129353,
+      "totalUs": 286452
+    },
+    {
+      "vsyncUs": 209369365047,
+      "buildUs": 8274,
+      "rasterUs": 151754,
+      "totalUs": 276686
+    },
+    {
+      "vsyncUs": 209369497181,
+      "buildUs": 1646,
+      "rasterUs": 128013,
+      "totalUs": 276361
+    },
+    {
+      "vsyncUs": 209369645820,
+      "buildUs": 8942,
+      "rasterUs": 150026,
+      "totalUs": 281180
+    },
+    {
+      "vsyncUs": 209369777955,
+      "buildUs": 29891,
+      "rasterUs": 132116,
+      "totalUs": 284956
+    },
+    {
+      "vsyncUs": 209369926602,
+      "buildUs": 2136,
+      "rasterUs": 152500,
+      "totalUs": 292398
+    },
+    {
+      "vsyncUs": 209370075246,
+      "buildUs": 9801,
+      "rasterUs": 129755,
+      "totalUs": 276248
+    },
+    {
+      "vsyncUs": 209370223889,
+      "buildUs": 2779,
+      "rasterUs": 148963,
+      "totalUs": 280226
+    },
+    {
+      "vsyncUs": 209370356019,
+      "buildUs": 32410,
+      "rasterUs": 133909,
+      "totalUs": 286106
+    },
+    {
+      "vsyncUs": 209370504665,
+      "buildUs": 5304,
+      "rasterUs": 150898,
+      "totalUs": 292143
+    },
+    {
+      "vsyncUs": 209370653310,
+      "buildUs": 9653,
+      "rasterUs": 128044,
+      "totalUs": 275057
+    },
+    {
+      "vsyncUs": 209370801959,
+      "buildUs": 9068,
+      "rasterUs": 162185,
+      "totalUs": 292698
+    },
+    {
+      "vsyncUs": 209370934089,
+      "buildUs": 2004,
+      "rasterUs": 123776,
+      "totalUs": 288695
+    },
+    {
+      "vsyncUs": 209371099246,
+      "buildUs": 17448,
+      "rasterUs": 151213,
+      "totalUs": 278340
+    },
+    {
+      "vsyncUs": 209371231382,
+      "buildUs": 1752,
+      "rasterUs": 127561,
+      "totalUs": 277593
+    },
+    {
+      "vsyncUs": 209371380027,
+      "buildUs": 9170,
+      "rasterUs": 144936,
+      "totalUs": 277808
+    },
+    {
+      "vsyncUs": 209371512155,
+      "buildUs": 13818,
+      "rasterUs": 125976,
+      "totalUs": 274487
+    },
+    {
+      "vsyncUs": 209371660802,
+      "buildUs": 1821,
+      "rasterUs": 149658,
+      "totalUs": 279467
+    },
+    {
+      "vsyncUs": 209371792936,
+      "buildUs": 25155,
+      "rasterUs": 128649,
+      "totalUs": 280626
+    },
+    {
+      "vsyncUs": 209371941585,
+      "buildUs": 2366,
+      "rasterUs": 147908,
+      "totalUs": 283705
+    },
+    {
+      "vsyncUs": 209372073719,
+      "buildUs": 15202,
+      "rasterUs": 130212,
+      "totalUs": 284867
+    },
+    {
+      "vsyncUs": 209372238886,
+      "buildUs": 1866,
+      "rasterUs": 152161,
+      "totalUs": 275637
+    },
+    {
+      "vsyncUs": 209372371011,
+      "buildUs": 15717,
+      "rasterUs": 123187,
+      "totalUs": 271209
+    },
+    {
+      "vsyncUs": 209372519647,
+      "buildUs": 14488,
+      "rasterUs": 141216,
+      "totalUs": 267067
+    },
+    {
+      "vsyncUs": 209372651780,
+      "buildUs": 1501,
+      "rasterUs": 128741,
+      "totalUs": 266718
+    },
+    {
+      "vsyncUs": 209372800427,
+      "buildUs": 8082,
+      "rasterUs": 149965,
+      "totalUs": 271672
+    },
+    {
+      "vsyncUs": 209372932554,
+      "buildUs": 2872,
+      "rasterUs": 127774,
+      "totalUs": 271331
+    },
+    {
+      "vsyncUs": 209373081204,
+      "buildUs": 13118,
+      "rasterUs": 142962,
+      "totalUs": 269497
+    },
+    {
+      "vsyncUs": 209373213330,
+      "buildUs": 1533,
+      "rasterUs": 124163,
+      "totalUs": 264860
+    },
+    {
+      "vsyncUs": 209373361964,
+      "buildUs": 7813,
+      "rasterUs": 144151,
+      "totalUs": 263791
+    },
+    {
+      "vsyncUs": 209373477579,
+      "buildUs": 1818,
+      "rasterUs": 125814,
+      "totalUs": 277261
+    },
+    {
+      "vsyncUs": 209373626222,
+      "buildUs": 9408,
+      "rasterUs": 149954,
+      "totalUs": 282171
+    },
+    {
+      "vsyncUs": 209373758351,
+      "buildUs": 9856,
+      "rasterUs": 131438,
+      "totalUs": 285026
+    },
+    {
+      "vsyncUs": 209373923507,
+      "buildUs": 2353,
+      "rasterUs": 151975,
+      "totalUs": 276154
+    },
+    {
+      "vsyncUs": 209374055636,
+      "buildUs": 15787,
+      "rasterUs": 129796,
+      "totalUs": 278313
+    },
+    {
+      "vsyncUs": 209374204280,
+      "buildUs": 4357,
+      "rasterUs": 148303,
+      "totalUs": 281662
+    },
+    {
+      "vsyncUs": 209374336414,
+      "buildUs": 24047,
+      "rasterUs": 124673,
+      "totalUs": 283992
+    },
+    {
+      "vsyncUs": 209374501577,
+      "buildUs": 1786,
+      "rasterUs": 148651,
+      "totalUs": 271294
+    },
+    {
+      "vsyncUs": 209374633709,
+      "buildUs": 9093,
+      "rasterUs": 128037,
+      "totalUs": 270802
+    },
+    {
+      "vsyncUs": 209374782358,
+      "buildUs": 17242,
+      "rasterUs": 147241,
+      "totalUs": 274180
+    },
+    {
+      "vsyncUs": 209374914488,
+      "buildUs": 5998,
+      "rasterUs": 127201,
+      "totalUs": 272845
+    },
+    {
+      "vsyncUs": 209375063140,
+      "buildUs": 15601,
+      "rasterUs": 151599,
+      "totalUs": 279846
+    },
+    {
+      "vsyncUs": 209375195268,
+      "buildUs": 2645,
+      "rasterUs": 126942,
+      "totalUs": 278359
+    },
+    {
+      "vsyncUs": 209375343916,
+      "buildUs": 14568,
+      "rasterUs": 140728,
+      "totalUs": 274230
+    },
+    {
+      "vsyncUs": 209375476048,
+      "buildUs": 1650,
+      "rasterUs": 129955,
+      "totalUs": 275352
+    },
+    {
+      "vsyncUs": 209375624700,
+      "buildUs": 10964,
+      "rasterUs": 146838,
+      "totalUs": 278085
+    },
+    {
+      "vsyncUs": 209375756834,
+      "buildUs": 2066,
+      "rasterUs": 127098,
+      "totalUs": 276627
+    },
+    {
+      "vsyncUs": 209375905485,
+      "buildUs": 34305,
+      "rasterUs": 144734,
+      "totalUs": 276335
+    },
+    {
+      "vsyncUs": 209376037612,
+      "buildUs": 10240,
+      "rasterUs": 129911,
+      "totalUs": 277128
+    },
+    {
+      "vsyncUs": 209376186260,
+      "buildUs": 1735,
+      "rasterUs": 143864,
+      "totalUs": 276687
+    },
+    {
+      "vsyncUs": 209376318395,
+      "buildUs": 7912,
+      "rasterUs": 128340,
+      "totalUs": 276030
+    },
+    {
+      "vsyncUs": 209376467039,
+      "buildUs": 1912,
+      "rasterUs": 152774,
+      "totalUs": 283904
+    },
+    {
+      "vsyncUs": 209376599170,
+      "buildUs": 9457,
+      "rasterUs": 125201,
+      "totalUs": 280441
+    },
+    {
+      "vsyncUs": 209376764316,
+      "buildUs": 8785,
+      "rasterUs": 150999,
+      "totalUs": 269888
+    },
+    {
+      "vsyncUs": 209376879934,
+      "buildUs": 1646,
+      "rasterUs": 128131,
+      "totalUs": 286101
+    },
+    {
+      "vsyncUs": 209377045092,
+      "buildUs": 8316,
+      "rasterUs": 148745,
+      "totalUs": 273159
+    },
+    {
+      "vsyncUs": 209377177219,
+      "buildUs": 1612,
+      "rasterUs": 130699,
+      "totalUs": 275021
+    },
+    {
+      "vsyncUs": 209377325849,
+      "buildUs": 19951,
+      "rasterUs": 149664,
+      "totalUs": 280235
+    },
+    {
+      "vsyncUs": 209377457985,
+      "buildUs": 2695,
+      "rasterUs": 127743,
+      "totalUs": 279191
+    },
+    {
+      "vsyncUs": 209377606631,
+      "buildUs": 9538,
+      "rasterUs": 150593,
+      "totalUs": 284808
+    },
+    {
+      "vsyncUs": 209377738757,
+      "buildUs": 1831,
+      "rasterUs": 129062,
+      "totalUs": 285370
+    },
+    {
+      "vsyncUs": 209377903915,
+      "buildUs": 29986,
+      "rasterUs": 151408,
+      "totalUs": 275065
+    },
+    {
+      "vsyncUs": 209378036050,
+      "buildUs": 32846,
+      "rasterUs": 126841,
+      "totalUs": 273642
+    },
+    {
+      "vsyncUs": 209378184694,
+      "buildUs": 2612,
+      "rasterUs": 149252,
+      "totalUs": 278566
+    },
+    {
+      "vsyncUs": 209378316817,
+      "buildUs": 9503,
+      "rasterUs": 129311,
+      "totalUs": 279007
+    },
+    {
+      "vsyncUs": 209378465472,
+      "buildUs": 1924,
+      "rasterUs": 152975,
+      "totalUs": 286775
+    },
+    {
+      "vsyncUs": 209378597603,
+      "buildUs": 8924,
+      "rasterUs": 128951,
+      "totalUs": 287416
+    },
+    {
+      "vsyncUs": 209378762764,
+      "buildUs": 15852,
+      "rasterUs": 150410,
+      "totalUs": 276619
+    },
+    {
+      "vsyncUs": 209378894897,
+      "buildUs": 2856,
+      "rasterUs": 129295,
+      "totalUs": 277452
+    },
+    {
+      "vsyncUs": 209379043547,
+      "buildUs": 15243,
+      "rasterUs": 153020,
+      "totalUs": 285612
+    },
+    {
+      "vsyncUs": 209379175674,
+      "buildUs": 1601,
+      "rasterUs": 126355,
+      "totalUs": 282913
+    },
+    {
+      "vsyncUs": 209379340842,
+      "buildUs": 8008,
+      "rasterUs": 149436,
+      "totalUs": 270684
+    }
+  ],
+  "captureAtSamplingStartObserved": {
+    "generation": 532,
+    "captureCount": 532,
+    "captureFailures": 0,
+    "activeSurfaceCount": 4,
+    "captureSupported": true,
+    "captureRect": {
+      "left": 0.0,
+      "top": 52.30769230769231,
+      "width": 360.0,
+      "height": 250.0
+    },
+    "scopeWidth": 360.0,
+    "scopeHeight": 354.5,
+    "captureAreaRatio": 0.7052186177715092,
+    "pixelWidth": 468.0,
+    "pixelHeight": 325.0,
+    "pixelRatio": 1.3,
+    "currentBytes": 608400,
+    "retainedBytes": 2433600,
+    "peakRetainedBytes": 3042000,
+    "retiredImageCount": 3
+  },
+  "captureAtEnd": {
+    "generation": 757,
+    "captureCount": 757,
+    "captureFailures": 0,
+    "activeSurfaceCount": 4,
+    "captureSupported": true,
+    "captureRect": {
+      "left": 0.0,
+      "top": 52.30769230769231,
+      "width": 360.0,
+      "height": 250.0
+    },
+    "scopeWidth": 360.0,
+    "scopeHeight": 354.5,
+    "captureAreaRatio": 0.7052186177715092,
+    "pixelWidth": 468.0,
+    "pixelHeight": 325.0,
+    "pixelRatio": 1.3,
+    "currentBytes": 608400,
+    "retainedBytes": 1825200,
+    "peakRetainedBytes": 3042000,
+    "retiredImageCount": 2
+  },
+  "captureEvents": [
+    {
+      "vsyncUs": 209349463111,
+      "generation": 530,
+      "captureCount": 530,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209349611736,
+      "generation": 531,
+      "captureCount": 531,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209349743869,
+      "generation": 532,
+      "captureCount": 532,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209349909027,
+      "generation": 533,
+      "captureCount": 533,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209350041150,
+      "generation": 534,
+      "captureCount": 534,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209350189782,
+      "generation": 535,
+      "captureCount": 535,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209350321905,
+      "generation": 536,
+      "captureCount": 536,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209350470540,
+      "generation": 537,
+      "captureCount": 537,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209350619182,
+      "generation": 538,
+      "captureCount": 538,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209350767818,
+      "generation": 539,
+      "captureCount": 539,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209350899940,
+      "generation": 540,
+      "captureCount": 540,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209351048571,
+      "generation": 541,
+      "captureCount": 541,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209351197207,
+      "generation": 542,
+      "captureCount": 542,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209351345842,
+      "generation": 543,
+      "captureCount": 543,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209351477967,
+      "generation": 544,
+      "captureCount": 544,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209351626603,
+      "generation": 545,
+      "captureCount": 545,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209351758727,
+      "generation": 546,
+      "captureCount": 546,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209351923881,
+      "generation": 547,
+      "captureCount": 547,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209352056005,
+      "generation": 548,
+      "captureCount": 548,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209352204634,
+      "generation": 549,
+      "captureCount": 549,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209352320240,
+      "generation": 550,
+      "captureCount": 550,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209352485397,
+      "generation": 551,
+      "captureCount": 551,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209352617511,
+      "generation": 552,
+      "captureCount": 552,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209352766143,
+      "generation": 553,
+      "captureCount": 553,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209352898258,
+      "generation": 554,
+      "captureCount": 554,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209353046900,
+      "generation": 555,
+      "captureCount": 555,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209353179023,
+      "generation": 556,
+      "captureCount": 556,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209353344174,
+      "generation": 557,
+      "captureCount": 557,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209353476290,
+      "generation": 558,
+      "captureCount": 558,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209353624932,
+      "generation": 559,
+      "captureCount": 559,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209353757344,
+      "generation": 560,
+      "captureCount": 560,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209353905992,
+      "generation": 561,
+      "captureCount": 561,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209354054641,
+      "generation": 562,
+      "captureCount": 562,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209354203285,
+      "generation": 563,
+      "captureCount": 563,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209354335419,
+      "generation": 564,
+      "captureCount": 564,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209354484070,
+      "generation": 565,
+      "captureCount": 565,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209354632710,
+      "generation": 566,
+      "captureCount": 566,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209354781361,
+      "generation": 567,
+      "captureCount": 567,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209354930004,
+      "generation": 568,
+      "captureCount": 568,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209355078650,
+      "generation": 569,
+      "captureCount": 569,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209355210783,
+      "generation": 570,
+      "captureCount": 570,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209355359432,
+      "generation": 571,
+      "captureCount": 571,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209355508078,
+      "generation": 572,
+      "captureCount": 572,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209355656725,
+      "generation": 573,
+      "captureCount": 573,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209355788857,
+      "generation": 574,
+      "captureCount": 574,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209355937508,
+      "generation": 575,
+      "captureCount": 575,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209356069633,
+      "generation": 576,
+      "captureCount": 576,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209356218283,
+      "generation": 577,
+      "captureCount": 577,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209356350409,
+      "generation": 578,
+      "captureCount": 578,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209356499060,
+      "generation": 579,
+      "captureCount": 579,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209356631195,
+      "generation": 580,
+      "captureCount": 580,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209356812880,
+      "generation": 581,
+      "captureCount": 581,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209356945015,
+      "generation": 582,
+      "captureCount": 582,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209357093666,
+      "generation": 583,
+      "captureCount": 583,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209357209278,
+      "generation": 584,
+      "captureCount": 584,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209357374445,
+      "generation": 585,
+      "captureCount": 585,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209357490062,
+      "generation": 586,
+      "captureCount": 586,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209357638708,
+      "generation": 587,
+      "captureCount": 587,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209357770841,
+      "generation": 588,
+      "captureCount": 588,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209357919490,
+      "generation": 589,
+      "captureCount": 589,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209358051623,
+      "generation": 590,
+      "captureCount": 590,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209358200271,
+      "generation": 591,
+      "captureCount": 591,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209358332399,
+      "generation": 592,
+      "captureCount": 592,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209358481046,
+      "generation": 593,
+      "captureCount": 593,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209358629691,
+      "generation": 594,
+      "captureCount": 594,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209358794855,
+      "generation": 595,
+      "captureCount": 595,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209358926986,
+      "generation": 596,
+      "captureCount": 596,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209359075633,
+      "generation": 597,
+      "captureCount": 597,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209359207760,
+      "generation": 598,
+      "captureCount": 598,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209359356401,
+      "generation": 599,
+      "captureCount": 599,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209359488530,
+      "generation": 600,
+      "captureCount": 600,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209359637166,
+      "generation": 601,
+      "captureCount": 601,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209359785816,
+      "generation": 602,
+      "captureCount": 602,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209359934465,
+      "generation": 603,
+      "captureCount": 603,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209360066592,
+      "generation": 604,
+      "captureCount": 604,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209360231758,
+      "generation": 605,
+      "captureCount": 605,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209360363890,
+      "generation": 606,
+      "captureCount": 606,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209360512530,
+      "generation": 607,
+      "captureCount": 607,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209360644663,
+      "generation": 608,
+      "captureCount": 608,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209360809819,
+      "generation": 609,
+      "captureCount": 609,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209360941943,
+      "generation": 610,
+      "captureCount": 610,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209361090593,
+      "generation": 611,
+      "captureCount": 611,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209361222721,
+      "generation": 612,
+      "captureCount": 612,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209361371366,
+      "generation": 613,
+      "captureCount": 613,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209361503500,
+      "generation": 614,
+      "captureCount": 614,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209361668641,
+      "generation": 615,
+      "captureCount": 615,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209361800773,
+      "generation": 616,
+      "captureCount": 616,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209361949425,
+      "generation": 617,
+      "captureCount": 617,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209362081556,
+      "generation": 618,
+      "captureCount": 618,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209362230192,
+      "generation": 619,
+      "captureCount": 619,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209362362311,
+      "generation": 620,
+      "captureCount": 620,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209362527473,
+      "generation": 621,
+      "captureCount": 621,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209362659606,
+      "generation": 622,
+      "captureCount": 622,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209362808254,
+      "generation": 623,
+      "captureCount": 623,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209362940386,
+      "generation": 624,
+      "captureCount": 624,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209363105545,
+      "generation": 625,
+      "captureCount": 625,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209363237668,
+      "generation": 626,
+      "captureCount": 626,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209363386319,
+      "generation": 627,
+      "captureCount": 627,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209363518456,
+      "generation": 628,
+      "captureCount": 628,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209363683625,
+      "generation": 629,
+      "captureCount": 629,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209363815753,
+      "generation": 630,
+      "captureCount": 630,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209363964387,
+      "generation": 631,
+      "captureCount": 631,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209364096526,
+      "generation": 632,
+      "captureCount": 632,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209364245173,
+      "generation": 633,
+      "captureCount": 633,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209364393819,
+      "generation": 634,
+      "captureCount": 634,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209364525939,
+      "generation": 635,
+      "captureCount": 635,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209364658068,
+      "generation": 636,
+      "captureCount": 636,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209364806719,
+      "generation": 637,
+      "captureCount": 637,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209364938844,
+      "generation": 638,
+      "captureCount": 638,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209365087492,
+      "generation": 639,
+      "captureCount": 639,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209365219627,
+      "generation": 640,
+      "captureCount": 640,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209365384784,
+      "generation": 641,
+      "captureCount": 641,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209365516908,
+      "generation": 642,
+      "captureCount": 642,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209365665545,
+      "generation": 643,
+      "captureCount": 643,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209365797678,
+      "generation": 644,
+      "captureCount": 644,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209365946327,
+      "generation": 645,
+      "captureCount": 645,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209366094979,
+      "generation": 646,
+      "captureCount": 646,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209366243626,
+      "generation": 647,
+      "captureCount": 647,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209366375751,
+      "generation": 648,
+      "captureCount": 648,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209366524389,
+      "generation": 649,
+      "captureCount": 649,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209366656527,
+      "generation": 650,
+      "captureCount": 650,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209366805175,
+      "generation": 651,
+      "captureCount": 651,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209366937306,
+      "generation": 652,
+      "captureCount": 652,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209367085946,
+      "generation": 653,
+      "captureCount": 653,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209367234594,
+      "generation": 654,
+      "captureCount": 654,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209367383245,
+      "generation": 655,
+      "captureCount": 655,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209367515377,
+      "generation": 656,
+      "captureCount": 656,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209367664024,
+      "generation": 657,
+      "captureCount": 657,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209367796157,
+      "generation": 658,
+      "captureCount": 658,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209367944796,
+      "generation": 659,
+      "captureCount": 659,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209368076917,
+      "generation": 660,
+      "captureCount": 660,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209368225567,
+      "generation": 661,
+      "captureCount": 661,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209368357694,
+      "generation": 662,
+      "captureCount": 662,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209368506342,
+      "generation": 663,
+      "captureCount": 663,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209368638473,
+      "generation": 664,
+      "captureCount": 664,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209368803635,
+      "generation": 665,
+      "captureCount": 665,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209368935770,
+      "generation": 666,
+      "captureCount": 666,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209369084413,
+      "generation": 667,
+      "captureCount": 667,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209369216552,
+      "generation": 668,
+      "captureCount": 668,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209369381714,
+      "generation": 669,
+      "captureCount": 669,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209369513848,
+      "generation": 670,
+      "captureCount": 670,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209369662487,
+      "generation": 671,
+      "captureCount": 671,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209369794621,
+      "generation": 672,
+      "captureCount": 672,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209369943269,
+      "generation": 673,
+      "captureCount": 673,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209370091913,
+      "generation": 674,
+      "captureCount": 674,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209370240556,
+      "generation": 675,
+      "captureCount": 675,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209370372686,
+      "generation": 676,
+      "captureCount": 676,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209370521332,
+      "generation": 677,
+      "captureCount": 677,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209370669977,
+      "generation": 678,
+      "captureCount": 678,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209370818626,
+      "generation": 679,
+      "captureCount": 679,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209370950756,
+      "generation": 680,
+      "captureCount": 680,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209371115913,
+      "generation": 681,
+      "captureCount": 681,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209371248049,
+      "generation": 682,
+      "captureCount": 682,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209371396694,
+      "generation": 683,
+      "captureCount": 683,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209371528822,
+      "generation": 684,
+      "captureCount": 684,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209371677469,
+      "generation": 685,
+      "captureCount": 685,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209371809603,
+      "generation": 686,
+      "captureCount": 686,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209371958251,
+      "generation": 687,
+      "captureCount": 687,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209372090386,
+      "generation": 688,
+      "captureCount": 688,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209372255552,
+      "generation": 689,
+      "captureCount": 689,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209372387677,
+      "generation": 690,
+      "captureCount": 690,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209372536314,
+      "generation": 691,
+      "captureCount": 691,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209372668447,
+      "generation": 692,
+      "captureCount": 692,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209372817093,
+      "generation": 693,
+      "captureCount": 693,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209372949221,
+      "generation": 694,
+      "captureCount": 694,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209373097870,
+      "generation": 695,
+      "captureCount": 695,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209373229996,
+      "generation": 696,
+      "captureCount": 696,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209373378631,
+      "generation": 697,
+      "captureCount": 697,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209373494245,
+      "generation": 698,
+      "captureCount": 698,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209373642889,
+      "generation": 699,
+      "captureCount": 699,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209373775017,
+      "generation": 700,
+      "captureCount": 700,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209373940174,
+      "generation": 701,
+      "captureCount": 701,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209374072303,
+      "generation": 702,
+      "captureCount": 702,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209374220946,
+      "generation": 703,
+      "captureCount": 703,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209374353081,
+      "generation": 704,
+      "captureCount": 704,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209374518244,
+      "generation": 705,
+      "captureCount": 705,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209374650375,
+      "generation": 706,
+      "captureCount": 706,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209374799025,
+      "generation": 707,
+      "captureCount": 707,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209374931155,
+      "generation": 708,
+      "captureCount": 708,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209375079807,
+      "generation": 709,
+      "captureCount": 709,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209375211934,
+      "generation": 710,
+      "captureCount": 710,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209375360583,
+      "generation": 711,
+      "captureCount": 711,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209375492715,
+      "generation": 712,
+      "captureCount": 712,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209375641366,
+      "generation": 713,
+      "captureCount": 713,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209375773500,
+      "generation": 714,
+      "captureCount": 714,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209375922152,
+      "generation": 715,
+      "captureCount": 715,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209376054279,
+      "generation": 716,
+      "captureCount": 716,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209376202927,
+      "generation": 717,
+      "captureCount": 717,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209376335062,
+      "generation": 718,
+      "captureCount": 718,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209376483706,
+      "generation": 719,
+      "captureCount": 719,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209376615836,
+      "generation": 720,
+      "captureCount": 720,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209376780983,
+      "generation": 721,
+      "captureCount": 721,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209376896600,
+      "generation": 722,
+      "captureCount": 722,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209377061758,
+      "generation": 723,
+      "captureCount": 723,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209377193886,
+      "generation": 724,
+      "captureCount": 724,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209377342516,
+      "generation": 725,
+      "captureCount": 725,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209377474651,
+      "generation": 726,
+      "captureCount": 726,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209377623298,
+      "generation": 727,
+      "captureCount": 727,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209377755423,
+      "generation": 728,
+      "captureCount": 728,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209377920582,
+      "generation": 729,
+      "captureCount": 729,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209378052716,
+      "generation": 730,
+      "captureCount": 730,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209378201360,
+      "generation": 731,
+      "captureCount": 731,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209378333484,
+      "generation": 732,
+      "captureCount": 732,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209378482138,
+      "generation": 733,
+      "captureCount": 733,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209378614270,
+      "generation": 734,
+      "captureCount": 734,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209378779430,
+      "generation": 735,
+      "captureCount": 735,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209378911563,
+      "generation": 736,
+      "captureCount": 736,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    },
+    {
+      "vsyncUs": 209379060213,
+      "generation": 737,
+      "captureCount": 737,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 1825200,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 2
+    },
+    {
+      "vsyncUs": 209379192340,
+      "generation": 738,
+      "captureCount": 738,
+      "captureFailures": 0,
+      "activeSurfaceCount": 4,
+      "captureSupported": true,
+      "captureRect": {
+        "left": 0.0,
+        "top": 52.30769230769231,
+        "width": 360.0,
+        "height": 250.0
+      },
+      "scopeWidth": 360.0,
+      "scopeHeight": 354.5,
+      "captureAreaRatio": 0.7052186177715092,
+      "pixelWidth": 468.0,
+      "pixelHeight": 325.0,
+      "pixelRatio": 1.3,
+      "currentBytes": 608400,
+      "retainedBytes": 2433600,
+      "peakRetainedBytes": 3042000,
+      "retiredImageCount": 3
+    }
+  ],
+  "missingQualificationEvidence": [],
+  "metadataLabelsComplete": true,
+  "qualifiedMeasurement": true,
+  "scenario": "captureUltra-4-compact-animated",
+  "repetition": 1,
+  "startupSettleUs": 10000000
+}

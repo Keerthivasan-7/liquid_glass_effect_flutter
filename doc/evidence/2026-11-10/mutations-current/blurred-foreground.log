@@ -1,0 +1,29 @@
+00:00 +0: loading C:/Projects/Flutter/Liquid Glass/.research/full-tests-2026-11-10/minimum/test/visual_contract_test.dart
+00:00 +0: composited foreground text and icon remain pixel sharp
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: [255, 255, 255, 255]
+  Actual: [154, 154, 154, 255]
+   Which: at location [0] is <154> instead of <255>
+Foreground differs at (161, 137)
+
+When the exception was thrown, this was the stack:
+#4      registerRendererContractTests.<anonymous closure> (file:///C:/Projects/Flutter/Liquid%20Glass/.research/full-tests-2026-11-10/minimum/test/support/renderer_contract_suite.dart:486:9)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:193:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1064:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Projects/Flutter/Liquid%20Glass/.research/full-tests-2026-11-10/minimum/test/support/renderer_contract_suite.dart line 486
+The test description was:
+  composited foreground text and icon remain pixel sharp
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:00 +0 -1: composited foreground text and icon remain pixel sharp [E]
+  Test failed. See exception logs above.
+  The test description was: composited foreground text and icon remain pixel sharp
+  
+00:00 +0 -1: Some tests failed.

@@ -34,9 +34,18 @@ backend/scenario limits remain in [COMPATIBILITY.md](COMPATIBILITY.md).
 
 Publication preparation checks dependency resolution, analysis, a Windows
 showcase build and the real archive dry run. It does not repeat phone tests or
-the full performance matrix. The latest renderer qualification, human review
-and remaining milestone gates remain open; publishing this prerelease does
-not complete the Verified Portable Renderer milestone.
+the full performance matrix. Subsequent current-source qualification passed
+eighteen visual contracts separately on the physical Android GLES phone,
+Windows/Skia, CanvasKit and skwasm; foreground ten-minute endurance retries also
+passed on the phone and Windows. Both hosted SDK lanes and three platform build
+jobs pass, and all five checks are required on `main` with verified settings.
+The full phone measurement phase collected 138 valid runs, but twelve of 46
+groups fail fixed repeatability limits. That performance gate and human review
+remain open; publishing this prerelease does not complete the milestone.
+
+GitHub main contains newer qualification records and host-driver hardening.
+The published archive and its README remain the immutable `954ea73` snapshot;
+these later repository updates have not been republished as a new version.
 
 Publishing requires the user's pub.dev Google account. Account sign-in is
 performed by the user. Published versions cannot normally be removed or

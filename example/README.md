@@ -29,12 +29,15 @@ sampling settings, not a measured speedup on every device. See the
 
 ## Delivery status
 
-The 13 November 2026 handoff is a development package and showcase. Desktop and
-Android builds have been produced. Extended testing and phone installation are
-deferred at the user's request. Earlier renderer qualification applies only to
-its recorded source, before the latest rotation-axis optimization and showcase
-rewrite. The tools below are available for future qualification; they are not
-being run as part of the current delivery work.
+The 13 November 2026 handoff is a development package and showcase. The first
+prerelease is published on pub.dev. Both hosted SDK lanes and Android, web and
+Windows builds pass. The published renderer, including rotation-axis
+precomputation, passes all eighteen visual contracts separately on physical
+Android GLES, Windows/Skia, CanvasKit and skwasm. Separate ten-minute foreground
+endurance runs pass on the phone and Windows. The full repeated phone timing
+matrix collected all 138 measurements; 34 of 46 groups meet the fixed spread
+limits and twelve remain unstable. Human showcase/accessibility review remains separate;
+see [the current source and results](../doc/evidence/2026-11-10/runtime-current/README.md).
 
 ## Deterministic native contracts
 
