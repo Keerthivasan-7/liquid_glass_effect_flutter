@@ -123,6 +123,17 @@ app setting when the platform does not provide a usable signal. Reduced motion
 also follows `MediaQuery.disableAnimations` and `accessibleNavigation`.
 Stop your app's own decorative animations separately, as the showcase does.
 
+For large text, let the content grow and provide scrolling rather than a fixed
+height that clips controls. Material buttons can supply explicit foreground
+colors, so set those to match the opaque reading surface as well. Set
+`VisualDensity.standard` when a button must retain a 48-pixel minimum: desktop
+adaptive density can reduce that nominal minimum to 40 pixels. Verify final
+bounds on the intended platforms. The shared
+photographic accessibility fixture in `test/support/photo_accessibility_suite.dart`
+demonstrates this at 320 logical pixels and up to 3× text scaling; its native
+entry point and capture instructions are in the example README. A fixture pass
+does not establish contrast for arbitrary translucent content.
+
 ## Scope and cost
 
 Share a scene among related surfaces. The capture is the rectangular union of
@@ -144,10 +155,12 @@ entire scene for every notification. Byte estimates do not measure GPU memory.
 
 ## Current delivery limits
 
-The latest CPU rotation-axis optimization and showcase rewrite compile into
-the Android development build. Earlier visual/endurance evidence predates that
-change. Extended testing and phone installation are deferred at the user's
-request. No renderer speedup, complete performance matrix, physical iOS or
-Vulkan support is claimed. Consult [compatibility](COMPATIBILITY.md),
+The published renderer has current visual qualification on the named Android
+GLES, Windows and browser targets, plus three completed foreground endurance
+runs. A full v6 phone matrix retains twelve unstable groups. Four focused v7
+groups pass, with forty-two still unmeasured. The phone has been released.
+Human product/accessibility review and background/resume investigation remain
+open. No renderer speedup, complete performance matrix, physical iOS or Vulkan
+qualification is claimed. Consult [compatibility](COMPATIBILITY.md),
 [performance](PERFORMANCE.md) and [release readiness](RELEASE_CHECKLIST.md)
 before selecting a production target.

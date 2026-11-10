@@ -32,6 +32,17 @@ void main() {
     expect(() => validateRendererReport(report), throwsStateError);
   });
 
+  test('partial named matrices cannot qualify from a nonempty export', () {
+    final report = contracts()..['expectedObservationCount'] = 12;
+    expect(() => validateRendererReport(report), throwsStateError);
+    report['expectedObservationCount'] = 1;
+    expect(() => validateRendererReport(report), returnsNormally);
+    for (final invalid in <Object?>[0, -1, 1.0, '1', null]) {
+      report['expectedObservationCount'] = invalid;
+      expect(() => validateRendererReport(report), throwsStateError);
+    }
+  });
+
   test('a timed-out partial soak rejects the observed false driver success',
       () {
     final report = {

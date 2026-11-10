@@ -49,6 +49,7 @@ verification gates below still apply to completion of the renderer milestone.
 - [x] Check inherited text/icon contrast, keyboard action preservation and focus feedback.
 - [x] Repeat current renderer qualification on the owned Android emulator: eighteen v5 visual contracts and 600,536-ms endurance, 120 disposals, driver exit zero, bounded tracked images/RSS, final healthy services and empty crash buffer.
 - [ ] Review physical-device accessibility and supported product layouts with a human reviewer.
+- [x] Validate twelve Windows opaque-reading cases over a credited satellite image at 1×/2×/3× text; preserve native images and desktop-density regression. This does not close human or physical-device review.
 - [x] Qualify physical Android GLES for the named phone and foreground scenarios.
 - [ ] Qualify Vulkan and physical iOS/Metal before claiming them supported; other Android devices remain unverified.
 - [ ] Investigate interrupted-surface/background-resume behavior before making lifecycle reliability claims.

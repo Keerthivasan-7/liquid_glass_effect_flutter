@@ -40,5 +40,12 @@ void validateRendererReport(Map<String, dynamic> report) {
     if (errors is! List || observations is! Map || observations.isEmpty) {
       throw StateError('Renderer contracts did not export their observations.');
     }
+    if (report.containsKey('expectedObservationCount')) {
+      final expected = report['expectedObservationCount'];
+      if (expected is! int || expected < 1 || observations.length != expected) {
+        throw StateError(
+            'Renderer contracts did not complete every expected case.');
+      }
+    }
   }
 }

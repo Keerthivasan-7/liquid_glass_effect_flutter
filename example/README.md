@@ -74,6 +74,25 @@ a successful test with a failed Android system is not a clean endurance run.
 These tools establish only the scenarios and backend they actually execute.
 See [the compatibility matrix](../doc/COMPATIBILITY.md) for current evidence.
 
+## Photographic accessibility checks
+
+```powershell
+flutter drive --driver=test_driver/integration_test.dart --target=integration_test/photo_accessibility_test.dart -d windows --profile --dart-define=RENDERER_LABEL=Windows-Skia
+```
+
+This separate fixture checks a 320 × 568 reading panel over a credited NASA
+satellite-image composite. Its twelve cases combine light/dark surfaces,
+explicit reduced transparency/inherited high contrast, and 1×/2×/3× text.
+Exports contain top and scrolled-to-action images, contrast ratios, capture
+counts, keyboard activation and semantics observations. The host rejects a
+partial matrix. Package tests exercise the same assertions with the widget
+test font; native captures use the platform font.
+
+The example supplies matching button colors and a scrollable content layout.
+These checks apply to opaque reading modes. They do not establish arbitrary
+translucent text contrast, screen-reader usability or human product approval.
+The image credit and source are in [assets/README.md](assets/README.md).
+
 ## Android surface readback and app reuse
 
 Android qualification uses the example's small native bridge to copy its own
