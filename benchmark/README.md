@@ -129,4 +129,7 @@ Exports declare `hudRefreshHz: 0` during a v7 measurement and
 rejects mixed protocols/display cadences in a repetition group. The runner
 rejects v6 prepared binaries/results for v7. Fixed p50/p99 limits, warm-up,
 settling and measurement windows are unchanged. New v7 device measurements are
-still required; the earlier matrix has not been relabeled or made to pass.
+still required for forty-two cases. A
+[four-case v7 phone follow-up](../doc/evidence/2026-11-10/performance-physical-v7-focused/README.md)
+passes all twelve measurements. The earlier matrix has not been relabeled or
+made to pass, and four cases do not establish a full-matrix pass.

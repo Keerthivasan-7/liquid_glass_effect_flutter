@@ -166,6 +166,9 @@ Both SDK CI lanes and all three platform builds pass. The full phone matrix
 collected 138 measurements: 34 of 46 groups met the fixed repeatability limits;
 twelve did not. [All results, including failures](doc/evidence/2026-11-10/performance-physical-current/README.md)
 are preserved. No renderer speedup or general frame-rate claim is made.
+Protocol v7 removes periodic benchmark-display work; its
+[four-case phone follow-up](doc/evidence/2026-11-10/performance-physical-v7-focused/README.md)
+passes all twelve measurements. The remaining forty-two cases still need v7 qualification.
 
 Physical iOS/Metal, Android Vulkan, macOS and Linux remain unverified. Overlapping
 iOS filters require separate hardware evidence. The published platform list is
