@@ -157,12 +157,15 @@ select an engine-supported Impeller filter or clipped blur/tint fallback.
 `onRenderPathChanged` reports the concrete path. Shader or capture failure
 downgrades the effect; accessibility may intentionally choose opaque fallback.
 
-Earlier recorded snapshots passed visual contracts on Windows/Skia,
-Android/Impeller GLES, CanvasKit and skwasm. A named Android phone also completed
-a ten-minute endurance run. Those records predate the latest rotation-axis
-optimization and package rename. The full repeated performance matrix and
-latest-source runtime qualification remain open. Builds are not runtime
-evidence, and no renderer speedup is claimed.
+The published renderer passed eighteen visual contracts on each of Windows/Skia,
+a physical Android/Impeller GLES phone, CanvasKit and skwasm on 10 November 2026.
+The phone and Windows also completed separate ten-minute foreground endurance
+runs. The [source and result record](doc/evidence/2026-11-10/runtime-current/source-and-results.json)
+ties these results to the published renderer, including the rotation-axis change.
+Both SDK CI lanes and all three platform builds pass. The full phone matrix
+collected 138 measurements: 34 of 46 groups met the fixed repeatability limits;
+twelve did not. [All results, including failures](doc/evidence/2026-11-10/performance-physical-current/README.md)
+are preserved. No renderer speedup or general frame-rate claim is made.
 
 Physical iOS/Metal, Android Vulkan, macOS and Linux remain unverified. Overlapping
 iOS filters require separate hardware evidence. The published platform list is

@@ -13,11 +13,11 @@ hashes. See [the publication record](evidence/2026-11-10/pub-publication.json).
 The verification milestone and runtime/performance gates below remain open.
 Historical evidence is unchanged.
 
-Delivery steering: target **13 November 2026**. Extended testing has stopped at
-the user's request; see [the four-day delivery plan](FOUR_DAY_DELIVERY.md).
-The latest development change moves constant anisotropy rotation math to the
-CPU. It updates the capture/filter uniform layouts to 68/63 floats and has not
-been covered by the earlier runtime evidence below. No measured speedup is claimed.
+Delivery steering: target **13 November 2026**. On 10 November the user requested
+all tests and made the phone available for the full matrix, superseding the
+earlier test deferral. See [the four-day delivery plan](FOUR_DAY_DELIVERY.md).
+Current runtime results include CPU rotation-axis precomputation and the 68/63
+capture/filter uniform layouts. No measured speedup is claimed.
 
 Updated: 2026-11-10. The milestone remains in progress. Evidence applies to its
 recorded source snapshot, SDK, backend and scenarios. See
@@ -26,14 +26,14 @@ recorded source snapshot, SDK, backend and scenarios. See
 | Work package | Implemented and checked | Remaining gate |
 |---|---|---|
 | WP0 support contract | Separate capture, Impeller filter and fallback contracts; named backend evidence and explicit unverified targets. | Original pre-change performance baseline was not obtained. No before/after speed claim is permitted. |
-| WP1 SDK checks | Recorded minimum 3.32.0 and stable 3.47.9 checks cover formatting, analysis, 55 package and nine benchmark checks. All 46 source-snapshot entries matched the recorded check snapshot; the later axis-precomputation and showcase changes postdate those checks. The publication dry run reports the truthful missing-source-metadata warning. CI/scheduled/build smoke workflows implemented. | Hosted CI/merge protection, real-source-metadata warning and final-source qualification. |
+| WP1 SDK checks | Hosted CI on `970d38f` passes all five jobs: exact minimum 3.32.0 and stable 3.47.9 package lanes plus Android, web and Windows builds. Each package lane passes formatting, package/example/benchmark analysis, 63 package checks, nine benchmark checks, twelve independent validator checks and a zero-warning publication dry run. All five GitHub Actions checks are required on `main`, strict and enforced for administrators; saved settings read back and verified. | Keep future changes passing these checks. |
 | WP2 capture footprint | Conservative optical envelope; actual-image dimensions; affine mapping; interaction envelope; guarded retirement; scope-anchored fractional texel lattice. Regression fails before grid alignment and passes after. | Platform qualifications retain their explicit limits. |
-| WP3 visual contracts | Eighteen shared contracts, semantic uniform/value manifests, PNG/runtime exports. Four required mutations and a retained-scroll mutation detected and restored. | Physical-device review remains separate. |
-| WP4 runtime qualification | Fixture v4 passes all eighteen contracts on Windows, CanvasKit, skwasm and fresh Android GLES. Clean Android v4 repeat completes 600,532 ms, 10,056 frames and 120 disposals with bounded retention. Native PixelCopy fixture v5 additionally passes all eighteen visual contracts. Scrolling video saved. | The clean v4 repeat has healthy core services and no new crash entries after Bluetooth was disabled only in the project-owned AVD. Earlier failures remain preserved. Physical Xiaomi GLES v5 passes all eighteen visuals and a standalone 600,645-ms endurance run with 120 disposals. Vulkan/iOS and other untested targets remain separate. |
-| WP5 benchmark | Raw timestamped timings, fair cases, resumable 46-case matrix and twelve independent validator checks. Protocol v6 adds sixty-second initial settling, ten seconds per repetition, memory preflight, authenticated app reuse and focus/viewport invalidation. One physical ordinary-control group has three independently accepted repetitions. | Prior unstable attempts are preserved. The capture group was interrupted and invalidated. The ordinary control predates the portrait safeguards and latest optimization; no qualified glass baseline or full matrix. Phone work deferred by user. |
+| WP3 visual contracts | Eighteen shared contracts, semantic uniform/value manifests and PNG/runtime exports. All four required mutations detected and source restored on the current renderer. Prior retained-scroll mutation remains recorded. | Human image and product-background review remains separate. |
+| WP4 runtime qualification | Current published renderer passes eighteen v5 contracts on each of physical Xiaomi GLES, Android emulator GLES, Windows/Skia, CanvasKit and skwasm: 90 contracts, 215 observations. Current foreground ten-minute endurance passes on the phone (600,640 ms, 120 disposals), Windows (600,297 ms, 106 disposals) and emulator (600,536 ms, 120 disposals). Final emulator crash buffer empty and package/activity services present. | Interrupted phone and timed-out Windows attempts remain failed. Background/resume, Vulkan/iOS and other untested targets remain unverified. |
+| WP5 benchmark | All 46 current phone groups measured, three repetitions each: 138 individually valid raw exports. Independent recomputation accepts 34 groups and rejects twelve for fixed spread limits. Every repetition, source/SDK/APK identity, capture metadata and failure is preserved. Physical-phone host memory gate explicitly zero MiB, with telemetry retained. | Repeatability gate remains open: eleven build-p50 spread failures and one blur-10-animated raster/total-span-p99 failure. Limits unchanged; runner correctly exits one. No whole-matrix or smooth-60-Hz pass. |
 | WP6 optimization | CPU rotation-axis precomputation now reuses constant values across sampling and highlights; showcase build succeeds. Hover/press capture reuse has a prior count-based check. | Repeatable baseline/profiling must justify further optimization; no FPS/GPU improvement claimed. |
-| WP7 accessibility | Explicit transparency/motion/contrast; opaque treatment; inherited contrast; keyboard/accessibility focus and child actions. Seven focused checks plus native/browser contracts. | Physical-device and photographic/product-background review unverified. |
-| WP8 release docs | Contracts, SDK sampler audit, reference comparison and complete integration guide. Showcase has three functional screens, four presets and comfort previews; desktop/Android builds produced. Current library graph: 418 nodes/478 edges/20 communities. Development source bundle: 192 files, with source/artifact hashes and separate offline Git bundle. Earlier pub archive inspection applies to its recorded snapshot. | Final pub-package qualification, canonical repository and verified release commit/tag; one metadata warning. Current builds and source ZIP do not replace runtime qualification or a pub dry run. |
+| WP7 accessibility | Explicit transparency/motion/contrast, opaque treatment, inherited contrast, keyboard/accessibility focus and child actions. Focused checks and current phone/native/browser contracts pass. | Human physical-device and photographic/product-background review unverified. |
+| WP8 release docs | Contracts, SDK sampler audit, reference comparison and integration guide. Three-screen showcase, four presets and comfort previews. Current library graph: 419 nodes/479 edges/21 communities. Published prerelease, canonical repository, source tag, required merge checks and verified registry checksum recorded. | Finish current performance manifest and remaining review; reconcile final delivery notes. Publication is separate from milestone completion. |
 
 ## Four-day delivery
 
@@ -43,15 +43,47 @@ screens; presets, session favorites, fine adjustments/reset and accessibility
 previews work through actual app state. Diagnostics are isolated from the page
 build. A settings-navigation edge case and reduced-motion expansion were
 included in the final Android build. See the [integration guide](INTEGRATION_GUIDE.md)
-and [showcase instructions](../example/README.md). Extended tests and phone
-installation remain deferred by user direction.
+and [showcase instructions](../example/README.md). The full phone measurement
+phase is finished and the phone released; twelve groups remain unstable.
 
 Release preparation also refreshed the library architecture map after the
-axis-helper change. Future CI now explicitly analyzes example/benchmark apps
+axis-helper change. Hosted CI explicitly analyzes example/benchmark apps
 and preserves SDK/dependency/build logs for all platform build jobs, including
-failures. These workflow changes have not run; no hosted CI result is claimed.
+failures. All five jobs passed in
+[run 42761367535](https://github.com/Keerthivasan-7/liquid_glass_effect_flutter/actions/runs/42761367535),
+source `970d38f`. An initial latest-stable archive check exposed an SDK migration
+rewriting analysis excludes; the configuration was corrected before both
+subsequent complete CI runs passed.
 
-## Evidence locations
+## Current-source evidence — 10 November
+
+- [Runtime summary and source hashes](evidence/2026-11-10/runtime-current/source-and-results.json):
+  all fifteen renderer files match published source `954ea73`.
+- [Current runtime records and retained failures](evidence/2026-11-10/runtime-current/README.md).
+- [Hosted SDK checks and platform build logs](evidence/2026-11-10/github-ci/42761367535/artifacts.json).
+- [Required merge-check settings](evidence/2026-11-10/github-ci/required-checks.json):
+  all five named checks bound to GitHub Actions, up-to-date branches required,
+  administrator enforcement enabled, force pushes and branch deletion blocked.
+- [Minimum SDK clean checkout](evidence/2026-11-10/sdk-minimum/clean-checkout/checks.json)
+  and [stable clean checkout](evidence/2026-11-10/sdk-stable/clean-checkout/checks.json).
+  These local checks at `bc87b63` contain 55 package checks; hosted `970d38f`
+  additionally covers eight host-driver validation regressions, for 63 total.
+- [Current four required mutations](evidence/2026-11-10/mutations-current/results.json).
+- [Report-validator replay against seven real exports](evidence/2026-11-10/native-report-regression.json).
+  The old Windows driver returned zero for an incomplete timed-out soak. The
+  corrected driver preserves evidence and rejects that report. The successful
+  retry passed the corrected driver.
+- [Full current phone performance report](evidence/2026-11-10/performance-physical-current/README.md):
+  46 groups / 138 measurements, 34 qualified groups, twelve unstable. Raw files
+  are unchanged copies and all independent statistics/hash checks match.
+
+The initial current phone soak lost its rendering surface after the user locked
+or switched apps, followed by a native GL-context crash. It remains a failed
+attempt. The completed foreground retry does not establish background/resume
+reliability. Current foreground results and fixed-window benchmark results have
+separate acceptance conditions.
+
+## Historical evidence locations — earlier source snapshots
 
 - [Windows fixture v5](evidence/2026-11-09/windows-v5/runtime.json).
 - [CanvasKit release v5](evidence/2026-11-09/web-canvaskit-v5/runtime.json).
@@ -87,9 +119,10 @@ named `dev-handoff-2026-11-10`. This starts from the current development source;
 it does not recover an original pre-change revision. The user subsequently
 created `https://github.com/Keerthivasan-7/liquid_glass_effect_flutter`, now connected as
 `origin`. Package source/issue links use this real URL. The earlier dry run's
-missing-source warning is historical; the dry run has not been repeated.
-Hosted CI, branch protection and a verified release tag remain open. The initial
-upload uses a CI-skip instruction to respect the user's testing deferral.
+missing-source warning is historical; current clean-checkout and hosted dry
+runs have zero warnings. The source tag, hosted CI and required merge checks
+are verified. Only the initial uploads used a CI-skip instruction;
+the user subsequently authorized the complete suites.
 
 Initial Windows benchmarks were timed-out partial/empty runs; all are preserved
 and invalidated. A minimized Windows soak was invalidated. Filter-coordinate

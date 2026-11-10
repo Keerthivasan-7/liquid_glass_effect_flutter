@@ -1,0 +1,26 @@
+D/ViewRootImpl(24778): setSurfaceViewCreated, created:true
+D/Surface (24778): Surface::disconnect(this=0xcdb61800,api=1)
+D/Surface (24778): Surface::connect(this=0xcdb61800,api=1)
+W/Looper  (24778): Slow Looper main: Long Msg: seq=6 plan=10:51:20.640  late=1433ms wall=3610ms running=0ms h=android.view.Choreographer$FrameHandler c=android.view.Choreographer$FrameDisplayEventReceiver
+W/Looper  (24778): Slow Looper main: doFrame is 1433ms late because of 4 msg, msg 1 took 1221ms (seq=2 late=14ms h=android.app.ActivityThread$H w=110), msg 2 took 1301ms (seq=3 late=1256ms h=android.app.ActivityThread$H w=159)
+I/Choreographer(24778): Skipped 208 frames!  The application may be doing too much work on its main thread.
+W/Looper  (24778): Slow Looper main: doFrame is 3483ms late because of 5 msg, msg 1 took 3610ms (seq=6 late=1433ms h=android.view.Choreographer$FrameHandler c=android.view.Choreographer$FrameDisplayEventReceiver)
+D/ProfileInstaller(24778): Installing profile for dev.liquidglass.liquid_glass_benchmark
+VMServiceFlutterDriver: Connecting to Flutter application at [local-test-service-uri-redacted]
+VMServiceFlutterDriver: Isolate found with number: 1317293057996463
+VMServiceFlutterDriver: Isolate 1317293057996463 is runnable.
+VMServiceFlutterDriver: Isolate is paused at start.
+VMServiceFlutterDriver: Attempting to resume isolate
+I/flutter (24778): 00:00 +0: repeatable native renderer matrix
+VMServiceFlutterDriver: Connected to Flutter application.
+I/glass_benchmar(24778): ProcessProfilingInfo new_methods=1418 is saved saved_to_disk=1 resolve_classes_delay=8000
+I/flutter (24778): MATRIX_INITIAL_SETTLE seconds=60
+I/flutter (24778): MATRIX_RESULT ordinary-1-compact-static repetition=1 samples=1658 complete=true
+I/flutter (24778): MATRIX_RESULT ordinary-1-compact-static repetition=2 samples=1689 complete=true
+I/flutter (24778): MATRIX_RESULT ordinary-1-compact-static repetition=3 samples=1657 complete=true
+I/flutter (24778): 03:22 +1: (tearDownAll)
+W/glass_benchmar(24778): Accessing hidden method Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z (greylist, linking, allowed)
+W/glass_benchmar(24778): Accessing hidden method Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object; (greylist, linking, allowed)
+I/flutter (24778): 03:22 +2: All tests passed!
+All tests passed.
+Leaving the application running.

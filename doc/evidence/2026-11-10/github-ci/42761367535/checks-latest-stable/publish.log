@@ -1,0 +1,275 @@
+Resolving dependencies...
+Downloading packages...
+  material_color_utilities 0.13.0 (0.13.1 available)
+  test_api 0.7.12 (0.7.15 available)
+Got dependencies!
+2 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Publishing liquid_glass_effect_flutter 0.1.0-dev.1 to https://pub.dev:
+├── CHANGELOG.md (6 KB)
+├── CONTRIBUTING.md (1 KB)
+├── LICENSE (1 KB)
+├── README.md (8 KB)
+├── analysis_options.yaml (<1 KB)
+├── assets
+│   └── showcase
+│       ├── comfort-opaque.png (97 KB)
+│       ├── controls-dark.png (95 KB)
+│       └── materials-light.png (95 KB)
+├── doc
+│   ├── CAPTURE_CONTRACT.md (4 KB)
+│   ├── COMPATIBILITY.md (9 KB)
+│   ├── DELIVERY_NOTES.md (4 KB)
+│   ├── ENGINEERING_REPORT.md (7 KB)
+│   ├── FOUR_DAY_DELIVERY.md (2 KB)
+│   ├── IMPLEMENTATION_PLAN.md (11 KB)
+│   ├── INTEGRATION_GUIDE.md (6 KB)
+│   ├── MILESTONE_AUDIT.md (8 KB)
+│   ├── MILESTONE_PROGRESS.md (10 KB)
+│   ├── PERFORMANCE.md (7 KB)
+│   ├── PHYSICS_MODEL.md (5 KB)
+│   ├── PUBLISHING.md (2 KB)
+│   ├── REFERENCE_COMPARISON.md (8 KB)
+│   ├── RELEASE_CHECKLIST.md (4 KB)
+│   ├── RESEARCH.md (5 KB)
+│   └── VERIFIED_PORTABLE_RENDERER_PLAN.md (30 KB)
+├── example
+│   ├── README.md (5 KB)
+│   ├── analysis_options.yaml (1 KB)
+│   ├── android
+│   │   ├── app
+│   │   │   ├── build.gradle.kts (1 KB)
+│   │   │   └── src
+│   │   │       ├── debug
+│   │   │       │   └── AndroidManifest.xml (<1 KB)
+│   │   │       ├── main
+│   │   │       │   ├── AndroidManifest.xml (2 KB)
+│   │   │       │   ├── kotlin
+│   │   │       │   │   └── dev
+│   │   │       │   │       └── liquidglass
+│   │   │       │   │           └── liquid_glass_showcase
+│   │   │       │   │               └── MainActivity.kt (4 KB)
+│   │   │       │   └── res
+│   │   │       │       ├── drawable
+│   │   │       │       │   └── launch_background.xml (<1 KB)
+│   │   │       │       ├── drawable-v21
+│   │   │       │       │   └── launch_background.xml (<1 KB)
+│   │   │       │       ├── mipmap-hdpi
+│   │   │       │       │   └── ic_launcher.png (<1 KB)
+│   │   │       │       ├── mipmap-mdpi
+│   │   │       │       │   └── ic_launcher.png (<1 KB)
+│   │   │       │       ├── mipmap-xhdpi
+│   │   │       │       │   └── ic_launcher.png (<1 KB)
+│   │   │       │       ├── mipmap-xxhdpi
+│   │   │       │       │   └── ic_launcher.png (1 KB)
+│   │   │       │       ├── mipmap-xxxhdpi
+│   │   │       │       │   └── ic_launcher.png (1 KB)
+│   │   │       │       ├── values
+│   │   │       │       │   └── styles.xml (<1 KB)
+│   │   │       │       └── values-night
+│   │   │       │           └── styles.xml (<1 KB)
+│   │   │       └── profile
+│   │   │           └── AndroidManifest.xml (<1 KB)
+│   │   ├── build.gradle.kts (<1 KB)
+│   │   ├── gradle
+│   │   │   └── wrapper
+│   │   │       └── gradle-wrapper.properties (<1 KB)
+│   │   ├── gradle.properties (<1 KB)
+│   │   └── settings.gradle.kts (<1 KB)
+│   ├── integration_test
+│   │   ├── renderer_contract_test.dart (2 KB)
+│   │   ├── renderer_qualification_test.dart (<1 KB)
+│   │   ├── renderer_soak_test.dart (10 KB)
+│   │   └── support
+│   │       └── android_surface_readback.dart (1 KB)
+│   ├── ios
+│   │   ├── Flutter
+│   │   │   ├── AppFrameworkInfo.plist (<1 KB)
+│   │   │   ├── Debug.xcconfig (<1 KB)
+│   │   │   └── Release.xcconfig (<1 KB)
+│   │   ├── Runner
+│   │   │   ├── AppDelegate.swift (<1 KB)
+│   │   │   ├── Assets.xcassets
+│   │   │   │   ├── AppIcon.appiconset
+│   │   │   │   │   ├── Contents.json (2 KB)
+│   │   │   │   │   ├── Icon-App-1024x1024@1x.png (10 KB)
+│   │   │   │   │   ├── Icon-App-20x20@1x.png (<1 KB)
+│   │   │   │   │   ├── Icon-App-20x20@2x.png (<1 KB)
+│   │   │   │   │   ├── Icon-App-20x20@3x.png (<1 KB)
+│   │   │   │   │   ├── Icon-App-29x29@1x.png (<1 KB)
+│   │   │   │   │   ├── Icon-App-29x29@2x.png (<1 KB)
+│   │   │   │   │   ├── Icon-App-29x29@3x.png (<1 KB)
+│   │   │   │   │   ├── Icon-App-40x40@1x.png (<1 KB)
+│   │   │   │   │   ├── Icon-App-40x40@2x.png (<1 KB)
+│   │   │   │   │   ├── Icon-App-40x40@3x.png (<1 KB)
+│   │   │   │   │   ├── Icon-App-60x60@2x.png (<1 KB)
+│   │   │   │   │   ├── Icon-App-60x60@3x.png (1 KB)
+│   │   │   │   │   ├── Icon-App-76x76@1x.png (<1 KB)
+│   │   │   │   │   ├── Icon-App-76x76@2x.png (1 KB)
+│   │   │   │   │   └── Icon-App-83.5x83.5@2x.png (1 KB)
+│   │   │   │   └── LaunchImage.imageset
+│   │   │   │       ├── Contents.json (<1 KB)
+│   │   │   │       ├── LaunchImage.png (<1 KB)
+│   │   │   │       ├── LaunchImage@2x.png (<1 KB)
+│   │   │   │       ├── LaunchImage@3x.png (<1 KB)
+│   │   │   │       └── README.md (<1 KB)
+│   │   │   ├── Base.lproj
+│   │   │   │   ├── LaunchScreen.storyboard (2 KB)
+│   │   │   │   └── Main.storyboard (1 KB)
+│   │   │   ├── Info.plist (2 KB)
+│   │   │   ├── Runner-Bridging-Header.h (<1 KB)
+│   │   │   └── SceneDelegate.swift (<1 KB)
+│   │   ├── Runner.xcodeproj
+│   │   │   ├── project.pbxproj (25 KB)
+│   │   │   ├── project.xcworkspace
+│   │   │   │   ├── contents.xcworkspacedata (<1 KB)
+│   │   │   │   └── xcshareddata
+│   │   │   │       ├── IDEWorkspaceChecks.plist (<1 KB)
+│   │   │   │       └── WorkspaceSettings.xcsettings (<1 KB)
+│   │   │   └── xcshareddata
+│   │   │       └── xcschemes
+│   │   │           └── Runner.xcscheme (4 KB)
+│   │   ├── Runner.xcworkspace
+│   │   │   ├── contents.xcworkspacedata (<1 KB)
+│   │   │   └── xcshareddata
+│   │   │       ├── IDEWorkspaceChecks.plist (<1 KB)
+│   │   │       └── WorkspaceSettings.xcsettings (<1 KB)
+│   │   └── RunnerTests
+│   │       └── RunnerTests.swift (<1 KB)
+│   ├── lib
+│   │   ├── main.dart (27 KB)
+│   │   └── showcase_material.dart (<1 KB)
+│   ├── linux
+│   │   ├── CMakeLists.txt (4 KB)
+│   │   ├── flutter
+│   │   │   ├── CMakeLists.txt (2 KB)
+│   │   │   ├── generated_plugin_registrant.cc (<1 KB)
+│   │   │   ├── generated_plugin_registrant.h (<1 KB)
+│   │   │   └── generated_plugins.cmake (<1 KB)
+│   │   └── runner
+│   │       ├── CMakeLists.txt (<1 KB)
+│   │       ├── main.cc (<1 KB)
+│   │       ├── my_application.cc (5 KB)
+│   │       └── my_application.h (<1 KB)
+│   ├── macos
+│   │   ├── Flutter
+│   │   │   ├── Flutter-Debug.xcconfig (<1 KB)
+│   │   │   ├── Flutter-Release.xcconfig (<1 KB)
+│   │   │   └── GeneratedPluginRegistrant.swift (<1 KB)
+│   │   ├── Runner
+│   │   │   ├── AppDelegate.swift (<1 KB)
+│   │   │   ├── Assets.xcassets
+│   │   │   │   └── AppIcon.appiconset
+│   │   │   │       ├── Contents.json (1 KB)
+│   │   │   │       ├── app_icon_1024.png (100 KB)
+│   │   │   │       ├── app_icon_128.png (5 KB)
+│   │   │   │       ├── app_icon_16.png (<1 KB)
+│   │   │   │       ├── app_icon_256.png (13 KB)
+│   │   │   │       ├── app_icon_32.png (1 KB)
+│   │   │   │       ├── app_icon_512.png (35 KB)
+│   │   │   │       └── app_icon_64.png (2 KB)
+│   │   │   ├── Base.lproj
+│   │   │   │   └── MainMenu.xib (23 KB)
+│   │   │   ├── Configs
+│   │   │   │   ├── AppInfo.xcconfig (<1 KB)
+│   │   │   │   ├── Debug.xcconfig (<1 KB)
+│   │   │   │   ├── Release.xcconfig (<1 KB)
+│   │   │   │   └── Warnings.xcconfig (<1 KB)
+│   │   │   ├── DebugProfile.entitlements (<1 KB)
+│   │   │   ├── Info.plist (1 KB)
+│   │   │   ├── MainFlutterWindow.swift (<1 KB)
+│   │   │   └── Release.entitlements (<1 KB)
+│   │   ├── Runner.xcodeproj
+│   │   │   ├── project.pbxproj (28 KB)
+│   │   │   ├── project.xcworkspace
+│   │   │   │   └── xcshareddata
+│   │   │   │       └── IDEWorkspaceChecks.plist (<1 KB)
+│   │   │   └── xcshareddata
+│   │   │       └── xcschemes
+│   │   │           └── Runner.xcscheme (4 KB)
+│   │   ├── Runner.xcworkspace
+│   │   │   ├── contents.xcworkspacedata (<1 KB)
+│   │   │   └── xcshareddata
+│   │   │       └── IDEWorkspaceChecks.plist (<1 KB)
+│   │   └── RunnerTests
+│   │       └── RunnerTests.swift (<1 KB)
+│   ├── pubspec.yaml (<1 KB)
+│   ├── test_driver
+│   │   ├── integration_test.dart (2 KB)
+│   │   └── renderer_report_validation.dart (1 KB)
+│   ├── web
+│   │   ├── favicon.png (<1 KB)
+│   │   ├── icons
+│   │   │   ├── Icon-192.png (5 KB)
+│   │   │   ├── Icon-512.png (8 KB)
+│   │   │   ├── Icon-maskable-192.png (5 KB)
+│   │   │   └── Icon-maskable-512.png (20 KB)
+│   │   ├── index.html (1 KB)
+│   │   └── manifest.json (<1 KB)
+│   └── windows
+│       ├── CMakeLists.txt (4 KB)
+│       ├── flutter
+│       │   ├── CMakeLists.txt (3 KB)
+│       │   ├── generated_plugin_registrant.cc (<1 KB)
+│       │   ├── generated_plugin_registrant.h (<1 KB)
+│       │   └── generated_plugins.cmake (<1 KB)
+│       └── runner
+│           ├── CMakeLists.txt (1 KB)
+│           ├── Runner.rc (3 KB)
+│           ├── flutter_window.cpp (2 KB)
+│           ├── flutter_window.h (<1 KB)
+│           ├── main.cpp (1 KB)
+│           ├── resource.h (<1 KB)
+│           ├── resources
+│           │   └── app_icon.ico (32 KB)
+│           ├── runner.exe.manifest (<1 KB)
+│           ├── utils.cpp (2 KB)
+│           ├── utils.h (<1 KB)
+│           ├── win32_window.cpp (8 KB)
+│           └── win32_window.h (3 KB)
+├── lib
+│   ├── liquid_glass_effect_flutter.dart (<1 KB)
+│   ├── liquid_glass_flutter.dart (<1 KB)
+│   ├── liquid_optics_flutter.dart (<1 KB)
+│   └── src
+│       ├── configuration
+│       │   ├── liquid_glass_accessibility.dart (1 KB)
+│       │   └── liquid_glass_config.dart (15 KB)
+│       ├── geometry
+│       │   └── liquid_glass_shape.dart (1 KB)
+│       ├── rendering
+│       │   ├── capture_footprint.dart (4 KB)
+│       │   ├── liquid_glass_capabilities.dart (<1 KB)
+│       │   └── shader_manager.dart (1 KB)
+│       └── widgets
+│           ├── liquid_glass.dart (44 KB)
+│           ├── liquid_glass_group.dart (7 KB)
+│           ├── liquid_glass_scene.dart (1 KB)
+│           └── liquid_glass_scope.dart (17 KB)
+├── pubspec.yaml (1 KB)
+├── shaders
+│   ├── liquid_glass.frag (17 KB)
+│   └── liquid_glass_capture.frag (18 KB)
+└── test
+    ├── accessibility_test.dart (10 KB)
+    ├── capture_footprint_test.dart (5 KB)
+    ├── configuration_test.dart (2 KB)
+    ├── geometry_test.dart (<1 KB)
+    ├── renderer_fixture_test.dart (3 KB)
+    ├── renderer_report_validation_test.dart (2 KB)
+    ├── shader_binding_test.dart (7 KB)
+    ├── shader_contract_test.dart (3 KB)
+    ├── support
+    │   ├── browser_runtime.dart (<1 KB)
+    │   ├── browser_runtime_stub.dart (<1 KB)
+    │   ├── browser_runtime_web.dart (1 KB)
+    │   ├── renderer_contract_suite.dart (30 KB)
+    │   └── renderer_fixture.dart (10 KB)
+    ├── visual_contract_test.dart (<1 KB)
+    └── widget_test.dart (15 KB)
+
+Total compressed archive size: 615 KB.
+Validating package...
+The server may enforce additional checks.
+
+Package has 0 warnings.

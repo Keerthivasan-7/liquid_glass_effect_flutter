@@ -1,0 +1,46 @@
+[
+  {
+    "mutation": "refraction-sign",
+    "source": "shaders/liquid_glass_capture.frag",
+    "before": "vec3(edge_normal * slope, 1.0)",
+    "after": "vec3(-edge_normal * slope, 1.0)",
+    "test": "convex capture samples toward its center and preserves the flat interior",
+    "exitCode": 1,
+    "detected": true,
+    "sourceRestored": true,
+    "restoredSha256": "b2f4d6031b2ce44040f2ec38e5583216a103addd68ae3cd0e5829d8cde4fbf47"
+  },
+  {
+    "mutation": "crop-origin",
+    "source": "lib/src/widgets/liquid_glass.dart",
+    "before": "scopeOrigin - captureRect.topLeft",
+    "after": "scopeOrigin",
+    "test": "crop origin and fractional capture scale preserve coordinates",
+    "exitCode": 1,
+    "detected": true,
+    "sourceRestored": true,
+    "restoredSha256": "9cf3d343d1574d91f8237bed4bdf45bd4f2718b65357e41b3fb237646354b8a3"
+  },
+  {
+    "mutation": "uniform-value",
+    "source": "lib/src/widgets/liquid_glass.dart",
+    "before": "..setFloat(7, _config.refractionStrength)",
+    "after": "..setFloat(7, _config.fresnelStrength)",
+    "test": "capture uniform names, types, order, and Dart values match",
+    "exitCode": 1,
+    "detected": true,
+    "sourceRestored": true,
+    "restoredSha256": "9cf3d343d1574d91f8237bed4bdf45bd4f2718b65357e41b3fb237646354b8a3"
+  },
+  {
+    "mutation": "blurred-foreground",
+    "source": "lib/src/widgets/liquid_glass.dart",
+    "before": "child: foreground,",
+    "after": "child: ImageFiltered(imageFilter: ui.ImageFilter.blur(sigmaX: 3, sigmaY: 3), child: foreground),",
+    "test": "composited foreground text and icon remain pixel sharp",
+    "exitCode": 1,
+    "detected": true,
+    "sourceRestored": true,
+    "restoredSha256": "9cf3d343d1574d91f8237bed4bdf45bd4f2718b65357e41b3fb237646354b8a3"
+  }
+]

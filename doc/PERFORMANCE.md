@@ -124,6 +124,33 @@ the old inward-refraction and stale-background defects; they do not supply an
 equivalent original timing baseline. See
 [the source record](evidence/2026-11-09/original-consumer-source/README.md).
 
-The user has deferred the approximately 2½-hour full matrix and asked to stop
-extended testing for the 13 November development handoff. Phone tests and
-installation remain deferred until the user makes the device available again.
+On 10 November the user requested all tests and explicitly made the phone
+available for the full matrix. That current-source run finished on 10 November:
+46 case groups and 138 complete measurements. Independent raw validation passes
+all individual measurements; 34 groups meet every fixed spread limit and twelve
+do not. Eleven failures concern build-time p50 spread. The remaining case,
+ten animated blur-fallback surfaces, fails raster and total-span p99 spread.
+The runner correctly exits one: the full repeatability gate has not passed.
+See [every result and attempt](evidence/2026-11-10/performance-physical-current/README.md)
+and the [machine-readable summary](evidence/2026-11-10/performance-physical-current/summary.json).
+A completed measurement is not automatically a repeatable group, and
+repeatability does not establish a 60/120-Hz performance target.
+
+This physical-device run records host free memory before and after each group
+but explicitly uses a zero-MiB host memory gate. This follows the physical-phone
+policy; it does not apply the emulator's 2-GiB gate. The independent p50 max/min
+limit of 1.25 and p99 limit of 1.5 are unchanged. No before/after renderer speedup,
+GPU-time, energy or presentation-FPS claim is made. The full run lasted from
+05:20:51 to 08:04:47 UTC. Static variants still request frames at vsync and do
+not measure idle power. Continuous temperature/clock telemetry was not captured;
+the settling interval alone is not evidence of thermal stability.
+
+In the named static one-surface scene, balanced capture raster p50 ranges from
+63.61 to 63.79 ms across three runs, compared with 12.14–13.41 ms for the
+ordinary control. The balanced case exceeds the phone's 16.67-ms work budget;
+there is no smooth-60-Hz claim for that configuration. The ordinary scene also
+has tail-budget exceedances. These are whole-scene FrameTiming measurements,
+including the benchmark UI, rather than isolated shader/GPU costs. Use traces
+before attributing build variation or raster cost to a particular mechanism.
+Do not silently reduce optics or select only the best repetitions to close the
+gate. Preserve this baseline before targeted profiling or protocol changes.

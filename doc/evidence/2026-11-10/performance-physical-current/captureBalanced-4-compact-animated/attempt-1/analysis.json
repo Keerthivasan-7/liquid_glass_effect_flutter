@@ -1,0 +1,127 @@
+{
+  "valid": false,
+  "errors": [
+    "unstable build.p50Ms"
+  ],
+  "runs": [
+    {
+      "valid": true,
+      "errors": [],
+      "statistics": {
+        "build": {
+          "p50Ms": 4.825,
+          "p90Ms": 31.545,
+          "p99Ms": 39.004,
+          "worstMs": 41.79
+        },
+        "raster": {
+          "p50Ms": 72.873,
+          "p90Ms": 74.11,
+          "p99Ms": 77.365,
+          "worstMs": 89.156
+        },
+        "totalSpan": {
+          "p50Ms": 149.693,
+          "p90Ms": 156.201,
+          "p99Ms": 158.503,
+          "worstMs": 175.698
+        }
+      },
+      "sampleCount": 382
+    },
+    {
+      "valid": true,
+      "errors": [],
+      "statistics": {
+        "build": {
+          "p50Ms": 3.34,
+          "p90Ms": 18.42,
+          "p99Ms": 37.142,
+          "worstMs": 51.448
+        },
+        "raster": {
+          "p50Ms": 72.608,
+          "p90Ms": 74.165,
+          "p99Ms": 76.758,
+          "worstMs": 83.255
+        },
+        "totalSpan": {
+          "p50Ms": 148.332,
+          "p90Ms": 155.771,
+          "p99Ms": 159.258,
+          "worstMs": 167.604
+        }
+      },
+      "sampleCount": 385
+    },
+    {
+      "valid": true,
+      "errors": [],
+      "statistics": {
+        "build": {
+          "p50Ms": 4.693,
+          "p90Ms": 29.663,
+          "p99Ms": 37.581,
+          "worstMs": 41.569
+        },
+        "raster": {
+          "p50Ms": 72.802,
+          "p90Ms": 73.891,
+          "p99Ms": 77.265,
+          "worstMs": 82.427
+        },
+        "totalSpan": {
+          "p50Ms": 149.736,
+          "p90Ms": 156.36,
+          "p99Ms": 158.272,
+          "worstMs": 161.678
+        }
+      },
+      "sampleCount": 382
+    }
+  ],
+  "spread": {
+    "build": {
+      "p50Ms": {
+        "maxMinRatio": 1.444610778443114,
+        "limit": 1.25,
+        "stable": false
+      },
+      "p99Ms": {
+        "maxMinRatio": 1.050131926121372,
+        "limit": 1.5,
+        "stable": true
+      }
+    },
+    "raster": {
+      "p50Ms": {
+        "maxMinRatio": 1.0036497355663287,
+        "limit": 1.25,
+        "stable": true
+      },
+      "p99Ms": {
+        "maxMinRatio": 1.0079079705047032,
+        "limit": 1.5,
+        "stable": true
+      }
+    },
+    "totalSpan": {
+      "p50Ms": {
+        "maxMinRatio": 1.0094652536202573,
+        "limit": 1.25,
+        "stable": true
+      },
+      "p99Ms": {
+        "maxMinRatio": 1.0062297816417307,
+        "limit": 1.5,
+        "stable": true
+      }
+    }
+  },
+  "complete": false,
+  "rawSha256": {
+    "1-captureBalanced-4-compact-animated-run-1.json": "82e549ceed4ad8fde654dcfc75045f0214c8be75837efc0fd265f6a06f28ad35",
+    "2-captureBalanced-4-compact-animated-run-2.json": "e253805358bfcbd9eb674066be71f6b02761f7bff1a0792655ce560f15c8e518",
+    "3-captureBalanced-4-compact-animated-run-3.json": "4284efe37b32c732606ba1d45a683b6fdee4d365fe84f28a1c9ad6b0177b6eb9"
+  }
+}

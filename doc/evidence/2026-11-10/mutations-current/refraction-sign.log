@@ -1,0 +1,28 @@
+00:00 +0: loading C:/Projects/Flutter/Liquid Glass/.research/full-tests-2026-11-10/minimum/test/visual_contract_test.dart
+00:00 +0: convex capture samples toward its center and preserves the flat interior
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: a value greater than <76>
+  Actual: <64>
+   Which: is not a value greater than <76>
+
+When the exception was thrown, this was the stack:
+#4      registerRendererContractTests.<anonymous closure> (file:///C:/Projects/Flutter/Liquid%20Glass/.research/full-tests-2026-11-10/minimum/test/support/renderer_contract_suite.dart:208:5)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:193:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1064:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Projects/Flutter/Liquid%20Glass/.research/full-tests-2026-11-10/minimum/test/support/renderer_contract_suite.dart line 208
+The test description was:
+  convex capture samples toward its center and preserves the flat interior
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:00 +0 -1: convex capture samples toward its center and preserves the flat interior [E]
+  Test failed. See exception logs above.
+  The test description was: convex capture samples toward its center and preserves the flat interior
+  
+00:00 +0 -1: Some tests failed.

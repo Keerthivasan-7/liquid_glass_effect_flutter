@@ -1,74 +1,82 @@
-# Development handoff — 10 November 2026
+# Development delivery — 13 November 2026
 
-Delivery deadline: **13 November 2026**. This is a development handoff, not a
-production release or completion of the Verified Portable Renderer milestone.
+Updated 10 November. The first development prerelease is available on
+[pub.dev](https://pub.dev/packages/liquid_glass_effect_flutter). The Verified
+Portable Renderer milestone remains in progress; its remaining gates are below.
 
-## Included work
+## Deliverables
 
-- Portable capture fixes, conservative optical bounds, scroll freshness,
-  guarded image/picture retirement and accessibility policies from the
-  recorded renderer work.
-- Latest CPU rotation-axis precomputation in both shaders, without changing
-  optical parameters or transmission sample counts. No measured speedup claim.
-- Showcase with three functional sections: Materials, Controls and Comfort.
-  Four presets, local favorites, resettable fine adjustments, light/dark mode,
-  optional ambient highlights, scrollable captured decoration and comfort
-  previews. Favorites and tuning are session-only.
-- Complete app integration example, showcase instructions and reconciled
-  performance/release notes.
-- Refreshed structural library map (418 nodes, 478 edges, 20 communities) and
-  future CI improvements: explicit example/benchmark analysis plus SDK and
-  build-log artifacts on every platform build job. Hosted execution is pending.
-
-## Local deliverables
-
-Files are in `.research/artifacts/` in this workspace:
-
-| File | Purpose |
+| Deliverable | Identity |
 |---|---|
-| `liquid-glass-showcase-development-armv7.apk` | Final showcase profile build for 32-bit ARM Android; development signing, not a store release |
-| `liquid-optics-flutter-0.1.0-dev.1-source.zip` | Library, shaders, tests, documentation and example source; no research downloads, evidence or build outputs |
-| `showcase-delivery-manifest.json` | Artifact hashes, exact compiled source hashes and build SDK identity |
-| `liquid-optics-flutter-dev-handoff-2026-11-10.bundle` | Offline local Git history, including source and recorded evidence, tagged `dev-handoff-2026-11-10` |
+| Flutter package | `liquid_glass_effect_flutter: ^0.1.0-dev.1` |
+| Published source | Git tag `v0.1.0-dev.1`, commit `954ea73f3e2523de83667dd3b7f06f11efb5edfb` |
+| Canonical repository | [Keerthivasan-7/liquid_glass_effect_flutter](https://github.com/Keerthivasan-7/liquid_glass_effect_flutter) |
+| Showcase | Repository `example/`: Materials, Controls and Comfort; four presets, session favorites, resettable adjustments, theme/highlight controls and accessibility previews |
+| Integration instructions | [Complete guide](INTEGRATION_GUIDE.md) and [showcase instructions](../example/README.md) |
+| Publication proof | [Registry archive checksum, exclusions and prepared-file hashes](evidence/2026-11-10/pub-publication.json) |
 
-The APK uses Flutter 3.47.9. It is not a universal Android binary. It has not
-been installed on the phone after the user's testing deferral. The Windows
-preview was built with Flutter 3.44.1 before the final small settings/copy
-cleanup; it is left open for the user and is not the final packaged executable.
-The source ZIP is a development source bundle, not a published pub archive or
-a source commit. Its example still resolves the library with `path: ../`.
-The separate Git bundle preserves the local development revision and evidence.
-It can be restored with `git clone PATH_TO_BUNDLE NEW_FOLDER`; use the quoted
-absolute bundle path if it contains spaces. This offline snapshot predates the
-remote connection. The workspace now uses
-`https://github.com/Keerthivasan-7/liquid_glass_effect_flutter` as `origin`.
+The registry archive is 628,400 bytes and contains 181 files. Its checksum
+matches pub.dev; twenty-one prepared source/documentation/image hashes were
+verified after download. Local research, raw evidence, build outputs and graph
+caches are excluded. The source tag is immutable; later test-driver hardening
+and qualification records are on GitHub main and have not been republished.
 
-## Evidence and remaining work
+Both shaders reuse a CPU-computed rotation axis for sampling and highlights.
+The optical parameters, transmission sample counts and quality settings are
+unchanged. This removes repeated constant calculations but has no measured
+before/after speedup claim. The structural library graph covers thirteen Dart
+files: 419 nodes, 479 edges and 21 communities.
 
-Earlier visual/endurance results cover their recorded pre-axis source snapshots.
-The current Android build compiles the final showcase and latest shader layout;
-build success does not replace runtime qualification. Extended testing and phone
-installation remain deferred. One ordinary-control timing group is accepted;
-the glass timing baseline and full 46-case matrix remain open.
+## Current checks
 
-Local history begins at this development handoff and does not reconstruct an
-original pre-change commit. The user has now supplied the canonical GitHub
-repository and package metadata links have been updated. Hosted CI, merge
-rules, a verified release tag and the final publication dry run remain open.
-The initial upload skips automated checks to respect the testing deferral. Physical
-iOS, Vulkan and other unverified backends retain their explicit limitations.
-Human accessibility/product-background review also remains open.
+- Hosted [run 42761367535](https://github.com/Keerthivasan-7/liquid_glass_effect_flutter/actions/runs/42761367535)
+  at `970d38f`: all five jobs pass. Minimum Flutter 3.32.0 and stable 3.47.9 each
+  pass formatting, package/example/benchmark analysis, 63 package checks, nine
+  benchmark checks, twelve independent raw-validator checks and a zero-warning
+  publication dry run. Android, Windows and web build jobs pass separately.
+- The published renderer passes eighteen visual contracts on each of the
+  physical Xiaomi Android 10 / Impeller GLES phone, Windows/Skia, CanvasKit and
+  skwasm, plus the owned Android emulator GLES target. All fifteen renderer
+  source hashes match the published tag: 90 contracts across five targets.
+- Separate foreground endurance retries pass on the phone (600,640 ms,
+  120 disposals) and Windows (600,297 ms, 106 disposals). Both retain bounded
+  tracked images and observed RSS. The current emulator also passes 600,536 ms
+  and 120 disposals, with final healthy services and an empty crash buffer.
+  These test iterations are not display FPS.
+- Current four required mutations are detected and restored byte for byte.
+  A corrected host driver rejects incomplete soak reports; eight regression
+  checks and replays of seven actual saved exports cover this failure mode.
+- All five hosted checks are required on `main`, bound to GitHub Actions, with
+  up-to-date branches and administrator enforcement. The saved settings were
+  read back and verified; force pushes and branch deletion are blocked.
 
-## Work to finish by the deadline
+See [current runtime evidence](evidence/2026-11-10/runtime-current/README.md),
+[hosted check records](evidence/2026-11-10/github-ci/42761367535/checks.json)
+and [the requirement audit](MILESTONE_AUDIT.md).
 
-1. Review the showcase appearance and controls during normal development use;
-   address concrete feedback without adding more optical features.
-2. Keep the source package, integration instructions and final delivery manifest
-   together. Create source-hosting metadata only when a real repository exists.
-3. Freeze the development deliverable by 13 November and carry the remaining
-   qualification items forward explicitly. Resume device work only when the
-   user makes the phone available and requests it.
+## Remaining work
 
-See [the four-day plan](FOUR_DAY_DELIVERY.md),
-[milestone audit](MILESTONE_AUDIT.md) and
-[release checklist](RELEASE_CHECKLIST.md) for detailed scope.
+1. Resolve the repeatability gate after targeted profiling. The full phone run
+   collected 138 individually valid measurements; 34 of 46 groups meet fixed
+   spread limits and twelve fail. [All data and failures](evidence/2026-11-10/performance-physical-current/README.md)
+   are retained. This is not a full-matrix or 60/120-Hz performance pass.
+2. Obtain human showcase, accessibility and photographic/product-background
+   review. Automated contracts cover selected deterministic states.
+3. Investigate background/resume separately. The phone's interrupted soak lost
+   its surface and encountered a native GL-context failure after the user locked
+   or switched apps. The successful foreground retry does not prove this fixed.
+
+The original equivalent pre-change timing baseline was not obtained. Recovered
+old consumer sources exhibit different optical behavior, so they do not supply
+a fair historical performance comparison. Keep this deviation explicit; do not
+claim a measured renderer speedup. Physical iOS/Metal, Android Vulkan, macOS and
+Linux remain unverified and require separate evidence before support claims.
+
+Earlier development ZIP/APK/Git-bundle artifacts remain in the ignored local
+`.research/artifacts/` directory with their original manifests. They predate the
+package rename/publication and are historical snapshots, not replacements for
+the published package or its verified source tag. Local Git history begins at
+the development handoff and does not reconstruct an original pre-change commit.
+
+The deadline remains **13 November 2026**. Freeze the agreed deliverable without
+adding new optical features; report unresolved qualification items explicitly.
