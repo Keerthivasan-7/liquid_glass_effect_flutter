@@ -45,13 +45,21 @@ def validate_report(report):
     errors = []
     frames = report.get("frames", [])
     metadata = report.get("metadata", {})
-    if metadata.get("benchmarkProtocolVersion") == 6:
+    protocol = metadata.get("benchmarkProtocolVersion")
+    if protocol not in (5, 6, 7):
+        errors.append("unknown benchmark protocol")
+    if protocol in (6, 7):
         required = metadata.get("requiredInitialSettleUs")
         age = metadata.get("appSessionAgeAtStartUs")
         if type(required) is not int or required < 60_000_000:
             errors.append("initial settling policy shorter than sixty seconds")
         elif type(age) is not int or age < required:
             errors.append("application session did not complete initial settling")
+    if protocol == 7:
+        if type(metadata.get("hudRefreshHz")) is not int or metadata["hudRefreshHz"] != 0:
+            errors.append("measurement display was not frozen")
+        if type(metadata.get("idleHudRefreshHz")) is not int or metadata["idleHudRefreshHz"] != 4:
+            errors.append("missing idle display cadence")
     if not frames or len(frames) != report.get("sampleCount"):
         errors.append("empty or mismatched sample count")
     for frame in frames:
@@ -124,13 +132,18 @@ def validate_report(report):
             "sampleCount": len(frames)}
 
 
-def validate_group(reports):
+def validate_group(reports, protocols=()):
     checked = [validate_report(report) for report in reports]
     errors = []
+    if any(expected is not None and any(
+            report.get("metadata", {}).get("benchmarkProtocolVersion") != expected
+            for report in reports) for expected in protocols):
+        errors.append("result protocol does not match manifest or runner")
     if len(reports) != 3 or sorted(r.get("repetition", 0) for r in reports) != [1, 2, 3]:
         errors.append("requires exactly repetitions 1, 2, 3")
     configurations = [{k: r.get("metadata", {}).get(k)
-                       for k in (*CONFIG_KEYS, "benchmarkProtocolVersion", "requiredInitialSettleUs")}
+                       for k in (*CONFIG_KEYS, "benchmarkProtocolVersion", "requiredInitialSettleUs",
+                                 "hudRefreshHz", "idleHudRefreshHz")}
                       for r in reports]
     if configurations and any(c != configurations[0] for c in configurations):
         errors.append("different configurations in repetition group")
@@ -170,7 +183,9 @@ def analyze(root):
             manifest = json.loads((directory / "matrix.json").read_text(encoding="utf-8-sig"))
             paths = [inside(directory, name) for name in manifest["results"]]
             reports = [json.loads(path.read_text(encoding="utf-8-sig")) for path in paths]
-            result = validate_group(reports)
+            result = validate_group(reports, protocols=(
+                index["configuration"].get("protocolVersion"),
+                manifest.get("benchmarkProtocolVersion")))
             result["rawSha256"] = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
             if not manifest.get("completed") or manifest.get("smokeOnly"):
                 result["valid"] = False
@@ -201,7 +216,9 @@ def main():
     if args.group:
         manifest = json.loads((args.directory / "matrix.json").read_text(encoding="utf-8-sig"))
         paths = [inside(args.directory, name) for name in manifest["results"]]
-        result = validate_group([json.loads(p.read_text(encoding="utf-8-sig")) for p in paths])
+        result = validate_group(
+            [json.loads(p.read_text(encoding="utf-8-sig")) for p in paths],
+            protocols=(manifest.get("benchmarkProtocolVersion"),))
         result["complete"] = result["valid"] and manifest.get("completed") is True and not manifest.get("smokeOnly")
         result["rawSha256"] = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
     else:

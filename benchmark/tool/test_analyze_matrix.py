@@ -12,8 +12,9 @@ def sample():
                "rasterUs": 2000, "totalUs": 4000} for i in range(30)]
     metadata = dict.fromkeys(CONFIG_KEYS, "observed")
     metadata.update(buildMode="profile", case="ordinary", refreshRateHz=60,
-                    benchmarkProtocolVersion=6, requiredInitialSettleUs=60_000_000,
+                    benchmarkProtocolVersion=7, requiredInitialSettleUs=60_000_000,
                     appSessionAgeAtStartUs=70_000_000,
+                    hudRefreshHz=0, idleHudRefreshHz=4,
                     opticalConfig=None, activePathsDuringSampling=[],
                     lifecycleAtStart="resumed", lifecycleAtEnd="resumed")
     return {"metadata": metadata, "frames": frames, "sampleCount": 30,
@@ -65,11 +66,59 @@ class RawValidationTest(unittest.TestCase):
         report["metadata"].update(case="captureBalanced", activePathsDuringSampling=["fallback"])
         self.assertFalse(validate_report(report)["valid"])
 
-    def test_rejects_unsettled_protocol_six_even_if_application_claims_qualified(self):
+    def test_rejects_unsettled_current_protocols_even_if_application_claims_qualified(self):
+        for protocol in (6, 7):
+            with self.subTest(protocol=protocol):
+                report = sample()
+                report["metadata"]["benchmarkProtocolVersion"] = protocol
+                report["metadata"]["appSessionAgeAtStartUs"] = 59_999_999
+                self.assertIn("application session did not complete initial settling",
+                              validate_report(report)["errors"])
+
+    def test_preserves_legacy_protocol_six_validation(self):
         report = sample()
-        report["metadata"]["appSessionAgeAtStartUs"] = 59_999_999
-        self.assertIn("application session did not complete initial settling",
-                      validate_report(report)["errors"])
+        report["metadata"]["benchmarkProtocolVersion"] = 6
+        report["metadata"]["hudRefreshHz"] = 4
+        report["metadata"].pop("idleHudRefreshHz")
+        self.assertTrue(validate_report(report)["valid"])
+
+    def test_rejects_unfrozen_or_missing_protocol_seven_display_policy(self):
+        for cadence in (4, None, False):
+            with self.subTest(cadence=cadence):
+                report = sample()
+                report["metadata"]["hudRefreshHz"] = cadence
+                self.assertIn("measurement display was not frozen",
+                              validate_report(report)["errors"])
+        report = sample()
+        report["metadata"].pop("idleHudRefreshHz")
+        self.assertIn("missing idle display cadence", validate_report(report)["errors"])
+
+    def test_rejects_unknown_protocol_instead_of_bypassing_policy(self):
+        report = sample()
+        report["metadata"]["benchmarkProtocolVersion"] = 999
+        self.assertIn("unknown benchmark protocol", validate_report(report)["errors"])
+
+    def test_cannot_mix_display_workloads_in_a_repetition_group(self):
+        reports = [sample() for _ in range(3)]
+        for repetition, report in enumerate(reports, 1):
+            report["repetition"] = repetition
+            report["metadata"]["benchmarkProtocolVersion"] = 6
+            report["metadata"]["hudRefreshHz"] = 4
+            report["metadata"].pop("idleHudRefreshHz")
+        reports[1]["metadata"]["hudRefreshHz"] = 0
+        self.assertIn("different configurations in repetition group",
+                      validate_group(reports)["errors"])
+
+    def test_rejects_historical_reports_relabelled_by_a_current_manifest(self):
+        reports = [sample() for _ in range(3)]
+        for repetition, report in enumerate(reports, 1):
+            report["repetition"] = repetition
+            report["metadata"]["benchmarkProtocolVersion"] = 6
+            report["metadata"]["hudRefreshHz"] = 4
+            report["metadata"].pop("idleHudRefreshHz")
+        self.assertTrue(validate_group(reports, protocols=(6, None))["valid"])
+        self.assertIn("result protocol does not match manifest or runner",
+                      validate_group(reports, protocols=(7, 7))["errors"])
 
     def test_rejects_focus_loss_even_if_application_claims_qualified(self):
         report = sample()
