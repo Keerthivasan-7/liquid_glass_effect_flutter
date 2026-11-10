@@ -3,6 +3,8 @@ import 'dart:io';
 
 import 'package:integration_test/integration_test_driver.dart';
 
+import 'renderer_report_validation.dart';
+
 Future<void> main() => integrationDriver(
       writeResponseOnFailure: true,
       responseDataCallback: (data) async {
@@ -46,5 +48,8 @@ Future<void> main() => integrationDriver(
         payload['recordedAtUtc'] = DateTime.now().toUtc().toIso8601String();
         await File('${directory.path}/runtime.json')
             .writeAsString(const JsonEncoder.withIndent('  ').convert(payload));
+        // Preserve artifacts before rejecting a false outer success after a
+        // test-framework timeout. Endurance completion must be explicit.
+        validateRendererReport(Map<String, dynamic>.from(data ?? {}));
       },
     );
