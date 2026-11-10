@@ -1,5 +1,18 @@
 # Changelog
 
+## Unreleased
+
+- Add Optics Studio with five backdrops, three finishes, interactive
+  lighting, a spacing control, replay and a large-text preview.
+- Add `LiquidGlassCluster` and `LiquidGlassMember` for a shared optical field
+  across up to four capsules in a capture scene. Keep foreground widgets and
+  their hit targets separate.
+- Add glass button, card, navigation and segmented controls. Navigation and
+  selection support keyboard activation, growing labels and reduced motion.
+- Add independent, bounded tap ripples and a separate vibrancy control.
+  Correct the near-transparent tint response, softbox edge interpolation and
+  sampling bounds for chromatic dispersion.
+
 ## 0.1.0-dev.1
 
 - Prepare the first pub.dev prerelease as `liquid_glass_effect_flutter`, with a

@@ -44,6 +44,7 @@ class LiquidGlassConfig {
     this.edgeWidth = 0.065,
     this.maxDisplacement = 20,
     this.saturation = 1.04,
+    this.vibrancy = 0,
     this.tint = const Color(0x10FFFFFF),
     this.lightDirection = const Offset(-0.65, -0.75),
     this.lightColor = Colors.white,
@@ -86,6 +87,7 @@ class LiquidGlassConfig {
         assert(edgeWidth > 0 && edgeWidth <= 0.5),
         assert(maxDisplacement >= 0 && maxDisplacement <= 64),
         assert(saturation >= 0 && saturation <= 2),
+        assert(vibrancy >= 0 && vibrancy <= 1),
         assert(lightIntensity >= 0 && lightIntensity <= 10),
         assert(motionStrength >= 0 && motionStrength <= 3),
         assert(noise >= 0 && noise <= 0.1),
@@ -219,6 +221,9 @@ class LiquidGlassConfig {
   final double edgeWidth;
   final double maxDisplacement;
   final double saturation;
+
+  /// Boosts muted midtone chroma while preserving neutrals and primary colors.
+  final double vibrancy;
   final Color tint;
   final Offset lightDirection;
   final Color lightColor;
@@ -266,6 +271,7 @@ class LiquidGlassConfig {
     double? edgeWidth,
     double? maxDisplacement,
     double? saturation,
+    double? vibrancy,
     Color? tint,
     Offset? lightDirection,
     Color? lightColor,
@@ -310,6 +316,7 @@ class LiquidGlassConfig {
         edgeWidth: edgeWidth ?? this.edgeWidth,
         maxDisplacement: maxDisplacement ?? this.maxDisplacement,
         saturation: saturation ?? this.saturation,
+        vibrancy: vibrancy ?? this.vibrancy,
         tint: tint ?? this.tint,
         lightDirection: lightDirection ?? this.lightDirection,
         lightColor: lightColor ?? this.lightColor,
@@ -357,6 +364,7 @@ class LiquidGlassConfig {
           edgeWidth == other.edgeWidth &&
           maxDisplacement == other.maxDisplacement &&
           saturation == other.saturation &&
+          vibrancy == other.vibrancy &&
           tint == other.tint &&
           lightDirection == other.lightDirection &&
           lightColor == other.lightColor &&
@@ -401,6 +409,7 @@ class LiquidGlassConfig {
         edgeWidth,
         maxDisplacement,
         saturation,
+        vibrancy,
         tint,
         lightDirection,
         lightColor,

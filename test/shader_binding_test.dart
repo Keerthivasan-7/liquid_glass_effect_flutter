@@ -16,6 +16,7 @@ const _configFields = <String, String>{
   'u_edge_width': 'edgeWidth',
   'u_max_displacement': 'maxDisplacement',
   'u_blur_sigma': 'blurSigma',
+  'u_vibrancy': 'vibrancy',
   'u_saturation': 'saturation',
   'u_noise': 'noise',
   'u_inner_shadow': 'innerShadow',
@@ -80,6 +81,41 @@ Map<String, List<String>> _manifest(bool capture) => <String, List<String>>{
         capture ? '_motionStrength' : 'motion.motionStrength'
       ],
       if (capture) ...<String, List<String>>{
+        'u_wave_0': <String>[
+          r'_waves.$1.origin.dx',
+          r'_waves.$1.origin.dy',
+          r'_waves.$1.age'
+        ],
+        'u_wave_1': <String>[
+          r'_waves.$2.origin.dx',
+          r'_waves.$2.origin.dy',
+          r'_waves.$2.age'
+        ],
+        'u_blend_radius': <String>['field?.blendRadius ?? 0'],
+        'u_capsule_0': <String>[
+          'field?.member(0).left ?? 0',
+          'field?.member(0).top ?? 0',
+          'field?.member(0).width ?? 0',
+          'field?.member(0).height ?? 0'
+        ],
+        'u_capsule_1': <String>[
+          'field?.member(1).left ?? 0',
+          'field?.member(1).top ?? 0',
+          'field?.member(1).width ?? 0',
+          'field?.member(1).height ?? 0'
+        ],
+        'u_capsule_2': <String>[
+          'field?.member(2).left ?? 0',
+          'field?.member(2).top ?? 0',
+          'field?.member(2).width ?? 0',
+          'field?.member(2).height ?? 0'
+        ],
+        'u_capsule_3': <String>[
+          'field?.member(3).left ?? 0',
+          'field?.member(3).top ?? 0',
+          'field?.member(3).width ?? 0',
+          'field?.member(3).height ?? 0'
+        ],
         'u_surface_size': <String>['size.width', 'size.height'],
         'u_scope_size': <String>['scopeSize.width', 'scopeSize.height'],
         'u_scope_origin': <String>['origin.dx', 'origin.dy'],
@@ -95,6 +131,16 @@ Map<String, List<String>> _manifest(bool capture) => <String, List<String>>{
         ],
       },
       if (!capture) ...<String, List<String>>{
+        'u_wave_0': <String>[
+          '_wave(0).origin.dx',
+          '_wave(0).origin.dy',
+          '_wave(0).age'
+        ],
+        'u_wave_1': <String>[
+          '_wave(1).origin.dx',
+          '_wave(1).origin.dy',
+          '_wave(1).age'
+        ],
         'u_surface_origin': <String>[
           'screenOrigin.dx * pixelsPerLogical',
           'screenOrigin.dy * pixelsPerLogical'

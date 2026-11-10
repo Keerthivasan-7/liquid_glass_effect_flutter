@@ -1,6 +1,6 @@
 # Integrating the development package
 
-This guide targets the current `0.1.0-dev.1` source package. Use Flutter 3.32
+This guide covers the development checkout. Use Flutter 3.32
 or later. The first prerelease is published on
 [pub.dev](https://pub.dev/packages/liquid_glass_effect_flutter).
 Its source repository is
@@ -19,6 +19,58 @@ dependencies:
 
 Run `flutter pub get` in your app. The package declares its own shader assets;
 you do not need to copy them into your app's asset list.
+
+## Joined controls in the development checkout
+
+Put a `LiquidGlassCluster` on the glass plane of a `LiquidGlassScene`.
+Each member supplies a stable ID, bounds in the cluster's logical coordinates,
+and an ordinary Flutter foreground widget. Changing those bounds during an
+animation moves the optics and the action together.
+
+```dart
+SizedBox(
+  width: 240,
+  height: 96,
+  child: LiquidGlassCluster(
+    blendRadius: 36,
+    members: [
+      LiquidGlassMember(
+        id: 'minus',
+        bounds: const Rect.fromLTWH(42, 20, 68, 56),
+        child: IconButton(
+          tooltip: 'Zoom out', onPressed: zoomOut, icon: const Icon(Icons.remove),
+        ),
+      ),
+      LiquidGlassMember(
+        id: 'plus',
+        bounds: const Rect.fromLTWH(118, 20, 68, 56),
+        child: IconButton(
+          tooltip: 'Zoom in', onPressed: zoomIn, icon: const Icon(Icons.add),
+        ),
+      ),
+    ],
+  ),
+)
+```
+
+Use the same material for every member of a cluster. The capture renderer
+combines up to four axis-aligned capsules in list order. The whole cluster
+can be positioned as one widget. Its padded paint box includes the bridge
+and optical sampling reach. Leave space around controls inside the parent.
+For more than four members, an explicit filter renderer, or a fallback
+treatment, the controls use independent silhouettes. Reduced transparency
+and high contrast choose the opaque treatment. Each action keeps its own
+foreground hit area. The optical bridge adds no action.
+
+`LiquidGlassLightingController.updateFromTilt` accepts pitch and roll in
+radians. Use `updateFromPointer` for local pointer coordinates and the size
+of the tracked area. A level pose or centered pointer gives front lighting.
+The two most recent pointer-down impulses can overlap even with a fixed
+light. Reduced motion suppresses their animation.
+
+The Studio contains working examples of `LiquidGlassCard`,
+`LiquidGlassButton`, `LiquidGlassNavBar`, and
+`LiquidGlassSegmentedControl<T>`. [Studio source](../example/lib/studio/studio_page.dart)
 
 ## A working two-plane screen
 
