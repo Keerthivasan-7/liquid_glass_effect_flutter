@@ -3,13 +3,13 @@
 Liquid glass surfaces for Flutter with refracted backgrounds, soft material
 lighting, and crisp foreground controls.
 
-**First prerelease: `0.1.0-dev.1` · Flutter 3.32+ · BSD-3-Clause**
+**First prerelease: [0.1.0-dev.1](https://pub.dev/packages/liquid_glass_effect_flutter/versions/0.1.0-dev.1) · Flutter 3.32+ · BSD-3-Clause**
 
 ![Regular liquid glass over the live showcase background](assets/showcase/materials-light.png)
 
 [Run the showcase](example/README.md) · [Integration guide](doc/INTEGRATION_GUIDE.md) ·
 [Renderer compatibility](doc/COMPATIBILITY.md) ·
-[Source](https://github.com/Keerthivasan-7/liquid_glass_effect)
+[Source](https://github.com/Keerthivasan-7/liquid_glass_effect_flutter)
 
 ## What it does
 
@@ -38,8 +38,8 @@ dependencies:
 import 'package:liquid_glass_effect_flutter/liquid_glass_effect_flutter.dart';
 ```
 
-The GitHub repository is named `liquid_glass_effect`; the pub.dev package and
-primary Dart import are named `liquid_glass_effect_flutter`.
+The GitHub repository, pub.dev package and primary Dart import are named
+`liquid_glass_effect_flutter`.
 
 ## A complete example
 
@@ -117,8 +117,8 @@ accessibility settings. Scroll the background behind the glass to see the
 content-plane separation in action.
 
 ```sh
-git clone https://github.com/Keerthivasan-7/liquid_glass_effect.git
-cd liquid_glass_effect/example
+git clone https://github.com/Keerthivasan-7/liquid_glass_effect_flutter.git
+cd liquid_glass_effect_flutter/example
 flutter pub get
 flutter run
 ```

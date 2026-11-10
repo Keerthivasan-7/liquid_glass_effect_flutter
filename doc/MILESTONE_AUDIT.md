@@ -29,18 +29,18 @@ alone do not complete the milestone. Unmet requirements stay visible.
 | WP6 measured optimization | No speculative optical sample/quality reduction | CPU rotation-axis precomputation implemented after the user directed work forward. Sample counts and quality remain unchanged; showcase build succeeds. No measured speedup claimed; extended checks deferred. |
 | WP7.1–5,7 accessibility | Exported policy, opaque path, focused tests and native/browser contracts | Implemented/checked; app supplies unavailable transparency preference. |
 | WP7.6 text scaling / contrast backgrounds | Large-text/high-contrast PNGs, light/dark/mixed fields; app child-style responsibility documented | Deterministic states checked. Photographic/product and physical review unverified. |
-| WP8.1 metadata | User supplied `Keerthivasan-7/liquid_glass_effect`; origin connected and real package source/issue links added | Metadata updated; publication dry run remains deferred. |
+| WP8.1 metadata | Canonical repository now `Keerthivasan-7/liquid_glass_effect_flutter`; origin updated after GitHub reported the rename. Real package source/issue links added. | First prerelease published; clean-source dry run has zero warnings. The first archive's former repository URL redirects to the renamed source. |
 | WP8.2–4 docs / vocabulary | Three-screen showcase, four presets, comfort controls, complete integration guide, README, compatibility, progress | Development desktop/Android builds produced; final handoff reconciliation in progress. |
 | WP8.5 performance manifests | Protocol v6 and ordinary-control raw/source/SDK/analysis subset archived | One qualified control, no glass/full-matrix manifest. Latest development source is different. |
 | WP8.6–7 research / old spec | Exact SDK sampler audit; superseded-spec banner | Implemented. Closed issue does not imply shipped API; checked SDKs retain nearest implicit sampler/one-argument shader API. |
 | WP8.8 graph | Current library-source graph: 419 nodes, 479 edges, 21 communities, including the new public entry point, background composition and private axis helper | Regenerated after the publication rename on 10 November. Root/library outputs synchronized; library source hashes recorded. This is a structural library map, not runtime evidence or a shader-code graph. |
-| WP8.9 archive/checklist | Earlier pub archive inspected; development source ZIP and exact artifact/source manifest prepared. Local history initialized for the `dev-handoff-2026-11-10` snapshot. | One truthful source-metadata warning and remaining release gates stay open. Local development history is not hosted CI or a verified release tag. |
+| WP8.9 archive/checklist | Published prerelease archive: 628,400 bytes / 181 files; checksum and 21 prepared-file hashes verified, private exclusions confirmed. Source `954ea73` tagged `v0.1.0-dev.1`. | Publication dry run passed with zero warnings. Runtime/performance qualification and hosted checks remain open; publication does not complete the milestone. |
 
 ## Local issue register
 
 | ID | Dependency / gap | Closure condition |
 |---|---|---|
-| R1 | Canonical repository supplied on 10 November: `https://github.com/Keerthivasan-7/liquid_glass_effect`. Local history starts at the development handoff; no original pre-change history recovered. | Complete hosted checks/merge rules, verified release commit/tag and publication dry run. Initial upload skips CI to respect the user's testing deferral. |
+| R1 | Canonical repository supplied and renamed to `liquid_glass_effect_flutter`. First pub.dev prerelease, exact source tag and zero-warning publication check recorded. No original pre-change history recovered. | Hosted checks/merge rules and final renderer qualification remain open. Upload commits skip CI to respect the user's testing deferral. |
 | R2 | Physical Android GLES / Vulkan | Xiaomi Android 10 GLES passes all 18 v5 visuals. Standalone ten-minute endurance also passes; timing remains separate. Qualify Vulkan independently. |
 | R3 | Physical iOS Metal / filter overlap | Physical capture/scroll/overlap plus separate overlapping-filter evidence. Simulator/closed issue insufficient. |
 | R4 | macOS / Linux | Named runtime runs if entering the verified set. |

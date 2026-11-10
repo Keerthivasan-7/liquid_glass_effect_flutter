@@ -41,7 +41,7 @@ The separate Git bundle preserves the local development revision and evidence.
 It can be restored with `git clone PATH_TO_BUNDLE NEW_FOLDER`; use the quoted
 absolute bundle path if it contains spaces. This offline snapshot predates the
 remote connection. The workspace now uses
-`https://github.com/Keerthivasan-7/liquid_glass_effect` as `origin`.
+`https://github.com/Keerthivasan-7/liquid_glass_effect_flutter` as `origin`.
 
 ## Evidence and remaining work
 

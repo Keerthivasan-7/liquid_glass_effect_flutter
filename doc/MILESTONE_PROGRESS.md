@@ -5,8 +5,13 @@ and proposed `liquid_glass_effect_flutter` because `liquid_glass_effect` is take
 The proposed name returned 404 from the pub.dev package API. Current imports,
 public entry point, shader asset keys and example dependencies now use the new
 name. Actual showcase screenshots and a package-focused README are included.
-This is a `0.1.0-dev.1` prerelease candidate; the verification milestone and
-runtime/performance gates below remain open. Historical evidence is unchanged.
+Version `0.1.0-dev.1` is now published on
+[pub.dev](https://pub.dev/packages/liquid_glass_effect_flutter), from source
+tag `v0.1.0-dev.1` / commit `954ea73`. The final dry run returned zero warnings;
+the downloaded registry archive matches its checksum and all 21 prepared-file
+hashes. See [the publication record](evidence/2026-11-10/pub-publication.json).
+The verification milestone and runtime/performance gates below remain open.
+Historical evidence is unchanged.
 
 Delivery steering: target **13 November 2026**. Extended testing has stopped at
 the user's request; see [the four-day delivery plan](FOUR_DAY_DELIVERY.md).
@@ -80,7 +85,7 @@ The user confirmed on 2026-11-09 that no repository existed. Local Git history
 was initialized on 10 November for the development handoff, with the snapshot
 named `dev-handoff-2026-11-10`. This starts from the current development source;
 it does not recover an original pre-change revision. The user subsequently
-created `https://github.com/Keerthivasan-7/liquid_glass_effect`, now connected as
+created `https://github.com/Keerthivasan-7/liquid_glass_effect_flutter`, now connected as
 `origin`. Package source/issue links use this real URL. The earlier dry run's
 missing-source warning is historical; the dry run has not been repeated.
 Hosted CI, branch protection and a verified release tag remain open. The initial

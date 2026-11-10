@@ -1,7 +1,20 @@
 # First pub.dev prerelease
 
-Publication candidate: **`liquid_glass_effect_flutter` · `0.1.0-dev.1`**.
-The repository remains `Keerthivasan-7/liquid_glass_effect`.
+Published: **[`liquid_glass_effect_flutter` · `0.1.0-dev.1`](https://pub.dev/packages/liquid_glass_effect_flutter)**
+on 10 November 2026. The repository is now
+`Keerthivasan-7/liquid_glass_effect_flutter`; its former URL redirects.
+
+Published source: commit `954ea73f3e2523de83667dd3b7f06f11efb5edfb`,
+tag `v0.1.0-dev.1`. The registry archive is 628,400 bytes / 181 files, SHA-256
+`049e510abaf4a9901efab9cee51360c94631dfae7303e9056a08c2f7399dc1f9`.
+The archive checksum and 21 prepared source/documentation/screenshot hashes
+match, with excluded research, evidence and build files absent. See
+[the publication record](evidence/2026-11-10/pub-publication.json).
+
+Preparation analysis reported no issues; the Windows showcase built; the final
+clean-source publication dry run returned zero warnings. Google authorization
+and the first upload completed successfully. The first archive retains the
+repository URL valid when uploaded; GitHub redirects it to the renamed source.
 
 The package API returned 404 for the proposed name on 10 November 2026;
 `liquid_glass_effect` already exists as another author's package. A 404 does

@@ -4,18 +4,18 @@ Updated 2026-11-10. Evidence and incomplete gates are recorded in
 [MILESTONE_PROGRESS.md](MILESTONE_PROGRESS.md). A prior smoke run does not
 qualify newer shader or lifecycle changes.
 
+Public prerelease `0.1.0-dev.1` was published on 10 November 2026. The remaining
+verification gates below still apply to completion of the renderer milestone.
+
 ## Source identity and packaging
 
-- [x] Confirm the canonical source repository: `Keerthivasan-7/liquid_glass_effect`.
-- [x] Select `liquid_glass_effect_flutter` for publication; pub.dev returned 404 on 10 November. Availability is not reserved until upload succeeds.
+- [x] Confirm the renamed canonical source repository: `Keerthivasan-7/liquid_glass_effect_flutter`.
+- [x] Register `liquid_glass_effect_flutter` and publish `0.1.0-dev.1`.
 - [x] Remove fake homepage/repository/issue URLs.
 - [x] Include BSD-3-Clause license and independent-reference research records.
 - [x] Exclude research downloads, CI, raw evidence, graphs and build outputs from the package.
-- [ ] Inspect the final package archive and resolve dry-run warnings truthfully.
-- [ ] Establish a reproducible source commit/tag.
-  The local `dev-handoff-2026-11-10` snapshot preserves development source;
-  a verified release commit/tag remains open; the canonical hosted repository
-  has now been supplied.
+- [x] Inspect the final prerelease archive and resolve dry-run warnings: zero warnings; registry archive 628,400 bytes / 181 files, with private files excluded.
+- [x] Establish a reproducible prerelease source commit/tag: `954ea73`, `v0.1.0-dev.1`; archive checksum and 21 prepared-file hashes match. This is not proof of runtime qualification.
 
 ## Automated engineering gates
 
@@ -27,8 +27,8 @@ qualify newer shader or lifecycle changes.
 - [x] Detect deliberate refraction-sign, crop-origin, uniform-value and foreground-blur defects.
 - [x] Inspect the real 366-KB archive and confirm intended exclusions.
 - [x] Add real homepage/repository/issue links supplied by the user.
-- [ ] Repeat the final pub dry run when testing resumes; earlier SDK dry runs exited 65 for the then-missing source metadata.
-- [ ] Run hosted CI and configure required checks once a real repository exists.
+- [x] Run the publication-candidate dry run on Flutter 3.44.1: zero warnings. Earlier SDK dry runs exited 65 for the then-missing source metadata; final minimum/latest SDK qualification remains separate.
+- [ ] Run hosted CI and configure required checks. Upload commits skipped automated suites at the user's request.
 - [ ] Qualify the final rotation-axis/shader and showcase source; builds alone do not close this gate. Extended runs deferred by user direction.
 - [x] Refresh the library architecture graph after the publication rename: 419 nodes, 479 edges, 21 communities; synchronize root outputs and record source hashes.
 

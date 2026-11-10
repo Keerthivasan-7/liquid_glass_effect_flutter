@@ -1,8 +1,10 @@
 # Integrating the development package
 
 This guide targets the current `0.1.0-dev.1` source package. Use Flutter 3.32
-or later. The package has not been published. Its source repository is
-[liquid_glass_effect](https://github.com/Keerthivasan-7/liquid_glass_effect);
+or later. The first prerelease is published on
+[pub.dev](https://pub.dev/packages/liquid_glass_effect_flutter).
+Its source repository is
+[liquid_glass_effect_flutter](https://github.com/Keerthivasan-7/liquid_glass_effect_flutter);
 the publication name and primary import are `liquid_glass_effect_flutter`.
 Copy the package folder alongside your app, then add a path
 dependency using its actual folder name:

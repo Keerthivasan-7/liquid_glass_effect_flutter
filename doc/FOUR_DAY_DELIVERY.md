@@ -15,7 +15,7 @@ The original milestone requirements remain tracked in MILESTONE_AUDIT.md.
 Deferring a check does not make it passed. The full 46-case performance matrix,
 physical iOS/Vulkan qualification and hosted checks remain open. The user has
 created the canonical repository on 10 November:
-`https://github.com/Keerthivasan-7/liquid_glass_effect`. Source links are now
+`https://github.com/Keerthivasan-7/liquid_glass_effect_flutter`. Source links are now
 configured; hosted qualification remains deferred.
 
 ## Current implementation step
