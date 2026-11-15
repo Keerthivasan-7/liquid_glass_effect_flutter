@@ -47,6 +47,9 @@ class _StudioPageState extends State<StudioPage>
   bool _joined = true;
   double _zoom = 1;
   double _angle = 0;
+  final _lensOffsets = List.filled(3, Offset.zero);
+  Offset? _dragPointer;
+  Offset? _dragCenter;
   bool _largeType = false;
 
   bool get _quiet =>
@@ -69,7 +72,10 @@ class _StudioPageState extends State<StudioPage>
   }
 
   void _move(bool joined, {bool replay = false}) {
-    setState(() => _joined = joined);
+    setState(() {
+      _joined = joined;
+      _lensOffsets.fillRange(0, 3, Offset.zero);
+    });
     final target = joined ? 1.0 : 0.0;
     if (_quiet) {
       _join.value = target;
@@ -89,6 +95,7 @@ class _StudioPageState extends State<StudioPage>
       _joined = true;
       _zoom = 1;
       _angle = 0;
+      _lensOffsets.fillRange(0, 3, Offset.zero);
     });
   }
 
@@ -208,6 +215,8 @@ class _StudioPageState extends State<StudioPage>
                                       '${(v * 100).round()} percent separated',
                                   onChanged: (v) => setState(() {
                                         _join.value = 1 - v;
+                                        _lensOffsets.fillRange(
+                                            0, 3, Offset.zero);
                                         _joined = v < .5;
                                       }))))
                     ]),
@@ -215,6 +224,9 @@ class _StudioPageState extends State<StudioPage>
                         onPressed: () => _move(true, replay: true),
                         icon: const Icon(Icons.replay_rounded),
                         label: const Text('Replay join')),
+                    const Text(
+                        'Drag the lenses to reshape the glass. Replay restores their positions.',
+                        style: TextStyle(fontSize: 12)),
                     Row(children: [
                       const Text('Lens angle'),
                       Expanded(
@@ -295,11 +307,15 @@ class _StudioPageState extends State<StudioPage>
     const icons = [Icons.remove, Icons.center_focus_strong, Icons.add];
     const labels = ['Zoom out', 'Reset zoom', 'Zoom in'];
     return SizedBox(
-        height: 120,
+        height: 220,
         child: AnimatedBuilder(
             animation: _join,
             builder: (context, _) {
               final spacing = spread + (joinedSpacing - spread) * _join.value;
+              Offset base(int i) => Offset(width / 2 + (i - 1) * spacing, 110);
+              Offset bounded(Offset p) => Offset(
+                  p.dx.clamp(50 * scale, width - 50 * scale),
+                  p.dy.clamp(50 * scale, 220 - 50 * scale));
               return LiquidGlassCluster(
                 config: material,
                 accessibility: policy,
@@ -312,18 +328,62 @@ class _StudioPageState extends State<StudioPage>
                         id: i,
                         rotation: (i - 1) * radians,
                         bounds: Rect.fromCenter(
-                            center: Offset(width / 2 + (i - 1) * spacing, 60),
+                            center: bounded(base(i) + _lensOffsets[i]),
                             width: (i == 1 ? 62 : 76) * scale,
                             height: 48 * scale),
-                        child: IconButton(
-                            tooltip: labels[i],
-                            icon: Icon(icons[i], size: 22 * scale),
-                            onPressed: () => setState(() {
-                                  final delta = i == 0 ? -.18 : .18;
-                                  _zoom = i == 1
-                                      ? 1
-                                      : (_zoom + delta).clamp(.65, 1.9);
-                                }))),
+                        child: GestureDetector(
+                            key: ValueKey('drag-lens-$i'),
+                            onVerticalDragStart: (details) {
+                              _join.stop();
+                              setState(() {
+                                _lensOffsets[i] = bounded(_dragCenter! +
+                                        details.globalPosition -
+                                        _dragPointer!) -
+                                    base(i);
+                              });
+                            },
+                            onVerticalDragDown: (details) {
+                              _dragPointer = details.globalPosition;
+                              _dragCenter = bounded(base(i) + _lensOffsets[i]);
+                            },
+                            onVerticalDragUpdate: (details) => setState(() {
+                                  // Global coordinates avoid feeding the moving,
+                                  // rotated child's transform back into its drag.
+                                  final next = _dragCenter! +
+                                      details.globalPosition -
+                                      _dragPointer!;
+                                  _lensOffsets[i] = bounded(next) - base(i);
+                                }),
+                            onHorizontalDragStart: (details) {
+                              _join.stop();
+                              setState(() {
+                                _lensOffsets[i] = bounded(_dragCenter! +
+                                        details.globalPosition -
+                                        _dragPointer!) -
+                                    base(i);
+                              });
+                            },
+                            onHorizontalDragDown: (details) {
+                              _dragPointer = details.globalPosition;
+                              _dragCenter = bounded(base(i) + _lensOffsets[i]);
+                            },
+                            onHorizontalDragUpdate: (details) => setState(() {
+                                  // Global coordinates avoid feeding the moving,
+                                  // rotated child's transform back into its drag.
+                                  final next = _dragCenter! +
+                                      details.globalPosition -
+                                      _dragPointer!;
+                                  _lensOffsets[i] = bounded(next) - base(i);
+                                }),
+                            child: IconButton(
+                                tooltip: labels[i],
+                                icon: Icon(icons[i], size: 22 * scale),
+                                onPressed: () => setState(() {
+                                      final delta = i == 0 ? -.18 : .18;
+                                      _zoom = i == 1
+                                          ? 1
+                                          : (_zoom + delta).clamp(.65, 1.9);
+                                    })))),
                 ],
               );
             }));
