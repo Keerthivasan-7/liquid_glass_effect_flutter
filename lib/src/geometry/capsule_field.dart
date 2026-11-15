@@ -4,25 +4,29 @@ import 'package:flutter/rendering.dart';
 
 import 'liquid_glass_shape.dart';
 
-/// A capsule is a line segment swept by a disk. Its half-spine encodes
-/// orientation and length in the cluster's coordinate system.
+/// A rounded rectangle placed in the cluster coordinate system.
 class PlacedCapsule {
-  PlacedCapsule(this.bounds, this.rotation)
-      : spine = Offset.fromDirection(
-          rotation + (bounds.height > bounds.width ? math.pi / 2 : 0),
-          (bounds.width - bounds.height).abs() / 2,
-        );
+  PlacedCapsule(this.bounds, this.rotation, {double? borderRadius})
+      : radius = (borderRadius ?? bounds.shortestSide / 2)
+            .clamp(0, bounds.shortestSide / 2);
 
-  PlacedCapsule._(this.bounds, this.rotation, this.spine);
+  PlacedCapsule._(this.bounds, this.rotation, this.radius);
   final Rect bounds;
   final double rotation;
-  final Offset spine;
   Offset get center => bounds.center;
-  double get radius => bounds.shortestSide / 2;
-  Rect get extent =>
-      Rect.fromPoints(center - spine, center + spine).inflate(radius);
+  final double radius;
+  Rect get extent => Rect.fromCenter(
+      center: center,
+      width: 2 *
+          ((bounds.width / 2 - radius) * math.cos(rotation).abs() +
+              (bounds.height / 2 - radius) * math.sin(rotation).abs() +
+              radius),
+      height: 2 *
+          ((bounds.width / 2 - radius) * math.sin(rotation).abs() +
+              (bounds.height / 2 - radius) * math.cos(rotation).abs() +
+              radius));
   PlacedCapsule shift(Offset offset) =>
-      PlacedCapsule._(bounds.shift(offset), rotation, spine);
+      PlacedCapsule._(bounds.shift(offset), rotation, radius);
 
   void addTo(Path path) {
     final rounded = RRect.fromRectAndRadius(bounds, Radius.circular(radius));
