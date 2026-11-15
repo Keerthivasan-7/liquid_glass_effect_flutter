@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Add per-member corner radii to glass clusters with rotated bounds,
+  shared distance-field normals and a Studio roundness control.
+
 - Derive bevel normals from a monotone cubic height profile and trace
   transmission through a curved entrance and planar back face with an air gap.
 - Update Android example and benchmark Gradle wrappers for current Flutter.

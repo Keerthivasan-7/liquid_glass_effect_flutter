@@ -14,7 +14,8 @@ class LiquidGlassMember {
       {required this.id,
       required this.bounds,
       required this.child,
-      this.rotation = 0});
+      this.rotation = 0,
+      this.borderRadius});
 
   /// Stable across position changes. IDs must be unique within a cluster.
   final Object id;
@@ -24,10 +25,14 @@ class LiquidGlassMember {
 
   /// Clockwise angle in radians around the center of [bounds].
   final double rotation;
+
+  /// Null selects a capsule. A finite radius selects a rounded rectangle.
+  /// Values are clamped to half the shorter side.
+  final double? borderRadius;
   final Widget child;
 }
 
-/// Shades up to four independently oriented capsules as one surface inside a
+/// Shades up to four independently oriented rounded shapes as one surface inside a
 /// [LiquidGlassScene]. List order determines smooth union and stacking order.
 /// Give the cluster a bounded area. Leave room around members for the bridge.
 /// Outside a capture scope, the same controls retain independent silhouettes.
@@ -58,6 +63,8 @@ class LiquidGlassCluster extends StatelessWidget {
       if (!member.bounds.isFinite ||
           member.bounds.isEmpty ||
           !member.rotation.isFinite ||
+          (member.borderRadius != null &&
+              (!member.borderRadius!.isFinite || member.borderRadius! < 0)) ||
           !ids.add(member.id)) {
         throw ArgumentError(
             'Each glass member needs unique identity, finite rotation and finite, positive bounds.');
@@ -72,10 +79,15 @@ class LiquidGlassCluster extends StatelessWidget {
               child: Transform.rotate(
                   angle: member.rotation,
                   child: ClipRRect(
-                      borderRadius:
-                          BorderRadius.circular(member.bounds.shortestSide / 2),
+                      borderRadius: BorderRadius.circular(
+                          (member.borderRadius ??
+                                  member.bounds.shortestSide / 2)
+                              .clamp(0, member.bounds.shortestSide / 2)),
                       child: LiquidGlass(
-                          shape: const LiquidGlassShape.capsule(),
+                          shape: member.borderRadius == null
+                              ? const LiquidGlassShape.capsule()
+                              : LiquidGlassShape.roundedRectangle(
+                                  borderRadius: member.borderRadius!),
                           config: _independentConfig(member),
                           accessibility: accessibility,
                           lightingController: lightingController,
@@ -86,7 +98,8 @@ class LiquidGlassCluster extends StatelessWidget {
     }
     final capsules = [
       for (final member in members)
-        PlacedCapsule(member.bounds, member.rotation)
+        PlacedCapsule(member.bounds, member.rotation,
+            borderRadius: member.borderRadius)
     ];
     final extents =
         capsules.map((c) => c.extent).reduce((a, b) => a.expandToInclude(b));
