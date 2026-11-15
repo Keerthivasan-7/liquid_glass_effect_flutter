@@ -17,7 +17,11 @@ enum _Finish {
   final IconData icon;
   LiquidGlassConfig get material => switch (this) {
         _Finish.clear => const LiquidGlassConfig.clear(),
-        _Finish.satin => const LiquidGlassConfig.frosted(),
+        _Finish.satin => const LiquidGlassConfig.frosted().copyWith(
+            fresnelStrength: 0.42,
+            specularStrength: 0.28,
+            environmentStrength: 0.32,
+            coatStrength: 0.12),
         _Finish.prism => const LiquidGlassConfig.crystal().copyWith(
             dispersionStrength: 1.6,
             abbeNumber: 18,
