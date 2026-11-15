@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Derive bevel normals from a monotone cubic height profile and trace
+  transmission through a curved entrance and planar back face with an air gap.
+- Update Android example and benchmark Gradle wrappers for current Flutter.
+  Retain the Material import required by the minimum Flutter SDK.
+
 - Support independent capsule rotation with matching optical bounds,
   foreground clipping and hit targets. Add the Lens angle slider to Studio.
 
