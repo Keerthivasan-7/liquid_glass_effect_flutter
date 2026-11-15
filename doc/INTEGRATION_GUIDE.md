@@ -54,7 +54,10 @@ SizedBox(
 ```
 
 Use the same material for every member of a cluster. The capture renderer
-combines up to four axis-aligned capsules in list order. The whole cluster
+combines up to four independently rotated capsules in list order. Set
+`LiquidGlassMember.rotation` in radians to rotate a member around its bounds'
+center. Its foreground and hit area rotate with the optical silhouette.
+The whole cluster
 can be positioned as one widget. Its padded paint box includes the bridge
 and optical sampling reach. Leave space around controls inside the parent.
 For more than four members, an explicit filter renderer, or a fallback

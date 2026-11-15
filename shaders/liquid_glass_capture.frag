@@ -61,6 +61,7 @@ uniform vec4 u_capsule_0;
 uniform vec4 u_capsule_1;
 uniform vec4 u_capsule_2;
 uniform vec4 u_capsule_3;
+uniform vec4 u_capsule_radii;
 
 const float PI = 3.141592653589793;
 
@@ -220,14 +221,20 @@ vec3 thin_film_color(float cos_theta) {
 }
 
 vec2 refracted_offset(vec3 normal, float ior, float shortest) {
-  vec3 ray = refract(vec3(0.0, 0.0, -1.0), normal, 1.0 / max(ior, 1.0001));
-  vec2 lateral = ray.xy / max(abs(ray.z), 0.2);
-  float internal_path = u_thickness * shortest * (1.0 + 0.35 * (1.0 - abs(ray.z)));
-  float distance = min(
-    length(lateral) * u_refraction_strength * internal_path,
-    u_max_displacement
-  );
-  return length(lateral) > 0.00001 ? normalize(lateral) * distance : vec2(0.0);
+  float eta = max(ior, 1.0001);
+  vec3 internal_ray = refract(vec3(0.0, 0.0, -1.0), normal, 1.0 / eta);
+  // A curved entrance over a planar back face, followed by a short air gap.
+  float depth = u_thickness * shortest * u_refraction_strength;
+  float travel = depth / max(-internal_ray.z, 0.0001);
+  vec2 back_hit = internal_ray.xy * travel;
+  vec3 exit_ray = refract(internal_ray, vec3(0.0, 0.0, 1.0), eta);
+  // A zero exit vector denotes total internal reflection at the back face.
+  vec2 air_travel = vec2(0.0);
+  if (dot(exit_ray, exit_ray) > 0.0001) {
+    air_travel = exit_ray.xy / max(-exit_ray.z, 0.0001) * depth * 0.12;
+  }
+  vec2 offset = back_hit + air_travel;
+  return offset * min(1.0, u_max_displacement / max(length(offset), 0.0001));
 }
 
 // Radial derivative of a compact sin^2 packet behind a moving wavefront.
@@ -243,12 +250,11 @@ vec2 wave_gradient(vec2 frag, vec3 wave) {
 
 // The xy components carry the gradient of the distance in z. The
 // polynomial blend interpolates both, so the bridge has a single normal.
-vec3 capsule_field(vec2 p, vec4 box) {
-  vec2 half_size = box.zw * 0.5;
-  float radius = min(half_size.x, half_size.y);
-  vec2 d = p - (box.xy + half_size);
-  vec2 span = half_size - radius;
-  vec2 v = d - clamp(d, -span, span);
+vec3 capsule_field(vec2 p, vec4 capsule, float radius) {
+  vec2 d = p - capsule.xy;
+  vec2 spine = capsule.zw;
+  float projection = clamp(dot(d, spine) / max(dot(spine, spine), 0.000001), -1.0, 1.0);
+  vec2 v = d - spine * projection;
   float len = length(v);
   return vec3(v / max(len, 0.0001), len - radius);
 }
@@ -273,11 +279,11 @@ void main() {
   vec2 edge_normal;
 
   float coverage = 1.0;
-  if (u_capsule_0.z > 0.0) {
-    vec3 field = capsule_field(frag, u_capsule_0);
-    if (u_capsule_1.z > 0.0) field = join_field(field, capsule_field(frag, u_capsule_1));
-    if (u_capsule_2.z > 0.0) field = join_field(field, capsule_field(frag, u_capsule_2));
-    if (u_capsule_3.z > 0.0) field = join_field(field, capsule_field(frag, u_capsule_3));
+  if (u_capsule_radii.x > 0.0) {
+    vec3 field = capsule_field(frag, u_capsule_0, u_capsule_radii.x);
+    if (u_capsule_radii.y > 0.0) field = join_field(field, capsule_field(frag, u_capsule_1, u_capsule_radii.y));
+    if (u_capsule_radii.z > 0.0) field = join_field(field, capsule_field(frag, u_capsule_2, u_capsule_radii.z));
+    if (u_capsule_radii.w > 0.0) field = join_field(field, capsule_field(frag, u_capsule_3, u_capsule_radii.w));
     distance = field.z;
     edge_normal = field.xy;
     // Skia runtime effects do not expose screen-space derivatives.
@@ -302,20 +308,16 @@ void main() {
 
   float bevel = max(u_edge_width * shortest * 0.5, 1.5);
   float inward = clamp(-distance / bevel, 0.0, 1.0);
-  float profile_power = mix(
-    1.8,
-    0.72,
-    clamp(u_curvature * 0.5, 0.0, 1.0)
-  );
-  float height = pow(sin(inward * 0.5 * PI), profile_power);
-  float meniscus_lip = inward * exp(-inward * 3.6) * 0.32 * u_curvature;
-  height = clamp(height + meniscus_lip, 0.0, 1.0);
+  // Monotone cubic height profile. Its analytic derivative controls
+  // the normal, so refraction and illumination follow the same surface.
+  float shoulder = mix(0.35, 1.65, clamp(u_curvature * 0.5, 0.0, 1.0));
+  float t = inward;
+  float height = t * (shoulder + t * (3.0 - 2.0 * shoulder +
+      t * (shoulder - 2.0)));
+  float derivative = shoulder + 2.0 * t * (3.0 - 2.0 * shoulder) +
+      3.0 * t * t * (shoulder - 2.0);
   float edge_weight = 1.0 - height;
-  float slope = edge_weight * mix(
-    2.25,
-    0.8,
-    clamp(u_curvature * 0.5, 0.0, 1.0)
-  );
+  float slope = max(derivative, 0.0) * 1.4;
   // A convex bevel's normal tilts outward. refract() then samples toward the
   // lens center; negating the gradient produces a concave/demagnifying lens.
   vec3 normal = normalize(vec3(edge_normal * slope, 1.0));
@@ -542,7 +544,7 @@ void main() {
     }
   }
 
-  // Total Internal Reflection (TIR) Diamond-Grade Edge Luminescence
+  // Artistic grazing-angle rim, independent of internal-ray transmission.
   float sin2_theta = 1.0 - n_dot_v * n_dot_v;
   float critical_sin2 = 1.0 / max(u_refractive_index * u_refractive_index, 1.001);
   float tir_intensity = smoothstep(critical_sin2 - 0.10, critical_sin2 + 0.05, sin2_theta) *
