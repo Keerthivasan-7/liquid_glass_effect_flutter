@@ -17,8 +17,10 @@ scrubbing, replay, zoom and a large-text preview. See the
 [integration example](INTEGRATION_GUIDE.md#joined-controls-in-the-development-checkout).
 
 The first cluster API takes explicit member geometry in group coordinates.
-It covers axis-aligned capsules sharing one material. Independent rotations
-per member, arbitrary descendant registration, joined filter-backend optics,
+It covers capsules sharing one material. As of 15 November, each member supports
+independent rotation with matching foreground clipping, hit targets and capture
+bounds. The Studio exposes this through Lens angle. Arbitrary descendant
+registration, joined filter-backend optics,
 projected lighting and the broader effects catalog remain follow-on work.
 The checked-in graph now covers the new Dart library files.
 

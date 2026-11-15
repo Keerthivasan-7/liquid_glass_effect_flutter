@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Support independent capsule rotation with matching optical bounds,
+  foreground clipping and hit targets. Add the Lens angle slider to Studio.
+
 - Add Optics Studio with five backdrops, three finishes, interactive
   lighting, a spacing control, replay and a large-text preview.
 - Add `LiquidGlassCluster` and `LiquidGlassMember` for a shared optical field
