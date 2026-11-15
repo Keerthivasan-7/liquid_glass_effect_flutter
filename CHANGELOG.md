@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Add AnimatedLiquidGlassCluster for interrupted layout transitions,
+  shortest-arc rotation, corner interpolation and reduced-motion handling.
+
 - Add per-member corner radii to glass clusters with rotated bounds,
   shared distance-field normals and a Studio roundness control.
 

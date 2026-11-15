@@ -10,6 +10,7 @@ export 'src/widgets/liquid_glass.dart';
 export 'src/widgets/liquid_glass_button.dart';
 export 'src/widgets/liquid_glass_card.dart';
 export 'src/widgets/liquid_glass_cluster.dart';
+export 'src/widgets/animated_liquid_glass_cluster.dart';
 export 'src/widgets/liquid_glass_group.dart'
     show LiquidGlassGroup, LiquidGlassMotion;
 export 'src/widgets/liquid_glass_nav_bar.dart';
