@@ -4,6 +4,7 @@ import 'dart:math' as math;
 // ignore: deprecated_member_use
 import 'package:flutter/material.dart';
 import 'package:liquid_glass_effect_flutter/liquid_glass_effect_flutter.dart';
+import 'animated_cluster_demo.dart';
 
 enum StudioBackdrop { orbit, paper, charcoal, spectrum, atlas }
 
@@ -134,6 +135,13 @@ class _StudioPageState extends State<StudioPage>
           title: const Text('Optics Studio',
               style: TextStyle(fontWeight: FontWeight.w700, letterSpacing: -1)),
           actions: [
+            IconButton(
+              tooltip: 'Morphing controls',
+              icon: const Icon(Icons.animation),
+              onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                      builder: (_) => const AnimatedClusterDemo())),
+            ),
             TextButton.icon(
                 onPressed: () => Navigator.pushNamed(context, '/gallery'),
                 icon: const Icon(Icons.layers_outlined),
