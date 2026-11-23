@@ -10,6 +10,7 @@ import 'studio/studio_page.dart';
 
 void main() => runApp(const ShowcaseApp());
 
+/// Root showcase application demonstrating liquid glass effects.
 class ShowcaseApp extends StatelessWidget {
   const ShowcaseApp({super.key});
 
@@ -17,19 +18,36 @@ class ShowcaseApp extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Liquid Glass',
-        theme: ThemeData(useMaterial3: true),
+        theme: ThemeData(
+          useMaterial3: true,
+          extensions: const <ThemeExtension<dynamic>>[
+            LiquidGlassThemeData(
+              defaultConfig: LiquidGlassConfig.regular(),
+              cardConfig: LiquidGlassConfig.frosted(),
+              buttonConfig: LiquidGlassConfig.crystal(),
+              inputConfig: LiquidGlassConfig.frosted(),
+            ),
+          ],
+        ),
         routes: {
           '/gallery': (_) => const ShowcasePage(),
-          '/studio': (_) => const StudioPage()
+          '/studio': (_) => const StudioPage(),
         },
         home: const StudioPage(),
       );
 }
 
-enum _Section { materials, controls, comfort }
+/// Navigation sections available in the showcase gallery.
+enum ShowcaseSection { materials, components, controls, comfort }
 
+/// Interactive gallery showcasing liquid glass materials, components, and controls.
 class ShowcasePage extends StatefulWidget {
-  const ShowcasePage({super.key});
+  const ShowcasePage({
+    this.initialSection = ShowcaseSection.materials,
+    super.key,
+  });
+
+  final ShowcaseSection initialSection;
 
   @override
   State<ShowcasePage> createState() => _ShowcasePageState();
@@ -40,7 +58,7 @@ class _ShowcasePageState extends State<ShowcasePage> {
   final _tuningKey = GlobalKey();
   final _diagnostics = ValueNotifier<LiquidGlassDiagnostics?>(null);
   final _saved = <ShowcaseMaterial>{};
-  _Section _section = _Section.materials;
+  late ShowcaseSection _section;
   ShowcaseMaterial _material = ShowcaseMaterial.regular;
   LiquidGlassConfig _config = const LiquidGlassConfig.regular();
   bool _customized = false;
@@ -50,6 +68,14 @@ class _ShowcasePageState extends State<ShowcasePage> {
   bool _reduceTransparency = false;
   bool _highContrast = false;
 
+  // State for interactive components demonstration
+  bool _switchVal = true;
+  double _sliderVal = 0.65;
+  String _selectedChip = 'Frosted';
+  String _dropdownVal = 'Crystal Glass';
+  late final TextEditingController _inputController;
+  bool _inputError = false;
+
   Color get _ink => _dark ? const Color(0xFFF4F7FF) : const Color(0xFF142238);
   Color get _surface => _dark ? const Color(0xFF142033) : Colors.white;
   bool get _contrastOn => _highContrast || MediaQuery.of(context).highContrast;
@@ -58,6 +84,7 @@ class _ShowcasePageState extends State<ShowcasePage> {
       _reduceMotion ||
       MediaQuery.of(context).disableAnimations ||
       MediaQuery.of(context).accessibleNavigation;
+
   LiquidGlassAccessibilityPolicy get _policy => LiquidGlassAccessibilityPolicy(
         reduceMotion: _reduceMotion,
         reduceTransparency: _reduceTransparency,
@@ -66,9 +93,18 @@ class _ShowcasePageState extends State<ShowcasePage> {
       );
 
   @override
+  void initState() {
+    super.initState();
+    _section = widget.initialSection;
+    _inputController =
+        TextEditingController(text: 'Real-time dielectric refraction');
+  }
+
+  @override
   void dispose() {
     _scroll.dispose();
     _diagnostics.dispose();
+    _inputController.dispose();
     super.dispose();
   }
 
@@ -84,15 +120,15 @@ class _ShowcasePageState extends State<ShowcasePage> {
         _customized = true;
       });
 
-  void _chooseSection(_Section section) {
+  void _chooseSection(ShowcaseSection section) {
     if (_section == section) return;
     if (_scroll.hasClients) _scroll.jumpTo(0);
     setState(() => _section = section);
   }
 
   void _openTuning() {
-    final shouldOpen = _section != _Section.materials || !_showTuning;
-    _chooseSection(_Section.materials);
+    final shouldOpen = _section != ShowcaseSection.materials || !_showTuning;
+    _chooseSection(ShowcaseSection.materials);
     setState(() => _showTuning = shouldOpen);
     if (!_showTuning) return;
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -113,14 +149,24 @@ class _ShowcasePageState extends State<ShowcasePage> {
         brightness: _dark ? Brightness.dark : Brightness.light);
     final media = MediaQuery.of(context);
     return Theme(
-      data: ThemeData(colorScheme: scheme, useMaterial3: true),
+      data: ThemeData(
+        colorScheme: scheme,
+        useMaterial3: true,
+        extensions: const <ThemeExtension<dynamic>>[
+          LiquidGlassThemeData(
+            defaultConfig: LiquidGlassConfig.regular(),
+            cardConfig: LiquidGlassConfig.frosted(),
+            buttonConfig: LiquidGlassConfig.crystal(),
+            inputConfig: LiquidGlassConfig.frosted(),
+          ),
+        ],
+      ),
       child: MediaQuery(
         data: media.copyWith(
             disableAnimations: media.disableAnimations || _reduceMotion),
         child: Scaffold(
           body: LiquidGlassScene(
             qualityScale: 0.65,
-            // Updating this small observer never rebuilds the backdrop or glass.
             onDiagnosticsChanged: (value) {
               if (mounted) _diagnostics.value = value;
             },
@@ -164,9 +210,10 @@ class _ShowcasePageState extends State<ShowcasePage> {
                         child: ConstrainedBox(
                           constraints: const BoxConstraints(maxWidth: 720),
                           child: switch (_section) {
-                            _Section.materials => _materialsPage(),
-                            _Section.controls => _controlsPage(),
-                            _Section.comfort => _comfortPage(),
+                            ShowcaseSection.materials => _materialsPage(),
+                            ShowcaseSection.components => _componentsPage(),
+                            ShowcaseSection.controls => _controlsPage(),
+                            ShowcaseSection.comfort => _comfortPage(),
                           },
                         ),
                       ),
@@ -273,14 +320,14 @@ class _ShowcasePageState extends State<ShowcasePage> {
           Text(title,
               style: TextStyle(
                   color: _ink,
-                  fontSize: MediaQuery.of(context).size.width < 500 ? 38 : 54,
-                  height: 1.04,
-                  letterSpacing: -1.8,
+                  fontSize: MediaQuery.of(context).size.width < 500 ? 34 : 48,
+                  height: 1.06,
+                  letterSpacing: -1.5,
                   fontWeight: FontWeight.w800)),
           const SizedBox(height: 14),
           Text(description,
               style: TextStyle(color: _quiet, fontSize: 16, height: 1.5)),
-          const SizedBox(height: 28),
+          const SizedBox(height: 24),
         ],
       );
 
@@ -408,6 +455,327 @@ class _ShowcasePageState extends State<ShowcasePage> {
     );
   }
 
+  /// All new components demonstration section
+  Widget _componentsPage() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _heading(
+          'THE ULTIMATE COMPONENT SUITE',
+          'Production Components',
+          'A complete set of interactive, geometry-aware liquid glass widgets with native gestures and haptics.',
+        ),
+
+        // 1. Form & Input Controls
+        _panel(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Icon(Icons.edit_note_rounded, color: _ink),
+                  const SizedBox(width: 10),
+                  Text('Inputs & Forms',
+                      style: TextStyle(
+                          color: _ink,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w800)),
+                ],
+              ),
+              const SizedBox(height: 16),
+              LiquidGlassTextField(
+                controller: _inputController,
+                labelText: 'Optical Query Input',
+                hintText: 'Type text to test glass input...',
+                prefixIcon: Icon(Icons.search, color: _quiet),
+                suffixIcon: IconButton(
+                  icon: Icon(
+                    _inputError
+                        ? Icons.error_outline_rounded
+                        : Icons.check_circle_outline_rounded,
+                    color: _inputError ? Colors.red : Colors.green,
+                  ),
+                  onPressed: () => setState(() => _inputError = !_inputError),
+                  tooltip: 'Toggle error state tint',
+                ),
+                errorText:
+                    _inputError ? 'Simulated optical error absorption' : null,
+              ),
+              const SizedBox(height: 18),
+              Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Liquid Glass Toggle',
+                            style: TextStyle(
+                                color: _ink, fontWeight: FontWeight.w700)),
+                        const SizedBox(height: 2),
+                        Text('Fluid spring bounce & light haptics',
+                            style: TextStyle(color: _quiet, fontSize: 12)),
+                      ],
+                    ),
+                  ),
+                  LiquidGlassSwitch(
+                    value: _switchVal,
+                    onChanged: (val) => setState(() => _switchVal = val),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 18),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Wrap(
+                    alignment: WrapAlignment.spaceBetween,
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    children: [
+                      Text('Liquid Glass Range Slider',
+                          style: TextStyle(
+                              color: _ink, fontWeight: FontWeight.w700)),
+                      Text('${(_sliderVal * 100).round()}%',
+                          style: TextStyle(
+                              color: _quiet, fontWeight: FontWeight.w700)),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  LiquidGlassSlider(
+                    value: _sliderVal,
+                    divisions: 10,
+                    onChanged: (val) => setState(() => _sliderVal = val),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 18),
+              Row(
+                children: [
+                  Expanded(
+                    child: Text('Material Dropdown',
+                        style: TextStyle(
+                            color: _ink, fontWeight: FontWeight.w700)),
+                  ),
+                  LiquidGlassDropdown<String>(
+                    value: _dropdownVal,
+                    items: const [
+                      LiquidGlassDropdownItem(
+                          value: 'Crystal Glass', child: Text('Crystal Glass')),
+                      LiquidGlassDropdownItem(
+                          value: 'Frosted Obsidian',
+                          child: Text('Frosted Obsidian')),
+                      LiquidGlassDropdownItem(
+                          value: 'Thin Film Prism',
+                          child: Text('Thin Film Prism')),
+                    ],
+                    onChanged: (val) {
+                      if (val != null) setState(() => _dropdownVal = val);
+                    },
+                  ),
+                ],
+              ),
+              const SizedBox(height: 18),
+              Text('Interactive Filter Chips',
+                  style: TextStyle(color: _ink, fontWeight: FontWeight.w700)),
+              const SizedBox(height: 8),
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                children: [
+                  for (final tag in [
+                    'Frosted',
+                    'Refraction',
+                    'Thin Film',
+                    'Abbe Dispersion',
+                    'Anisotropy'
+                  ])
+                    LiquidGlassChip(
+                      label: Text(tag),
+                      selected: _selectedChip == tag,
+                      avatar: Icon(Icons.auto_awesome,
+                          size: 14,
+                          color: _selectedChip == tag ? Colors.white : _quiet),
+                      onSelected: (_) => setState(() => _selectedChip = tag),
+                      onDeleted: () {},
+                    ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 18),
+
+        // 2. Overlays & Dialogs
+        _panel(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Icon(Icons.layers_rounded, color: _ink),
+                  const SizedBox(width: 10),
+                  Text('Modals, Sheets & Tooltips',
+                      style: TextStyle(
+                          color: _ink,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w800)),
+                ],
+              ),
+              const SizedBox(height: 16),
+              Row(
+                children: [
+                  Expanded(
+                    child: LiquidGlassButton(
+                      borderRadius: 16,
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.vertical_align_top_rounded, size: 18),
+                          SizedBox(width: 8),
+                          Text('Open BottomSheet'),
+                        ],
+                      ),
+                      onPressed: () {
+                        LiquidGlassBottomSheet.show(
+                          context: context,
+                          builder: (context) => Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 12),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text('Liquid Glass BottomSheet',
+                                    style: TextStyle(
+                                        color: _ink,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w800)),
+                                const SizedBox(height: 8),
+                                Text(
+                                    'Frosted background with grab handle pill and high-contrast readability.',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(color: _quiet)),
+                                const SizedBox(height: 20),
+                                LiquidGlassButton(
+                                  borderRadius: 16,
+                                  onPressed: () => Navigator.pop(context),
+                                  child: const Text('Dismiss Sheet'),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: LiquidGlassButton(
+                      borderRadius: 16,
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.chat_bubble_outline_rounded, size: 18),
+                          SizedBox(width: 8),
+                          Text('Open Dialog'),
+                        ],
+                      ),
+                      onPressed: () {
+                        LiquidGlassDialog.show(
+                          context: context,
+                          title: const Text('Liquid Glass Dialog'),
+                          content: const Text(
+                              'This modal alert renders with frosted dielectric scattering, preserving background depth while protecting readability.'),
+                          actions: [
+                            TextButton(
+                              onPressed: () => Navigator.pop(context),
+                              child: const Text('Cancel'),
+                            ),
+                            LiquidGlassButton(
+                              borderRadius: 12,
+                              onPressed: () => Navigator.pop(context),
+                              child: const Text('Confirm'),
+                            ),
+                          ],
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+              Center(
+                child: LiquidGlassTooltip(
+                  message:
+                      'Obsidian dark glass tooltip with high-contrast typography',
+                  child: LiquidGlassChip(
+                    avatar: Icon(Icons.help_outline_rounded,
+                        size: 16, color: _quiet),
+                    label: const Text('Hover or hold to preview Tooltip'),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 18),
+
+        // 3. Navigation & Actions
+        _panel(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Icon(Icons.dashboard_customize_rounded, color: _ink),
+                  const SizedBox(width: 10),
+                  Text('Navigation & Action Widgets',
+                      style: TextStyle(
+                          color: _ink,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w800)),
+                ],
+              ),
+              const SizedBox(height: 16),
+              LiquidGlassListTile(
+                leading: const Icon(Icons.lens_blur_rounded),
+                title: const Text('Optical Dispersion'),
+                subtitle:
+                    const Text('Physical Abbe-number wavelength separation'),
+                trailing: LiquidGlassSwitch(
+                  value: _switchVal,
+                  onChanged: (v) => setState(() => _switchVal = v),
+                ),
+              ),
+              const SizedBox(height: 8),
+              LiquidGlassListTile(
+                leading: const Icon(Icons.waves_rounded),
+                title: const Text('Surface Caustics'),
+                subtitle: const Text('Simulated specular light concentrating'),
+                trailing: const Icon(Icons.chevron_right_rounded),
+                onTap: () {},
+              ),
+              const SizedBox(height: 18),
+              Wrap(
+                alignment: WrapAlignment.center,
+                spacing: 16,
+                runSpacing: 12,
+                children: [
+                  LiquidGlassFAB(
+                    onPressed: () {},
+                    child: const Icon(Icons.auto_awesome),
+                  ),
+                  LiquidGlassFAB.extended(
+                    icon: const Icon(Icons.bolt_rounded),
+                    label: const Text('Extended Glass FAB'),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget _controlsPage() =>
       Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
         _heading('EVERYDAY INTERACTIONS', 'Make it yours.',
@@ -422,25 +790,68 @@ class _ShowcasePageState extends State<ShowcasePage> {
           Text('These controls change the scene you are looking at.',
               style: TextStyle(color: _quiet, height: 1.4)),
           const SizedBox(height: 18),
-          SwitchListTile.adaptive(
-              contentPadding: EdgeInsets.zero,
-              title: const Text('Dark appearance'),
-              value: _dark,
-              onChanged: (value) => setState(() => _dark = value)),
-          SwitchListTile.adaptive(
-              contentPadding: EdgeInsets.zero,
-              title: const Text('Ambient highlights'),
-              subtitle: Text(_motionOff
-                  ? 'Paused by your reduced motion preference'
-                  : 'A gentle movement across the surface'),
-              value: _config.animateLight && !_motionOff,
-              onChanged: _motionOff
-                  ? null
-                  : (value) => setState(
-                      () => _config = _config.copyWith(animateLight: value))),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('Dark appearance',
+                  style: TextStyle(color: _ink, fontWeight: FontWeight.w700)),
+              LiquidGlassSwitch(
+                value: _dark,
+                onChanged: (value) => setState(() => _dark = value),
+              ),
+            ],
+          ),
+          const SizedBox(height: 14),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Ambient highlights',
+                      style:
+                          TextStyle(color: _ink, fontWeight: FontWeight.w700)),
+                  Text(
+                    _motionOff
+                        ? 'Paused by your reduced motion preference'
+                        : 'A gentle movement across the surface',
+                    style: TextStyle(color: _quiet, fontSize: 12),
+                  ),
+                ],
+              ),
+              LiquidGlassSwitch(
+                value: _config.animateLight && !_motionOff,
+                onChanged: _motionOff
+                    ? null
+                    : (value) => setState(
+                        () => _config = _config.copyWith(animateLight: value)),
+              ),
+            ],
+          ),
           const Divider(height: 28),
-          _slider('Edge bend', _config.refractionStrength, 0, 0.12,
-              (value) => _tune(_config.copyWith(refractionStrength: value))),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Edge bend refraction',
+                      style:
+                          TextStyle(color: _ink, fontWeight: FontWeight.w700)),
+                  Text(_config.refractionStrength.toStringAsFixed(3),
+                      style: TextStyle(color: _quiet)),
+                ],
+              ),
+              const SizedBox(height: 6),
+              LiquidGlassSlider(
+                value: _config.refractionStrength,
+                min: 0,
+                max: 0.12,
+                onChanged: (value) =>
+                    _tune(_config.copyWith(refractionStrength: value)),
+              ),
+            ],
+          ),
         ])),
         const SizedBox(height: 18),
         _panel(
@@ -586,21 +997,24 @@ class _ShowcasePageState extends State<ShowcasePage> {
           ]));
 
   Widget _navigation() => ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 560),
+        constraints: const BoxConstraints(maxWidth: 620),
         child: _glass(
           shape: const LiquidGlassShape.capsule(),
           padding: const EdgeInsets.all(5),
           child: Row(children: [
-            _destination(_Section.materials, Icons.layers_rounded, 'Materials'),
             _destination(
-                _Section.controls, Icons.touch_app_rounded, 'Controls'),
+                ShowcaseSection.materials, Icons.layers_rounded, 'Materials'),
+            _destination(ShowcaseSection.components, Icons.widgets_rounded,
+                'Components'),
             _destination(
-                _Section.comfort, Icons.accessibility_new_rounded, 'Comfort'),
+                ShowcaseSection.controls, Icons.touch_app_rounded, 'Controls'),
+            _destination(ShowcaseSection.comfort,
+                Icons.accessibility_new_rounded, 'Comfort'),
           ]),
         ),
       );
 
-  Widget _destination(_Section section, IconData icon, String label) {
+  Widget _destination(ShowcaseSection section, IconData icon, String label) {
     final selected = _section == section;
     return Expanded(
         child: Semantics(

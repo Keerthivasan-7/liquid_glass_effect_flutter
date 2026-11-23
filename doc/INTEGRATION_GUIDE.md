@@ -78,6 +78,34 @@ The Studio contains working examples of `LiquidGlassCard`,
 `LiquidGlassButton`, `LiquidGlassNavBar`, and
 `LiquidGlassSegmentedControl<T>`. [Studio source](../example/lib/studio/studio_page.dart)
 
+## Animated cluster layouts
+
+Use `AnimatedLiquidGlassCluster` on the glass plane to animate updates to
+member bounds, rotation, corner radius and blend radius. Keep each member's ID
+stable. Interrupted transitions continue from the displayed geometry.
+
+```dart
+AnimatedLiquidGlassCluster(
+  duration: const Duration(milliseconds: 400),
+  members: [
+    LiquidGlassMember(
+      id: 'action',
+      bounds: Rect.fromLTWH(24, 24, expanded ? 220 : 64, 56),
+      borderRadius: expanded ? 18 : 28,
+      child: TextButton(
+        onPressed: toggleExpanded,
+        child: Text(expanded ? 'Close controls' : 'Open'),
+      ),
+    ),
+  ],
+)
+```
+
+New members appear at their target geometry and removed members leave
+immediately. Existing members interpolate their geometry. Foreground content
+updates immediately, so use responsive content that fits intermediate bounds.
+Reduced-motion preferences settle to the target. Materials update immediately.
+
 ## A working two-plane screen
 
 Use `LiquidGlassScene` so the changing background is captured separately from
