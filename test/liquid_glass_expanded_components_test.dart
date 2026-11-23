@@ -26,10 +26,8 @@ void main() {
       final dark = LiquidGlassPresets.regularDark;
       expect(dark.blurSigma, 6.5);
 
-      final adaptiveLight =
-          LiquidGlassPresets.adaptive(Brightness.light);
-      final adaptiveDark =
-          LiquidGlassPresets.adaptive(Brightness.dark);
+      final adaptiveLight = LiquidGlassPresets.adaptive(Brightness.light);
+      final adaptiveDark = LiquidGlassPresets.adaptive(Brightness.dark);
 
       expect(adaptiveLight, const LiquidGlassConfig.regular());
       expect(adaptiveDark, LiquidGlassPresets.regularDark);

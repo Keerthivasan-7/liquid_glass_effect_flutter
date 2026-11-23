@@ -152,7 +152,8 @@ class _LiquidGlassSwitchState extends State<LiquidGlassSwitch>
             animation: _thumbPosition,
             builder: (context, _) {
               final t = _thumbPosition.value;
-              final trackTint = Color.lerp(inactiveColor, activeColor, t.clamp(0.0, 1.0))!;
+              final trackTint =
+                  Color.lerp(inactiveColor, activeColor, t.clamp(0.0, 1.0))!;
 
               return LiquidGlass(
                 config: effectiveConfig.copyWith(tint: trackTint),

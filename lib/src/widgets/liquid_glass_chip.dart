@@ -73,15 +73,14 @@ class LiquidGlassChip extends StatelessWidget {
             const LiquidGlassConfig.regular())
         .copyWith(
       tint: selected
-          ? (selectedColor ?? theme.colorScheme.primary)
-              .withValues(alpha: 0.32)
+          ? (selectedColor ?? theme.colorScheme.primary).withValues(alpha: 0.32)
           : null,
       specularStrength: selected ? 0.8 : null,
       fresnelStrength: selected ? 0.75 : null,
     );
 
-    final ink = DefaultTextStyle.of(context).style.color ??
-        theme.colorScheme.onSurface;
+    final ink =
+        DefaultTextStyle.of(context).style.color ?? theme.colorScheme.onSurface;
 
     return Semantics(
       selected: selected,

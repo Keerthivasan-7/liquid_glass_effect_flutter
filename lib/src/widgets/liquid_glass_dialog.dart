@@ -19,7 +19,8 @@ class LiquidGlassDialog extends StatelessWidget {
     this.config,
     this.accessibility = const LiquidGlassAccessibilityPolicy(),
     this.borderRadius = 24.0,
-    this.insetPadding = const EdgeInsets.symmetric(horizontal: 40.0, vertical: 24.0),
+    this.insetPadding =
+        const EdgeInsets.symmetric(horizontal: 40.0, vertical: 24.0),
     this.lightingController,
     super.key,
   });
@@ -89,12 +90,8 @@ class LiquidGlassDialog extends StatelessWidget {
         .copyWith(
       blurSigma: 18.0,
       roughness: 0.50,
-      tint: isDark
-          ? const Color(0x60070B16)
-          : const Color(0x35FFFFFF),
-      absorptionColor: isDark
-          ? const Color(0xFF080D1A)
-          : Colors.white,
+      tint: isDark ? const Color(0x60070B16) : const Color(0x35FFFFFF),
+      absorptionColor: isDark ? const Color(0xFF080D1A) : Colors.white,
       absorptionStrength: isDark ? 0.65 : 0.35,
     );
 

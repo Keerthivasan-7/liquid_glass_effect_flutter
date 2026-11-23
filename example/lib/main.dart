@@ -43,7 +43,7 @@ enum ShowcaseSection { materials, components, controls, comfort }
 /// Interactive gallery showcasing liquid glass materials, components, and controls.
 class ShowcasePage extends StatefulWidget {
   const ShowcasePage({
-    this.initialSection = ShowcaseSection.components,
+    this.initialSection = ShowcaseSection.materials,
     super.key,
   });
 
@@ -527,8 +527,9 @@ class _ShowcasePageState extends State<ShowcasePage> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  Wrap(
+                    alignment: WrapAlignment.spaceBetween,
+                    crossAxisAlignment: WrapCrossAlignment.center,
                     children: [
                       Text('Liquid Glass Range Slider',
                           style: TextStyle(
@@ -752,14 +753,15 @@ class _ShowcasePageState extends State<ShowcasePage> {
                 onTap: () {},
               ),
               const SizedBox(height: 18),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              Wrap(
+                alignment: WrapAlignment.center,
+                spacing: 16,
+                runSpacing: 12,
                 children: [
                   LiquidGlassFAB(
                     onPressed: () {},
                     child: const Icon(Icons.auto_awesome),
                   ),
-                  const SizedBox(width: 16),
                   LiquidGlassFAB.extended(
                     icon: const Icon(Icons.bolt_rounded),
                     label: const Text('Extended Glass FAB'),
@@ -1104,8 +1106,7 @@ class _BackdropPainter extends CustomPainter {
     canvas.drawPath(
         ribbon,
         Paint()
-          ..color =
-              const Color(0xFF246BFD).withValues(alpha: dark ? 0.3 : 0.18)
+          ..color = const Color(0xFF246BFD).withValues(alpha: dark ? 0.3 : 0.18)
           ..style = PaintingStyle.stroke
           ..strokeWidth = 24);
   }

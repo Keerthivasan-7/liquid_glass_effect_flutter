@@ -40,7 +40,8 @@ class LiquidGlassTooltip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final effectiveConfig = (config ?? const LiquidGlassConfig.regular()).copyWith(
+    final effectiveConfig =
+        (config ?? const LiquidGlassConfig.regular()).copyWith(
       blurSigma: 12.0,
       specularStrength: 0.85,
       fresnelStrength: 0.70,

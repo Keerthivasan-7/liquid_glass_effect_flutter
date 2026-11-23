@@ -80,8 +80,8 @@ class LiquidGlassDropdown<T> extends StatelessWidget {
         glassTheme.defaultConfig ??
         const LiquidGlassConfig.frosted();
 
-    final ink = DefaultTextStyle.of(context).style.color ??
-        theme.colorScheme.onSurface;
+    final ink =
+        DefaultTextStyle.of(context).style.color ?? theme.colorScheme.onSurface;
 
     return LiquidGlass(
       config: effectiveConfig,

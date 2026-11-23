@@ -183,9 +183,7 @@ class _LiquidGlassTextFieldState extends State<LiquidGlassTextField> {
               ? (isDark
                   ? theme.colorScheme.primary.withValues(alpha: 0.18)
                   : theme.colorScheme.primary.withValues(alpha: 0.10))
-              : (isDark
-                  ? const Color(0x280B1120)
-                  : const Color(0x18FFFFFF)),
+              : (isDark ? const Color(0x280B1120) : const Color(0x18FFFFFF)),
       absorptionColor: hasError
           ? const Color(0xFFFFE5E5)
           : isDark
@@ -195,7 +193,8 @@ class _LiquidGlassTextFieldState extends State<LiquidGlassTextField> {
       borderWidth: _isFocused ? 1.5 : 0.8,
     );
 
-    final inputDecoration = (widget.decoration ?? const InputDecoration()).copyWith(
+    final inputDecoration =
+        (widget.decoration ?? const InputDecoration()).copyWith(
       hintText: widget.hintText ?? widget.decoration?.hintText,
       labelText: widget.labelText ?? widget.decoration?.labelText,
       prefixIcon: widget.prefixIcon ?? widget.decoration?.prefixIcon,

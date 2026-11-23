@@ -193,7 +193,8 @@ class _LiquidGlassSliderState extends State<LiquidGlassSlider> {
                             child: DecoratedBox(
                               decoration: BoxDecoration(
                                 color: active.withValues(alpha: 0.72),
-                                borderRadius: BorderRadius.circular(railHeight / 2),
+                                borderRadius:
+                                    BorderRadius.circular(railHeight / 2),
                               ),
                             ),
                           ),

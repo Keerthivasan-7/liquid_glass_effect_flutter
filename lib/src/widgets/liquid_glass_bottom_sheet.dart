@@ -96,17 +96,13 @@ class LiquidGlassBottomSheet extends StatelessWidget {
         .copyWith(
       blurSigma: 16.0,
       roughness: 0.48,
-      tint: isDark
-          ? const Color(0x60060914)
-          : const Color(0x35FFFFFF),
-      absorptionColor: isDark
-          ? const Color(0xFF070B16)
-          : Colors.white,
+      tint: isDark ? const Color(0x60060914) : const Color(0x35FFFFFF),
+      absorptionColor: isDark ? const Color(0xFF070B16) : Colors.white,
       absorptionStrength: isDark ? 0.6 : 0.35,
     );
 
-    final ink = DefaultTextStyle.of(context).style.color ??
-        theme.colorScheme.onSurface;
+    final ink =
+        DefaultTextStyle.of(context).style.color ?? theme.colorScheme.onSurface;
 
     return ClipRRect(
       borderRadius: BorderRadius.vertical(top: Radius.circular(borderRadius)),

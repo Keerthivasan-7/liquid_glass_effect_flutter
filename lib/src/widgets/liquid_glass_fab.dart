@@ -97,7 +97,9 @@ class LiquidGlassFAB extends StatelessWidget {
     );
 
     final ink = foregroundColor ??
-        (theme.brightness == Brightness.dark ? Colors.white : theme.colorScheme.primary);
+        (theme.brightness == Brightness.dark
+            ? Colors.white
+            : theme.colorScheme.primary);
 
     Widget content;
     if (isExtended) {
@@ -169,9 +171,8 @@ class LiquidGlassFAB extends StatelessWidget {
                       onPressed!();
                     }
                   : null,
-              customBorder: isExtended
-                  ? const StadiumBorder()
-                  : const CircleBorder(),
+              customBorder:
+                  isExtended ? const StadiumBorder() : const CircleBorder(),
               child: Center(child: content),
             ),
           ),
