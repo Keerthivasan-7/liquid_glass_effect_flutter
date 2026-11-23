@@ -3,7 +3,11 @@
 Liquid glass surfaces for Flutter with refracted backgrounds, soft material
 lighting, and crisp foreground controls.
 
-**First prerelease: [0.1.0-dev.1](https://pub.dev/packages/liquid_glass_effect_flutter/versions/0.1.0-dev.1) · Flutter 3.32+ · BSD-3-Clause**
+**Release: [0.2.0](https://pub.dev/packages/liquid_glass_effect_flutter) · Flutter 3.32+ · BSD-3-Clause**
+
+[![Live Demo](https://img.shields.io/badge/Live_Showcase-Try_in_Browser-007ACC?style=for-the-badge&logo=flutter)](https://keerthivasan-7.github.io/liquid_glass_effect_flutter/)
+[![Pub Version](https://img.shields.io/pub/v/liquid_glass_effect_flutter?style=for-the-badge&logo=dart)](https://pub.dev/packages/liquid_glass_effect_flutter)
+[![License: BSD-3-Clause](https://img.shields.io/badge/license-BSD--3--Clause-blue.svg?style=for-the-badge)](https://opensource.org/licenses/BSD-3-Clause)
 
 ![Optics Studio showing capsule controls separating and joining over a satellite photograph, followed by material and text-size changes](assets/showcase/studio-motion.webp)
 
@@ -37,7 +41,7 @@ qualification are still evolving. See the compatibility notes below.
 
 ```yaml
 dependencies:
-  liquid_glass_effect_flutter: ^0.1.0-dev.1
+  liquid_glass_effect_flutter: ^0.2.0
 ```
 
 ```dart
@@ -112,6 +116,46 @@ opts into animation and respects reduced motion.
 The Lightweight label describes its sampling settings, not a measured speed
 ranking on every device. The [optics model](doc/PHYSICS_MODEL.md) documents the
 material controls, and the showcase exposes the most useful adjustments.
+
+## Production Component Suite
+
+`liquid_glass_effect_flutter` provides an out-of-the-box design system of interactive widgets:
+
+| Category | Component | Key Capabilities |
+| :--- | :--- | :--- |
+| **Inputs & Forms** | `LiquidGlassTextField` | Dielectric refraction, specular focus sheen border, error absorption tint. |
+| | `LiquidGlassSwitch` | Fluid spring physics bounce, crystal thumb, translucent track, light haptics. |
+| | `LiquidGlassSlider` | Translucent rail, active progress gradient, crystal orb thumb, division snapping. |
+| | `LiquidGlassDropdown<T>` | Frosted popup select menu with translucent item rows and animated indicator. |
+| | `LiquidGlassChip` | Selectable capsule tags with avatar slots, sparkle icons, and delete callbacks. |
+| **Modals & Overlays** | `LiquidGlassBottomSheet` | Frosted bottom sheet with grab handle pill and static `.show()` presentation. |
+| | `LiquidGlassDialog` | Frosted alert dialog with specular borders and action buttons. |
+| | `LiquidGlassTooltip` | Obsidian dark glass bubble with high-contrast text and micro-refraction. |
+| **Navigation & Actions**| `LiquidGlassAppBar` | `PreferredSizeWidget` liquid glass app bar with subtle blur and dielectric edge. |
+| | `LiquidGlassFAB` | Circular and stadium extended floating action button with ambient depth shadows. |
+| | `LiquidGlassListTile` | Glass settings and menu tile with leading/trailing slots and selection highlights. |
+| **Design System** | `LiquidGlassThemeData` | `ThemeExtension` for cascading materials globally across the app. |
+| | `LiquidGlassPresets` | Adaptive dark mode presets (`regularDark`, `frostedDark`, `clearDark`). |
+
+### Global Theming
+
+Configure a unified glass theme across your entire application using `ThemeExtension`:
+
+```dart
+MaterialApp(
+  theme: ThemeData(
+    extensions: const [
+      LiquidGlassThemeData(
+        defaultConfig: LiquidGlassConfig.regular(),
+        cardConfig: LiquidGlassConfig.frosted(),
+        buttonConfig: LiquidGlassConfig.crystal(),
+        inputConfig: LiquidGlassConfig.frosted(),
+      ),
+    ],
+  ),
+  home: const MyHomeScreen(),
+);
+```
 
 ## Explore the showcase
 

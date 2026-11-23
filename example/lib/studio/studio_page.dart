@@ -4,6 +4,8 @@ import 'dart:math' as math;
 // ignore: deprecated_member_use
 import 'package:flutter/material.dart';
 import 'package:liquid_glass_effect_flutter/liquid_glass_effect_flutter.dart';
+import '../main.dart';
+import 'animated_cluster_demo.dart';
 
 enum StudioBackdrop { orbit, paper, charcoal, spectrum, atlas }
 
@@ -53,6 +55,7 @@ class _StudioPageState extends State<StudioPage>
   bool _joined = true;
   double _zoom = 1;
   double _angle = 0;
+  double _roundness = 1;
   final _lensOffsets = List.filled(3, Offset.zero);
   Offset? _dragPointer;
   Offset? _dragCenter;
@@ -101,6 +104,7 @@ class _StudioPageState extends State<StudioPage>
       _joined = true;
       _zoom = 1;
       _angle = 0;
+      _roundness = 1;
       _lensOffsets.fillRange(0, 3, Offset.zero);
     });
   }
@@ -132,6 +136,20 @@ class _StudioPageState extends State<StudioPage>
           title: const Text('Optics Studio',
               style: TextStyle(fontWeight: FontWeight.w700, letterSpacing: -1)),
           actions: [
+            IconButton(
+              tooltip: 'Morphing controls',
+              icon: const Icon(Icons.animation),
+              onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                      builder: (_) => const AnimatedClusterDemo())),
+            ),
+            TextButton.icon(
+                onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                        builder: (_) => const ShowcasePage(
+                            initialSection: ShowcaseSection.components))),
+                icon: const Icon(Icons.widgets_outlined),
+                label: const Text('Components')),
             TextButton.icon(
                 onPressed: () => Navigator.pushNamed(context, '/gallery'),
                 icon: const Icon(Icons.layers_outlined),
@@ -246,6 +264,16 @@ class _StudioPageState extends State<StudioPage>
                         onChanged: (v) => setState(() => _angle = v),
                       )),
                     ]),
+                    Row(children: [
+                      const Text('Roundness'),
+                      Expanded(
+                          child: Slider(
+                              value: _roundness,
+                              semanticFormatterCallback: (v) =>
+                                  '${(v * 100).round()} percent rounded',
+                              onChanged: (v) =>
+                                  setState(() => _roundness = v))),
+                    ]),
                     ExpansionTile(
                         tilePadding: EdgeInsets.zero,
                         title: const Text('Render details'),
@@ -333,6 +361,7 @@ class _StudioPageState extends State<StudioPage>
                     LiquidGlassMember(
                         id: i,
                         rotation: (i - 1) * radians,
+                        borderRadius: 24 * scale * _roundness,
                         bounds: Rect.fromCenter(
                             center: bounded(base(i) + _lensOffsets[i]),
                             width: (i == 1 ? 62 : 76) * scale,

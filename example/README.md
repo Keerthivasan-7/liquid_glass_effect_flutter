@@ -8,6 +8,8 @@ spacing slider to separate the three camera controls and bring them back
 together. Drag individual lenses horizontally or vertically to reshape the
 cluster. Replay and the spacing control restore the arranged positions.
 **Lens angle** rotates the outer lenses and their controls independently.
+**Roundness** changes their silhouette continuously between rectangles and
+capsules, including while they are joined or rotated.
 The controls zoom or reset the backdrop. Try **Pointer** illumination
 and drag across the scene, or select **Still motion**. **Replay join** repeats
 the same transition from a fixed starting pose. **Render details** shows the

@@ -1,15 +1,37 @@
 # Changelog
 
-## Unreleased
+## 0.2.0
 
+- Added comprehensive production-grade liquid glass widget suite:
+  - `LiquidGlassTextField`: Refractive input field with specular focus sheen border and error absorption tint.
+  - `LiquidGlassSwitch`: Spring-physics toggle switch with crystal glass thumb, track refraction, and haptic feedback.
+  - `LiquidGlassSlider`: Translucent rail slider with active progress gradient, crystal orb thumb, and division snaps.
+  - `LiquidGlassChip`: Compact capsule tag with selection highlight, avatar slot, and delete icon.
+  - `LiquidGlassBottomSheet`: Frosted modal presentation sheet with grab handle pill and static `.show()` helper.
+  - `LiquidGlassDialog`: Frosted alert dialog with specular borders and integrated action buttons.
+  - `LiquidGlassTooltip`: High-contrast obsidian dark glass tooltip with micro-refraction.
+  - `LiquidGlassAppBar`: `PreferredSizeWidget` liquid glass app bar with blur and dielectric border.
+  - `LiquidGlassFAB`: Circular and stadium extended floating action button with ambient depth shadows.
+  - `LiquidGlassDropdown`: Frosted popup select dropdown menu with translucent items.
+  - `LiquidGlassListTile`: Glass settings and menu tile with leading/trailing slots and selection highlights.
+- Added `LiquidGlassThemeData` (`ThemeExtension`) for global cascade across all components.
+- Added `LiquidGlassPresets` with dark mode support (`regularDark`, `frostedDark`, `clearDark`), `.adaptive(brightness)`, and `.toDark()` extension.
+- Added comprehensive component showcase in the example application (`ShowcaseSection.components`).
+- Added automated test suite `test/liquid_glass_expanded_components_test.dart` verifying all 13 components.
+- Added automated GitHub Pages deployment workflow for web showcase.
+
+## 0.1.0-dev.2
+
+- Add AnimatedLiquidGlassCluster for interrupted layout transitions,
+  shortest-arc rotation, corner interpolation and reduced-motion handling.
+- Add per-member corner radii to glass clusters with rotated bounds,
+  shared distance-field normals and a Studio roundness control.
 - Derive bevel normals from a monotone cubic height profile and trace
   transmission through a curved entrance and planar back face with an air gap.
 - Update Android example and benchmark Gradle wrappers for current Flutter.
   Retain the Material import required by the minimum Flutter SDK.
-
 - Support independent capsule rotation with matching optical bounds,
   foreground clipping and hit targets. Add the Lens angle slider to Studio.
-
 - Add Optics Studio with five backdrops, three finishes, interactive
   lighting, a spacing control, replay and a large-text preview.
 - Add `LiquidGlassCluster` and `LiquidGlassMember` for a shared optical field
