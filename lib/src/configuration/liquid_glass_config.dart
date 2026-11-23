@@ -1,3 +1,5 @@
+// Retained for the declared Flutter 3.32 minimum.
+// ignore: deprecated_member_use
 import 'package:flutter/material.dart';
 
 /// Rendering cost and optical fidelity of a [LiquidGlassConfig].

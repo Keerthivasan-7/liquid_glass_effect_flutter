@@ -1,4 +1,6 @@
 import 'dart:math' as math;
+// Retained for the declared Flutter 3.32 minimum.
+// ignore: deprecated_member_use
 import 'package:flutter/material.dart';
 
 /// A reactive controller that dynamically drives optical lighting, specular

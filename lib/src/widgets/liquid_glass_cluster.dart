@@ -11,15 +11,23 @@ import 'liquid_glass.dart';
 @immutable
 class LiquidGlassMember {
   const LiquidGlassMember(
-      {required this.id, required this.bounds, required this.child});
+      {required this.id,
+      required this.bounds,
+      required this.child,
+      this.rotation = 0});
 
   /// Stable across position changes. IDs must be unique within a cluster.
   final Object id;
+
+  /// Layout bounds before rotation, in cluster coordinates.
   final Rect bounds;
+
+  /// Clockwise angle in radians around the center of [bounds].
+  final double rotation;
   final Widget child;
 }
 
-/// Shades up to four axis-aligned capsules as a single glass surface inside a
+/// Shades up to four independently oriented capsules as one surface inside a
 /// [LiquidGlassScene]. List order determines smooth union and stacking order.
 /// Give the cluster a bounded area. Leave room around members for the bridge.
 /// Outside a capture scope, the same controls retain independent silhouettes.
@@ -49,9 +57,10 @@ class LiquidGlassCluster extends StatelessWidget {
     for (final member in members) {
       if (!member.bounds.isFinite ||
           member.bounds.isEmpty ||
+          !member.rotation.isFinite ||
           !ids.add(member.id)) {
         throw ArgumentError(
-            'Each glass member needs unique identity and finite, positive bounds.');
+            'Each glass member needs unique identity, finite rotation and finite, positive bounds.');
       }
     }
     if (members.length > 4 || config.renderer == LiquidGlassRenderer.shader) {
@@ -60,23 +69,32 @@ class LiquidGlassCluster extends StatelessWidget {
           Positioned.fromRect(
               key: ValueKey(member.id),
               rect: member.bounds,
-              child: LiquidGlass(
-                  shape: const LiquidGlassShape.capsule(),
-                  config: config,
-                  accessibility: accessibility,
-                  lightingController: lightingController,
-                  onRenderPathChanged: onRenderPathChanged,
-                  interactive: true,
-                  child: member.child)),
+              child: Transform.rotate(
+                  angle: member.rotation,
+                  child: ClipRRect(
+                      borderRadius:
+                          BorderRadius.circular(member.bounds.shortestSide / 2),
+                      child: LiquidGlass(
+                          shape: const LiquidGlassShape.capsule(),
+                          config: _independentConfig(member),
+                          accessibility: accessibility,
+                          lightingController: lightingController,
+                          onRenderPathChanged: onRenderPathChanged,
+                          interactive: true,
+                          child: member.child)))),
       ]);
     }
+    final capsules = [
+      for (final member in members)
+        PlacedCapsule(member.bounds, member.rotation)
+    ];
     final extents =
-        members.map((m) => m.bounds).reduce((a, b) => a.expandToInclude(b));
+        capsules.map((c) => c.extent).reduce((a, b) => a.expandToInclude(b));
     // Each pairwise smooth-min can extend the field by at most k/4.
     final paintBox =
         extents.inflate(blendRadius * (members.length - 1) / 4 + 1);
     final local = [
-      for (final member in members) member.bounds.shift(-paintBox.topLeft)
+      for (final capsule in capsules) capsule.shift(-paintBox.topLeft)
     ];
     return Stack(fit: StackFit.expand, children: [
       Positioned.fromRect(
@@ -92,13 +110,28 @@ class LiquidGlassCluster extends StatelessWidget {
               for (var i = 0; i < members.length; i++)
                 Positioned.fromRect(
                     key: ValueKey(members[i].id),
-                    rect: local[i],
-                    child: ClipRRect(
-                        borderRadius:
-                            BorderRadius.circular(local[i].shortestSide / 2),
-                        child: members[i].child)),
+                    rect: local[i].bounds,
+                    child: Transform.rotate(
+                        angle: local[i].rotation,
+                        child: ClipRRect(
+                            borderRadius:
+                                BorderRadius.circular(local[i].radius),
+                            child: members[i].child))),
             ]),
           )),
     ]);
+  }
+
+  LiquidGlassConfig _independentConfig(LiquidGlassMember member) {
+    // The filter binds a screen origin and uniform scale. Only the capture
+    // path maps a rotated local basis into the actual source texture.
+    if (member.rotation == 0) return config;
+    return switch (config.renderer) {
+      LiquidGlassRenderer.auto =>
+        config.copyWith(renderer: LiquidGlassRenderer.capture),
+      LiquidGlassRenderer.shader =>
+        config.copyWith(renderer: LiquidGlassRenderer.fallback),
+      _ => config,
+    };
   }
 }

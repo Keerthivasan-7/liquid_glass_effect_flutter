@@ -1,3 +1,5 @@
+// Retained for the declared Flutter 3.32 minimum.
+// ignore: deprecated_member_use
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:liquid_glass_showcase/main.dart';
@@ -14,6 +16,14 @@ void main() {
     await tester.pumpWidget(const ShowcaseApp());
     await tester.pumpAndSettle();
     expect(find.text('Blue Marble'), findsOneWidget);
+    final lens = find.byKey(const ValueKey('drag-lens-1'));
+    Offset lensPosition() =>
+        tester.getCenter(lens) -
+        tester.getTopLeft(find.byType(LiquidGlassCluster));
+    final original = lensPosition();
+    await tester.drag(lens, const Offset(0, 65));
+    await tester.pumpAndSettle();
+    expect(lensPosition().dy, greaterThan(original.dy + 20));
     Future<void> choose(String label) async {
       final target = find.text(label);
       await tester.ensureVisible(target);
@@ -24,6 +34,7 @@ void main() {
     }
 
     await choose('Separate lenses');
+    expect(lensPosition().dy, closeTo(original.dy, 1));
     expect(find.text('Join lenses'), findsOneWidget);
     await choose('Prism');
     await choose('Spectrum');

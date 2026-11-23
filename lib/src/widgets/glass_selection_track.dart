@@ -1,5 +1,7 @@
 import 'dart:ui' show lerpDouble;
 
+// Retained for the declared Flutter 3.32 minimum.
+// ignore: deprecated_member_use
 import 'package:flutter/material.dart';
 
 /// Keeps the foreground stationary while the two ends of the selected pill
