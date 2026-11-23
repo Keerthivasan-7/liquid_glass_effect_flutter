@@ -53,6 +53,7 @@ class _StudioPageState extends State<StudioPage>
   bool _joined = true;
   double _zoom = 1;
   double _angle = 0;
+  double _roundness = 1;
   final _lensOffsets = List.filled(3, Offset.zero);
   Offset? _dragPointer;
   Offset? _dragCenter;
@@ -101,6 +102,7 @@ class _StudioPageState extends State<StudioPage>
       _joined = true;
       _zoom = 1;
       _angle = 0;
+      _roundness = 1;
       _lensOffsets.fillRange(0, 3, Offset.zero);
     });
   }
@@ -246,6 +248,16 @@ class _StudioPageState extends State<StudioPage>
                         onChanged: (v) => setState(() => _angle = v),
                       )),
                     ]),
+                    Row(children: [
+                      const Text('Roundness'),
+                      Expanded(
+                          child: Slider(
+                              value: _roundness,
+                              semanticFormatterCallback: (v) =>
+                                  '${(v * 100).round()} percent rounded',
+                              onChanged: (v) =>
+                                  setState(() => _roundness = v))),
+                    ]),
                     ExpansionTile(
                         tilePadding: EdgeInsets.zero,
                         title: const Text('Render details'),
@@ -333,6 +345,7 @@ class _StudioPageState extends State<StudioPage>
                     LiquidGlassMember(
                         id: i,
                         rotation: (i - 1) * radians,
+                        borderRadius: 24 * scale * _roundness,
                         bounds: Rect.fromCenter(
                             center: bounded(base(i) + _lensOffsets[i]),
                             width: (i == 1 ? 62 : 76) * scale,

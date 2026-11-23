@@ -62,6 +62,7 @@ uniform vec4 u_capsule_1;
 uniform vec4 u_capsule_2;
 uniform vec4 u_capsule_3;
 uniform vec4 u_capsule_radii;
+uniform vec4 u_member_angles;
 
 const float PI = 3.141592653589793;
 
@@ -250,13 +251,19 @@ vec2 wave_gradient(vec2 frag, vec3 wave) {
 
 // The xy components carry the gradient of the distance in z. The
 // polynomial blend interpolates both, so the bridge has a single normal.
-vec3 capsule_field(vec2 p, vec4 capsule, float radius) {
-  vec2 d = p - capsule.xy;
-  vec2 spine = capsule.zw;
-  float projection = clamp(dot(d, spine) / max(dot(spine, spine), 0.000001), -1.0, 1.0);
-  vec2 v = d - spine * projection;
-  float len = length(v);
-  return vec3(v / max(len, 0.0001), len - radius);
+vec3 capsule_field(vec2 p, vec4 box, float radius, float angle) {
+  vec2 axis = vec2(cos(angle), sin(angle));
+  vec2 delta = p - box.xy;
+  vec2 local = vec2(dot(delta, axis), dot(delta, vec2(-axis.y, axis.x)));
+  vec2 q = abs(local) - (box.zw - radius);
+  vec2 outside = max(q, vec2(0.0));
+  float len = length(outside);
+  float distance = len + min(max(q.x, q.y), 0.0) - radius;
+  vec2 gradient = len > 0.00001 ? outside / len :
+      (q.x > q.y ? vec2(1.0, 0.0) : vec2(0.0, 1.0));
+  gradient *= sign(local);
+  return vec3(axis.x * gradient.x - axis.y * gradient.y,
+              axis.y * gradient.x + axis.x * gradient.y, distance);
 }
 
 vec3 join_field(vec3 a, vec3 b) {
@@ -279,11 +286,11 @@ void main() {
   vec2 edge_normal;
 
   float coverage = 1.0;
-  if (u_capsule_radii.x > 0.0) {
-    vec3 field = capsule_field(frag, u_capsule_0, u_capsule_radii.x);
-    if (u_capsule_radii.y > 0.0) field = join_field(field, capsule_field(frag, u_capsule_1, u_capsule_radii.y));
-    if (u_capsule_radii.z > 0.0) field = join_field(field, capsule_field(frag, u_capsule_2, u_capsule_radii.z));
-    if (u_capsule_radii.w > 0.0) field = join_field(field, capsule_field(frag, u_capsule_3, u_capsule_radii.w));
+  if (u_capsule_0.z > 0.0) {
+    vec3 field = capsule_field(frag, u_capsule_0, u_capsule_radii.x, u_member_angles.x);
+    if (u_capsule_1.z > 0.0) field = join_field(field, capsule_field(frag, u_capsule_1, u_capsule_radii.y, u_member_angles.y));
+    if (u_capsule_2.z > 0.0) field = join_field(field, capsule_field(frag, u_capsule_2, u_capsule_radii.z, u_member_angles.z));
+    if (u_capsule_3.z > 0.0) field = join_field(field, capsule_field(frag, u_capsule_3, u_capsule_radii.w, u_member_angles.w));
     distance = field.z;
     edge_normal = field.xy;
     // Skia runtime effects do not expose screen-space derivatives.
