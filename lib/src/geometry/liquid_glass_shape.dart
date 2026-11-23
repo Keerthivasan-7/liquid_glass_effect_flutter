@@ -1,5 +1,7 @@
 import 'dart:math' as math;
 
+// Retained for the declared Flutter 3.32 minimum.
+// ignore: deprecated_member_use
 import 'package:flutter/material.dart';
 
 /// Geometry understood by both the Flutter clipper and the optical shader.

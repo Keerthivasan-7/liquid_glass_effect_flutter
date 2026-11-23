@@ -27,7 +27,7 @@ void main() {
     expect(source, contains('diagonal'));
   });
 
-  test('capture shader declares portable texture and 92 float slots', () {
+  test('capture shader declares portable texture and 96 float slots', () {
     final source = File('shaders/liquid_glass_capture.frag').readAsStringSync();
     expect(source, contains('uniform sampler2D u_capture;'));
     expect(source, contains('refract('));
@@ -37,7 +37,7 @@ void main() {
     expect(source, contains('FlutterFragCoord()'));
     expect(RegExp(r'uniform float ').allMatches(source).length, 38);
     expect(RegExp(r'uniform vec2 ').allMatches(source).length, 8);
-    expect(RegExp(r'uniform vec4 ').allMatches(source).length, 8);
+    expect(RegExp(r'uniform vec4 ').allMatches(source).length, 9);
     expect(RegExp(r'uniform vec3 ').allMatches(source).length, 2);
     expect(source, contains('u_interaction_point'));
     expect(source, contains('interaction_falloff'));
